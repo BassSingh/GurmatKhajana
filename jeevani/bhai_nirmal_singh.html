@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bhai Nirmal Singh Ji • GurmatKhajana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'EB Garamond',serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 15% 20%,
+    rgba(212,164,44,0.06),
+    transparent 25%),
+    radial-gradient(circle at 85% 60%,
+    rgba(212,164,44,0.04),
+    transparent 30%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-family:'Inter',sans-serif;
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.5) 50%,
+    rgba(0,0,0,0.97) 100%),
+    url('../images/gallery/jeevani/Bhai_Nirmal_Singh.jpg')
+    center top/cover no-repeat;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(ellipse at center bottom,
+    rgba(212,164,44,0.08),
+    transparent 60%);
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    max-width:900px;
+
+    padding:0 40px 80px;
+
+    text-align:center;
+}
+
+.hero-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+
+    margin-bottom:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+}
+
+.hero-label::before,
+.hero-label::after{
+    content:'';
+    width:60px;
+    height:1px;
+    background:rgba(212,164,44,0.4);
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+    font-weight:600;
+    color:#fff;
+
+    margin-bottom:16px;
+
+    line-height:1.1;
+}
+
+.hero-content h1 em{
+    color:#d4a42c;
+    font-style:normal;
+}
+
+.hero-dates{
+    color:#888;
+    letter-spacing:3px;
+    font-size:0.9rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+}
+
+/* ARTICLE BODY */
+
+.article-body{
+    max-width:780px;
+    margin:0 auto;
+    padding:90px 40px 120px;
+}
+
+/* OPENING QUOTE */
+
+.opening-quote{
+    text-align:center;
+    margin-bottom:80px;
+
+    padding:50px 40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(212,164,44,0.06),
+    rgba(212,164,44,0.02));
+
+    border:1px solid rgba(212,164,44,0.15);
+
+    position:relative;
+}
+
+.opening-quote::before{
+    content:'\201C';
+
+    position:absolute;
+    top:-30px;
+    left:50%;
+    transform:translateX(-50%);
+
+    font-family:'Cinzel',serif;
+    font-size:6rem;
+    color:rgba(212,164,44,0.25);
+    line-height:1;
+}
+
+.opening-quote p{
+    font-family:'EB Garamond',serif;
+    font-size:1.35rem;
+    font-style:italic;
+    color:#d4a42c;
+    line-height:1.9;
+}
+
+.opening-quote cite{
+    display:block;
+    margin-top:18px;
+    color:#888;
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-family:'Inter',sans-serif;
+}
+
+/* PROSE */
+
+.prose p{
+    font-family:'EB Garamond',serif;
+    font-size:1.22rem;
+    line-height:2;
+    color:#d8d8d8;
+    margin-bottom:32px;
+}
+
+.prose p:first-child::first-letter{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    font-weight:600;
+    color:#d4a42c;
+    float:left;
+    line-height:0.8;
+    margin-right:10px;
+    margin-top:8px;
+}
+
+/* SECTION DIVIDER */
+
+.section-divider{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin:60px 0;
+}
+
+.section-divider span{
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,0.08);
+}
+
+.section-divider p{
+    color:#d4a42c;
+    letter-spacing:3px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+    white-space:nowrap;
+}
+
+/* PULL QUOTE */
+
+.pull-quote{
+    margin:50px 0;
+
+    padding:40px 45px;
+
+    border-left:3px solid #d4a42c;
+
+    background:
+    linear-gradient(to right,
+    rgba(212,164,44,0.05),
+    transparent);
+
+    border-radius:0 16px 16px 0;
+}
+
+.pull-quote p{
+    font-family:'EB Garamond',serif;
+    font-size:1.4rem;
+    font-style:italic;
+    color:#e8d5a3;
+    line-height:1.8;
+    margin:0;
+}
+
+.pull-quote cite{
+    display:block;
+    margin-top:14px;
+    color:#888;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-family:'Inter',sans-serif;
+}
+
+/* CLOSING */
+
+.closing-block{
+    margin-top:80px;
+    text-align:center;
+
+    padding:60px 40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.8),
+    rgba(10,10,10,0.6));
+
+    border:1px solid rgba(212,164,44,0.12);
+}
+
+.closing-block p{
+    font-family:'EB Garamond',serif;
+    font-size:1.25rem;
+    font-style:italic;
+    color:#ccc;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+.closing-block strong{
+    display:block;
+    margin-top:20px;
+    color:#d4a42c;
+    font-style:normal;
+    font-size:1rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* BACK LINK */
+
+.back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:60px;
+
+    color:#888;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+
+    transition:0.3s ease;
+}
+
+.back-link:hover{
+    color:#d4a42c;
+}
+
+.back-link::before{
+    content:'←';
+    font-size:1rem;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+
+    font-family:'Inter',sans-serif;
+    font-size:0.85rem;
+}
+
+/* FADE IN ANIMATION */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-content{
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.article-body{
+    animation:fadeUp 1s ease 0.3s both;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    left:20px;
+    top:18px;
+}
+
+.top-main-logo img{
+    width:120px;
+}
+
+.hero{
+    min-height:90vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding:0 24px 60px;
+}
+
+.hero-content h1{
+    font-size:2.8rem;
+}
+
+.article-body{
+    padding:60px 24px 80px;
+}
+
+.opening-quote{
+    padding:35px 24px;
+}
+
+.opening-quote p{
+    font-size:1.15rem;
+}
+
+.prose p{
+    font-size:1.1rem;
+}
+
+.pull-quote{
+    padding:30px 28px;
+}
+
+.pull-quote p{
+    font-size:1.2rem;
+}
+
+.closing-block{
+    padding:40px 24px;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+  <img src="../images/logo/logo.svg" alt="GurmatKhajana Logo">
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="/GurmatKhajana/index.html">Home</a>
+    <a href="/GurmatKhajana/about.html">About</a>
+    <a href="/GurmatKhajana/articles/index.html">Articles</a>
+    <a href="/GurmatKhajana/jeevani/index.html">Jeevani</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-label">
+      Jeevani
+    </div>
+
+    <h1>Bhai <em>Nirmal</em> Singh Ji</h1>
+
+    <p class="hero-dates">d. 24th October 1997</p>
+
+  </div>
+
+</section>
+
+<!-- ARTICLE -->
+
+<div class="article-body">
+
+  <a href="/GurmatKhajana/jeevani/index.html" class="back-link">
+    Back to Jeevani
+  </a>
+
+  <div class="opening-quote">
+    <p>
+      "What is the point of spending your whole life building a house,
+      only to dismantle it in a few seconds?
+      That is what nindia does to a Gursikh's kamaee."
+    </p>
+    <cite>Bhai Nirmal Singh Ji</cite>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      Bhai Sahib was a farmer, raised by his grandmother after losing his mother young.
+      He became the finest wrestler in his district — a man of discipline, sacrifice
+      and total commitment. These qualities never left him. He simply found a higher arena.
+    </p>
+
+    <p>
+      After arriving in England in the 1960s, alcohol became part of his social life —
+      until a chance encounter with an elderly Gursikh at work changed everything.
+      Bhai Sahib offered to carry his heavy loads in exchange for being taught Gurbani
+      and carpentry. That exchange became the first thread that pulled him entirely
+      toward Guru Sahib.
+    </p>
+
+    <p>
+      By 1971–72 the pull was undeniable. He went directly to Bhai Ram Singh Ji's
+      (ex AKJ UK Jathedar) house and said he wanted Amrit di daat and an Akhand Paath
+      in his home — read not by hired Gianis, but by Kirtee Singhs who earn an honest
+      living. Bhai Ram Singh said to Bhai Sahib that AKJ rehat is too much of an extreme
+      jump for you, but Bhai Sahib was adamant that he was to take Amrit from kirtee
+      Gursikhs in AKJ. When he told his Singhni, Bibi Salinder Kaur Ji, to dispose of
+      all the alcohol, she hid it in the garden instead — unconvinced he would last.
+      When he found out, he said simply:
+    </p>
+
+  </div>
+
+  <div class="pull-quote">
+    <p>"I have done my ardaas. I will never drink again."</p>
+    <cite>He never did.</cite>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      Both Bibi Salinder Kaur Ji and Bhai Nirmal Singh Ji took Amrit together.
+      He stood on one leg for the entirety of the Amrit Sanchar — an act of complete
+      surrender and warrior's focus — and asked his daughter to do the same.
+    </p>
+
+    <p>
+      From that day, his life became a living sadhana. Every morning without fail —
+      in health and in illness — he woke at 1am for Amrit Vela. Bhai Sahib's Amritvela
+      would last for 5 to 6 hours with a minimum of 2 hours naam abhiyaas. He completed
+      the full Sundar Gutka daily, did Sehaj Paath completing the cycle monthly, and
+      rang a bell each evening to call the family to Kirtan.
+    </p>
+
+  </div>
+
+  <div class="pull-quote">
+    <p>"Kirtan is my khorakh — my food."</p>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      He sat through entire nights of Kirtan, back straight, khartala in hand,
+      nourished by something this world cannot provide. After every Amrit Vela,
+      he would ask Bibi Ji to prepare degh — "The Shaheed Singhs and puratan rooha
+      are here. They must have degh."
+    </p>
+
+    <p>
+      His ardaas was unlike anything those who witnessed it had seen.
+      Bhai Surat Singh Puran Ji would say: "Bhai Nirmal Singh Ji Guru Sahib de naal
+      sidhia gala karde aa!" — He speaks directly with Waheguru. He would begin facing
+      one direction and, absorbed in total communion, turn 90 degrees without realising.
+    </p>
+
+    <p>
+      During Amrit Vela he would have Darshan of Guru Sahib and Shaheed rooha.
+      He would quietly ask Bibi Salinder Kaur Ji whether she had seen them —
+      and when she confirmed the same darshan, he would simply smile and say nothing,
+      never drawing attention to his own spiritual state.
+    </p>
+
+    <p>
+      His daughter would ask after Amrit Vela: "Did Sangat come today?" —
+      because the Naam abhiyaas echoing from Baba Ji's room sounded like twenty
+      Gursikhs doing abhiyaas together. Bhai Sahib would laugh softly:
+      "No — it was just me."
+    </p>
+
+    <p>
+      For many years, there would be daily knocking at the front door of Bhai Sahib's
+      home at 1am, but when checked there was no one outside. Bhai Surat Singh Puran Ji,
+      during one of his many extended stays at his home, told him: "Never lock the door
+      at night — leave it ajar. The Shaheed Singhs come for Amrit Vela."
+      From that day, the door was never locked.
+    </p>
+
+  </div>
+
+  <div class="section-divider">
+    <span></span>
+    <p>The Test of Fire</p>
+    <span></span>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      In his forties, Bhai Sahib was struck down by severe Tuberculosis.
+      Every medication failed, and he became unable to stand.
+      His sister, Bibi Parkash Kaur, a naam abiyassi Gursikh herself,
+      took him back to India.
+    </p>
+
+    <p>
+      When Bapu Atma Singh Ji Panjokhre Wale heard the news, he gathered Gursikhs
+      and began an Akhand Paath immediately — the instructions absolute: no one to
+      enter the room, even langar and water left at the door. The Akhand Paath rose
+      in such chardi kala that at the Madh di Ardaas — when Bhai Sahib had not been
+      able to stand for weeks — he rose to his feet. He stood. He walked.
+      After the Bhog, he ate normally.
+    </p>
+
+  </div>
+
+  <div class="pull-quote">
+    <p>
+      "Your kamaee on this earth was complete. This was to have been your time
+      for Sachkhand. But Guru Sahib has granted you twenty more years —
+      to complete your duniyaavi kaaraj and see your children married."
+    </p>
+    <cite>Bapu Atma Singh Ji Panjokhre Wale</cite>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      The children were married by 1996.
+      In October 1997 — exactly twenty years later — Bhai Nirmal Singh Ji left this world.
+      In those twenty years he had one mission: to burn away everything remaining
+      between his soul and Sachkhand. Not a single morning or day wasted.
+    </p>
+
+  </div>
+
+  <div class="section-divider">
+    <span></span>
+    <p>Souls Recognising Souls</p>
+    <span></span>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      In 1976, whilst walking his daughter to her Amrit Sanchar in Anandpur Sahib,
+      an elderly Singh — Bapu Bawa Singh Ji Kamarhaati — saw Bhai Sahib from a distance
+      and ran toward him. They held each other and did naam simran for nearly two hours —
+      two souls recognising something beyond this life.
+    </p>
+
+  </div>
+
+  <div class="pull-quote">
+    <p>
+      "When I saw you, it was as if I had Darshan of Guru Nanak Sahib Ji."
+    </p>
+    <cite>Bapu Bawa Singh Ji Kamarhaati — Bhai Sahib felt and said the exact same of Bapu Ji.</cite>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      On the same day, another Singh came running from the mountain —
+      recognising Bhai Sahib's soul from a previous janam, calling him his brother —
+      and they embraced each other whilst doing naam simran for over an hour.
+      These were not coincidences of earth. These were souls finding each other again,
+      briefly reunited in the city of the Guru's own making, Anandpur Sahib.
+    </p>
+
+    <p>
+      Bhai Nirmal Singh Ji was the first Singh to keep Sarbloh in the UK —
+      a distinction he held for over thirty years. He was recognised for his wisdom
+      by youth from all Jatheh Bandiyaa across the UK, and many modelled their lives
+      on his. But of all his qualities, the one most remembered is this:
+      he never spoke ill of anyone.
+    </p>
+
+  </div>
+
+  <div class="section-divider">
+    <span></span>
+    <p>The Final Days</p>
+    <span></span>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      Even hospitalised and critical, even on an oxygen mask, Bhai Sahib did Simran
+      for three to four hours with the Gursikhs who came to visit. The nurses would
+      pass his room and remark that there was a light around his head — like a halo.
+      He was welcoming souls into the room, calling them by name: "Aajo sajno!" —
+      giving Fateh to the Shaheed Singhs as they came.
+    </p>
+
+    <p>
+      He left on 24th October 1997.
+    </p>
+
+    <p>
+      A few years after his passing, Bhai Surat Singh Puran Ji stayed at Bhai Sahib's
+      daughter's home. During Amrit Vela one morning, in deep bairaag, he said:
+      "Bhai Nirmal Singh Ji, tusi sidhe Sachkhand vich chale gae. Daas nu vi laijande naal."
+      Bhai Sahib and Puran Ji had deep pyaar for one another — they knew the depth of
+      their relationship and that it was beyond this earth.
+    </p>
+
+  </div>
+
+  <div class="closing-block">
+    <p>
+      Bhai Sahib built his house carefully, brick by brick,
+      and he never once dismantled it.
+    </p>
+    <strong>ਵਾਹਿਗੁਰੂਜੀਕਾਖਾਲਸਾਵਾਹਿਗੁਰੂਜੀਕੀਫਤਹਿ </strong>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy 🙏
+</footer>
+
+</body>
+</html>
