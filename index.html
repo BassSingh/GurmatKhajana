@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GurmatKhajana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* MAIN BACKGROUND */
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* CINEMATIC GLOW LAYERS */
+
+body::after{
+    content:'';
+
+    position:fixed;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(212,164,44,0.10),
+    transparent 25%),
+
+    radial-gradient(circle at 85% 30%,
+    rgba(212,164,44,0.08),
+    transparent 30%),
+
+    radial-gradient(circle at 50% 80%,
+    rgba(255,255,255,0.03),
+    transparent 35%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.88),
+    rgba(0,0,0,0.15));
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.05);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.50),
+    rgba(0,0,0,0.9)),
+    url('images/gallery/siteimages/2.jpeg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 10%,
+    rgba(0,0,0,0.72) 100%);
+
+    backdrop-filter:blur(2px);
+}
+
+/* EXTRA HERO GLOW */
+
+.hero::after{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(212,164,44,0.10),
+    transparent 45%);
+
+    pointer-events:none;
+}
+
+/* TOP KHANDA */
+
+.akj-top-logo{
+    position:absolute;
+    top:55px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:50;
+}
+
+.akj-top-logo img{
+    width:120px;
+    height:auto;
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.18));
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:1200px;
+
+    text-align:center;
+
+    padding-top:100px;
+}
+
+/* MAIN LOGO */
+
+.main-logo{
+    margin-bottom:30px;
+}
+
+.main-logo img{
+    width:100%;
+    max-width:520px;
+    height:auto;
+
+    object-fit:contain;
+
+    display:block;
+    margin:auto;
+
+    filter:
+    drop-shadow(0 0 35px rgba(212,164,44,0.2));
+}
+
+/* ARCHIVE LINE */
+
+.archive-line{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+
+    margin-bottom:30px;
+
+    flex-wrap:wrap;
+}
+
+.archive-line span{
+    width:140px;
+    height:1px;
+    background:rgba(212,164,44,0.35);
+}
+
+.archive-line p{
+    color:#d4a42c;
+    letter-spacing:4px;
+    font-size:0.85rem;
+}
+
+/* TAGLINE */
+
+.tagline{
+    font-family:'Cinzel',serif;
+    font-size:2.5rem;
+    font-style:italic;
+
+    margin-bottom:50px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:17px 38px;
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.btn-gold{
+    background:#d4a42c;
+    color:black;
+}
+
+.btn-dark{
+    border:1px solid rgba(255,255,255,0.18);
+    background:rgba(255,255,255,0.03);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* SECTIONS */
+
+.section{
+    position:relative;
+    padding:100px 7%;
+}
+
+.section::before{
+    content:'';
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:75%;
+    height:75%;
+
+    background:
+    radial-gradient(circle,
+    rgba(212,164,44,0.04),
+    transparent 70%);
+
+    filter:blur(80px);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+.section-title{
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:#d4a42c;
+    letter-spacing:3px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-top:10px;
+}
+
+/* ARTICLE GRID */
+
+.article-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:24px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:26px;
+    min-height:480px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.65),
+    rgba(10,10,10,0.35));
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    border-color:
+    rgba(212,164,44,0.35);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.45);
+}
+
+.card.large{
+    min-height:620px;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s ease;
+}
+
+.card:hover img{
+    transform:scale(1.06);
+}
+
+.card-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(to top,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.15));
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:35px;
+}
+
+.card-category{
+    color:#d4a42c;
+    letter-spacing:2px;
+    font-size:0.8rem;
+    margin-bottom:10px;
+}
+
+.card-overlay h3{
+    font-family:'Cinzel',serif;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.card-overlay p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+/* JEEVANI */
+
+.jeevani-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.jeevani-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:26px;
+    min-height:380px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.65),
+    rgba(10,10,10,0.35));
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s ease;
+}
+
+.jeevani-card:hover{
+    transform:translateY(-8px);
+
+    border-color:
+    rgba(212,164,44,0.35);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.45);
+}
+
+.jeevani-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.jeevani-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:35px;
+
+    background:
+    linear-gradient(to top,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.2));
+}
+
+.jeevani-overlay h3{
+    font-family:'Cinzel',serif;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.jeevani-overlay p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+    color:#888;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* TABLET */
+
+@media(max-width:950px){
+
+.article-grid{
+    grid-template-columns:1fr;
+}
+
+.jeevani-grid{
+    grid-template-columns:1fr;
+}
+
+.section-title h2{
+    font-size:2.3rem;
+}
+
+.tagline{
+    font-size:1.6rem;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.88)),
+
+    url('images/gallery/siteimages/2.jpeg');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* CINEMATIC LIGHTING */
+
+.hero::before{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.22),
+    transparent 35%),
+
+    radial-gradient(circle at center,
+    transparent 20%,
+    rgba(0,0,0,0.72) 100%),
+
+    linear-gradient(
+    to top,
+    rgba(0,0,0,0.92),
+    transparent 45%);
+
+    z-index:1;
+}
+
+/* FILM GRAIN */
+
+.hero::after{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+    url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+    opacity:0.18;
+
+    mix-blend-mode:soft-light;
+
+    z-index:2;
+}
+
+.hero-content{
+    padding-top:130px;
+    padding-left:18px;
+    padding-right:18px;
+}
+
+.main-logo img{
+    max-width:260px;
+    width:100%;
+    height:auto;
+}
+
+.archive-line{
+    gap:10px;
+    margin-bottom:22px;
+}
+
+.archive-line span{
+    width:35px;
+}
+
+.archive-line p{
+    font-size:0.62rem;
+    letter-spacing:1.5px;
+    text-align:center;
+}
+
+.tagline{
+    font-size:1.1rem;
+    line-height:1.6;
+    padding:0 10px;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    width:100%;
+    gap:12px;
+}
+
+.btn{
+    width:100%;
+    padding:15px 20px;
+    font-size:0.95rem;
+}
+
+.section{
+    padding:70px 20px;
+}
+
+.section-title{
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    font-size:2rem;
+}
+
+.card.large{
+    min-height:420px;
+}
+
+.card{
+    min-height:340px;
+}
+
+.card-overlay{
+    padding:24px;
+}
+
+.card-overlay h3{
+    font-size:1.5rem;
+}
+
+.card-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,0.88),
+    rgba(0,0,0,0.10));
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:35px;
+}
+
+.jeevani-card{
+    min-height:320px;
+}
+
+.jeevani-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:35px;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,0.88),
+    rgba(0,0,0,0.10));
+}
+
+.jeevani-overlay h3{
+    font-size:1.5rem;
+}
+
+footer{
+    font-size:0.85rem;
+    line-height:1.7;
+    padding:30px 20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="nav-links">
+        <a href="/GurmatKhajana/index.html">Home</a>
+        <a href="/GurmatKhajana/about.html">About</a>
+        <a href="/GurmatKhajana/articles/index.html">Articles</a>
+        <a href="/GurmatKhajana/index.html#jeevani">Jeevani</a>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="akj-top-logo">
+
+        <img src="images/logo/akj_black_khanda.png"
+             alt="AKJ Khanda">
+
+    </div>
+
+    <div class="hero-content">
+
+        <div class="main-logo">
+
+            <img src="images/logo/logo.svg"
+                 alt="GurmatKhajana Logo">
+
+        </div>
+
+        <div class="archive-line">
+
+            <span></span>
+
+            <p>ARTICLES • JEEVANI • GURSIKHI ARCHIVE</p>
+
+            <span></span>
+
+        </div>
+
+        <p class="tagline">
+            The Living Archive of Gursikh Legacy
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#articles" class="btn btn-gold">
+                Explore Articles
+            </a>
+
+            <a href="#jeevani" class="btn btn-dark">
+                Read Jeevani
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ARTICLES -->
+
+<section class="section" id="articles">
+
+    <div class="section-title">
+
+        <span>Latest Articles</span>
+
+    </div>
+
+    <div class="article-grid">
+
+        <a href="/GurmatKhajana/articles/BhaiRandhirSingh/naamjugti.html" class="card large">
+
+            <img src="images/gallery/siteimages/1.jpg">
+
+            <div class="card-overlay">
+
+                <div>
+
+                    <div class="card-category">
+                        Naam Abhiyaas
+                    </div>
+
+                    <h3>ਨਾਮ ਜਪਣ ਦੀ ਜੁਗਤੀ</h3>
+
+                    <p>
+                        The Shabad is the Guru,
+                        and the consciousness is the disciple of the sound.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </a>
+
+        <a href="#" class="card">
+
+            <img src="images/gallery/siteimages/2.jpeg">
+
+            <div class="card-overlay">
+
+                <div>
+
+                    <div class="card-category">
+                        Nitnem
+                    </div>
+
+                    <h3>The Power Of Daily Banis</h3>
+
+                </div>
+
+            </div>
+
+        </a>
+
+        <a href="#" class="card">
+
+            <img src="images/gallery/siteimages/3.jpeg">
+
+            <div class="card-overlay">
+
+                <div>
+
+                    <div class="card-category">
+                        Sevaa
+                    </div>
+
+                    <h3>Humility Through Service</h3>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- JEEVANI -->
+
+<section class="section" id="jeevani">
+
+    <div class="section-title">
+
+        <span>Jeevani</span>
+
+
+    </div>
+
+    <div class="jeevani-grid">
+
+        <div class="jeevani-card">
+
+            <img src="images/gallery/siteimages/4.jpeg">
+
+            <div class="jeevani-overlay">
+
+                <div>
+
+                    <h3>Bhai Randhir Singh Jee</h3>
+
+                    <p>
+                        Discover inspiring Jeevani,
+                        writings and spiritual legacy.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="jeevani-card">
+
+            <img src="images/gallery/siteimages/5.jpeg">
+
+            <div class="jeevani-overlay">
+
+                <div>
+
+                    <h3>Gursikh Jeevan</h3>
+
+                    <p>
+                        Stories and experiences
+                        from inspiring Gursikhs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy 🙏
+</footer>
+
+</body>
+</html>

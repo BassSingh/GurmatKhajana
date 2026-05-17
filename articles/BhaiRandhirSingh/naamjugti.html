@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GurmatKhajana • ਨਾਮ ਜਪਣ ਦੀ ਜੁਗਤੀ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:180px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    left:20px;
+    top:18px;
+}
+
+.top-main-logo img{
+    width:135px;
+}
+
+}
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.88)),
+
+    url('/GurmatKhajana/images/gallery/siteimages/2.jpeg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 5%,
+    rgba(0,0,0,0.72) 100%);
+
+    backdrop-filter:blur(2px);
+}
+
+/* TOP KHANDA */
+
+.akj-top-logo{
+    position:absolute;
+    top:90px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:50;
+}
+.akj-top-logo img{
+    width:120px;
+    height:auto;
+    display:block;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:1100px;
+
+    text-align:center;
+
+    padding:100px 20px 60px;
+}
+
+.main-logo img{
+    width:100%;
+    max-width:420px;
+    height:auto;
+
+    object-fit:contain;
+
+    display:block;
+    margin:auto;
+
+    margin-bottom:30px;
+}
+
+.article-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:0.85rem;
+
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    line-height:1.3;
+
+    margin-bottom:25px;
+}
+
+.article-meta{
+    color:#d0d0d0;
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+/* ARTICLE BODY */
+
+.article-wrapper{
+    width:100%;
+    max-width:950px;
+
+    margin:auto;
+
+    padding:90px 30px 120px;
+}
+
+.featured-image{
+    width:100%;
+    height:620px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:55px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.45);
+}
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.article-content{
+    font-size:1.2rem;
+    line-height:2.4;
+    color:#e2e2e2;
+}
+
+.article-content p{
+    margin-bottom:40px;
+}
+
+/* LANGUAGE SWITCHER */
+
+.language-switcher{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.language-switcher button{
+    padding:14px 28px;
+    border:none;
+    border-radius:50px;
+
+    background:#1a1a1a;
+    color:#d4a42c;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid rgba(212,164,44,0.3);
+
+    transition:0.3s ease;
+}
+
+.language-switcher button:hover{
+    background:#d4a42c;
+    color:black;
+}
+
+.language-switcher button.active{
+    background:#d4a42c;
+    color:black;
+}
+
+.gurbani-block{
+    margin:70px 0;
+
+    padding:50px 40px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(18,18,18,0.96),
+    rgba(8,8,8,0.98));
+
+    border:1px solid rgba(212,164,44,0.2);
+
+    text-align:center;
+}
+
+.gurbani-block .gurmukhi{
+    font-size:2rem;
+    line-height:2;
+    color:#d4a42c;
+
+    margin-bottom:25px;
+}
+
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:60px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:#d4a42c;
+    color:black;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.back-home:hover{
+    transform:translateY(-3px);
+}
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero{
+    min-height:70vh;
+    background-attachment:scroll;
+}
+
+.akj-top-logo img{
+    width:75px;
+}
+
+.hero-content{
+    padding-top:80px;
+}
+
+.main-logo img{
+    max-width:250px;
+}
+
+.hero-content h1{
+    font-size:2.2rem;
+}
+
+.article-wrapper{
+    padding:60px 20px 90px;
+}
+
+.featured-image{
+    height:340px;
+    border-radius:24px;
+}
+
+.article-content{
+    font-size:1rem;
+    line-height:2.2;
+}
+
+.gurbani-block{
+    padding:35px 24px;
+}
+
+.gurbani-block .gurmukhi{
+    font-size:1.45rem;
+    line-height:1.8;
+}
+
+.language-switcher button{
+    width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+
+    <img src="/GurmatKhajana/images/logo/logo.svg"
+         alt="GurmatKhajana Logo">
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="nav-links">
+
+        <a href="/GurmatKhajana/index.html">Home</a>
+        <a href="/GurmatKhajana/about.html">About</a>
+        <a href="/GurmatKhajana/articles/index.html">Articles</a>
+        <a href="/GurmatKhajana/index.html#jeevani">Jeevani</a>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+        <div class="main-logo">
+            <img src="/GurmatKhajana/images/logo/logo.svg"
+                 alt="GurmatKhajana Logo">
+        </div>
+
+        <div class="article-label">
+            GurmatKhajana Article
+        </div>
+
+        <h1>
+            ਨਾਮ ਜਪਣ ਦੀ ਜੁਗਤੀ
+        </h1>
+
+        <div class="article-meta">
+            By the late Bhai Sahib Randhir Singh Ji
+        </div>
+
+    </div>
+
+</section>
+
+<section class="article-wrapper">
+
+    <div class="featured-image">
+
+        <img src="/GurmatKhajana/images/gallery/siteimages/1.jpg"
+             alt="Naam Japna">
+
+    </div>
+
+    <div class="article-content">
+
+        <!-- LANGUAGE SWITCHER -->
+
+        <div class="language-switcher">
+
+            <button onclick="showPunjabi()" id="paBtn" class="active">
+                ਪੰਜਾਬੀ
+            </button>
+
+            <button onclick="showEnglish()" id="enBtn">
+                English
+            </button>
+
+        </div>
+
+        <!-- PUNJABI CONTENT -->
+
+        <div id="punjabi-content">
+
+            <p>
+                ਅਭਿਆਸ ਕਰਦੇ ਹੋਏ ਗੁਰਮੰਤਰ ਗੁਰਮਤਿ ਨਾਮ ਰੂਪੀ ਸ਼ਬਦ ਨੂੰ ਸੁਰਤੀ ਨਾਲ ਜੋੜਨਾ ਹੈ । ਨਾਮ ਜਪਦੇ ਹੋਏ, ਨਾਮ-ਜਾਪ ਦੇ ਅਰੰਭ ਵਿਚ ਸ਼ਬਦ ਨਾਲਿ ਸੁਰਤੀ ਲਾਉਣੀ ਹੈ । ਨਾਮ-ਸ਼ਬਦ ਦੀ ਜੋ ਧੁਨੀ ਅਭਿਆਸ-ਜਾਪ ਕਰਦਿਆਂ ਆਵੇ (ਨਿਕਲੇ), ਉਸ ਧੁਨਿ ਨਾਲਿ ਸੁਰਤੀ ਨੂੰ ਜੋੜਨਾ, ਇਹ ਸ਼ਬਦ ਸੁਰਤਿ ਦਾ ਅਰੰਭਕ ਖੇਲੁ ਹੈ ।ਅਭਿਆਸੀ ਜਨ ਪਹਿਲਾਂ ਏਥੋਂ ਹੀ ਅਭਿਆਸ ਅਰੰਭ ਕਰਦਾ ਹੈ । ਗੁਰਮੰਤਰ ਨਾਮ-ਸ਼ਬਦ ਦੁਅਖਰੇ ਦਾ ਪਹਿਲਾ ਦੁਅਖਰਾ ਸਹਿਤਿ ਸੁਆਸ ਦੇ ਅੰਦਰ ਨੂੰ ਖਿਚ ਕੇ ਉਪਰ ਨੂੰ ਦਸਵੇਂ ਦੁਆਰ ਉਚਿ ਲੈ ਜਾਵੇ ।
+            </p>
+
+            <p>
+                ਸਹਿਜ ਸੁਆਸੀ ਵੇਗ ਸੇਤੀ ਹੀ ਉਪਰੋਂ (ਅੰਦਰੋਂ) ਹੇਠਾਂ ਬਾਹਰ ਵਲ ਨੂੰ ਉਤਰਾਵੇ ਅਤੇ ਉਤਰਾਵਨ ਸਮੇਂ ਪਿਛਲੇ (ਦੂਜੇ) ਅਰਧ ਗੁਰਮੰਤਰੀ ਦੇ ਹਿਸੇ ਨੂੰ ਰਸਨਾ ਨਾਲਿ ਸਪਰਸ਼ ਕੇ ਨਿਕਸਾਵੇ । ਏਸੇ ਪ੍ਰਕਾਰ ਸੁਤੇ ਸੁਆਸਾਂ ਦੇ ਸਹਿਜ ਵੇਗ ਸਹਿਤ ਸ਼ਬਦ- ਅਭਿਆਸ ਦਾ ਸਿਲਸਿਲਾ ਸਦਾ ਜਾਰੀ ਰੱਖੇ । ਉਪਰ ਨੂੰ, ਅਰਥਾਤ ਅੰਦਰ ਨੂੰ ਸੁਆਸ ਲੈ ਜਾਣ ਸਮੇਂ ਸ਼ਬਦ ਦਾ ਸਪਰਸ਼ ਹਲਕ (ਤਾਲੂ) ਸਹਿਤ ਹੋਵੇਗਾ ਅਤੇ ਹੇਠਾਂ ਬਾਹਰਵਾਰ ਨੂੰ ਸੁਆਸ ਉਤਾਰਦੇ ਹੋਏ ਸ਼ਬਦ ਰਸਨਾ ਸੇਤੀ ਸਪੱਰਸ਼ੇਗਾ । ਇਸ ਸਪਰਸ਼ ਦੀ ਧੁਨੀ ਚਾਹੇ ਬੈਖਰੀ ਹੋਵੇ, ਚਾਹੇ ਮਧਮਾ, ਪਰਾ, ਪਸੰਤੀ ਹੋਵੇ, ਉਸ ਧੁਨੀ ਸੇਤੀ ਸੁਰਤਿ ਨੂੰ ਜੋੜਨਾ ਹੈ ।
+            </p>
+
+            <div class="gurbani-block">
+
+                <div class="gurmukhi">
+                    “ਸਬਦੁ ਗੁਰੂ ਸੁਰਤਿ ਧੁਨਿ ਚੇਲਾ”
+                </div>
+
+            </div>
+
+            <p>
+                ਦੇ ਗੁਰਵਾਕ ਅਨੁਸਾਰ ਇਹ ਗੁਰਮਤਿ ਨਾਮ ਅਭਿਆਸ ਦੀ ਖੇਡ ਹੈ । ‘ਸ਼ਬਦ’ ਗੁਰੂ ਰੂਪ ਇਸ ਕਰਕੇ ਹੈ ਕਿ ਧੁਰੋਂ ਨਿਰੰਕਾਰ ਦੀ ਦਰਗਾਹ ਤੋਂ ਆਇਆ ਹੋਣ ਕਰਕੇ ਸ਼ਬਦ ਦੀ ਸਪੱਰਸ਼ ਪਾਰਸ ਰੂਪੀ ਹੈ, ਅੰਮ੍ਰਿਤ ਰਸਾਇਣੀ ਹੈ। ਇਸ ਦੇ ਹਲਕ (ਤਾਲੂ) ਨਾਲਿ ਸੁਰਤੀ ਸਹਿਤ ਸਪੱਰਸ਼ਿਆਂ ਕਾਟ ਕਰ ਕੇ ਸਣੇ ਸਣੇ ਵਿਸਮਾਦ ਰੂਪ ਵਿਚ ਲੀਨਤਾ ਦਾ ਅਨੰਦ, ਬਿਸਮ ਅਨੰਦ ਆਉਣ ਲਗ ਪੈਂਦਾ ਹੈ। ਰਸਨਾ ਨਾਲਿ ਸਪੱਰਸ਼ ਹੋਣ ਕਰਕੇ ਅੰਤਰਗਤਿ ਜੋਤਿ ਪ੍ਰਕਾਸ਼ ਦਾ ਰਸ ਰੁਮਕਣ ਲਗ ਪੈਂਦਾ ਹੈ। ਜਦੋਂ ਰਸ-ਬਿਸਮਤਾ ਦੀ ਨੌਬਤ ਆਣ ਉਪਜਦੀ ਹੈ ਤਦੋਂ ਅਭਿਆਸੀ ਜਨ ਦੀ ਸੁਰਤੀ ਬਿਰਤੀ ਇਸ ਰਸ-ਬਿਸਮਾਦ ਕਲਾ ਵਿਚਿ ਲੀਨ ਹੋ ਕੇ ਸਹਿਜ ਲੀਨਤਾ ਦੇ ਦਰਜੇ ਨੂੰ ਅਪੜ ਜਾਂਦੀ ਹੈ। ਫੇਰ ਸੁਰਤੀ ਜੋੜਨ ਦਾ ਖ਼ਾਸ ਯਤਨ ਨਹੀਂ ਕਰਨਾ ਪੈਂਦਾ । ਰਸ-ਜੋਤਿ-ਪ੍ਰਕਾਸ਼ ਦੀ ਕਿਰਣ-ਕਣੀ ਹੀ ਸੁਰਤਿ-ਮਹਿਵੀਅਤ ਲਈ ਸਹਾਈ ਹੋਈ ਰਹਿੰਦੀ ਹੈ। ਸ਼ਬਦ-ਅਭਿਆਸ ਤੋਂ ਇਕ ਖਿਨ ਭੀ ਬਾਹਰ ਨਹੀਂ ਹੋਣ ਦੇਂਦੀ। ਗੁਰ ਪ੍ਰਸਾਦਿ ਕਰ ਹੀ ਇਹ ਬਿਧਿ ਬਣ ਆਉਂਦੀ ਹੈ ਅਤੇ ਜਿਉਂ ਜਿਉਂ ਇਹ ਬਿਧਿ ਬਣਦੀ ਹੈ ਤਿਉਂ ਤਿਉਂ ਗੁਰੂ ਕਰਤਾਰ ਦੇ ਸ਼ੁਕਰਾਨੇ ਵਿਚਿ ਨਿਮਰੀਭੂਤ ਹੋ ਕੇ ਅਭਿਆਸ-ਆਨੰਦਨੀ-ਖੇਡ ਐਸੀ ਹੁੰਦੀ ਹੈ ਕਿ ਸ਼ਬਦ ਅਭਿਆਸ ਗੁਰੂ-ਕਰਤਾਰ-ਸਨਮੁਖੀ ਅਰਦਾਸ ਰੂਪ ਹੋ ਜਾਂਦਾ ਹੈ ।
+            </p>
+
+            <p>
+                ਚੇਤੇ ਰਹੇ ਕਿ ਇਸ ਅਭਿਆਸ-ਰਸ-ਆਨੰਦਨੀ ਖੇਡ ਵਿਚਿ ਰਸ-ਪ੍ਰਾਇਣ ਹੋ ਕੇ, ਰਸ-ਰਸਾਇਣ ਹੋ ਕੇ ਅਭਿਆਸੀ ਜਨ ਦਾ ਰੋਮ ਰੋਮ ਰੁਮਕ ਉਠਦਾ ਹੈ, ਅੰਗ ਅੰਗ ਫਰਕਣ ਲਗ ਪੈਂਦਾ ਹੈ । ਹੋੱਠ ਭੀ ਆਪ-ਮੁਹਾਰੇ ਫਰਕਣ ਲੱਗ ਪੈਂਦੇ ਹਨ। ਇਹ ਅਮਿਉ ਰਸਾਇਣੀ ਰਸ ਅਤਯੰਤ ਹੀ ਅੱਜਰ ਵਸਤੂ ਹੈ। ਗੁਰ ਪ੍ਰਸਾਦਿ ਕਰ ਹੀ ਜਰਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਅਰਦਾਸ ਰੂਪ ਅਭਿਆਸ (ਜੈਸਾ ਉਪਰ ਵਰਨਣ ਹੋਇਆ ਹੈ) ਇਸ ਅੱਜਰ ਪਦ ਨੂੰ ਜਰਾਉਣ ਲਈ ਬੜਾ ਹੀ ਸਹਾਈ ਹੁੰਦਾ ਹੈ। ਜੋ ਜਰ ਨਹੀਂ ਸਕਦੇ, ਉਹ ਭੜਕ ਕੇ ਉਠਦੇ ਹਨ। ਜਰਨ ਵਾਲਿਆਂ ਦੀ ਭੀ ਨਿਝਰ-ਝਰਨ-ਬਿਰਤੀ ਇਕ ਬਿਸ਼ਮ-ਅਨੰਦੀ ਹੁਲਾਰੇ ਦੀ ਅਕੱਥਨੀਯ ਮੌਜ ਵਿਚਿ ਹਾਲ ਖੇਡਣ ਲਗ ਪੈਂਦੀ ਹੈ । ਸਰੀਰ ਭੀ ਵਜਦ ਵਿਚਿ ਆ ਝੂਲਣ ਮੇਲ੍ਹਣ ਲਗ ਪੈਂਦਾ ਹੈ, ਪਰ ਸਹਿਜ-ਕਲਾ ਵਿਚਿ। ਇਸ ਵਜਦ-ਹੁਲਾਰੜੀ ਖੇਡ ਵਿਚਿ ਅੰਤਰੀਵੀ ਅਮਿਉ-ਰਸ ਰਸਾਇਣ ਸੇਤੀ ਸਰਸ਼ਾਰ ਹੋ ਕੇ ਅਤੇ ਬੇਹਬਲ ਹੋ ਕੇ ਅਭਿਆਸੀ ਜਨ, ਸ਼ਬਦ-ਅਭਿਆਸ-ਤਰੰਗੀ ਫੁਰਾਟੇ ਭੀ ਮਾਰਨ ਲਗ ਪੈਂਦਾ ਹੈ। ਇਨ੍ਹਾਂ ਫੁਰਾਟਿਆਂ ਸੁਰਾਟਿਆਂ, ਗੁਰਾਟਿਆਂ ਦੇ ਗਰਜਾਉਣ ਵਿਚਿ ਹੋਰ ਭੀ ਅਧਿਭੁਤ ਅਨੰਦ ਆਉਂਦਾ ਹੈ। ਜਿਨ੍ਹਾਂ ਉਤੇ ਇਹ ਦਸ਼ਾ ਵਾਪਰੀ ਹੋਵੇ ਸੇ ਹੀ ਜਾਣਨ ਇਸ ਰਸ-ਅਨੰਦੀ ਖੇਡ ਨੂੰ । ਨਹੀਂ ਤਾਂ ਆਮ ਲੋਕੀ ਆਪਣੀ ਆਪਣੀ ਮੱਤ ਕੁਮੱਤ ਅਨੁਸਾਰ ਰਸ-ਫੁਰਾਟੀਆਂ, ਰਸ-ਰਸਾਟੀਆਂ, ਰਸ ਝਰਨਾਟੀਆਂ, ਰਸ ਸੁਰਤਾਟੀਆਂ, ਰਸ ਗੁਰਾਟੀਆਂ, ਰਸ ਗਜਰਾਟੀਆਂ ਦੀ ਇਸ ਅਨੂਪਮ ਤੇ ਅਲੌਕਿਕ ਖੇਡ (ਦਸ਼ਾ) ਨੂੰ ਦੇਖ ਕੇ ਮਖੌਲ ਉਡਾਉਣ ਲਗ ਪੈਂਦੇ ਹਨ । ਪਏ ਉਡਾਉਣ।
+            </p>
+
+            <div class="gurbani-block">
+
+                <div class="gurmukhi">
+                    ['ਗੁਰਮਤਿ ਕਰਮ ਫਿਲਾਸਫ਼ੀ' ਪੁਸਤਕ ਵਿਚੋਂ]
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+
+        <div id="english-content" style="display:none;">
+
+            <p>
+                While practicing, one must connect the consciousness (Surti) with the Shabad (divine word) in the form of Gurmantar Gurmat Naam. While chanting the Name, When you Jap Naam at the beginning one must focus the consciousness on the Shabad. Connecting consciousness with whatever sound of the Naam-Shabad arises/emerges during practice-recitation is the initial play of Shabad-Surti. The practitioner first starts the practice from here. The first part of the two-syllable Gurmantar Naam-Shabad should be drawn inwards with the breath and taken upwards towards the Tenth Gate (Dasam Dwar).
+            </p>
+
+            <p>
+                With the natural flow of breath, it should descend from above (inside) towards the outside, and at the time of descent, the latter (second) half of the Gurmantar should be uttered by touching it with the tongue. In this way, the sequence of Shabad-practice should be kept continuous with the natural flow of spontaneous breaths. While taking the breath upwards, i.e., inwards, the touch of the Shabad will be with the palate (Taalu), and while releasing the breath downwards/outwards, the Shabad will touch the tongue. Whether the sound of this touch is audible, whisper-like, or subtle/internal, the consciousness must be joined with that sound.
+            </p>
+
+            <div class="gurbani-block">
+
+                <div class="gurmukhi">
+                    "The Shabad is the Guru, and the consciousness is the disciple of the sound"
+                </div>
+
+            </div>
+
+            <p>
+                According to the Guru's words, this is the play of Naam. The 'Shabad' is in the form of the Guru because, having come from the court of the Formless One (Nirankar), the touch of the Shabad is like a philosopher's stone (Paras), an ambrosial elixir. By touching it with the palate along with consciousness, it severs worldly ties, and slowly, the bliss of immersion in a state of wonder (Vismad), the wondrous bliss, begins to arise.
+            </p>
+
+            <p>
+                Due to the touch with the tongue, the savor of internal divine light (Jyoti Prakash) begins to ripple. When the state of blissful wonder arises, the practitioner's consciousness becomes absorbed in this art of wondrous bliss and reaches the level of natural immersion. Then, no special effort is needed to focus the consciousness. A single ray/particle of the savor-light-radiance remains helpful for the absorption of consciousness. It doesn't let one stay outside of the Shabad-practice for even a moment. By Guru's grace alone, this method is formed, and as this method develops, one becomes humble in gratitude to the Guru/Creator and the practice becomes such a blissful-joyous play that the Shabad-practice turns into a form of prayer (Ardaas) facing the Guru.
+            </p>
+
+            <p>
+                Remember that in this play of bliss derived from the practice of the Divine Elixir, by becoming absorbed in and transformed by that Elixir, every hair on the practitioner's body quivers, and every limb begins to vibrate. Even the lips begin to move spontaneously. This nectar-sweet Elixir is an extremely difficult thing to withstand. It can only be endured through Guru's Grace. Practice in the form of prayer (as described above) is very helpful in assisting one to withstand this unendurable state. Those who cannot withstand it, rise up agitatedly. For those who can endure it, their continuous flow of consciousness begins to revel in the indescribable joy of a wondrous-blissful surge. The body also begins to sway and move in ecstasy, but within a state of poise (Sahaj).
+            </p>
+
+            <p>
+                In this ecstatic, swaying play, being saturated and overwhelmed by the inner Nectar-Elixir, the practitioner also begins to experience bursts of Word-practice waves. There is an even more wondrous bliss in the resonance of these bursts and flows. Only those who have experienced this state can know this Elixir-blissful play. Otherwise, common people, according to their own understanding or misconceptions, start to mock this unique and transcendental play (state) of Elixir-bursts, flows, vibrations, sounds, and roars. Let them mock.
+            </p>
+
+            <div class="gurbani-block">
+
+                <div class="gurmukhi">
+                    [From the book 'Gurmat Karam Philosophy']
+                </div>
+
+            </div>
+
+            <p>
+                With Guru Sahib’s kirpa, this digitisation seva has been carried out by Daas Bhupinder Singh (Dharam Parchar Lead – AKJ UK).
+            </p>
+
+            <p>
+                Daas humbly seeks forgiveness for any mistakes or shortcomings.
+            </p>
+
+        </div>
+
+        <a href="/GurmatKhajana/index.html" class="back-home">
+            ← Back To GurmatKhajana
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy 🙏
+</footer>
+
+<script>
+
+function showPunjabi(){
+
+    document.getElementById('punjabi-content').style.display = 'block';
+    document.getElementById('english-content').style.display = 'none';
+
+    document.getElementById('paBtn').classList.add('active');
+    document.getElementById('enBtn').classList.remove('active');
+}
+
+function showEnglish(){
+
+    document.getElementById('punjabi-content').style.display = 'none';
+    document.getElementById('english-content').style.display = 'block';
+
+    document.getElementById('enBtn').classList.add('active');
+    document.getElementById('paBtn').classList.remove('active');
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About • GurmatKhajana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* MAIN BACKGROUND */
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* MODERN GLOW BACKGROUND */
+
+body::after{
+    content:'';
+
+    position:fixed;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(212,164,44,0.10),
+    transparent 25%),
+
+    radial-gradient(circle at 85% 30%,
+    rgba(212,164,44,0.08),
+    transparent 30%),
+
+    radial-gradient(circle at 50% 80%,
+    rgba(255,255,255,0.03),
+    transparent 35%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:220px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+
+    min-height:60vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.60),
+    rgba(0,0,0,0.90)),
+    url('../images/gallery/siteimages/gursikhs.jpeg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 10%,
+    rgba(0,0,0,0.80) 100%);
+}
+
+.hero::after{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(212,164,44,0.12),
+    transparent 45%);
+
+    z-index:1;
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+
+    padding:170px 20px 100px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+
+    margin-bottom:25px;
+}
+
+.hero-content p{
+    color:#d0d0d0;
+    font-size:1.15rem;
+    line-height:2;
+}
+
+/* CONTENT */
+
+.content-section{
+    position:relative;
+    padding:110px 7%;
+}
+
+.content-section::before{
+    content:'';
+
+    position:absolute;
+
+    top:120px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:75%;
+    height:75%;
+
+    background:
+    radial-gradient(circle,
+    rgba(212,164,44,0.05),
+    transparent 70%);
+
+    filter:blur(80px);
+
+    z-index:-1;
+
+    pointer-events:none;
+}
+
+.content-wrapper{
+    max-width:1000px;
+    margin:auto;
+}
+
+.content-block{
+    position:relative;
+
+    margin-bottom:90px;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.55),
+    rgba(10,10,10,0.35));
+
+    border:
+    1px solid rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.35);
+
+    transition:0.4s ease;
+}
+
+.content-block:hover{
+    border-color:
+    rgba(212,164,44,0.18);
+}
+
+.content-block span{
+    color:#d4a42c;
+    letter-spacing:3px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+}
+
+.content-block h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+.content-block p{
+    color:#ddd;
+    line-height:2.2;
+    font-size:1.08rem;
+
+    margin-bottom:28px;
+}
+
+/* QUOTE BLOCK */
+
+.quote-block{
+    margin:80px 0;
+
+    padding:60px 40px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(18,18,18,0.96),
+    rgba(8,8,8,0.98));
+
+    border:
+    1px solid rgba(212,164,44,0.18);
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.4);
+}
+
+.quote-block h3{
+    font-family:'Cinzel',serif;
+    color:#d4a42c;
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+}
+
+.quote-block p{
+    font-size:1.15rem;
+    line-height:2;
+    color:#ddd;
+}
+
+/* INFO GRID */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:28px;
+
+    margin-top:60px;
+}
+
+.info-card{
+    padding:40px 35px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(18,18,18,0.96),
+    rgba(8,8,8,0.98));
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    transition:0.35s ease;
+}
+
+.info-card:hover{
+    transform:translateY(-6px);
+
+    border-color:
+    rgba(212,164,44,0.35);
+}
+
+.info-card h3{
+    font-family:'Cinzel',serif;
+    font-size:1.5rem;
+
+    margin-bottom:18px;
+}
+
+.info-card p{
+    color:#ccc;
+    line-height:1.9;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:
+    1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    left:20px;
+    top:18px;
+}
+
+.top-main-logo img{
+    width:135px;
+}
+
+.hero{
+    min-height:50vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding-top:150px;
+}
+
+.hero-content h1{
+    font-size:2.7rem;
+}
+
+.hero-content p{
+    font-size:1rem;
+    line-height:1.9;
+}
+
+.content-section{
+    padding:80px 20px;
+}
+
+.content-block{
+    padding:35px 24px;
+}
+
+.content-block h2{
+    font-size:2rem;
+}
+
+.content-block p{
+    font-size:1rem;
+    line-height:2;
+}
+
+.quote-block{
+    padding:40px 24px;
+}
+
+.quote-block h3{
+    font-size:1.5rem;
+}
+
+.quote-block p{
+    font-size:1rem;
+}
+
+.info-card{
+    padding:32px 24px;
+}
+
+footer{
+    font-size:0.85rem;
+    line-height:1.7;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+
+  <img src="../images/logo/logo.svg"
+       alt="GurmatKhajana Logo">
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="nav-links">
+
+    <a href="/GurmatKhajana/index.html">Home</a>
+    <a href="/GurmatKhajana/about.html">About</a>
+    <a href="/GurmatKhajana/articles/index.html">Articles</a>
+    <a href="/GurmatKhajana/index.html#jeevani">Jeevani</a>
+
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>About GurmatKhajana</h1>
+
+    <p>
+      A living digital archive dedicated to preserving
+      Gurmat writings, Jeevani, Naam Abhiyaas,
+      Gursikhi history and spiritual reflections
+      for generations to come.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- CONTENT -->
+
+<section class="content-section">
+
+  <div class="content-wrapper">
+
+    <div class="content-block">
+
+      <span>Our Vision</span>
+
+      <h2>Preserving Gurmat Legacy</h2>
+
+      <p>
+        GurmatKhajana has been created with the aim of preserving
+        priceless Gurmat writings, historical articles,
+        Gursikh Jeevan experiences and spiritual treasures
+        that may otherwise become difficult to access over time.
+      </p>
+
+      <p>
+        This archive is intended to provide a clean,
+        organised and accessible platform for seekers
+        wishing to explore Naam Abhiyaas, Gurmat philosophy,
+        Jeevani and the writings of inspiring Gursikhs.
+      </p>
+
+    </div>
+
+    <div class="quote-block">
+
+      <h3>
+        “ਸਬਦੁ ਗੁਰੂ ਸੁਰਤਿ ਧੁਨਿ ਚੇਲਾ”
+      </h3>
+
+      <p>
+        “The Shabad is the Guru,
+        and the consciousness is the disciple of the sound.”
+      </p>
+
+    </div>
+
+    <div class="content-block">
+
+      <span>The Archive</span>
+
+      <h2>What GurmatKhajana Contains</h2>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+
+          <h3>Articles</h3>
+
+          <p>
+            Gurmat writings and reflections
+            from respected Gursikhs.
+          </p>
+
+        </div>
+
+        <div class="info-card">
+
+          <h3>Jeevani</h3>
+
+          <p>
+            Inspirational lives and experiences
+            of Gursikhs throughout history.
+          </p>
+
+        </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="content-block">
+
+      <span>Seva</span>
+
+      <h2>Digitisation & Preservation</h2>
+
+      <p>
+        This project is part of an ongoing seva
+        to digitise and preserve valuable Gurmat material
+        in a respectful and organised format.
+      </p>
+
+      <p>
+        With Guru Sahib’s kirpa,
+        GurmatKhajana hopes to continue growing
+        into a valuable resource for the Panth
+        and future generations.
+      </p>
+
+    </div>
+
+</section>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy 🙏
+</footer>
+
+</body>
+</html>

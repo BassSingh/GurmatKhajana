@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bhai Joginder Singh Talwara • GurmatKhajana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+
+    position:fixed;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(212,164,44,0.10),
+    transparent 25%),
+
+    radial-gradient(circle at 85% 30%,
+    rgba(212,164,44,0.08),
+    transparent 30%),
+
+    radial-gradient(circle at 50% 80%,
+    rgba(255,255,255,0.03),
+    transparent 35%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:220px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+
+    min-height:60vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.60),
+    rgba(0,0,0,0.90)),
+    url('../../images/gallery/siteimages/talwara.jpg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 10%,
+    rgba(0,0,0,0.82) 100%);
+}
+
+.hero::after{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(212,164,44,0.12),
+    transparent 45%);
+
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+
+    padding:180px 20px 100px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+
+    margin-bottom:25px;
+}
+
+.hero-content p{
+    color:#d0d0d0;
+    font-size:1.15rem;
+    line-height:2;
+}
+
+/* CONTENT */
+
+.content-section{
+    position:relative;
+    padding:110px 7%;
+}
+
+.content-section::before{
+    content:'';
+
+    position:absolute;
+
+    top:120px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:75%;
+    height:75%;
+
+    background:
+    radial-gradient(circle,
+    rgba(212,164,44,0.05),
+    transparent 70%);
+
+    filter:blur(80px);
+
+    z-index:-1;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:#d4a42c;
+    letter-spacing:3px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    margin-top:15px;
+}
+
+/* ARTICLE GRID */
+
+.article-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:32px;
+}
+
+/* ARTICLE CARD */
+
+.article-card{
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:500px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.55),
+    rgba(10,10,10,0.35));
+
+    border:
+    1px solid rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(12px);
+
+    transition:0.4s ease;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.35);
+}
+
+.article-card:hover{
+    transform:translateY(-8px);
+
+    border-color:
+    rgba(212,164,44,0.25);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.45);
+}
+
+.article-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:0.5s ease;
+}
+
+.article-card:hover img{
+    transform:scale(1.05);
+}
+
+.article-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:35px;
+
+    background:
+    linear-gradient(to top,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.12));
+}
+
+.article-overlay-content{
+    width:100%;
+}
+
+.article-label{
+    color:#d4a42c;
+    font-size:0.8rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+}
+
+.article-overlay h3{
+    font-family:'Cinzel',serif;
+    font-size:2rem;
+
+    margin-bottom:15px;
+}
+
+.article-overlay p{
+    color:#ddd;
+    line-height:1.8;
+
+    margin-bottom:22px;
+}
+
+.read-btn{
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:
+    rgba(212,164,44,0.12);
+
+    border:
+    1px solid rgba(212,164,44,0.22);
+
+    color:#d4a42c;
+
+    font-size:0.85rem;
+
+    transition:0.3s ease;
+}
+
+.article-card:hover .read-btn{
+    background:#d4a42c;
+    color:black;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:
+    1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    left:20px;
+    top:18px;
+}
+
+.top-main-logo img{
+    width:135px;
+}
+
+.hero{
+    min-height:50vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding-top:150px;
+}
+
+.hero-content h1{
+    font-size:2.7rem;
+}
+
+.hero-content p{
+    font-size:1rem;
+    line-height:1.9;
+}
+
+.content-section{
+    padding:80px 20px;
+}
+
+.section-title h2{
+    font-size:2rem;
+}
+
+.article-card{
+    min-height:400px;
+}
+
+.article-overlay{
+    padding:24px;
+}
+
+.article-overlay h3{
+    font-size:1.5rem;
+}
+
+.article-overlay p{
+    font-size:0.92rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+
+    <img src="../../images/logo/logo.svg"
+         alt="GurmatKhajana Logo">
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="nav-links">
+
+        <a href="/GurmatKhajana/index.html">Home</a>
+        <a href="/GurmatKhajana/about.html">About</a>
+        <a href="/GurmatKhajana/articles/index.html">Articles</a>
+        <a href="/GurmatKhajana/index.html#jeevani">Jeevani</a>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Bhai Joginder Singh Talwara
+        </h1>
+
+        <p>
+            Explore deep Gurmat reflections,
+            spiritual writings, Naam Abhiyaas
+            and inspirational teachings from
+            Bhai Joginder Singh Talwara.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ARTICLES -->
+
+<section class="content-section">
+
+    <div class="section-title">
+
+        <span>Articles Archive</span>
+
+        <h2>Browse Articles</h2>
+
+    </div>
+
+    <div class="article-grid">
+
+        <!-- ARTICLE -->
+
+        <a href="#"
+           class="article-card">
+
+            <img src="../../images/gallery/siteimages/talwara.jpg">
+
+            <div class="article-overlay">
+
+                <div class="article-overlay-content">
+
+                    <div class="article-label">
+                        Gurmat Vichaar
+                    </div>
+
+                    <h3>
+                        Gurmat Reflections
+                    </h3>
+
+                    <p>
+                        Deep spiritual reflections
+                        and Gurmat teachings from
+                        Bhai Sahib Ji.
+                    </p>
+
+                    <div class="read-btn">
+                        Coming Soon
+                    </div>
+
+                </div>
+
+            </div>
+
+        </a>
+
+        <!-- ARTICLE -->
+
+        <a href="#"
+           class="article-card">
+
+            <img src="../../images/gallery/siteimages/2.jpeg">
+
+            <div class="article-overlay">
+
+                <div class="article-overlay-content">
+
+                    <div class="article-label">
+                        Naam Abhiyaas
+                    </div>
+
+                    <h3>
+                        Naam Simran
+                    </h3>
+
+                    <p>
+                        Articles focused on
+                        Naam practice, Simran
+                        and spiritual discipline.
+                    </p>
+
+                    <div class="read-btn">
+                        Coming Soon
+                    </div>
+
+                </div>
+
+            </div>
+
+        </a>
+
+        <!-- ARTICLE -->
+
+        <a href="#"
+           class="article-card">
+
+            <img src="../../images/gallery/siteimages/4.jpeg">
+
+            <div class="article-overlay">
+
+                <div class="article-overlay-content">
+
+                    <div class="article-label">
+                        Gursikhi
+                    </div>
+
+                    <h3>
+                        Gursikh Jeevan
+                    </h3>
+
+                    <p>
+                        Inspirational Gursikhi
+                        experiences and writings
+                        for seekers of Gurmat.
+                    </p>
+
+                    <div class="read-btn">
+                        Coming Soon
+                    </div>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy 🙏
+</footer>
+
+</body>
+</html>
