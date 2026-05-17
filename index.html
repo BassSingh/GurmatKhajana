@@ -436,35 +436,32 @@ a{
     position:relative;
     overflow:hidden;
     border-radius:26px;
-    height:380px;
+    height:420px;
 
-    background:
-    linear-gradient(135deg,
-    rgba(20,20,20,0.65),
-    rgba(10,10,10,0.35));
-
-    border:
-    1px solid rgba(255,255,255,0.06);
-
-    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.06);
 
     transition:0.4s ease;
+
+    display:block;
 }
 
 .jeevani-card:hover{
     transform:translateY(-8px);
 
-    border-color:
-    rgba(212,164,44,0.35);
+    border-color:rgba(212,164,44,0.35);
 
-    box-shadow:
-    0 20px 50px rgba(0,0,0,0.45);
+    box-shadow:0 20px 50px rgba(0,0,0,0.45);
 }
 
 .jeevani-card img{
     width:100%;
     height:100%;
     object-fit:cover;
+    transition:0.5s ease;
+}
+
+.jeevani-card:hover img{
+    transform:scale(1.06);
 }
 
 .jeevani-overlay{
@@ -472,25 +469,48 @@ a{
     inset:0;
 
     display:flex;
-    align-items:flex-end;
+    flex-direction:column;
+    justify-content:flex-end;
 
     padding:35px;
 
     background:
     linear-gradient(to top,
     rgba(0,0,0,0.95),
-    rgba(0,0,0,0.2));
+    rgba(0,0,0,0.10));
+}
+
+.jeevani-label{
+    color:#d4a42c;
+    letter-spacing:2px;
+    font-size:0.78rem;
+    text-transform:uppercase;
+    margin-bottom:10px;
 }
 
 .jeevani-overlay h3{
     font-family:'Cinzel',serif;
-    font-size:2rem;
+    font-size:1.8rem;
     margin-bottom:10px;
 }
 
 .jeevani-overlay p{
-    color:#ddd;
-    line-height:1.8;
+    color:#ccc;
+    line-height:1.7;
+    font-size:0.95rem;
+    margin-bottom:18px;
+}
+
+.jeevani-badge{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:50px;
+    background:rgba(212,164,44,0.12);
+    border:1px solid rgba(212,164,44,0.25);
+    color:#d4a42c;
+    font-size:0.82rem;
+    letter-spacing:1px;
+    width:fit-content;
 }
 
 /* FOOTER */
@@ -675,6 +695,18 @@ footer{
 }
 
 .card-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,0.88),
+    rgba(0,0,0,0.10));
+
+    display:flex;
+    align-items:flex-end;
+
     padding:24px;
 }
 
@@ -682,44 +714,20 @@ footer{
     font-size:1.5rem;
 }
 
-.card-overlay{
-    position:absolute;
-    inset:0;
-
-    background:
-    linear-gradient(
-    to top,
-    rgba(0,0,0,0.88),
-    rgba(0,0,0,0.10));
-
-    display:flex;
-    align-items:flex-end;
-
-    padding:35px;
-}
-
 .jeevani-card{
-    min-height:320px;
+    height:320px;
 }
 
 .jeevani-overlay{
-    position:absolute;
-    inset:0;
-
-    display:flex;
-    align-items:flex-end;
-
-    padding:35px;
-
-    background:
-    linear-gradient(
-    to top,
-    rgba(0,0,0,0.88),
-    rgba(0,0,0,0.10));
+    padding:24px;
 }
 
 .jeevani-overlay h3{
     font-size:1.5rem;
+}
+
+.jeevani-overlay p{
+    font-size:0.88rem;
 }
 
 footer{
@@ -893,49 +901,33 @@ footer{
 
     <div class="jeevani-grid">
 
-        <div class="jeevani-card">
+        <a href="/GurmatKhajana/jeevani/bhai_nirmal_singh.html" class="jeevani-card">
 
             <img src="images/gallery/jeevani/Bhai_Nirmal_Singh.jpg">
 
             <div class="jeevani-overlay">
-
-                <div>
-
-                    <h3>Bhai Nirmal Singh</h3>
-
-                    <p>
-                        Learn about Bhai Sahib!
-                    </p>
-
-                </div>
-
+                <div class="jeevani-label">Jeevani</div>
+                <h3>Bhai Nirmal Singh Ji</h3>
+                <p>Life, spiritual legacy and kamaee of Bhai Sahib.</p>
+                <div class="jeevani-badge">Read Jeevani</div>
             </div>
 
-        </div>
+        </a>
 
-        <div class="jeevani-card">
+        <a href="/GurmatKhajana/jeevani/bhai_jagtar_singh.html" class="jeevani-card">
 
-            <img src="images/gallery/siteimages/5.jpeg">
+            <img src="images/gallery/jeevani/Bhai_Jagtar_Singh.jpg">
 
             <div class="jeevani-overlay">
-
-                <div>
-
-                    <h3>Gursikh Jeevan</h3>
-
-                    <p>
-                        Stories and experiences
-                        from inspiring Gursikhs.
-                    </p>
-
-                </div>
-
+                <div class="jeevani-label">Jeevani</div>
+                <h3>Bhai Jagtar Singh Ji</h3>
+                <p>Life, seva and spiritual legacy of Bhai Sahib.</p>
+                <div class="jeevani-badge">Read Jeevani</div>
             </div>
 
-        </div>
+        </a>
 
     </div>
-
 </section>
 
 <footer>
