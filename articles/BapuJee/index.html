@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Articles • GurmatKhajana</title>
+  <title>Bhai Sadhu Singh Bapu Ji • GurmatKhajana</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +31,8 @@ body{
     overflow-x:hidden;
 }
 
+/* BACKGROUND */
+
 body::before{
     content:'';
     position:fixed;
@@ -43,6 +45,30 @@ body::before{
 
     pointer-events:none;
     z-index:-1;
+}
+
+body::after{
+    content:'';
+
+    position:fixed;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(212,164,44,0.10),
+    transparent 25%),
+
+    radial-gradient(circle at 85% 30%,
+    rgba(212,164,44,0.08),
+    transparent 30%),
+
+    radial-gradient(circle at 50% 80%,
+    rgba(255,255,255,0.03),
+    transparent 35%);
+
+    pointer-events:none;
+    z-index:-2;
 }
 
 a{
@@ -121,7 +147,7 @@ a{
 .hero{
     position:relative;
 
-    min-height:55vh;
+    min-height:60vh;
 
     display:flex;
     justify-content:center;
@@ -131,11 +157,13 @@ a{
 
     overflow:hidden;
 
+    isolation:isolate;
+
     background:
-    linear-gradient(rgba(0,0,0,0.55),
-    rgba(0,0,0,0.88)),
-    url('../images/gallery/siteimages/darbar.jpeg')
-    center/cover fixed;
+    linear-gradient(rgba(0,0,0,0.60),
+    rgba(0,0,0,0.90)),
+    url('../../images/gallery/siteimages/bapujee.png')
+    center top/cover fixed;
 }
 
 .hero::before{
@@ -146,33 +174,73 @@ a{
     background:
     radial-gradient(circle at center,
     transparent 10%,
-    rgba(0,0,0,0.78) 100%);
+    rgba(0,0,0,0.82) 100%);
+}
+
+.hero::after{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(212,164,44,0.12),
+    transparent 45%);
+
+    z-index:1;
 }
 
 .hero-content{
     position:relative;
     z-index:2;
 
-    padding:160px 20px 80px;
+    max-width:900px;
+
+    padding:180px 20px 100px;
 }
 
 .hero-content h1{
     font-family:'Cinzel',serif;
     font-size:4.5rem;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .hero-content p{
     color:#d0d0d0;
-    font-size:1.1rem;
-    line-height:1.8;
+    font-size:1.15rem;
+    line-height:2;
 }
 
-/* SECTION */
+/* CONTENT */
 
-.section{
-    padding:100px 7%;
+.content-section{
+    position:relative;
+    padding:110px 7%;
+}
+
+.content-section::before{
+    content:'';
+
+    position:absolute;
+
+    top:120px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:75%;
+    height:75%;
+
+    background:
+    radial-gradient(circle,
+    rgba(212,164,44,0.05),
+    transparent 70%);
+
+    filter:blur(80px);
+
+    z-index:-1;
 }
 
 .section-title{
@@ -193,62 +261,69 @@ a{
     margin-top:15px;
 }
 
-/* AUTHOR GRID */
+/* ARTICLE GRID */
 
-.author-grid{
+.article-grid{
     display:grid;
     grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
+    repeat(auto-fill,minmax(320px,1fr));
 
     gap:32px;
+
+    max-width:380px;
 }
 
-/* AUTHOR CARD */
+/* ARTICLE CARD */
 
-.author-card{
+.article-card{
     position:relative;
-
-    min-height:500px;
 
     overflow:hidden;
 
+    min-height:380px;
+
     border-radius:30px;
 
-    background:#111;
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.55),
+    rgba(10,10,10,0.35));
+
+    border:
+    1px solid rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(12px);
 
     transition:0.4s ease;
 
-    border:
-    1px solid rgba(255,255,255,0.06);
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.35);
 }
 
-.author-card:hover{
+.article-card:hover{
     transform:translateY(-8px);
 
     border-color:
-    rgba(212,164,44,0.4);
+    rgba(212,164,44,0.25);
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,0.45);
+    0 25px 60px rgba(0,0,0,0.45);
 }
 
-.author-card img{
+.article-card img{
     width:100%;
     height:100%;
     object-fit:cover;
+    object-position:center top;
 
     transition:0.5s ease;
 }
 
-.author-card img[src*="bapujee"]{
-    object-position:center top;
-}
-
-.author-card:hover img{
+.article-card:hover img{
     transform:scale(1.05);
 }
 
-.author-overlay{
+.article-overlay{
     position:absolute;
     inset:0;
 
@@ -259,15 +334,15 @@ a{
 
     background:
     linear-gradient(to top,
-    rgba(0,0,0,0.96),
-    rgba(0,0,0,0.18));
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.12));
 }
 
-.author-overlay-content{
+.article-overlay-content{
     width:100%;
 }
 
-.author-label{
+.article-label{
     color:#d4a42c;
     font-size:0.8rem;
     letter-spacing:2px;
@@ -276,23 +351,24 @@ a{
     margin-bottom:12px;
 }
 
-.author-overlay h3{
+.article-overlay h3{
     font-family:'Cinzel',serif;
     font-size:2rem;
 
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
-.author-overlay p{
+.article-overlay p{
     color:#ddd;
     line-height:1.8;
-    margin-bottom:20px;
+
+    margin-bottom:22px;
 }
 
-.article-count{
+.read-btn{
     display:inline-block;
 
-    padding:10px 18px;
+    padding:12px 22px;
 
     border-radius:50px;
 
@@ -300,11 +376,18 @@ a{
     rgba(212,164,44,0.12);
 
     border:
-    1px solid rgba(212,164,44,0.2);
+    1px solid rgba(212,164,44,0.22);
 
     color:#d4a42c;
 
     font-size:0.85rem;
+
+    transition:0.3s ease;
+}
+
+.article-card:hover .read-btn{
+    background:#d4a42c;
+    color:black;
 }
 
 /* FOOTER */
@@ -346,43 +429,48 @@ footer{
 }
 
 .hero{
-    min-height:45vh;
+    min-height:50vh;
     background-attachment:scroll;
 }
 
 .hero-content{
-    padding-top:140px;
+    padding-top:150px;
 }
 
 .hero-content h1{
-    font-size:2.6rem;
+    font-size:2.7rem;
 }
 
 .hero-content p{
     font-size:1rem;
+    line-height:1.9;
 }
 
-.section{
-    padding:70px 20px;
+.content-section{
+    padding:80px 20px;
 }
 
 .section-title h2{
     font-size:2rem;
 }
 
-.author-card{
-    min-height:400px;
+.article-grid{
+    max-width:100%;
 }
 
-.author-overlay{
+.article-card{
+    min-height:320px;
+}
+
+.article-overlay{
     padding:24px;
 }
 
-.author-overlay h3{
+.article-overlay h3{
     font-size:1.5rem;
 }
 
-.author-overlay p{
+.article-overlay p{
     font-size:0.92rem;
 }
 
@@ -397,7 +485,7 @@ footer{
 
 <div class="top-main-logo">
 
-  <img src="../images/logo/logo.svg"
+  <img src="../../images/logo/logo.svg"
        alt="GurmatKhajana Logo">
 
 </div>
@@ -423,139 +511,58 @@ footer{
 
   <div class="hero-content">
 
-    <h1>Articles Archive</h1>
+    <h1>Bhai Sadhu Singh Bapu Ji</h1>
 
     <p>
       Explore Gurmat writings, Naam Abhiyaas,
-      Jeevan experiences and spiritual reflections
-      from inspiring Gursikhs.
+      spiritual reflections and priceless
+      Gurmat treasures from Bhai Sadhu Singh
+      Bapu Ji.
     </p>
 
   </div>
 
 </section>
 
-<!-- AUTHORS -->
+<!-- ARTICLES -->
 
-<section class="section">
+<section class="content-section">
 
   <div class="section-title">
 
-    <span>Gursikh Writers</span>
+    <span>Articles Archive</span>
 
-    <h2>Browse By Author</h2>
+    <h2>Browse Articles</h2>
 
   </div>
 
-  <div class="author-grid">
+  <div class="article-grid">
 
-    <!-- Bhai Randhir Singh -->
+    <!-- Krodh -->
 
-    <a href="/GurmatKhajana/articles/BhaiRandhirSingh/index.html"
-       class="author-card">
+    <a href="#" class="article-card">
 
-      <img src="../images/gallery/siteimages/1.jpg">
+      <img src="../../images/gallery/siteimages/bapujee.png">
 
-      <div class="author-overlay">
+      <div class="article-overlay">
 
-        <div class="author-overlay-content">
+        <div class="article-overlay-content">
 
-          <div class="author-label">
+          <div class="article-label">
             Gurmat Archive
           </div>
 
           <h3>
-            Bhai Randhir Singh Ji
+            Krodh
           </h3>
 
-          <div class="article-count">
-            View Articles
-          </div>
+          <p>
+            Gurmat teachings on anger and
+            how to overcome it.
+          </p>
 
-        </div>
-
-      </div>
-
-    </a>
-
-    <!-- Bhai Joginder Singh Talwara -->
-
-    <a href="/GurmatKhajana/articles/Talwara/index.html"
-       class="author-card">
-
-      <img src="../images/gallery/siteimages/talwara.jpg">
-
-      <div class="author-overlay">
-
-        <div class="author-overlay-content">
-
-          <div class="author-label">
-            Gurmat Archive
-          </div>
-
-          <h3>
-            Bhai Joginder Singh Talwara
-          </h3>
-
-          <div class="article-count">
-            View Articles
-          </div>
-
-        </div>
-
-      </div>
-
-    </a>
-
-    <!-- Bhai Jasbir Singh Mohali -->
-
-    <a href="/GurmatKhajana/articles/BhaiJasbirSinghMohali/index.html"
-       class="author-card">
-
-      <img src="../images/gallery/siteimages/mohali.jpeg">
-
-      <div class="author-overlay">
-
-        <div class="author-overlay-content">
-
-          <div class="author-label">
-            Gurmat Archive
-          </div>
-
-          <h3>
-            Bhai Jasbir Singh Mohali
-          </h3>
-
-          <div class="article-count">
-            View Articles
-          </div>
-
-        </div>
-
-      </div>
-
-    </a>
-
-    <!-- Bhai Sadhu Singh Bapu Ji -->
-
-    <a href="/GurmatKhajana/articles/BapuJee/index.html" class="author-card">
-
-      <img src="../images/gallery/siteimages/bapujee.png">
-
-      <div class="author-overlay">
-
-        <div class="author-overlay-content">
-
-          <div class="author-label">
-            Gurmat Archive
-          </div>
-
-          <h3>
-            Bhai Sadhu Singh Bapu Ji
-          </h3>
-
-          <div class="article-count">
-            View Articles
+          <div class="read-btn">
+            Read Article
           </div>
 
         </div>
