@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bhai Rama Singh Ji • GurmatKhajana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'EB Garamond',serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 15% 20%,
+    rgba(212,164,44,0.06),
+    transparent 25%),
+    radial-gradient(circle at 85% 60%,
+    rgba(212,164,44,0.04),
+    transparent 30%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-family:'Inter',sans-serif;
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+    top:14px;
+    left:40px;
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.5) 50%,
+    rgba(0,0,0,0.97) 100%),
+    url('../images/gallery/jeevani/Bhai_Rama_Singh.jpg')
+    center top/cover no-repeat;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(ellipse at center bottom,
+    rgba(212,164,44,0.08),
+    transparent 60%);
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    max-width:900px;
+
+    padding:0 40px 80px;
+
+    text-align:center;
+}
+
+.hero-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+
+    margin-bottom:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+}
+
+.hero-label::before,
+.hero-label::after{
+    content:'';
+    width:60px;
+    height:1px;
+    background:rgba(212,164,44,0.4);
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+    font-weight:600;
+    color:#fff;
+
+    margin-bottom:16px;
+
+    line-height:1.1;
+}
+
+.hero-content h1 em{
+    color:#d4a42c;
+    font-style:normal;
+}
+
+.hero-dates{
+    color:#888;
+    letter-spacing:3px;
+    font-size:0.9rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+}
+
+/* ARTICLE BODY */
+
+.article-body{
+    max-width:780px;
+    margin:0 auto;
+    padding:90px 40px 120px;
+}
+
+/* OPENING QUOTE */
+
+.opening-quote{
+    text-align:center;
+    margin-bottom:80px;
+
+    padding:50px 40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(212,164,44,0.06),
+    rgba(212,164,44,0.02));
+
+    border:1px solid rgba(212,164,44,0.15);
+
+    position:relative;
+}
+
+.opening-quote::before{
+    content:'\201C';
+
+    position:absolute;
+    top:-30px;
+    left:50%;
+    transform:translateX(-50%);
+
+    font-family:'Cinzel',serif;
+    font-size:6rem;
+    color:rgba(212,164,44,0.25);
+    line-height:1;
+}
+
+.opening-quote p{
+    font-family:'EB Garamond',serif;
+    font-size:1.35rem;
+    font-style:italic;
+    color:#d4a42c;
+    line-height:1.9;
+}
+
+.opening-quote cite{
+    display:block;
+    margin-top:18px;
+    color:#888;
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-family:'Inter',sans-serif;
+}
+
+/* PROSE */
+
+.prose p{
+    font-family:'EB Garamond',serif;
+    font-size:1.22rem;
+    line-height:2;
+    color:#d8d8d8;
+    margin-bottom:32px;
+}
+
+.prose p:first-child::first-letter{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    font-weight:600;
+    color:#d4a42c;
+    float:left;
+    line-height:0.8;
+    margin-right:10px;
+    margin-top:8px;
+}
+
+/* SECTION DIVIDER */
+
+.section-divider{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin:60px 0;
+}
+
+.section-divider span{
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,0.08);
+}
+
+.section-divider p{
+    color:#d4a42c;
+    letter-spacing:3px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+    white-space:nowrap;
+}
+
+/* PULL QUOTE */
+
+.pull-quote{
+    margin:50px 0;
+
+    padding:40px 45px;
+
+    border-left:3px solid #d4a42c;
+
+    background:
+    linear-gradient(to right,
+    rgba(212,164,44,0.05),
+    transparent);
+
+    border-radius:0 16px 16px 0;
+}
+
+.pull-quote p{
+    font-family:'EB Garamond',serif;
+    font-size:1.4rem;
+    font-style:italic;
+    color:#e8d5a3;
+    line-height:1.8;
+    margin:0;
+}
+
+.pull-quote cite{
+    display:block;
+    margin-top:14px;
+    color:#888;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-family:'Inter',sans-serif;
+}
+
+/* CLOSING */
+
+.closing-block{
+    margin-top:80px;
+    text-align:center;
+
+    padding:60px 40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.8),
+    rgba(10,10,10,0.6));
+
+    border:1px solid rgba(212,164,44,0.12);
+}
+
+.closing-block p{
+    font-family:'EB Garamond',serif;
+    font-size:1.25rem;
+    font-style:italic;
+    color:#ccc;
+    line-height:1.9;
+}
+
+.closing-block strong{
+    display:block;
+    margin-top:20px;
+    color:#d4a42c;
+    font-style:normal;
+    font-size:1rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* BACK LINK */
+
+.back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:60px;
+
+    color:#888;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+
+    transition:0.3s ease;
+}
+
+.back-link:hover{
+    color:#d4a42c;
+}
+
+.back-link::before{
+    content:'←';
+    font-size:1rem;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+
+    font-family:'Inter',sans-serif;
+    font-size:0.85rem;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero-content h1{
+    font-size:2.8rem;
+}
+
+.article-body{
+    padding:60px 24px 80px;
+}
+
+.opening-quote{
+    padding:35px 24px;
+}
+
+.prose p{
+    font-size:1.1rem;
+}
+
+.pull-quote{
+    padding:30px 28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-main-logo">
+    <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+</div>
+
+<nav class="navbar">
+
+    <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/articles/index.html">Articles</a>
+        <a href="/jeevani/index.html">Jeevani</a>
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            Jeevani
+        </div>
+
+        <h1>Bhai <em>Rama</em> Singh Ji</h1>
+
+        <p class="hero-dates">ਵਾਹਿਗੁਰੂਜੀਕਾਖਾਲਸਾਵਾਹਿਗੁਰੂਜੀਕੀਫਤਹਿ</p>
+
+    </div>
+
+</section>
+
+<div class="article-body">
+
+    <a href="/jeevani/index.html" class="back-link">
+        Back to Jeevani
+    </a>
+
+    <div class="opening-quote">
+        <p>
+            "Without the Perfect Guru there is no salvation."
+        </p>
+        <cite>The awakening that changed Bhai Sahib's life forever</cite>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            Bhai Rama Singh Ji was born in 1930 in the village of Chhariavli in
+            Uttar Pradesh, Northern India, into a staunch Hindu family. His father
+            was Vaid Chandar Pal and his mother was Bibi Lashmi Devi. He was named
+            "Rama" and grew up with one brother and two sisters.
+        </p>
+
+        <p>
+            The turning point of Bhai Sahib's life came at the age of eight after
+            hearing a sermon by Baba Rattan Daas. The Baba explained the suffering
+            of wandering through 8.4 million life forms without remembering God.
+            These words pierced deeply into Bhai Sahib's heart.
+        </p>
+
+        <p>
+            He asked himself:
+        </p>
+
+    </div>
+
+    <div class="pull-quote">
+        <p>
+            "Why shouldn't I meditate on God's Name in this very life and attain liberation?"
+        </p>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            As he began meditating, an inner voice repeatedly echoed:
+            "Without the Perfect Guru there is no salvation."
+        </p>
+
+        <p>
+            Drawn by spiritual yearning, Bhai Sahib left home and travelled to
+            Rishikesh, regarded as the land of saints. Living within the jungle,
+            he immersed himself in Simran, continuously meditating on "Haray Raama."
+        </p>
+
+        <p>
+            Yet again the same message echoed within:
+            "Without the Perfect Guru there is no salvation."
+        </p>
+
+    </div>
+
+    <div class="section-divider">
+        <span></span>
+        <p>Discovering Gurbani</p>
+        <span></span>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            In search of truth, Bhai Sahib later travelled to Delhi and stayed with
+            his uncle, working within the hotel trade. Opposite the hotel stood
+            Gurdwara Sis Ganj Sahib.
+        </p>
+
+        <p>
+            Through work opportunities he eventually travelled to Indonesia in 1957.
+            One day in a hotel room he discovered two Gutke of Sukhmani Sahib —
+            one written in Hindi and one in Gurmukhi.
+        </p>
+
+        <p>
+            Bhai Sahib began reading Sukhmani Sahib with devotion every single day.
+            For twenty-one days he continuously recited the Baani. Witnessing this
+            devotion, the government officer he worked under told him:
+        </p>
+
+    </div>
+
+    <div class="pull-quote">
+        <p>
+            "I respect anyone who recites Sukhmani Sahib. From today you are not my servant — you are my son."
+        </p>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            Through Gurbani, Bhai Sahib experienced peace and bliss unlike anything
+            he had known before. However, whilst living amongst worldly distractions,
+            the five thieves slowly pulled his mind away from Simran.
+        </p>
+
+        <p>
+            The spiritual bliss faded. Bhai Sahib realised the emptiness of worldly
+            pleasures and returned back to India, determined to continue his search
+            for the True Guru.
+        </p>
+
+    </div>
+
+    <div class="section-divider">
+        <span></span>
+        <p>The Perfect Guru</p>
+        <span></span>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            Bhai Sahib travelled widely searching for spiritual fulfilment. He visited
+            churches and mandirs but his soul remained restless.
+        </p>
+
+        <p>
+            Finally, one day he entered a Gurdwara.
+        </p>
+
+        <p>
+            As Bhai Sahib bowed before Sri Guru Granth Sahib Ji, he felt a divine
+            force descend upon his head. Listening to Rehraas Sahib, Kirtan and
+            Kathaa, he heard the words:
+        </p>
+
+    </div>
+
+    <div class="pull-quote">
+        <p>
+            "The Perfect Guru is Sri Guru Granth Sahib Ji."
+        </p>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            At that very moment, Bhai Sahib realised he had found what he had spent
+            years searching for.
+        </p>
+
+    </div>
+
+    <div class="section-divider">
+        <span></span>
+        <p>Journey to England</p>
+        <span></span>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            Bhai Sahib arrived in England on 18th January 1964 by ship at Tilbury.
+            Soon after arriving he obtained his first Nitnem Gutka and began reciting
+            Mool Mantar continuously.
+        </p>
+
+        <p>
+            Immersed in Naam, Bhai Sahib experienced immense calmness and spiritual
+            strength. During this time he travelled across Europe with companions
+            from different backgrounds and faiths.
+        </p>
+
+    </div>
+
+    <div class="section-divider">
+        <span></span>
+        <p>Darshan of Guru Gobind Singh Ji</p>
+        <span></span>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            Whilst staying in Germany during one journey, Bhai Sahib faced a difficult
+            situation that deeply tested his discipline and purity.
+        </p>
+
+        <p>
+            Throughout the journey he had continuously recited Japji Sahib and
+            Chaupaee Sahib. That night, in deep prayer, Bhai Sahib begged Guru Gobind
+            Singh Ji to preserve the honour of Sikhi.
+        </p>
+
+        <p>
+            At Amritvela the hotel room suddenly filled with a brilliant divine light.
+        </p>
+
+    </div>
+
+    <div class="pull-quote">
+        <p>
+            Guru Gobind Singh Ji blessed Bhai Sahib with Darshan and commanded him to take Amrit and spread Gurmat across the world.
+        </p>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            From that moment onward Bhai Sahib discarded the razor, kept his Kesh,
+            and dedicated his life fully to Guru Sahib.
+        </p>
+
+    </div>
+
+    <div class="section-divider">
+        <span></span>
+        <p>The Gift of Amrit</p>
+        <span></span>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            Returning to England, Bhai Sahib met Gursikhs at Shepherd's Bush Gurdwara
+            and was introduced to Giani Amolak Singh Ji.
+        </p>
+
+        <p>
+            Shortly afterwards, the first Rainasabaee Keertan was organised in Southall
+            during Guru Gobind Singh Ji's Gurpurab in 1968. Bhai Sahib was deeply moved.
+        </p>
+
+        <p>
+            An Amrit Sanchaar followed where many Singhs and Singhnees received Amrit
+            and immersed themselves into Naam and Gurmat living.
+        </p>
+
+    </div>
+
+    <div class="pull-quote">
+        <p>
+            Bhai Sahib devoted his entire life to inspiring others toward Amrit, Naam and Gurmat Rehit.
+        </p>
+    </div>
+
+    <div class="section-divider">
+        <span></span>
+        <p>Mission & Seva</p>
+        <span></span>
+    </div>
+
+    <div class="prose">
+
+        <p>
+            Bhai Sahib helped establish Amritvela Simran programmes and Rainasabaee
+            Keertans across the UK. His mission spread across many countries including
+            Malaysia, Singapore, Indonesia, East Africa, Canada, America and Europe.
+        </p>
+
+        <p>
+            Thousands were inspired through his humility, discipline and deep love
+            for Guru Sahib.
+        </p>
+
+        <p>
+            Despite widespread respect and recognition, Bhai Sahib always remained
+            humble and grounded in seva.
+        </p>
+
+        <p>
+            Whilst absorbed in Simran he would clean the Sangat's shoes and wash dishes
+            within the Langar Hall, teaching through actions rather than words.
+        </p>
+
+    </div>
+
+    <div class="closing-block">
+
+        <p>
+            Bhai Rama Singh Ji spent his life searching for the Perfect Guru —
+            and after finding Guru Sahib, he dedicated every breath toward Naam,
+            Amrit and Gurmat Parchaar.
+        </p>
+
+        <strong>
+            ਵਾਹਿਗੁਰੂਜੀਕਾਖਾਲਸਾਵਾਹਿਗੁਰੂਜੀਕੀਫਤਹਿ
+        </strong>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+</body>
+</html>
