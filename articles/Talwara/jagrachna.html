@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GurmatKhajana • ਜਗ-ਰਚਨਾ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* MOBILE NAV */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    display:none;
+}
+
+.top-main-logo img{
+    width:135px;
+}
+
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.88)),
+
+    url('/images/gallery/siteimages/talwara.jpg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 5%,
+    rgba(0,0,0,0.72) 100%);
+
+    backdrop-filter:blur(2px);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:1100px;
+
+    text-align:center;
+
+    padding:100px 20px 60px;
+}
+
+.main-logo img{
+    display:block;
+    width:100%;
+    max-width:520px;
+    height:auto;
+
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.article-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:0.85rem;
+
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    line-height:1.3;
+    color:#d4a42c;
+
+    margin-bottom:25px;
+}
+
+.article-meta{
+    color:#d0d0d0;
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+/* ARTICLE BODY */
+
+.article-wrapper{
+    width:100%;
+    max-width:950px;
+
+    margin:auto;
+
+    padding:90px 30px 120px;
+}
+
+.featured-image{
+    width:100%;
+    height:620px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:55px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.45);
+}
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.article-content{
+    font-size:1.2rem;
+    line-height:2.4;
+    color:#e2e2e2;
+}
+
+.article-content p{
+    margin-bottom:40px;
+}
+
+/* LANGUAGE SWITCHER */
+
+.language-switcher{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.language-switcher button{
+    padding:14px 28px;
+    border-radius:50px;
+
+    background:#1a1a1a;
+    color:#d4a42c;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid rgba(212,164,44,0.3);
+
+    transition:0.3s ease;
+}
+
+.language-switcher button:hover{
+    background:#d4a42c;
+    color:black;
+}
+
+.language-switcher button.active{
+    background:#d4a42c;
+    color:black;
+}
+
+.gurbani-block{
+    margin:70px 0;
+
+    padding:50px 40px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(18,18,18,0.96),
+    rgba(8,8,8,0.98));
+
+    border:1px solid rgba(212,164,44,0.2);
+
+    text-align:center;
+}
+
+.gurbani-block .gurmukhi{
+    font-size:1.6rem;
+    line-height:2;
+    color:#d4a42c;
+
+    margin-bottom:10px;
+}
+
+.gurbani-block .translation{
+    font-size:1rem;
+    color:#aaa;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:60px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:#d4a42c;
+    color:black;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.back-home:hover{
+    transform:translateY(-3px);
+}
+
+.attribution{
+    margin-top:50px;
+    padding:35px 40px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:rgba(255,255,255,0.02);
+}
+
+.attribution p{
+    color:#aaa;
+    font-size:1rem;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero{
+    min-height:70vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding-top:100px;
+}
+
+.main-logo img{
+    max-width:250px;
+}
+
+.hero-content h1{
+    font-size:2.2rem;
+}
+
+.article-wrapper{
+    padding:60px 20px 90px;
+}
+
+.featured-image{
+    height:340px;
+    border-radius:24px;
+}
+
+.article-content{
+    font-size:1rem;
+    line-height:2.2;
+}
+
+.gurbani-block{
+    padding:35px 24px;
+}
+
+.gurbani-block .gurmukhi{
+    font-size:1.3rem;
+    line-height:1.8;
+}
+
+.language-switcher button{
+    width:100%;
+}
+
+.attribution{
+    padding:28px 24px;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+  <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/articles/index.html">Articles</a>
+    <a href="/jeevani/index.html">Jeevani</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="main-logo">
+      <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+    </div>
+
+    <div class="article-label">
+      GurmatKhajana Article
+    </div>
+
+    <h1>ਜਗ-ਰਚਨਾ</h1>
+
+    <div class="article-meta">
+      ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ ਦੀ ਬਾਣੀ ਵਿਚੋਂ — Bhai Sahib Joginder Singh Ji Talwara
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ARTICLE -->
+
+<section class="article-wrapper">
+
+  <div class="featured-image">
+    <img src="/images/gallery/siteimages/talwara.jpg" alt="Bhai Joginder Singh Talwara">
+  </div>
+
+  <div class="article-content">
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-switcher">
+
+      <button onclick="showPunjabi()" id="paBtn" class="active">
+        ਪੰਜਾਬੀ
+      </button>
+
+      <button onclick="showEnglish()" id="enBtn">
+        English
+      </button>
+
+    </div>
+
+    <!-- PUNJABI CONTENT -->
+
+    <div id="punjabi-content">
+
+      <p>
+        ਇਹ ਸੰਸਾਰ, ਵਾਹਿਗੁਰੂ ਦੀ ਵਚਿਤਰ ਰਚਨਾ ਦਾ ਨਮੂਨਾ ਹੈ । ਰਚਨਹਾਰ ਆਪ ਸੁੰਦ੍ਰਾਵਲਾ ਹੈ, ਇਸ ਲਈ ਉਸ ਦੀ ਰਚਨਾ ਵੀ ਅਤੀਅੰਤ ਸੁੰਦਰ ਅਤੇ ਮਨ-ਮੋਹਣੀ ਹੈ । ਜਗਤ-ਰਚਨਾ ਕਿਉਂ ਅਤੇ ਕਿਵੇਂ ਹੋਈ, ਇਸ ਭੇਤ ਨੂੰ ਕਰਤੇ ਪੁਰਖ ਤੋਂ ਬਗ਼ੈਰ ਕੋਈ ਕੀ ਜਾਣ ਸਕਦਾ ਹੈ । ਪਰ ਇਹ ਇਕ ਅਟੱਲ ਸਚਾਈ ਹੈ ਕਿ ਸਮੁੱਚਾ ਸੰਸਾਰ ਸੱਚੇ ਵਾਹਿਗੁਰੂ ਦੀ ਸੱਚ ਕਮਾਉਣ ਲਈ ਰਚੀ ਹੋਈ ਸੱਚੀ ਧਰਮਸਾਲ ਹੈ ।
+      </p>
+
+      <p>
+        ਸਮੁੱਚਾ ਸੰਸਾਰ ਅਤੇ ਇਸ ਦੀ ਹਰੇਕ ਵਸਤੂ ਦੇ ਰਚੇ ਜਾਣ ਦਾ ਵਿਸ਼ੇਸ਼ ਮੰਤਵ ਜ਼ਰੂਰ ਹੈ। ਪ੍ਰਯੋਜਨ ਇਹ ਹੈ ਕਿ ਜਗਤ ਦੀ ਹਰੇਕ ਵਸਤੂ ਨੇ ਸੱਚ ਦੇ ਖਿਡਾਰੀ ਮਨੁੱਖ ਨੂੰ ਸੱਚ-ਪ੍ਰਾਪਤੀ ਲਈ ਆਪੋ ਆਪਣੀ ਥਾਵੇਂ ਸਹਾਇਤਾ ਕਰਨੀ ਹੈ। ਇਸੇ ਕਾਰਨ ਹੀ— ਇਹ ਜਗਤ-ਰਚਨਾ ਸੱਚੇ ਦੀ ਸੱਚੀ ਲੀਲ੍ਹਾ ਹੈ।
+      </p>
+
+      <p>
+        ਸੰਸਾਰ ਇਕ ਰਚਨਾ ਹੈ, ਪਰਕਿਰਤੀ ਹੈ ਤੇ ਇਹ ਈਸ਼ਵਰੀ ਨਿਯਮ ਹੈ ਕਿ ਪਰਕਿਰਤੀ ਵਿਚ ਹਰ ਪਲ, ਹਰ ਛਿਨ ਤਬਦੀਲੀ ਵਾਪਰਦੀ ਰਹਿੰਦੀ ਹੈ ਅਤੇ ਸਮਾਂ ਪਾ ਕੇ ਇਸਦਾ ਰੂਪ ਵਟੀਜਦਾ ਰਹਿੰਦਾ ਹੈ। ਦਿਸਣਹਾਰ ਸਾਰਾ ਜਗਤ-ਪਸਾਰਾ ਨਾਸ਼ਮਾਨ ਹੈ। ਇਸੇ ਲਈ ਸੰਸਾਰ ਨੂੰ ਸੁਪਨੇ ਦੀ ਨਿਆਈਂ ਚਲਾਇ ਮਾਨ ਕਰਕੇ ਹੀ ਦਰਸਾਇਆ ਹੋਇਆ ਹੈ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਸਮ ਸੁਪਨੈ ਕੈ ਇਹੁ ਜਗੁ ਜਾਨੁ ॥<br>
+          ਬਿਨਸੈ ਛਿਨ ਮੈ ਸਾਚੀ ਮਾਨੁ ॥੧॥
+        </div>
+        <div class="translation">[ਬਸੰਤੁ ਮਹਲਾ ੯]</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਜਗ ਰਚਨਾ ਸਭ ਝੂਠ ਹੈ ਜਾਨਿ ਲੇਹੁ ਰੇ ਮੀਤ ॥</div>
+        <div class="translation">[ਸਲੋਕ ਮ: ੯]</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਨਾਨਕ ਕਹਤ ਜਗਤ ਸਭ ਮਿਥਿਆ ਜਿਉ ਸੁਪਨਾ ਰੈਨਾਈ ॥੨॥੧॥</div>
+        <div class="translation">[ਸਾਰੰਗ ਮ:੯]</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਸਗਲ ਜਗਤੁ ਹੈ ਜੈਸੇ ਸੁਪਨਾ ਬਿਨਸਤ ਲਗਤ ਨ ਬਾਰ ॥੧॥ ਰਹਾਉ ॥</div>
+        <div class="translation">[ਸੋਰਠਿ ਮ:੯]</div>
+      </div>
+
+      <p>
+        ਨੀਂਦਰ ਵਿਚ ਸੁਪਨਾ ਸਚਾ ਲਗਦਾ ਹੈ, ਪਰ ਨੀਂਦਰ ਉਘੜਦਿਆਂ ਹੀ ਸੁਪਨਾ ਐਵੇਂ ਖ਼ਿਆਲੀ ਦੁਨੀਆ ਦੀ ਖੇਡ ਪ੍ਰਤੀਤ ਹੁੰਦੀ ਹੈ। ਏਵੇਂ ਹੀ ਅਗਿਆਨਤਾ ਦੀ ਨੀਂਦ ਕਾਰਨ ਸੰਸਾਰ ਦੀ ਰਚਨਾ ਥਿਰ ਭਾਸਦੀ ਹੈ, ਪਰ ਅਗਿਆਨਤਾ ਦੀ ਨੀਂਦਰ ਖੁਲ੍ਹਦਿਆਂ ਹੀ ਯਥਾਰਥ ਦੀ ਸਮਝ ਪੈ ਜਾਂਦੀ ਹੈ ਕਿ ਇਹ ਨਾਸ਼ਮਾਨ ਹੈ ।
+      </p>
+
+      <p>
+        ਸੰਸਾਰ ਧੂਏਂ ਦੇ ਪਹਾੜ ਵਾਂਗ ਹੈ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਇਹੁ ਜਗੁ ਧੂਏ ਕਾ ਪਹਾਰ ॥</div>
+        <div class="translation">[ਬਸੰਤ ਮ:੯]</div>
+      </div>
+
+      <p>
+        ਸੰਸਾਰ ਪਾਣੀ ਦੇ ਬੁਲਬੁਲੇ ਵਤ ਹੈ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਜੈਸੇ ਜਲ ਤੇ ਬੁਦਬੁਦਾ ਉਪਜੈ ਬਿਨਸੈ ਨੀਤ ॥<br>
+          ਜਗ ਰਚਨਾ ਤੈਸੇ ਰਚੀ ਕਹੁ ਨਾਨਕ ਸੁਨਿ ਮੀਤ ॥੨੫॥
+        </div>
+        <div class="translation">[ਸਲੋਕ ਮਃ: ੯]</div>
+      </div>
+
+      <p>
+        ਰੇਤ ਦੀ ਕੰਧ ਦੀ ਨਿਆਈਂ ਹੈ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਬਾਰੂ ਕੀ ਭੀਤਿ ਜੈਸੇ ਬਸੁਧਾ ਕੋ ਰਾਜੁ ਹੈ ॥੧॥<br>
+          ਬਾਰੂ ਭੀਤਿ ਬਨਾਈ ਰਚਿ ਪਚਿ ਰਹਤ ਨਹੀ ਦਿਨ ਚਾਰਿ ॥
+        </div>
+        <div class="translation">[ਜੈਜਾਵੰਤੀ ਮਃ ੯ / ਸੋਰਠਿ ਮ:੯]</div>
+      </div>
+
+      <p>
+        ਮ੍ਰਿਗ ਤ੍ਰਿਸ਼ਨਾ ਅਤੇ ਬੱਦਲ ਦੀ ਛਾਂ ਵਾਂਗ ਮਿਥਿਆ ਹੈ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਮ੍ਰਿਗ ਤ੍ਰਿਸਨਾ ਜਿਉ ਝੂਠੋ ਇਹੁ ਜਗ ਦੇਖਿ ਤਾਸਿ ਉਠਿ ਧਾਵੈ ॥੧॥<br>
+          ਮ੍ਰਿਗ ਤ੍ਰਿਸਨਾ ਜਿਉ ਜਗ ਰਚਨਾ ਯਹ ਦੇਖਹੁ ਰਿਦੈ ਬਿਚਾਰਿ ॥<br>
+          ਜੋ ਦੀਸੈ ਸੋ ਸਗਲ ਬਿਨਾਸੈ ਜਿਉ ਬਾਦਰ ਕੀ ਛਾਈ ॥
+        </div>
+        <div class="translation">[ਗਉੜੀ ਮ: ੯ / ਦੇਵਗੰਧਾਰੀ ਮ: ੯ / ਗਉੜੀ ਮ: ੯]</div>
+      </div>
+
+      <p>
+        ਪਰ ਮਿਥਿਆ ਹੁੰਦਾ ਹੋਇਆ ਵੀ ਬਾਹਰੋਂ ਏਨਾ ਮਨਮੋਹਣਾ ਤੇ ਮਿੱਠਾ ਹੈ ਕਿ ਕਿਸੇ ਦਾ ਇਸ ਨੂੰ ਛਡਣ ਤੇ ਦਿਲ ਨਹੀਂ ਕਰਦਾ। "ਇਹ ਜਗ ਮਿੱਠਾ" ਇਕ ਮੁਹਾਵਰਾ ਬਣ ਗਿਆ ਹੋਇਆ ਹੈ। ਇਸ ਸੰਸਾਰ ਦੀ ਸੁੰਦਰਤਾ ਅਤੇ ਮਿਠਾਸ ਤੋਂ ਇਨਕਾਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ; ਪਰ ਇਸ ਦਾ ਸਹੀ ਲਾਭ ਉਸ ਨੂੰ ਹੀ ਹੁੰਦਾ ਹੈ ਜੋ ਇਸ ਦੀ ਸੁੰਦਰਤਾ ਨੂੰ ਮਾਣਦਾ ਹੋਇਆ, ਇਸ ਦੀ ਮਿਠਾਸ ਦਾ ਅਨੰਦ ਲੈਂਦਾ ਹੋਇਆ, ਆਪਣੀ ਸੁਰਤੀ ਨੂੰ, ਸੰਸਾਰ ਦੀ ਮਾਇਕੀ ਛਿਨ ਭੰਗਰ ਸੁੰਦਰਤਾ ਤੇ ਰਸਾਂ ਵਿਚ ਖੱਚਤ ਕਰਨ ਦੀ ਬਜਾਏ, ਸੁੰਦ੍ਰਾਵਲੇ ਤੇ ਮਿਠੜੇ ਪ੍ਰਭੂ ਨਾਲ ਜੋੜੀ ਰਖਦਾ ਹੈ। ਮਨੁੱਖ ਦੀ ਖ਼ੁਸ਼ੀ ਤੇ ਸ਼ਾਂਤੀ ਦਾ ਨਿਰਭਰ ਇਸ ਨੁਕਤੇ ਨੂੰ ਸਮਝਣ ਉਤੇ ਹੈ।
+      </p>
+
+      <p>
+        ਜੋ ਇਸ ਭੇਦ ਨੂੰ ਸਮਝ ਲਏ ਉਸ ਲਈ ਜਗਤ ਸੱਚੇ ਦੀ ਕੋਠੜੀ ਹੋ ਨਿਬੜਦਾ ਹੈ ਤੇ ਉਹ ਇਥੇ ਸੱਚ ਦੀ ਕਮਾਈ ਕਰਕੇ ਦਰਗਾਹ ਵਿਚ ਸੁਰਖ਼ਰੂ ਜਾ ਹੁੰਦਾ ਹੈ।
+      </p>
+
+      <p>
+        ਜੋ ਇਸ ਨੁਕਤੇ ਤੋਂ ਖੁੰਝ ਜਾਂਦਾ ਹੈ ਉਹ ਨਾਸ਼ਮਾਨ ਜਗਤ ਦੇ ਨਾਸ਼ਮਾਨ ਪਦਾਰਥਾਂ ਨੂੰ ਭੋਗ ਭੋਗ ਕੇ ਭੋਗਾਂ ਵਿਚ ਹੀ ਪਚ ਮਰਦਾ ਹੈ।
+      </p>
+
+      <div class="gurbani-block">
+        <div class="translation">[ਪੁਸਤਕ "ਸਟੀਕ ਬਾਣੀ ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਜੀ"]</div>
+      </div>
+
+    </div>
+
+    <!-- ENGLISH CONTENT -->
+
+    <div id="english-content" style="display:none;">
+
+      <p>
+        This world is a manifestation of Vaheguru's wondrous creation. The Creator Himself is beautiful; therefore, His creation is also exceedingly beautiful and captivating. Why and how this world came into being — this mystery cannot be known by anyone except the Creator Himself. However, one unchanging truth is that the entire world has been created as a true Dharamsaal — a place where one can live and earn truth in devotion to Vaheguru.
+      </p>
+
+      <p>
+        The whole world, and every single thing within it, has been created with a specific purpose. That purpose is that every element of creation plays its role in helping human beings — seekers and players of truth — to attain truth, each in its own way. For this very reason, this creation of the world is the true Divine play (Leela) of the True One.
+      </p>
+
+      <p>
+        The world is a creation; it is nature. And it is a Divine law that within nature, change is constantly occurring at every moment, every instant. With time, everything continues to transform. All that is visible in this vast expanse of the world is temporary and perishable. That is why the world has been described as being like a dream — ever-moving, fleeting, like an illusion.
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਸਮ ਸੁਪਨੈ ਕੈ ਇਹੁ ਜਗੁ ਜਾਨੁ ॥<br>
+          ਬਿਨਸੈ ਛਿਨ ਮੈ ਸਾਚੀ ਮਾਨੁ ॥੧॥
+        </div>
+        <div class="translation">
+          Know this world to be like a dream. It perishes in an instant — accept this as the true reality.<br>
+          [Basant M:9]
+        </div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਜਗ ਰਚਨਾ ਸਭ ਝੂਠ ਹੈ ਜਾਨਿ ਲੇਹੁ ਰੇ ਮੀਤ ॥</div>
+        <div class="translation">
+          O friend, know that the entire creation of the world is false.<br>
+          [Salok M:9]
+        </div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਨਾਨਕ ਕਹਤ ਜਗਤ ਸਭ ਮਿਥਿਆ ਜਿਉ ਸੁਪਨਾ ਰੈਨਾਈ ॥੨॥੧॥</div>
+        <div class="translation">
+          Nanak says: the whole world is unreal, like a dream in the night.<br>
+          [Sarang M:9]
+        </div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਸਗਲ ਜਗਤੁ ਹੈ ਜੈਸੇ ਸੁਪਨਾ ਬਿਨਸਤ ਲਗਤ ਨ ਬਾਰ ॥੧॥ ਰਹਾਉ ॥</div>
+        <div class="translation">
+          The entire world is like a dream — it vanishes in no time.<br>
+          [Sorath M:9]
+        </div>
+      </div>
+
+      <p>
+        In sleep, a dream feels real; yet upon awakening, it is seen as mere illusion. Likewise, in the sleep of ignorance, the world appears lasting; but once awakened from that ignorance, one realises its true nature — that it is temporary and perishable.
+      </p>
+
+      <p>
+        The world is like a mountain of smoke:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਇਹੁ ਜਗੁ ਧੂਏ ਕਾ ਪਹਾਰ ॥</div>
+        <div class="translation">
+          This world is like a mountain of smoke — appearing solid, yet without true substance.<br>
+          [Basant M:9]
+        </div>
+      </div>
+
+      <p>
+        The world is like a bubble on water:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਜੈਸੇ ਜਲ ਤੇ ਬੁਦਬੁਦਾ ਉਪਜੈ ਬਿਨਸੈ ਨੀਤ ॥<br>
+          ਜਗ ਰਚਨਾ ਤੈਸੇ ਰਚੀ ਕਹੁ ਨਾਨਕ ਸੁਨਿ ਮੀਤ ॥੨੫॥
+        </div>
+        <div class="translation">
+          Just as a bubble arises from water and continually bursts, so is the creation of the world — says Nanak, listen O friend.<br>
+          [Salok M:9]
+        </div>
+      </div>
+
+      <p>
+        Like a wall of sand:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਬਾਰੂ ਕੀ ਭੀਤਿ ਜੈਸੇ ਬਸੁਧਾ ਕੋ ਰਾਜੁ ਹੈ ॥੧॥<br>
+          ਬਾਰੂ ਭੀਤਿ ਬਨਾਈ ਰਚਿ ਪਚਿ ਰਹਤ ਨਹੀ ਦਿਨ ਚਾਰਿ ॥
+        </div>
+        <div class="translation">
+          Like a wall of sand is the rule over the earth — worldly power.<br>
+          A wall of sand, though carefully built and maintained, does not last even a few days.<br>
+          [Jaijawanti M:9 / Sorath M:9]
+        </div>
+      </div>
+
+      <p>
+        It is false like a mirage and like the shadow of clouds:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਮ੍ਰਿਗ ਤ੍ਰਿਸਨਾ ਜਿਉ ਝੂਠੋ ਇਹੁ ਜਗ ਦੇਖਿ ਤਾਸਿ ਉਠਿ ਧਾਵੈ ॥੧॥<br>
+          ਮ੍ਰਿਗ ਤ੍ਰਿਸਨਾ ਜਿਉ ਜਗ ਰਚਨਾ ਯਹ ਦੇਖਹੁ ਰਿਦੈ ਬਿਚਾਰਿ ॥<br>
+          ਜੋ ਦੀਸੈ ਸੋ ਸਗਲ ਬਿਨਾਸੈ ਜਿਉ ਬਾਦਰ ਕੀ ਛਾਈ ॥
+        </div>
+        <div class="translation">
+          Like a mirage, this world is false; yet seeing it, one runs after it.<br>
+          Like a mirage is this world's creation — reflect upon this within your heart.<br>
+          Whatever is seen shall all pass away, like the shadow of clouds.<br>
+          [Gauri M:9 / Devgandhari M:9 / Gauri M:9]
+        </div>
+      </div>
+
+      <p>
+        Even though the world is transient, outwardly it appears so attractive and sweet that no one feels like letting go of it. "This world is sweet" has become a common saying. The beauty and sweetness of this world cannot be denied. However, its true benefit is gained only by the one who, while appreciating its beauty and enjoying its sweetness, does not become absorbed in its fleeting, material charms and pleasures — but instead keeps their awareness connected to the Beautiful and Sweet Divine. A person's happiness and peace depend on understanding this truth.
+      </p>
+
+      <p>
+        One who realises this finds that the world becomes a dwelling place of the True One, and by living truthfully, they depart honoured in the Divine presence (Dargaah).
+      </p>
+
+      <p>
+        One who misses this point remains lost in the perishable world and its temporary pleasures, and ultimately perishes within those very indulgences.
+      </p>
+
+      <div class="attribution">
+        <p>
+          [From the book "Steek Bani Sri Guru Tegh Bahadur Ji"]
+        </p>
+        <p>
+          With Guru Sahib's kirpa, this digitisation seva has been carried out by
+          Daas Bhupinder Singh (Dharam Parchar Lead – AKJ UK).
+        </p>
+        <p>
+          Daas humbly seeks forgiveness for any mistakes or shortcomings.
+        </p>
+      </div>
+
+    </div>
+
+    <a href="/articles/Talwara/index.html" class="back-home">
+      ← Back To Talwara Articles
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+<script>
+
+function showPunjabi(){
+    document.getElementById('punjabi-content').style.display = 'block';
+    document.getElementById('english-content').style.display = 'none';
+    document.getElementById('paBtn').classList.add('active');
+    document.getElementById('enBtn').classList.remove('active');
+}
+
+function showEnglish(){
+    document.getElementById('punjabi-content').style.display = 'none';
+    document.getElementById('english-content').style.display = 'block';
+    document.getElementById('enBtn').classList.add('active');
+    document.getElementById('paBtn').classList.remove('active');
+}
+
+</script>
+
+</body>
+</html>
