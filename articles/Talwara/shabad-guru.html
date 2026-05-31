@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GurmatKhajana • ਸਤਿਗੁਰ ਮੈ ਸਬਦੁ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* MOBILE NAV */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    display:none;
+}
+
+.top-main-logo img{
+    width:135px;
+}
+
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.88)),
+
+    url('/images/gallery/siteimages/talwara.jpg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 5%,
+    rgba(0,0,0,0.72) 100%);
+
+    backdrop-filter:blur(2px);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:1100px;
+
+    text-align:center;
+
+    padding:100px 20px 60px;
+}
+
+.main-logo img{
+    display:block;
+    width:100%;
+    max-width:520px;
+    height:auto;
+
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.article-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:0.85rem;
+
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    line-height:1.4;
+    color:#d4a42c;
+
+    margin-bottom:25px;
+}
+
+.article-meta{
+    color:#d0d0d0;
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+/* ARTICLE BODY */
+
+.article-wrapper{
+    width:100%;
+    max-width:950px;
+
+    margin:auto;
+
+    padding:90px 30px 120px;
+}
+
+.featured-image{
+    width:100%;
+    height:620px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:55px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.45);
+}
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.article-content{
+    font-size:1.2rem;
+    line-height:2.4;
+    color:#e2e2e2;
+}
+
+.article-content p{
+    margin-bottom:40px;
+}
+
+/* LANGUAGE SWITCHER */
+
+.language-switcher{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.language-switcher button{
+    padding:14px 28px;
+    border-radius:50px;
+
+    background:#1a1a1a;
+    color:#d4a42c;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid rgba(212,164,44,0.3);
+
+    transition:0.3s ease;
+}
+
+.language-switcher button:hover{
+    background:#d4a42c;
+    color:black;
+}
+
+.language-switcher button.active{
+    background:#d4a42c;
+    color:black;
+}
+
+.gurbani-block{
+    margin:70px 0;
+
+    padding:50px 40px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(18,18,18,0.96),
+    rgba(8,8,8,0.98));
+
+    border:1px solid rgba(212,164,44,0.2);
+
+    text-align:center;
+}
+
+.gurbani-block .gurmukhi{
+    font-size:1.6rem;
+    line-height:2;
+    color:#d4a42c;
+
+    margin-bottom:10px;
+}
+
+.gurbani-block .translation{
+    font-size:1rem;
+    color:#aaa;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.section-heading{
+    font-family:'Cinzel',serif;
+    font-size:1.3rem;
+    color:#d4a42c;
+    letter-spacing:2px;
+    margin-bottom:30px;
+    margin-top:60px;
+    text-transform:uppercase;
+}
+
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:60px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:#d4a42c;
+    color:black;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.back-home:hover{
+    transform:translateY(-3px);
+}
+
+.attribution{
+    margin-top:50px;
+    padding:35px 40px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:rgba(255,255,255,0.02);
+}
+
+.attribution p{
+    color:#aaa;
+    font-size:1rem;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero{
+    min-height:70vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding-top:100px;
+}
+
+.main-logo img{
+    max-width:250px;
+}
+
+.hero-content h1{
+    font-size:1.6rem;
+}
+
+.article-wrapper{
+    padding:60px 20px 90px;
+}
+
+.featured-image{
+    height:340px;
+    border-radius:24px;
+}
+
+.article-content{
+    font-size:1rem;
+    line-height:2.2;
+}
+
+.gurbani-block{
+    padding:35px 24px;
+}
+
+.gurbani-block .gurmukhi{
+    font-size:1.3rem;
+    line-height:1.8;
+}
+
+.language-switcher button{
+    width:100%;
+}
+
+.attribution{
+    padding:28px 24px;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+  <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/articles/index.html">Articles</a>
+    <a href="/jeevani/index.html">Jeevani</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="main-logo">
+      <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+    </div>
+
+    <div class="article-label">
+      GurmatKhajana Article
+    </div>
+
+    <h1>ਸਤਿਗੁਰ ਮੈ ਸਬਦੁ ਸਬਦ ਮੈ ਸਤਿਗੁਰ ਹੈ ਨਿਰਗੁਨ ਗਿਆਨ ਧਿਆਨ ਸਮਝਾਵੈ ਜੀ</h1>
+
+    <div class="article-meta">
+      ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ ਦੀ ਬਾਣੀ ਵਿਚੋਂ — Bhai Sahib Joginder Singh Ji Talwara
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ARTICLE -->
+
+<section class="article-wrapper">
+
+  <div class="featured-image">
+    <img src="/images/gallery/siteimages/talwara.jpg" alt="Bhai Joginder Singh Talwara">
+  </div>
+
+  <div class="article-content">
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-switcher">
+
+      <button onclick="showPunjabi()" id="paBtn" class="active">
+        ਪੰਜਾਬੀ
+      </button>
+
+      <button onclick="showEnglish()" id="enBtn">
+        English
+      </button>
+
+    </div>
+
+    <!-- PUNJABI CONTENT -->
+
+    <div id="punjabi-content">
+
+      <p>
+        "ਗੁਰੂ" ਦਾ ਸ਼ਬਦੀ ਅਰਥ ਹੈ ਅੰਨ੍ਹੇਰੇ ਵਿਚ ਚਾਨਣ ਕਰਨ ਵਾਲਾ। ਗੁਰੂ ਤੋਂ ਭਾਵ ਹੈ ਉਹ ਹੋਂਦ, ਜੋ ਮਨ ਵਿਚੋਂ ਅਗਿਆਨਤਾ ਦਾ ਅੰਨ੍ਹੇਰਾ ਦੂਰ ਕਰ ਕੇ ਗਿਆਨ ਦਾ ਪਰਕਾਸ਼ ਕਰ ਦੇਵੇ।
+      </p>
+
+      <p>
+        ਮਾਦੀ ਦੁਨੀਆ ਵਿਚ ਦੀਵਾ ਅੰਨ੍ਹੇਰੇ ਨੂੰ ਦੂਰ ਕਰਦਾ ਹੈ ਜਾਂ ਬਿਜਲੀ ਦੇ ਬਲਬ ਦੁਆਰਾ ਅੰਨ੍ਹੇਰੇ ਵਿਚ ਚਾਨਣ ਹੁੰਦਾ ਹੈ। ਸੁਆਲ ਪੈਦਾ ਹੁੰਦਾ ਹੈ ਕਿ ਕੀ ਚਾਨਣ ਕਰਨ ਵਾਲੀ ਵਸਤੂ ਦੀਵੇ ਅਥਵਾ ਬਲਬ ਦਾ ਖੋਲ (Container) ਹੈ, ਜਾਂ ਕੋਈ ਹੋਰ ਚੀਜ਼? ਨਿਰਸੰਦੇਹ ਬਲਬ ਜਾਂ ਖੋਲ ਜੋਤੀ ਦੇ ਪ੍ਰਗਟਾਅ ਦਾ ਕੇਵਲ ਮਾਧਿਅਮ ਹੈ, ਜੋਤੀ ਕੋਈ ਹੋਰ ਚੀਜ਼ ਹੈ।
+      </p>
+
+      <p>
+        ਅਧਿਆਤਮਕ ਖੇਤਰ ਵਿਚ ਪ੍ਰਕਾਸ਼ ਕਰਨ ਵਾਲੀ ਹਸਤੀ "ਗੁਰੂ" ਹੈ। ਮਾਦੀ ਨਜ਼ਰ ਨਾਲ ਵੇਖਿਆਂ ਗੁਰੂ ਵਿਅਕਤੀ ਦਿਸਦਾ ਹੈ, ਪਰ ਗਿਆਨ-ਨੇਤਰਾਂ ਦੁਆਰਾ ਇਹ ਭੇਤ ਖੁਲ੍ਹਦਾ ਹੈ ਕਿ ਗੁਰੂ 'ਵਿਅਕਤੀ' ਨਹੀਂ, 'ਸ਼ਕਤੀ' ਹੈ, ਜਾਂ ਇਉਂ ਕਹੋ ਗੁਰੂ 'ਦੇਹ' ਨਹੀਂ, 'ਜੋਤ' ਹੈ। ਸਾਰੇ ਸਤਿਗੁਰਾਂ ਨੇ ਬਾਣੀ ਉਚਾਰਨ ਕਰਦਿਆਂ ਹੋਇਆਂ ਆਪਣੇ ਨਿਜੀ ਨਾਮ ਦੀ ਬਜਾਏ 'ਨਾਨਕ' ਨਾਮ ਦੀ ਵਰਤੋਂ ਕੀਤੀ, ਤੇ ਇਸ ਤਰ੍ਹਾਂ ਕਰ ਕੇ ਇਹ ਸੱਚਾਈ ਦ੍ਰਿੜ ਕਰਵਾਈ ਕਿ ਗੁਰੂ 'ਸਰੀਰ' ਨਹੀਂ, 'ਜੋਤ' ਹੈ।
+      </p>
+
+      <p>
+        ਸਿਖ ਇਤਿਹਾਸ ਵਿਚ ਗੁਰੂ-ਜੋਤ ਨੇ ਦਸ ਸਰੀਰ-ਜਾਮੇ ਬਦਲੇ ਤੇ ਹੁਣ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਵਿਚ ਬਿਰਾਜਮਾਨ ਹੈ। ਜੇ ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦੀ ਦੇਹ ਗੁਰੂ ਹੁੰਦੀ ਤਾਂ ਉਹਨਾਂ ਦੇ ਸਰੀਰ-ਚੋਲਾ ਛਡਣ ਨਾਲ ਗੁਰਤਾ ਦਾ ਸਿਲਸਿਲਾ ਸਮਾਪਤ ਹੋ ਜਾਂਦਾ। ਅਸਲੀਅਤ ਇਹ ਹੈ ਕਿ ਕਾਇਆਂ ਪਲਟਦੀ ਰਹੀ ਪਰ ਗੁਰੂ ਦੀ ਸ਼ਬਦ-ਜੋਤ ਅਤੇ ਜੁਗਤਿ ਸਦਾ ਕਾਇਮ ਦਾਇਮ ਰਹੀ, ਅਤੇ ਹੁਣ ਵੀ ਸ਼ਬਦ-ਜੋਤ ਉਵੇਂ ਹੀ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੇ ਰੂਪ ਵਿਚ ਅਸਥਿਤ ਹੈ।
+      </p>
+
+      <p>
+        ਜੁਗਤਿ ਵਰਤਾਉਣ ਲਈ ਅਥਵਾ ਗੁਰ-ਦੀਖਿਅਤ ਕਰਨ ਲਈ ਦੇਹ ਦੀ ਲੋੜ, ਕਰਨੀ-ਕਮਾਈ ਵਾਲੇ ਤਿਆਰ-ਬਰ-ਤਿਆਰ ਪੰਜ ਗੁਰਸਿਖਾਂ ਦੁਆਰਾ ਪੂਰੀ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਗੁਰ-ਦੀਖਿਆ ਅੰਮ੍ਰਿਤ-ਸੰਚਾਰ ਦੀ ਰਸਮ ਪੂਰੀ ਕਰਨ ਮਗਰੋਂ ਪੰਜ ਪਿਆਰੇ ਫਿਰ ਗੁਰੂ ਕੇ ਸਿਖ ਹੀ ਸਦਵਾਉਂਦੇ ਹਨ, ਸੰਸਾਰ ਦੇ ਧਾਰਮਿਕ ਇਤਿਹਾਸ ਵਿਚ ਇਹ ਵਿਲੱਖਣ ਗੁਰਮੁਖੀ ਚਾਲ ਹੈ। ਮਾਦੀ ਦੁਨੀਆ ਵਿਚ ਸਰੀਰ ਅਥਵਾ ਦੇਹ ਨੂੰ ਬਹੁਤ ਮਹੱਤਤਾ ਪ੍ਰਾਪਤ ਹੈ। ਮਾਦਾ-ਪ੍ਰਸਤ ਵਿਅਕਤੀ ਤਾਂ ਸਰੀਰ ਨੂੰ ਹੀ ਸਭ ਕੁਝ ਸਮਝਦੇ ਹਨ, ਪਰ ਅਧਿਆਤਮਕ ਖੇਤਰ ਵਿਚ ਦੇਹ ਨੂੰ ਓਨੀ ਹੀ ਮਹੱਤਤਾ ਪ੍ਰਾਪਤ ਹੈ ਜਿੰਨੀ ਦੀ ਇਹ ਪਾਤਰ ਹੈ। ਜੋਤਿ ਦੇ ਟਾਕਰੇ ਵਿਚ ਦੇਹ ਨੂੰ ਤੁਛ ਸਮਝਿਆ ਗਿਆ ਹੈ। ਗੁਰਬਾਣੀ ਦਾ ਫ਼ੁਰਮਾਨ ਹੈ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਕਾਇਆ ਮਾਟੀ ਅੰਧੁ ਹੈ ਪਉਣੈ ਪੁਛਹੁ ਜਾਇ ॥੧॥</div>
+        <div class="translation">ਸਲੋਕੁ ਮ: ੩, ਵਾਰ ਗੂਜਰੀ, ਪੰਨਾ ੫੧੧</div>
+      </div>
+
+      <p>
+        ਪਿਛਲੇ ਕੁਝ ਸਾਲਾਂ ਤੋਂ ਦੇਹ-ਧਾਰੀ ਗੁਰੂ-ਡੰਮ ਦੀ ਬੜੀ ਚਰਚਾ ਹੈ। ਸਿਖ ਧਰਮ ਵਿਚ ਗੁਰੂ ਪ੍ਰਤੀ ਅਥਾਹ ਵਿਸ਼ਵਾਸ ਤੋਂ ਲਾਭ ਲੈਣ ਲਈ ਕਈ ਭਦਰ-ਪੁਰਸ਼ ਮੈਦਾਨ ਵਿਚ ਆ ਨਿਤਰੇ ਹਨ। ਗੁਰੂਆਂ ਦੀ ਹੇੜ ਆ ਗਈ ਹੈ। ਜੇ ਇਸੇ ਸਪੀਡ ਨਾਲ ਕੰਮ ਚਲਦਾ ਰਿਹਾ ਤਾਂ ਕਿਸੇ ਦਿਨ ਨੂੰ ਚੇਲਿਆਂ ਤੋਂ ਗੁਰੂਆਂ ਦੀ ਗਿਣਤੀ ਵਧ ਜਾਏਗੀ।
+      </p>
+
+      <p>
+        ਤ੍ਰਿਕਾਲ ਦਰਸੀ ਸ੍ਰੀ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨੇ ਇਸ ਦਸ਼ਾ ਨੂੰ ਜਾਣਦਿਆਂ ਹੋਇਆਂ ਹੀ ਸ਼ਖਸੀ ਗੁਰਤਾ ਦਾ ਸਿਲਸਿਲਾ ਬੰਦ ਕੀਤਾ ਸੀ ਅਤੇ ਗੁਰਸਿਖਾਂ ਨੂੰ ਸ਼ਬਦ-ਪੁੰਜ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੇ ਲੜ ਲਾ ਕੇ ਜੁਗਤਿ ਵਰਤਾਉਣ ਦਾ ਅਧਿਕਾਰ ਸ਼ਬਦ-ਗੁਰੂ ਦੀ ਤਾਬਿਆ ਵਿਚ ਵਿਚਰਨ ਵਾਲੇ ਕਰਣੀ ਕਮਾਈ ਵਾਲੇ ਪੰਜਾਂ ਦੇ ਪੁੰਜ — ਖ਼ਾਲਸਾ ਪੰਥ — ਨੂੰ ਬਖ਼ਸ਼ਿਆ ਸੀ। ਇਸ ਦੇ ਨਾਲ ਹੀ ਗੁਰੂ ਪਾਤਸ਼ਾਹ ਜੀ ਨੇ ਆਪਣੇ ਅਮੋਲਕ ਬਚਨਾਂ ਦੁਆਰਾ ਗੁਰਸਿਖਾਂ ਨੂੰ ਡੰਮੀ ਗੁਰੂਆਂ ਤੋਂ ਖ਼ਬਰਦਾਰ ਵੀ ਕਰ ਦਿੱਤਾ ਸੀ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਘਰਿ ਘਰਿ ਹੋਇ ਬਹੈਂਗੇ ਰਾਮਾ ॥<br>
+          ਤਿਨ ਤੇ ਸਰੈ ਨ ਕੋਊ ਕਾਮਾ ॥
+        </div>
+      </div>
+
+      <p>
+        ਸ਼ਬਦ-ਗੁਰੂ ਦੇ ਸਿਧਾਂਤ ਦੀ ਪੁਸ਼ਟੀ ਵਿਚ ਬੇਅੰਤ ਪ੍ਰਮਾਣ ਹਨ, ਇਤਿਹਾਸਕ ਵੀ ਤੇ ਸਿਧਾਂਤਕ ਵੀ। ਟੂਕ ਮਾਤਰ ਕੁਝ ਪ੍ਰਮਾਣ ਹੇਠਾਂ ਦਰਜ ਕੀਤੇ ਜਾਂਦੇ ਹਨ:
+      </p>
+
+      <div class="section-heading">ਇਤਿਹਾਸਕ ਪ੍ਰਮਾਣ</div>
+
+      <div class="gurbani-block">
+        <div class="translation" style="font-style:normal; color:#e2e2e2; font-size:1.05rem;">
+          ਸਿੱਖਾਂ ਨੇ ਪੁਛਾ, "ਜੋ ਅਬ ਦਰਸ਼ਨ ਕਹਾਂ ਕਰਹਿ।" ਸਤਿਗੁਰ ਦੀਨ ਦਿਆਲ ਬਚਨ ਕੀਆ, "ਦਸ ਸਰੂਪ ਪੂਰਨ ਭਏ, ਅਬ ਮੇਰਾ ਜਾਹਰਾ 'ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ' ਕੋ ਜਾਨਨਾ। ਜਿਸ ਨੇ ਮੇਰੇ ਸੇ ਬਾਤ ਕਰਨੀ ਹੋਇ ਤੋ ਆਦਿ ਗ੍ਰੰਥ ਸਾਹਿਬ ਕਾ ਪਾਠ ਕਰਨਾ। ਮੇਰੇ ਸੇ ਬਾਤ ਹੋਵੇਗੀ।"
+        </div>
+        <div class="translation">— ਮਹਿਮਾ ਪ੍ਰਕਾਸ਼, ਕ੍ਰਿਤ ਬਾਵਾ ਸਰੂਪ ਦਾਸ ਭੱਲਾ</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਤੀਨ ਰੂਪ ਹੈਂ ਮੋਹਿ ਕੇ ਸੁਨੋ ਨੰਦ ਚਿਤ ਲਾਇ ॥<br>
+          ਨਿਰਗੁਣ ਸਰਗੁਣ 'ਗੁਰ ਸ਼ਬਦ' ਕਹੋਂ ਤੋਹਿ ਸਮਝਾਇ ॥<br><br>
+          ਏਕ ਰੂਪ ਤਿਹੁ ਗੁਣ ਤੇ ਪਰੇ ॥<br>
+          ਨੇਤਿ ਨੇਤਿ ਜਿਹ ਨਿਗਮ ਉਚਰੇ ॥<br>
+          ਦੂਸਰ ਰੂਪ 'ਗ੍ਰੰਥ ਜੀ' ਜਾਨੋ ॥<br>
+          ਇਨ ਕੇ ਅੰਗ ਮੇਰੇ ਕਰ ਮਾਨੋ ॥
+        </div>
+        <div class="translation">— ਰਹਿਤਨਾਮਾ ਭਾ: ਨੰਦਲਾਲ ਜੀ</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="translation" style="font-style:normal; color:#e2e2e2; font-size:1.05rem;">
+          ਪ੍ਰਸ਼ਨ ਉੱਤਰ ਗੁਰੂ ਗ੍ਰੰਥ ਜੀ ਅਸਤ। ਦਰਮਿਆਨੇ ਗ੍ਰੰਥ ਵਾ ਗੁਰੂ ਹੇਚ ਫ਼ਰਕੇ ਨੇਸਤ।
+        </div>
+        <div class="translation">(ਅਰਥ — ਗੁਰੂ ਗ੍ਰੰਥ ਜੀ ਹਨ। ਗ੍ਰੰਥ ਅਤੇ ਗੁਰੂ ਦੇ ਵਿਚਕਾਰ ਕੋਈ ਫ਼ਰਕ ਨਹੀਂ ਹੈ। ਗ੍ਰੰਥ ਜੀ ਦੇ ਦਰਸ਼ਨਾਂ ਤੋਂ ਗੁਰੂ ਸਾਹਿਬ ਦੇ ਅਨੰਦ-ਭਰਪੂਰ ਦਰਸ਼ਨ ਹੋਣਗੇ।)<br>— ਉਮਾਦੁਤ-ਤਵਾਰੀਖ਼, ਕ੍ਰਿਤ ਮੁਨਸ਼ੀ ਸੋਹਣ ਲਾਲ</div>
+      </div>
+
+      <div class="section-heading">ਸਿਧਾਂਤਕ ਪ੍ਰਮਾਣ</div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਸਬਦੁ ਗੁਰ ਪੀਰਾ ਗਹਿਰ ਗੰਭੀਰਾ<br>
+          ਬਿਨੁ ਸਬਦੈ ਜਗੁ ਬਉਰਾਨੰ ॥
+        </div>
+        <div class="translation">ਸੋਰਠਿ ਮ: ੧, ਪੰਨਾ ੬੩੫</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਬਾਣੀ ਗੁਰੂ ਗੁਰੂ ਹੈ ਬਾਣੀ<br>
+          ਵਿਚਿ ਬਾਣੀ ਅੰਮ੍ਰਿਤੁ ਸਾਰੇ ॥
+        </div>
+        <div class="translation">ਨਟ ਅਸਟ: ਮ: ੪, ਪੰਨਾ ੯੮੨</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਗੁਰ ਮੂਰਤਿ ਗੁਰ ਸਬਦੁ ਹੈ<br>
+          ਸਾਧਸੰਗਤਿ ਵਿਚਿ ਪਰਗਟੀ ਆਇਆ ॥
+        </div>
+        <div class="translation">ਭਾਈ ਗੁਰਦਾਸ ਜੀ, ਵਾਰ ੨੪, ਪ: ੨੫</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਸਤਿਗੁਰ ਮੈ ਸਬਦੁ ਸਬਦ ਮੈ ਸਤਿਗੁਰ ਹੈ ਨਿਰਗੁਨ ਗਿਆਨ ਧਿਆਨ ਸਮਝਾਵੈ ਜੀ ॥</div>
+        <div class="translation">ਭਾਈ ਗੁਰਦਾਸ ਜੀ, ਕਬਿਤ ੫੩੪</div>
+      </div>
+
+      <p>
+        'ਸ਼ਬਦ-ਗੁਰੂ' ਸਿਧਾਂਤ ਦਾ ਧ੍ਰਵਾ ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਨੇ ਸਿਖੀ ਦੇ ਅਰੰਭ ਕਾਲ ਵਿਚ ਹੀ ਬੰਨ੍ਹ ਦਿੱਤਾ। ਸੁਮੇਰ ਪਰਬਤ ਤੇ ਜਦੋਂ ਗੁਰੂ ਪਾਤਸ਼ਾਹ ਗਏ ਤਾਂ ਸਿਧਾਂ ਨੇ ਸਵਾਲ ਕੀਤਾ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਕਵਣ ਮੂਲੁ ਕਵਣ ਮਤਿ ਵੇਲਾ ॥<br>
+          ਤੇਰਾ ਕਵਣੁ ਗੁਰੂ ਜਿਸਕਾ ਤੂ ਚੇਲਾ ॥<br>
+          ਕਵਣ ਕਥਾ ਲੇ ਰਹਹੁ ਨਿਰਾਲੇ ॥<br>
+          ਬੋਲੈ ਨਾਨਕੁ ਸੁਣਹੁ ਤੁਮ ਬਾਲੇ ॥
+        </div>
+      </div>
+
+      <p>
+        ਗੁਰੂ ਪਾਤਸ਼ਾਹ ਜੀ ਨੇ ਉੱਤਰ ਬਖ਼ਸ਼ਿਆ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਪਵਨ ਅਰੰਭੁ ਸਤਿਗੁਰ ਮਤਿ ਵੇਲਾ ॥<br>
+          ਸਬਦੁ ਗੁਰੂ ਸੁਰਤਿ ਧੁਨਿ ਚੇਲਾ ॥<br>
+          ਅਕਥ ਕਥਾ ਲੇ ਰਹਉ ਨਿਰਾਲਾ ॥<br>
+          ਨਾਨਕ ਜੁਗਿ ਜੁਗਿ ਗੁਰ ਗੋਪਾਲਾ ॥
+        </div>
+        <div class="translation">ਰਾਮਕਲੀ ਸਿਧ ਗੋਸਟਿ ਮ: ੧, ਪੰਨਾ ੯੪੨-੪੩</div>
+      </div>
+
+      <p>
+        ਏਨੇ ਸਪੱਸ਼ਟ ਸ਼ਬਦਾਂ ਦੇ ਬਾਵਜੂਦ ਜੇ ਕੋਈ ਸ਼ਖ਼ਸੀ ਪੂਜਾ ਪਿਛੇ ਲੂਰ ਲੂਰ ਕਰੀ ਜਾਵੇ ਤਾਂ ਉਸ ਦੇ ਮੰਦੇ ਭਾਗ। "ਜੈਸਾ ਸੇਵੈ ਤੈਸਾ ਹੋਇ" (ਗਉੜੀ ਮ: ੧, ਪੰਨਾ ੨੨੪) ਦਾ ਅਟੱਲ ਸਿਧਾਂਤ ਹੈ। ਦੇਹ-ਮਿੱਟੀ ਦੀ ਪੂਜਾ-ਪ੍ਰਤਿਸ਼ਟਾ ਕਰ ਕੇ, ਇਹਨੂੰ ਗੁਰੂ ਮੰਨ ਕੇ ਪਲੇ ਮਿੱਟੀ ਹੀ ਪੈ ਸਕਦੀ ਹੈ, ਮਨ ਵਿਚ ਤੱਤ-ਗਿਆਨ ਦਾ ਪਰਕਾਸ਼ ਨਹੀਂ ਹੋ ਸਕਦਾ।
+      </p>
+
+      <p>
+        ਦੇਹ-ਪੂਜਾ ਦੇ ਜਾਲ ਵਿਚੋਂ ਕਢਣ ਲਈ ਸਤਿਗੁਰਾਂ ਨੇ ਹੋਰ ਵਧੇਰੇ ਸਪੱਸ਼ਟ ਕੀਤਾ, 'ਦੇਹ' ਅਤੇ 'ਸ਼ਬਦ' ਦਾ ਪਰਸਪਰ ਟਾਕਰਾ ਕਰ ਕੇ ਸ਼ਬਦ ਦੀ ਸਿਰਮੌਰਤਾ ਦਰਸਾ ਕੇ ਨਿਰਸੰਦੇਹ ਨਿਰਣਾ ਕਰ ਦਿਤਾ ਕਿ ਸ਼ਬਦ ਤੱਤ ਵਸਤੂ ਹੈ ਤੇ ਆਤਮ-ਵਿਗਾਸ ਕੇਵਲ ਸ਼ਬਦ ਦੁਆਰਾ ਹੀ ਸੰਭਵ ਹੋ ਸਕਦਾ ਹੈ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਸਤਿਗੁਰ ਨੋ ਸਭੁ ਕੋ ਵੇਖਦਾ ਜੇਤਾ ਜਗਤੁ ਸੰਸਾਰੁ ॥<br>
+          ਡਿਠੈ ਮੁਕਤਿ ਨ ਹੋਵਈ ਜਿਚਰੁ ਸਬਦਿ ਨ ਕਰੇ ਵੀਚਾਰੁ ॥
+        </div>
+        <div class="translation">ਵਡਹੰਸ ਕੀ ਵਾਰ, ਪੰਨਾ ੫੯੪</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="translation" style="font-style:normal; color:#e2e2e2; font-size:1.05rem;">
+          ਬਚਨ ਹੋਇਆ ਸਾਡੇ ਚਰਨ ਸਾਧ ਸੰਗਤਿ ਵਿਚ ਸਦਾ ਰਹਿੰਦੇ ਹੈਨਿ ॥ ਤੁਸੀਂ ਸਦਾ ਮੇਰੇ ਚਰਨਾਂ ਦੀ ਸਰਨਿ ਹੋ ॥ ਸਰੀਰ ਮੇਰਾ ਸਰਗੁਣ ਹੈ ਤੇ ਸ਼ਬਦ ਮੇਰਾ ਰਿਦਾ ਹੈ, ਜੋ ਨਿਰਗੁਣ ਰੂਪ ਹੈ ॥ ਜੇ ਸਰੀਰ ਨਾਲ ਮਿਲੋਗੇ ਤਾਂ ਫੇਰ ਭੀ ਵਿਛੜੋਗੇ, ਪਰ ਜੇ ਸਬਦ ਨਾਲ ਮਿਲੋਗੇ ਤਾਂ ਵਿਛੜੋਗੇ ਨਹੀਂ ॥
+        </div>
+        <div class="translation">— ਸਿਖਾਂ ਦੀ ਭਗਤਮਾਲ, ਕ੍ਰਿਤ ਭਾ: ਮਨੀ ਸਿੰਘ ਜੀ ਸ਼ਹੀਦ</div>
+      </div>
+
+      <p>
+        ਇਹ ਬਦਕਿਸਮਤੀ ਦੀ ਗੱਲ ਹੈ ਕਿ ਅਸੀਂ "ਸ਼ਬਦ-ਗੁਰੂ" ਦੇ ਸਿਧਾਂਤ ਨੂੰ ਨਾ ਆਪ ਸਮਝ ਸਕੇ ਹਾਂ ਅਤੇ ਨਾ ਹੀ ਸੰਸਾਰ ਵਿਚ ਪਰਚਾਰ ਸਕੇ ਹਾਂ। ਸਾਡਾ ਮਿਸ਼ਨ ਸੁਸਤ ਹੀ ਨਹੀਂ, ਸੁੱਤਾ ਹੋਇਆ ਹੈ। ਨਹੀਂ ਨਹੀਂ, ਸਾਡਾ ਕੋਈ ਬਾਕਾਇਦਾ ਮਿਸ਼ਨ ਹੈ ਈ ਨਹੀਂ। ਰੱਬ ਈ ਰਾਖਾ ਹੈ!! ਇਹ ਡਿੰਭੀ ਗੁਰੂਆਂ ਦੀ ਭਰਮਾਰ ਸਾਡੀ ਅਣਗਹਿਲੀ ਤੇ ਅਵੇਸਲੇਪਣ ਦਾ ਹੀ ਸਿੱਟਾ ਹੈ। ਸਿਖ ਕੌਮ ਕੋਲ ਪ੍ਰਗਟ, ਪ੍ਰਮਾਣ ਤੇ ਪਰਤੱਖ ਸਤਿਗੁਰੂ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਹੈ।
+      </p>
+
+      <p>
+        ਪਰ ਕੌਮ ਦੇ ਮੁਹਾਣੇ ਗੁਰੂਆਂ ਦੀ ਕਲਪਤ ਫੋਟੋ ਛਪਵਾ ਛਪਵਾ ਕੇ ਆਪਣੀ ਸੂਝ ਬੂਝ ਦਾ ਦਿਵਾਲਾ ਕਢਵਾ ਰਹੇ ਹਨ। ਇਹ ਫੋਟੋ-ਪਰਚਾਰ ਗੁਰਮਤਿ ਦੇ ਵਿਰੁਧ ਹੈ ਤੇ ਇਸ ਨਾਲ ਦੇਹ-ਧਾਰੀ ਪ੍ਰਥਾ ਨੂੰ ਬਲ ਮਿਲਦਾ ਹੈ। ਉਹਨਾਂ ਦੀ ਰੀਸੇ ਹੁਣ ਕਈ ਪ੍ਰਾਈਵੇਟ ਵਪਾਰੀਆਂ ਨੇ ਗੁਰੂ ਦੇ ਮਨੋ-ਕਲਪਤ ਪਲਾਸਟਕ ਆਦਿ ਦੇ ਬੁੱਤ ਬਣਾ ਕੇ ਵੇਚਣੇ ਅਰੰਭ ਕਰ ਦਿਤੇ ਹਨ। ਦੋਸ਼ ਕਿਸ ਨੂੰ?
+      </p>
+
+      <p>
+        ਇਕ ਗੱਲ ਹੋਰ ਅਤਿ ਲੋੜੀਂਦੀ ਹੈ — ਉਹ ਹੈ ਸ਼ਬਦ-ਗੁਰੂ ਦੇ ਸਿਧਾਂਤ ਦੀ ਅਮਲੀ ਵਰਤੋਂ। ਸਿਧਾਂਤ ਭਾਵੇਂ ਕਿੰਨਾ ਉੱਚਾ ਤੇ ਸੁੱਚਾ ਹੋਵੇ, ਉਨੀ ਦੇਰ ਤਕ ਪ੍ਰਚਲਤ ਨਹੀਂ ਹੁੰਦਾ ਜਿੰਨੀ ਦੇਰ ਤਕ ਉਹ ਜੀਵਨ ਵਿਚ ਪ੍ਰਤੀਬਿੰਬਤ ਹੋ ਕੇ ਸਾਹਮਣੇ ਨਾ ਆਵੇ। ਇਸ ਗੱਲ ਤੋਂ ਮੁਕਰਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਕਿ ਸਾਡੀ ਪੰਥਕ ਦਸ਼ਾ ਬੜੀ ਨਿਘਰੀ ਹੋਈ ਹੈ। ਪੰਥਕ ਪੱਧਰ ਤੇ ਪ੍ਰਮੁਖਤਾ, ਕਰਨੀ ਕਮਾਈ ਵਾਲੇ ਤੇ ਨਿਰਮਲ ਜੀਵਨ ਵਾਲੇ ਵਿਅਕਤੀਆਂ ਦੀ ਬਜਾਏ ਚਲਾਕ ਤੇ ਮੂੰਹ-ਜ਼ੋਰ ਬੰਦਿਆਂ ਨੂੰ ਪ੍ਰਾਪਤ ਹੈ। ਵਤਰੋਂ ਟੱਪ ਚੁੱਕੇ ਭੱਦਰ ਪੁਰਸ਼, ਜਿਹੜੇ ਆਪਣੀ ਸਰੀਰਕ ਕਿਰਿਆ ਵੀ ਭਲੀ ਪਰਕਾਰ ਨਹੀਂ ਸੋਧ ਸਕਦੇ, ਕੇਵਲ ਲੀਡਰ ਲੋਕਾਂ ਦੀ ਝੋਲੀ-ਚੁਕੀ ਕਰਕੇ ਫਨੀਅਰ ਸੱਪਾਂ ਵਾਂਗ ਉੱਚ ਪਦਵੀਆਂ ਤੇ ਧਰਨਾ ਮਾਰੀ ਬੈਠੇ ਹਨ। ਧਾਰਮਿਕ ਆਗੂਆਂ ਵਿਚ ਆਤਮ-ਵਿਕਾਸ ਦੀ ਅਣਹੋਂਦ ਕਾਰਨ ਧਾਰਮਕ ਜਾਗ ਅਗੇ ਲਗ ਨਹੀਂ ਰਹੀ।
+      </p>
+
+      <p>
+        ਸਾਰੀ ਧਾਰਮਿਕ ਰਹੁ-ਰੀਤ ਫੋਕੀ ਤੇ ਰਸਮੀ ਬਣਾ ਦਿੱਤੀ ਗਈ ਹੈ। ਤਖਤ ਚੌਰ ਦੇ ਮਾਲਕ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਹਨ, ਪਰ ਸਾਡੇ ਤਖਤ ਸਾਹਿਬਾਂ ਉੱਤੇ ਇਸ ਵੇਲੇ ਕੇਵਲ ਸ਼ਸਤਰ ਬਿਰਾਜਮਾਨ ਹਨ। ਇਹ ਧਾਰਮਿਕ ਪਖੋਂ ਬੋਦੇ ਹੋ ਚੁੱਕੇ ਧਾਰਮਿਕ ਆਗੂ ਤਖਤਾਂ ਤੇ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਨੂੰ ਬਿਰਾਜਮਾਨ ਕਰਨ ਤੋਂ ਸੰਕੋਚ ਕਰਦੇ ਹਨ। ਜਦੋਂ ਸਾਡੇ ਧਾਰਮਿਕ ਆਗੂਆਂ ਵਿਚ "ਸ਼ਬਦ-ਗੁਰੂ" ਲਈ ਏਨਾ ਕੁ ਸਤਿਕਾਰ ਹੈ ਤਾਂ ਉਹਨਾਂ ਤੋਂ ਸ਼ਬਦ-ਗੁਰੂ ਦੇ ਸਿਧਾਂਤ ਦੇ ਪਰਚਾਰ ਦੀ ਆਸ ਕਿਵੇਂ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।
+      </p>
+
+      <p>
+        ਸੋ ਲੋੜ ਹੈ ਕਿ ਸ਼ਰਧਾ ਭਾਵਨੀ ਵਾਲੇ ਤੇ ਨਿਰਮਲ ਕਰਣੀ ਵਾਲੇ ਸੁਘੜ ਸੁਜਾਨ ਵਿਅਕਤੀ ਧਾਰਮਿਕ ਪਦਵੀਆਂ ਤੇ ਲਾਏ ਜਾਣ, ਜੋ ਆਪਣਾ ਸਮੁੱਚਾ ਜੀਵਨ ਪੰਥਕ ਵਿਕਾਸ ਲਈ ਲਾ ਦੇਣ। ਅਜਿਹੇ ਵਿਗਾਸੇ ਹੋਏ ਪੁਰਸ਼ਾਂ ਦੁਆਰਾ ਜਿਸ ਜਿਸ ਨੂੰ ਗੁਰ-ਦੀਖਿਅਤ ਕੀਤਾ ਜਾਵੇਗਾ, ਉਸ ਦੀ ਕਾਇਆ-ਕਲਪ ਹੋ ਜਾਵੇਗੀ, ਉਸ ਦਾ ਅੰਦਰਲਾ ਜਾਗ ਉਠੇਗਾ।
+      </p>
+
+      <p>
+        ਇਸ ਤਰ੍ਹਾਂ "ਸ਼ਬਦ-ਗੁਰੂ" ਸਿਧਾਂਤ ਲੋਕ-ਪ੍ਰਿਅ ਹੋ ਸਕਦਾ ਹੈ। ਸੰਸਾਰ ਲਈ ਇਹ ਸਿਧਾਂਤ ਹੀ ਕਲਿਆਣਕਾਰੀ ਹੈ। ਸਾਰੀ ਸ੍ਰਿਸ਼ਟੀ ਦਾ ਉਧਾਰ ਇਸ ਸਿਧਾਂਤ ਦੁਆਰਾ ਹੋਣਾ ਨਿਸਚਿਤ ਹੈ।
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਕਲਿਜੁਗੁ ਉਧਾਰਿਆ ਗੁਰਦੇਵ ॥<br>
+          ਮਲ ਮੂਤ ਮੂੜਮੁਘਦ ਹੋਤੇ ਸਭਿ ਲਗੇ ਤੇਰੀ ਸੇਵ ॥<br>
+          ਤੂ ਆਪਿ ਕਰਤਾ ਸਭ ਸ੍ਰਿਸਟਿ ਧਰਤਾ ਸਭ ਮਹਿ ਰਹਿਆ ਸਮਾਇ ॥<br>
+          ਧਰਮ ਰਾਜਾ ਬਿਸਮਾਦੁ ਹੋਆ ਸਭ ਪਈ ਪੈਰੀ ਆਇ ॥੨॥(੧੪੦)
+        </div>
+        <div class="translation">ਆਸਾ ਮ: ੫, ਪੰਨਾ ੪੦੬</div>
+      </div>
+
+    </div>
+
+    <!-- ENGLISH CONTENT -->
+
+    <div id="english-content" style="display:none;">
+
+      <p>
+        The literal meaning of "Guru" is one who brings light into darkness. Guru refers to that existence which removes the darkness of ignorance from the mind and illuminates it with the light of knowledge.
+      </p>
+
+      <p>
+        In the material world, a lamp removes darkness, or light appears in darkness through an electric bulb. The question arises: is the object that gives light the outer shell (container) of the lamp or bulb, or is it something else? Undoubtedly, the bulb or outer shell is merely the medium through which the light manifests; the light itself is something different.
+      </p>
+
+      <p>
+        In the spiritual realm, the being that gives illumination is the "Guru." To the physical eye, the Guru appears as a person, but through the eyes of wisdom this mystery is revealed — that the Guru is not a 'person' but a 'power'; or in other words, the Guru is not the 'body' but the 'Divine Light.' All the True Gurus, while uttering Gurbani, used the name 'Nanak' instead of their personal names, and in doing so firmly established the truth that the Guru is not the 'body' but the 'Light.'
+      </p>
+
+      <p>
+        In Sikh history, the Guru-Light changed ten physical forms and now resides in Sri Guru Granth Sahib Ji. If the body of Sri Guru Nanak Dev Ji had itself been the Guru, then with the casting off of His bodily robe, the succession of Guruship would have come to an end. The reality is that while the bodies changed, the Guru's Shabad-Light and method remained forever eternal, and even now the Shabad-Light exists in the same manner in the form of Sri Guru Granth Sahib Ji.
+      </p>
+
+      <p>
+        In order to administer the spiritual discipline or initiate someone into Gurmat, the need for a physical form is fulfilled by the ever-ready Five Gursikhs who live by righteous conduct and spiritual practice. After completing the ceremony of Amrit-Sanchar, the Panj Pyare still call themselves Sikhs of the Guru. In the religious history of the world, this is a unique Gursikhi tradition. In the material world, great importance is attached to the body or physical form. Materialistic people consider the body to be everything, but in the spiritual realm the body is valued only as much as it deserves. Compared to the Divine Light, the body is considered insignificant. Gurbani declares —
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਕਾਇਆ ਮਾਟੀ ਅੰਧੁ ਹੈ ਪਉਣੈ ਪੁਛਹੁ ਜਾਇ ॥੧॥</div>
+        <div class="translation">
+          The body is blind clay; go and ask the breath. ||1||<br>
+          Salok Mahalla 3, Vaar Gujri, Ang 511
+        </div>
+      </div>
+
+      <p>
+        For the past several years, there has been much discussion regarding bodily living gurus. To take advantage of the immense faith Sikhs have toward the Guru, many respectable-looking men have entered the field. There is now a flood of gurus. If things continue at this same speed, then one day the number of gurus will exceed the number of disciples.
+      </p>
+
+      <p>
+        Sri Guru Gobind Singh Ji, the Knower of all three times, foresaw this condition and therefore ended the line of personal Guruship. Attaching Gursikhs to the Shabad-form Sri Guru Granth Sahib Ji, He bestowed the authority of applying spiritual discipline upon the collective Khalsa Panth — the group of spiritually disciplined Five who live under the obedience of the Shabad-Guru. Along with this, Guru Patshah Ji also warned Gursikhs about false gurus through His priceless words:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਘਰਿ ਘਰਿ ਹੋਇ ਬਹੈਂਗੇ ਰਾਮਾ ॥<br>
+          ਤਿਨ ਤੇ ਸਰੈ ਨ ਕੋਊ ਕਾਮਾ ॥
+        </div>
+        <div class="translation">In every home they shall sit as gurus, O Rama. Yet through them, no task shall truly be accomplished.</div>
+      </div>
+
+      <p>
+        There are countless proofs supporting the principle of the Shabad-Guru, both historical and doctrinal. A few brief examples are recorded below:
+      </p>
+
+      <div class="section-heading">Historical Proofs</div>
+
+      <div class="gurbani-block">
+        <div class="translation" style="font-style:normal; color:#e2e2e2; font-size:1.05rem;">
+          The Sikhs asked, "Where shall we now obtain Your darshan?" The Compassionate True Guru replied, "The ten forms have been completed; now know Guru Granth Sahib as My manifest form. Whoever wishes to speak with Me should recite Adi Granth Sahib. Through it, they shall converse with Me."
+        </div>
+        <div class="translation">— Mahima Prakash, by Bawa Saroop Das Bhalla</div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਤੀਨ ਰੂਪ ਹੈਂ ਮੋਹਿ ਕੇ ਸੁਨੋ ਨੰਦ ਚਿਤ ਲਾਇ ॥<br>
+          ਨਿਰਗੁਣ ਸਰਗੁਣ 'ਗੁਰ ਸ਼ਬਦ' ਕਹੋਂ ਤੋਹਿ ਸਮਝਾਇ ॥<br><br>
+          ਏਕ ਰੂਪ ਤਿਹੁ ਗੁਣ ਤੇ ਪਰੇ ॥<br>
+          ਨੇਤਿ ਨੇਤਿ ਜਿਹ ਨਿਗਮ ਉਚਰੇ ॥<br>
+          ਦੂਸਰ ਰੂਪ 'ਗ੍ਰੰਥ ਜੀ' ਜਾਨੋ ॥<br>
+          ਇਨ ਕੇ ਅੰਗ ਮੇਰੇ ਕਰ ਮਾਨੋ ॥
+        </div>
+        <div class="translation">
+          I possess three forms — listen attentively, O Nand.<br>
+          The transcendent, the manifest, and the Guru-Shabad — I will explain them to you.<br><br>
+          One form is beyond the three qualities, of which the scriptures proclaim, 'Neti, Neti.'<br>
+          Know the second form as 'Granth Ji'; consider its limbs as My own.<br>
+          — Rehitnama Bhai Nand Lal Ji
+        </div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="translation" style="font-style:normal; color:#e2e2e2; font-size:1.05rem;">
+          Question and Answer: Guru Granth Sahib Ji is the Guru. Between the Guru Granth Sahib and the Guru there exists no difference. Through the darshan of Guru Granth Sahib Ji, one beholds the bliss-giving vision of Guru Sahib.
+        </div>
+        <div class="translation">— Umdat-ut-Tawarikh, by Munshi Sohan Lal</div>
+      </div>
+
+      <div class="section-heading">Doctrinal Proofs</div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਸਬਦੁ ਗੁਰ ਪੀਰਾ ਗਹਿਰ ਗੰਭੀਰਾ<br>
+          ਬਿਨੁ ਸਬਦੈ ਜਗੁ ਬਉਰਾਨੰ ॥
+        </div>
+        <div class="translation">
+          The Shabad is the Guru — deep and profound; without the Shabad, the world wanders insane.<br>
+          Sorath Mahalla 1, Ang 635
+        </div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਬਾਣੀ ਗੁਰੂ ਗੁਰੂ ਹੈ ਬਾਣੀ<br>
+          ਵਿਚਿ ਬਾਣੀ ਅੰਮ੍ਰਿਤੁ ਸਾਰੇ ॥
+        </div>
+        <div class="translation">
+          Bani is the Guru, and the Guru is Bani; within the Bani is contained all nectar.<br>
+          Nat Ashtpadi Mahalla 4, Ang 982
+        </div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਗੁਰ ਮੂਰਤਿ ਗੁਰ ਸਬਦੁ ਹੈ<br>
+          ਸਾਧਸੰਗਤਿ ਵਿਚਿ ਪਰਗਟੀ ਆਇਆ ॥
+        </div>
+        <div class="translation">
+          The Guru's form is the Guru's Shabad; it manifests within the Saadh Sangat.<br>
+          Bhai Gurdas Ji, Vaar 24, Pauri 25
+        </div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">ਸਤਿਗੁਰ ਮੈ ਸਬਦੁ ਸਬਦ ਮੈ ਸਤਿਗੁਰ ਹੈ ਨਿਰਗੁਨ ਗਿਆਨ ਧਿਆਨ ਸਮਝਾਵੈ ਜੀ ॥</div>
+        <div class="translation">
+          The True Guru is in the Shabad, and the Shabad is in the True Guru; it imparts the wisdom of transcendent knowledge and meditation.<br>
+          Bhai Gurdas Ji, Kabit 534
+        </div>
+      </div>
+
+      <p>
+        The foundation of the 'Shabad-Guru' principle was established by Sri Guru Nanak Dev Ji at the very beginning of Sikhi. When Guru Patshah Ji went to Mount Sumer, the Siddhs asked:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਕਵਣ ਮੂਲੁ ਕਵਣ ਮਤਿ ਵੇਲਾ ॥<br>
+          ਤੇਰਾ ਕਵਣੁ ਗੁਰੂ ਜਿਸਕਾ ਤੂ ਚੇਲਾ ॥<br>
+          ਕਵਣ ਕਥਾ ਲੇ ਰਹਹੁ ਨਿਰਾਲੇ ॥<br>
+          ਬੋਲੈ ਨਾਨਕੁ ਸੁਣਹੁ ਤੁਮ ਬਾਲੇ ॥
+        </div>
+        <div class="translation">
+          What is the source? What is the wisdom and way?<br>
+          Who is your Guru, whose disciple are you?<br>
+          By what discourse do you remain detached?<br>
+          Says Nanak: listen, O innocent ones.
+        </div>
+      </div>
+
+      <p>
+        Guru Patshah Ji bestowed the following reply:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਪਵਨ ਅਰੰਭੁ ਸਤਿਗੁਰ ਮਤਿ ਵੇਲਾ ॥<br>
+          ਸਬਦੁ ਗੁਰੂ ਸੁਰਤਿ ਧੁਨਿ ਚੇਲਾ ॥<br>
+          ਅਕਥ ਕਥਾ ਲੇ ਰਹਉ ਨਿਰਾਲਾ ॥<br>
+          ਨਾਨਕ ਜੁਗਿ ਜੁਗਿ ਗੁਰ ਗੋਪਾਲਾ ॥
+        </div>
+        <div class="translation">
+          Air is the beginning; the Guru's wisdom is the way.<br>
+          The Shabad is the Guru; consciousness attuned to its melody is the disciple.<br>
+          I remain detached through the indescribable discourse.<br>
+          Nanak — throughout the ages, the Guru is the Sustainer Lord.<br>
+          Ramkali Sidh Gosht, Mahalla 1, Ang 942-43
+        </div>
+      </div>
+
+      <p>
+        Despite such clear words, if someone still continues wandering after personality worship, then unfortunate indeed is his destiny. "As one serves, so one becomes" (Gauri Mahalla 1, Ang 224) is an unchanging principle. By worshipping the dust-body and accepting it as Guru, one gains nothing but dust; the illumination of spiritual wisdom cannot arise within the mind.
+      </p>
+
+      <p>
+        To free people from the trap of body-worship, the True Gurus explained even more clearly — by contrasting the 'body' and the 'Shabad,' they established the supremacy of the Shabad and decisively declared that the Shabad is the essential reality, and spiritual development is possible only through the Shabad:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਸਤਿਗੁਰ ਨੋ ਸਭੁ ਕੋ ਵੇਖਦਾ ਜੇਤਾ ਜਗਤੁ ਸੰਸਾਰੁ ॥<br>
+          ਡਿਠੈ ਮੁਕਤਿ ਨ ਹੋਵਈ ਜਿਚਰੁ ਸਬਦਿ ਨ ਕਰੇ ਵੀਚਾਰੁ ॥
+        </div>
+        <div class="translation">
+          Everyone beholds the True Guru, as much as the world exists;<br>
+          but liberation is not obtained until one reflects upon the Shabad.<br>
+          Vadhans Ki Vaar, Ang 594
+        </div>
+      </div>
+
+      <div class="gurbani-block">
+        <div class="translation" style="font-style:normal; color:#e2e2e2; font-size:1.05rem;">
+          "It has been declared: My feet forever remain within the holy congregation. You shall always remain in the refuge of My feet. My body is the manifest form, but My Shabad is My heart, which is the transcendent form. If you unite with the body, then even so you shall eventually separate; but if you unite with the Shabad, you shall never separate."
+        </div>
+        <div class="translation">— Sikhan Di Bhagatmala, by Bhai Mani Singh Ji Shaheed</div>
+      </div>
+
+      <p>
+        It is unfortunate that we ourselves have neither understood the principle of the "Shabad-Guru" nor propagated it throughout the world. Our mission is not merely slow, it is asleep. No, truly speaking, we do not even have a proper mission at all. God alone is our Protector! This abundance of fraudulent gurus is the direct result of our neglect and carelessness. The Sikh Panth possesses the manifest, proven, and visible True Guru — Dhan Dhan Sri Guru Granth Sahib Ji.
+      </p>
+
+      <p>
+        Yet the leaders of the Panth continue printing imaginary pictures of the Gurus, thereby bankrupting their own understanding. This picture-promotion is against Gurmat and strengthens the tradition of bodily gurus. Following their example, many private traders have now begun selling imaginary plastic idols and statues of Guru Sahib. Who is to blame?
+      </p>
+
+      <p>
+        One more matter is extremely necessary — the practical application of the Shabad-Guru principle. No matter how lofty and pure a principle may be, it does not truly become established until it is reflected and manifested within life itself. It cannot be denied that the condition of the Panth has greatly deteriorated. At the Panthic level, prominence is given not to spiritually disciplined individuals of pure conduct, but to clever and forceful men. Worthless individuals, who cannot even properly discipline their own physical habits, sit entrenched in high positions like venomous snakes merely by flattering influential leaders. Due to the absence of spiritual development among religious leaders, true religious awakening is not advancing.
+      </p>
+
+      <p>
+        The entire religious way of life has been reduced to empty rituals and hollow formalities. Sri Guru Granth Sahib Ji is the true Master of the Takht and Chaur, yet upon our Takhts today only weapons are enthroned. These spiritually weakened religious leaders hesitate to enthrone Sri Guru Granth Sahib Ji upon the Takhts. When our religious leaders themselves possess so little reverence for the "Shabad-Guru," how can any expectation remain that they will spread the principle of the Shabad-Guru?
+      </p>
+
+      <p>
+        Therefore, there is a need for wise and virtuous individuals of faithful devotion and pure conduct to be appointed to religious positions — individuals who dedicate their entire lives to the development of the Panth. Through such spiritually elevated persons, whoever receives Gurmat initiation shall undergo complete transformation; their inner consciousness shall awaken.
+      </p>
+
+      <p>
+        In this way, the principle of the "Shabad-Guru" can become beloved among the people. For the world, this principle alone is truly beneficial. The liberation of all creation through this principle is certain. As Gurbani declares —
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਕਲਿਜੁਗੁ ਉਧਾਰਿਆ ਗੁਰਦੇਵ ॥<br>
+          ਮਲ ਮੂਤ ਮੂੜਮੁਘਦ ਹੋਤੇ ਸਭਿ ਲਗੇ ਤੇਰੀ ਸੇਵ ॥<br>
+          ਤੂ ਆਪਿ ਕਰਤਾ ਸਭ ਸ੍ਰਿਸਟਿ ਧਰਤਾ ਸਭ ਮਹਿ ਰਹਿਆ ਸਮਾਇ ॥<br>
+          ਧਰਮ ਰਾਜਾ ਬਿਸਮਾਦੁ ਹੋਆ ਸਭ ਪਈ ਪੈਰੀ ਆਇ ॥੨॥(੧੪੦)
+        </div>
+        <div class="translation">
+          In the Dark Age of Kali Yuga, the Divine Guru has brought liberation.<br>
+          The filthy, foolish, and ignorant have all engaged in Your service.<br>
+          You Yourself are the Creator, the Sustainer of all creation, pervading all.<br>
+          Even Dharam Raj stands astonished, and all fall at Your feet. ||2||(140)<br>
+          Asa Mahalla 5, Ang 406
+        </div>
+      </div>
+
+      <div class="attribution">
+        <p>
+          With Guru Sahib's kirpa, this digitisation seva has been carried out by
+          Daas Bhupinder Singh (Dharam Parchar Lead – AKJ UK).
+        </p>
+        <p>
+          Daas humbly seeks forgiveness for any mistakes or shortcomings.
+        </p>
+      </div>
+
+    </div>
+
+    <a href="/articles/Talwara/index.html" class="back-home">
+      ← Back To Talwara Articles
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+<script>
+
+function showPunjabi(){
+    document.getElementById('punjabi-content').style.display = 'block';
+    document.getElementById('english-content').style.display = 'none';
+    document.getElementById('paBtn').classList.add('active');
+    document.getElementById('enBtn').classList.remove('active');
+}
+
+function showEnglish(){
+    document.getElementById('punjabi-content').style.display = 'none';
+    document.getElementById('english-content').style.display = 'block';
+    document.getElementById('enBtn').classList.add('active');
+    document.getElementById('paBtn').classList.remove('active');
+}
+
+</script>
+
+</body>
+</html>
