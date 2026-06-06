@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GurmatKhajana • ਗੁਰਬਾਣੀ ਉਚਾਰਣ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+    pointer-events:none;
+    z-index:-1;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    padding:22px 6%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+    top:14px;
+    left:40px;
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+    display:block;
+    filter:drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* MOBILE NAV */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    display:none;
+}
+
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.88)),
+    url('/images/gallery/siteimages/talwara.jpg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at center,
+    transparent 5%,
+    rgba(0,0,0,0.72) 100%);
+    backdrop-filter:blur(2px);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:10;
+    width:100%;
+    max-width:1100px;
+    text-align:center;
+    padding:100px 20px 60px;
+}
+
+.main-logo img{
+    display:block;
+    width:100%;
+    max-width:520px;
+    height:auto;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.article-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    line-height:1.3;
+    color:#d4a42c;
+    margin-bottom:25px;
+}
+
+.article-meta{
+    color:#d0d0d0;
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+/* ARTICLE BODY */
+
+.article-wrapper{
+    width:100%;
+    max-width:950px;
+    margin:auto;
+    padding:90px 30px 120px;
+}
+
+.featured-image{
+    width:100%;
+    height:620px;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:55px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.45);
+}
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.article-content{
+    font-size:1.2rem;
+    line-height:2.4;
+    color:#e2e2e2;
+}
+
+.article-content p{
+    margin-bottom:40px;
+}
+
+/* LANGUAGE SWITCHER */
+
+.language-switcher{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.language-switcher button{
+    padding:14px 28px;
+    border-radius:50px;
+    background:#1a1a1a;
+    color:#d4a42c;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    border:1px solid rgba(212,164,44,0.3);
+    transition:0.3s ease;
+}
+
+.language-switcher button:hover{
+    background:#d4a42c;
+    color:black;
+}
+
+.language-switcher button.active{
+    background:#d4a42c;
+    color:black;
+}
+
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:60px;
+    padding:16px 34px;
+    border-radius:50px;
+    background:#d4a42c;
+    color:black;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.back-home:hover{
+    transform:translateY(-3px);
+}
+
+.attribution{
+    margin-top:50px;
+    padding:35px 40px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:rgba(255,255,255,0.02);
+}
+
+.attribution p{
+    color:#aaa;
+    font-size:1rem;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+    color:#888;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero{
+    min-height:70vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding-top:100px;
+}
+
+.main-logo img{
+    max-width:250px;
+}
+
+.hero-content h1{
+    font-size:2.2rem;
+}
+
+.article-wrapper{
+    padding:60px 20px 90px;
+}
+
+.featured-image{
+    height:340px;
+    border-radius:24px;
+}
+
+.article-content{
+    font-size:1rem;
+    line-height:2.2;
+}
+
+.language-switcher button{
+    width:100%;
+}
+
+.attribution{
+    padding:28px 24px;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+  <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/articles/index.html">Articles</a>
+    <a href="/jeevani/index.html">Jeevani</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="main-logo">
+      <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+    </div>
+
+    <div class="article-label">
+      GurmatKhajana Article
+    </div>
+
+    <h1>ਗੁਰਬਾਣੀ ਉਚਾਰਣ</h1>
+
+    <div class="article-meta">
+      ਭਾਈ ਜੋਗਿੰਦਰ ਸਿੰਘ ਜੀ ਤਲਵਾੜਾ — Bhai Joginder Singh Ji Talwara
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ARTICLE -->
+
+<section class="article-wrapper">
+
+  <div class="featured-image">
+    <img src="/images/gallery/siteimages/talwara.jpg" alt="Bhai Joginder Singh Talwara">
+  </div>
+
+  <div class="article-content">
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-switcher">
+      <button onclick="showPunjabi()" id="paBtn" class="active">ਪੰਜਾਬੀ</button>
+      <button onclick="showEnglish()" id="enBtn">English</button>
+    </div>
+
+    <!-- PUNJABI CONTENT -->
+
+    <div id="punjabi-content">
+
+      <p>
+        ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਆਤਮਿਕ ਗਿਆਨ ਦਾ ਅਮੁੱਲ ਭੰਡਾਰ ਹਨ। ਇਸ ਰੱਬੀ-ਗਿਆਨ ਦਾ ਆਵੇਸ਼, ਸਤਿਗੁਰਾਂ ਅਤੇ ਦਿਵ-ਬਿਰਤੀ ਵਾਲੇ ਭਗਤ-ਜਨਾਂ ਦੇ ਨਿਰਮਲ ਹਿਰਦਿਆਂ ਵਿਚ, ਪਰਮ-ਸਤਿ ਨਾਲ ਅੰਤਰ-ਆਤਮੇ ਇਕ-ਸੁਰ ਹੋਣ ਸਮੇਂ ਹੋਇਆ। ਇਹ ਗੁਰੂ-ਗਿਆਨ ਫਿਰ ਉਹਨਾਂ ਦੀ ਪਾਵਨ ਰਸਨਾ ਤੋਂ ਗੁਰਬਾਣੀ ਦੇ ਰੂਪ ਵਿਚ ਸਾਕਾਰ ਹੋਇਆ। ਸਤਿਗੁਰਾਂ ਅਤੇ ਭਗਤ-ਜਨਾਂ ਦੀ ਪਾਵਨ ਬਾਣੀ ਦਾ ਸੰਕਲਨ ਸ੍ਰੀ ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਵਲੋਂ 'ਪੋਥੀ ਸਾਹਿਬ' ਦੇ ਰੂਪ ਵਿਚ ਸੰਮਤ ੧੬੬੧ ਵਿ. ਵਿਚ ਕੀਤਾ ਗਿਆ।
+      </p>
+
+      <p>
+        ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਵਿਚ ਅੰਕਤ ਬਾਣੀ ਉਸ ਸਮੇਂ ਦੀ ਲੋਕ-ਭਾਸ਼ਾ ਵਿਚ ਹੈ। ਗੁਰੂ ਪਾਤਸ਼ਾਹ ਬੇਸ਼ਕ ਪੰਜਾਬ ਦੇ ਜੰਮ-ਪਲ ਸਨ, ਪਰ ਰੱਬੀ ਗਿਆਨ ਦੇ ਪ੍ਰਗਟਾਅ ਲਈ ਉਹਨਾਂ ਵਲੋਂ ਉਸ ਸਮੇਂ ਧਾਰਮਕ ਖੇਤਰ ਵਿਚ ਵਰਤੀਂਦੀ ਸਾਧ-ਭਾਸ਼ਾ ਦਾ ਪ੍ਰਯੋਗ ਕੀਤਾ ਗਿਆ, ਜੋ ਭਾਰਤ ਦੀਆਂ ਵਖ ਵਖ ਭਾਸ਼ਾਵਾਂ ਦਾ ਸ੍ਰੇਸ਼ਟ ਮਿਸ਼ਰਣ ਸੀ। ਗੁਰਬਾਣੀ ਵਿਚ ਵਰਤੀ ਗਈ ਸਾਧ-ਭਾਸ਼ਾ ਉਤੇ ਪੰਜਾਬੀ ਦਾ ਰੰਗ ਗੂੜ੍ਹਾ ਅਤੇ ਸਪੱਸ਼ਟ ਨਜ਼ਰੀ ਪੈਂਦਾ ਹੈ। ਸਮੁੱਚੇ ਤੌਰ ਤੇ ਗੁਰਬਾਣੀ ਦੀ ਭਾਸ਼ਾ ਵਿਚੋਂ ਕਈ ਭਾਸ਼ਾਵਾਂ [ਬ੍ਰਿਜ, ਹਿੰਦਵੀ, ਭਟ-ਭਾਸ਼ਾ, ਸਹਸਕ੍ਰਿਤੀ, ਗਾਥਾ, ਫ਼ਾਰਸੀ (ਰੇਖਤਾ), ਪੰਜਾਬੀ ਅਥਵਾ ਇਸ ਦੀਆਂ ਵਖ ਵਖ ਉਪ-ਭਾਖਾਂ—ਲਹਿੰਦੀ, ਡੋਗਰੀ, ਪੋਠੋਹਾਰੀ, ਆਦਿ] ਦੀ ਵੰਨਗੀ ਉਪਲਭਧ ਹੈ। ਭਗਤ-ਬਾਣੀ ਵਿਚ ਦੈਵੀ-ਭਗਤਾਂ ਦੀਆਂ ਪ੍ਰਾਂਤਕ ਭਾਸ਼ਾਵਾਂ—ਬ੍ਰਿਜ, ਮਾਰਵਾੜੀ, ਗੁਜਰਾਤੀ, ਬੰਗਲਾ, ਮਰਾਠੀ ਆਦਿ ਦੇ ਸ਼ਬਦ ਵੀ ਬੇਅੰਤ ਹਨ।
+      </p>
+
+      <p>
+        ਗੁਰਬਾਣੀ ਦੀ ਭਾਸ਼ਾ ਪੰਜ ਸੌ ਸਾਲ ਤੋਂ ਲੈ ਕੇ ਅਠ ਸੌ ਸਾਲ ਤਕ ਪੁਰਾਣੀ ਹੈ। ਗੁਰਬਾਣੀ ਭਾਵੇਂ ਗੁਰਮੁਖੀ ਲਿਪੀ ਵਿਚ ਲਿਖੀ ਹੋਈ ਹੈ, ਪਰ ਇਸ ਦੀ ਲਿਖਣ-ਸ਼ੈਲੀ ਤਕਰੀਬਨ ਚਾਰ ਸੌ ਸਾਲ ਪੁਰਾਣੀ ਹੈ, ਜਿਸ ਉਤੇ ਦੇਵਨਾਗਰੀ ਦੀ ਲਿਖਣ-ਸ਼ੈਲੀ ਦਾ ਪ੍ਰਭਾਵ ਸਪੱਸ਼ਟ ਦਿਸਦਾ ਹੈ। ਗੁਰਬਾਣੀ ਦੀ ਲਿਖਤ ਵਿਚ 'ਯ' ਅਤੇ 'ਵ' ਦੀ ਸ੍ਵਰੀ ਵਰਤੋਂ ਅਤੇ ਦੂਹਰੀ ਤੀਹਰੀ ਧੁਨੀ ਵਾਲੇ ਸੁਰਾਂ ਦੀ ਵਰਤੋਂ ਬੇਅੰਤ ਥਾਈਂ ਮਿਲਦੀ ਹੈ, ਪਰ ਅਜਿਹੀ ਵਰਤੋਂ ਅਜੋਕੀ ਪੰਜਾਬੀ ਲਿਖਤ ਵਿਚ ਲਗਪਗ ਬੰਦ ਹੋ ਚੁੱਕੀ ਹੈ।
+      </p>
+
+      <p>
+        ਸਕੂਲੀ ਵਿਦਿਆ ਦੀ ਪ੍ਰਾਪਤੀ ਨਾਲ ਅਜੋਕੀ ਲਿਖਤ ਨੂੰ ਪੜ੍ਹ ਸਕਣ ਦੀ ਸਮਰੱਥਾ ਤਾਂ ਅਵੱਸ਼ ਆ ਜਾਂਦੀ ਹੈ। ਪਰ ਗੁਰਬਾਣੀ ਦੀ ਪੁਰਾਤਨ ਭਾਸ਼ਾ, ਜੋ ਪੁਰਾਤਨ ਲਿਖਣ-ਸ਼ੈਲੀ ਅਨੁਸਾਰ ਅਤੇ ਖ਼ਾਸ ਕਰਕੇ ਲੜੀਦਾਰ ਰੂਪ ਵਿਚ ਲਿਖੀ ਹੋਈ ਹੈ, ਇਸ ਨੂੰ ਕੇਵਲ ਸਕੂਲੀ ਵਿਦਿਆ ਦੇ ਬਲ-ਬੋਤੇ ਸ਼ੁੱਧ ਰੂਪ ਵਿਚ ਪੜ੍ਹ ਸਕਣਾ ਸੰਭਵ ਨਹੀਂ। ਇਸ ਲਈ ਤਾਂ ਗੁਰਬਾਣੀ ਦੇ ਸੁਸਿੱਖਿਅਤ ਪਾਠੀ ਸਿੰਘ ਪਾਸੋਂ ਸੰਥਿਆ ਲੈਣੀ ਲੋੜੀਦੀ ਹੈ।
+      </p>
+
+      <p>
+        ਪਿਛਲੇ ਸਮੇਂ ਵਿਚ ਪ੍ਰਚਲਤ ਪ੍ਰਥਾ ਸੀ ਕਿ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੇ ਚਰਨੀਂ ਲਗਣ ਤੋਂ ਪਹਿਲਾਂ ਪੰਜ ਗ੍ਰੰਥੀ, ਦਸ ਗ੍ਰੰਥੀ, ਬਾਈ ਵਾਰਾਂ, ਭਗਤ ਬਾਣੀ ਆਦਿ ਬਾਣੀਆਂ ਦੇ ਪਾਠ ਦੀ ਸੰਥਿਆ ਸੁਸਿੱਖਿਅਤ ਪਾਠੀ ਸਿੰਘਾਂ ਤੋਂ ਲਈ ਜਾਂਦੀ ਸੀ ਤੇ ਇਸ ਤੋਂ ਮਗਰੋਂ ਪਾਠ ਸਰਲ ਕਰਨ ਦਾ ਕਾਫ਼ੀ ਅਭਿਆਸ ਕੀਤਾ ਜਾਂਦਾ ਸੀ। ਸਮੇਂ ਦੇ ਗੇੜ ਨਾਲ ਜਾਂ ਤਾਂ ਸੁਸਿੱਖਿਅਤ ਪਾਠੀ ਸਿੰਘ ਮਿਲਣੇ ਦੁਰਲਭ ਹੋ ਗਏ ਹਨ, ਜਾਂ ਫਿਰ ਸਿੱਖ ਜਗਿਆਸੂਆਂ ਪਾਸ ਪਾਠ ਦੀ ਸੰਥਿਆ ਲਾਉਣ ਦੀ ਵਿਹਲ ਅਥਵਾ ਲਗਨ ਹੀ ਨਹੀਂ ਰਹੀ। ਬਹੁਤੇ ਪ੍ਰੇਮੀ ਸਿੱਖਿਆ ਲਏ ਬਗੈਰ ਹੀ ਪਾਠ ਕਰਨਾ ਅਰੰਭ ਕਰ ਦੇਂਦੇ ਹਨ। ਗੁਰਬਾਣੀ ਦੇ ਸ਼ੁੱਧ ਪਾਠ ਕਰਨ ਦੀ ਸਮਰੱਥਾ ਲਈ ਸਤਿਗੁਰਾਂ ਦੇ ਚਰਨਾਂ ਵਿਚ ਅਰਦਾਸ ਤਾਂ ਸਾਰਿਆਂ ਵਲੋਂ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਪਰ ਇਸ ਲਈ ਲੋੜੀਂਦਾ ਉਪਰਾਲਾ ਵਿਰਲੇ ਹੀ ਕਰਦੇ ਹਨ।
+      </p>
+
+      <p>
+        ਅੱਜ ਕੱਲ੍ਹ ਤਕਰੀਬਨ ਹਰ ਸ਼ਹਿਰ ਵਿਚ ਅਖੰਡ ਪਾਠ-ਸੇਵਾ ਸੁਸਾਇਟੀਆਂ ਬਣੀਆਂ ਹੋਈਆਂ ਹਨ, ਜੋ ਪ੍ਰੇਮੀ ਪਾਠੀਆਂ ਕੋਲੋਂ ਨਿਸ਼ਕਾਮ ਭਾਵਨਾ ਨਾਲ ਘਰੋ-ਘਰੀ ਪਾਠ ਕਰਾਉਂਦੀਆਂ ਹਨ। ਉਹਨਾਂ ਦੀ ਭਾਵਨਾ ਅਤੇ ਪ੍ਰਯੋਜਨ ਤਾਂ ਬਹੁਤ ਸਲਾਘਾ ਯੋਗ ਹੈ, ਪਰ ਵੇਖਣ ਵਿਚ ਆਇਆ ਹੈ ਕਿ ਅਣਸਿੱਖੇ ਪ੍ਰੇਮੀ ਪਾਠ ਕਰਨ ਵਿਚ ਅਣਗਿਣਤ ਗਲਤੀਆਂ ਕਰਦੇ ਹਨ। ਹੈਰਾਨੀ ਦੀ ਗੱਲ ਹੈ ਕਿ ਅਖੰਡ ਪਾਠ-ਸੇਵਾ ਸੁਸਾਇਟੀਆਂ ਵਲੋਂ ਗੁਰਬਾਣੀ ਦੇ ਸ਼ੁੱਧ ਉਚਾਰਣ ਸੰਬੰਧੀ ਸਿੱਖਿਆ ਦੇਣ ਦਿਵਾਉਣ ਵਲ ਕੋਈ ਧਿਆਨ ਨਹੀਂ ਦਿੱਤਾ ਜਾਂਦਾ।
+      </p>
+
+      <p>
+        ਗੁਰਬਾਣੀ ਦੇ ਸ਼ੁੱਧ ਉਚਾਰਣ ਦੇ ਮਹੱਤਵ ਪੂਰਨ ਵਿਸ਼ੇ ਵਲ ਪੰਥਕ ਪੱਧਰ ਤੇ ਲੋੜੀਂਦਾ ਧਿਆਨ ਅੱਜ ਤਕ ਨਹੀਂ ਦਿੱਤਾ ਗਿਆ। ਕੁਝ ਕੁ ਸੁਭਾਗੇ ਵਿਅਕਤੀਆਂ ਜਾਂ ਸੰਸਥਾਵਾਂ ਵਲੋਂ ਨਿੱਜੀ ਪੱਧਰ ਤੇ ਥੋੜਾ ਬਹੁਤ ਧਿਆਨ ਦਿੱਤਾ ਗਿਆ ਹੈ, ਪਰ ਉਚਾਰਣ ਦੀਆਂ ਸਮੱਸਿਆਵਾਂ, ਜਿਨ੍ਹਾਂ ਬਾਰੇ ਵਿਦਵਾਨਾਂ ਵਿਚ ਪਰਸਪਰ ਵਿਚਾਰਾਂ ਦਾ ਵਖੇਵਾਂ ਹੈ, ਉਹਨਾਂ ਦੇ ਸਮਾਧਾਨ ਲਈ ਕੋਈ ਵਿਸ਼ੇਸ਼ ਯਤਨ ਨਹੀਂ ਕੀਤਾ ਗਿਆ।
+      </p>
+
+      <p>
+        ਗੁਰਬਾਣੀ ਦੇ ਸ਼ੁੱਧ ਉਚਾਰਣ ਸੰਬੰਧੀ ਕਈ ਸਮੱਸਿਆਵਾਂ ਹਨ। ਇਹਨਾਂ ਵਿਚੋਂ ਇਕ ਸਮੱਸਿਆ ਇਹ ਹੈ ਕਿ ਗੁਰਬਾਣੀ ਦੀ ਸ਼ੁੱਧ ਛਪਾਈ ਵਲ ਯੋਗ ਧਿਆਨ ਨਹੀਂ ਦਿੱਤਾ ਜਾਂਦਾ। ਪ੍ਰਕਾਸ਼ਕਾਂ ਦੀ ਅਣਗਹਿਲੀ ਕਾਰਨ ਕਈ ਅਸ਼ੁੱਧੀਆਂ ਛਪ ਜਾਂਦੀਆਂ ਹਨ। ਇਸ ਤਰ੍ਹਾਂ ਵਖ ਵਖ ਪ੍ਰਕਾਸ਼ਕਾਂ ਵਲੋਂ ਛਾਪੀ ਜਾਣ ਵਾਲੀ ਬੀੜ ਦੀ ਹਰ ਨਵੀਂ ਐਡੀਸ਼ਨ ਸਮੇਂ ਅਸ਼ੁੱਧੀਆਂ ਦੀ ਗਿਣਤੀ ਵਿਚ ਵਾਧਾ ਹੁੰਦਾ ਚਲਿਆ ਆ ਰਿਹਾ ਹੈ। ਇਹ ਇਕ ਤਲਖ਼ ਸਚਾਈ ਹੈ ਕਿ ਵਖ ਵਖ ਪ੍ਰਕਾਸ਼ਕਾਂ ਦੁਆਰਾ ਛਪੀਆਂ ਬੀੜਾਂ ਵਿਚ ਪਰਸਪਰ ਕਈ ਪਾਠ-ਭੇਦ ਹਨ; ਖ਼ਾਸ ਕਰਕੇ ਪਦ-ਛੇਦ ਛਪਾਈ ਵਾਲੀਆਂ ਬੀੜਾਂ ਵਿਚ। ਬੜੇ ਦੁੱਖ ਦੀ ਗੱਲ ਹੈ ਕਿ ਇਸ ਪਾਸੇ ਕਿਸੇ ਸੰਸਥਾ ਵਲੋਂ ਲੋੜੀਂਦਾ ਧਿਆਨ ਨਹੀਂ ਦਿੱਤਾ ਜਾ ਰਿਹਾ।
+      </p>
+
+      <div class="attribution">
+        <p>[ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਬੋਧ, ਭਾਗ ੨ "ਗੁਰਬਾਣੀ ਉਚਾਰਣ" ਪੁਸਤਕ ਵਿਚੋਂ]</p>
+      </div>
+
+    </div>
+
+    <!-- ENGLISH CONTENT -->
+
+    <div id="english-content" style="display:none;">
+
+      <p>
+        Sri Guru Granth Sahib Ji is a priceless treasure of spiritual knowledge. The infusion of this divine knowledge occurred in the pure hearts of the Satgurus and devotee-souls of divine disposition, at the moment of becoming one with the Supreme Truth from within. This divine knowledge then manifested through their sacred tongues in the form of Gurbani. The compilation of the sacred Bani of the Satgurus and devotees was done by Sri Guru Arjan Dev Ji in the form of 'Pothi Sahib' in Sammat 1661 Vikrami.
+      </p>
+
+      <p>
+        The Bani recorded in Sri Guru Granth Sahib is in the spoken language of that era. Although Guru Patshah was born and raised in Panjab, for the expression of divine knowledge, the Sadh-Bhasha (saintly language) used in religious circles of that time was employed — which was a refined mixture of various languages of India. The influence of Panjabi is deeply and clearly visible on the Sadh-Bhasha used in Gurbani. Overall, Gurbani's language contains varieties of many languages including Brij, Hindvi, Bhat-Bhasha, Sahskrti, Gatha, Farsi (Rekhta), Punjabi and its various dialects — Lehndi, Dogri, Pothohari, etc. In Bhagat-Bani, words from the regional languages of the divine Bhagats — Brij, Marwari, Gujarati, Bangla, Marathi and others — are also found in abundance.
+      </p>
+
+      <p>
+        The language of Gurbani is between five hundred to eight hundred years old. Although Gurbani is written in Gurmukhi script, its writing style is approximately four hundred years old, upon which the influence of Devanagari writing style is clearly visible. In Gurbani's text, the vowel use of 'Y' and 'V' and the use of double and triple toned vowels is found in countless places, but such usage has largely ceased in modern Punjabi writing.
+      </p>
+
+      <p>
+        With the attainment of school education, one certainly gains the ability to read modern script. However, Gurbani's ancient language, written according to the ancient writing style and especially in continuous (Lareedaar) form, cannot be read correctly by the strength of school education alone. That is why it is necessary to take Santhia (guided learning) from a properly trained Paathi Singh.
+      </p>
+
+      <p>
+        In earlier times, it was common practice that before beginning the path of Sri Guru Granth Sahib, Santhia of compositions such as Panj Granthi, Das Granthi, Bai Vaaran, and Bhagat Bani would be taken from trained Paathi Singhs, and thereafter considerable practice of smooth recitation would be done. With the passage of time, either trained Paathi Singhs have become rare, or Sikh seekers no longer have the leisure or dedication to take Santhia. Many devotees begin recitation without any training. Ardas is offered by all for the ability to recite Gurbani correctly, but very few make the necessary effort for it.
+      </p>
+
+      <p>
+        Nowadays, Akhand Paath Seva Societies have been formed in almost every city, which arrange recitations at homes through devoted readers with selfless spirit. Their intention and purpose is very praiseworthy, but it has been observed that untrained devoted readers make countless mistakes during recitation. Surprisingly, no attention is paid by Akhand Paath Seva Societies toward providing education on correct Gurbani pronunciation.
+      </p>
+
+      <p>
+        The important subject of correct Gurbani pronunciation has not received adequate attention at the Panthic level to this day. Some fortunate individuals or institutions have paid some attention at a personal level, but no special effort has been made to resolve the pronunciation issues about which scholars hold differing views.
+      </p>
+
+      <p>
+        There are several issues concerning correct Gurbani pronunciation. One such issue is that adequate attention is not paid to the correct printing of Gurbani. Due to the negligence of publishers, many errors get printed. In this way, with each new edition printed by various publishers, the number of errors continues to grow. It is a bitter truth that there are many textual differences between Birs printed by various publishers — especially in those printed with Pad-Chhed (word-separated) style. It is very unfortunate that no institution is paying adequate attention to this matter.
+      </p>
+
+      <div class="attribution">
+        <p>[From Sri Guru Granth Sahib Bodh, Part 2, "Gurbani Uchaaran"]</p>
+        <p>
+          With Guru Sahib's kirpa, this digitisation seva has been carried out by
+          Daas Bhupinder Singh (Dharam Parchar Lead – AKJ UK).
+        </p>
+        <p>
+          Daas humbly seeks forgiveness for any mistakes or shortcomings.
+        </p>
+      </div>
+
+    </div>
+
+    <a href="/articles/Talwara/index.html" class="back-home">
+      ← Back To Talwara Articles
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+<script>
+
+function showPunjabi(){
+    document.getElementById('punjabi-content').style.display = 'block';
+    document.getElementById('english-content').style.display = 'none';
+    document.getElementById('paBtn').classList.add('active');
+    document.getElementById('enBtn').classList.remove('active');
+}
+
+function showEnglish(){
+    document.getElementById('punjabi-content').style.display = 'none';
+    document.getElementById('english-content').style.display = 'block';
+    document.getElementById('enBtn').classList.add('active');
+    document.getElementById('paBtn').classList.remove('active');
+}
+
+</script>
+
+</body>
+</html>
