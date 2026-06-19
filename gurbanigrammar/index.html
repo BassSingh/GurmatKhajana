@@ -10,138 +10,232 @@
   <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:#000;
-    color:#fff;
-    font-family:Arial,sans-serif;
-    line-height:1.7;
+background:#000;
+color:#fff;
+font-family:Arial,sans-serif;
+overflow-x:hidden;
 }
 
+body::before{
+content:'';
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(
+circle at top,
+rgba(212,164,44,.10),
+transparent 50%);
+
+pointer-events:none;
+z-index:-1;
+}
+
+/* HERO */
+
 .hero{
-    text-align:center;
-    padding:120px 20px;
-    background:
-    linear-gradient(
-    to bottom,
-    rgba(212,164,44,0.15),
-    rgba(0,0,0,1)
-    );
+min-height:80vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:60px 20px;
+}
+
+.logo{
+width:min(90vw,500px);
+margin-bottom:30px;
 }
 
 .hero h1{
-    font-size:4rem;
-    color:#d4a42c;
-    margin-bottom:20px;
+font-size:3.5rem;
+color:#d4a42c;
+margin-bottom:20px;
 }
 
 .hero p{
-    max-width:800px;
-    margin:auto;
-    color:#ccc;
-    font-size:1.1rem;
+max-width:850px;
+font-size:1.15rem;
+line-height:1.8;
+color:#ccc;
 }
 
+/* SECTION */
+
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
+max-width:1300px;
+margin:auto;
+padding:60px 20px;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:40px;
+text-align:center;
+margin-bottom:40px;
 }
 
 .section-title h2{
-    color:#d4a42c;
-    font-size:2rem;
+font-size:2rem;
+color:#d4a42c;
 }
 
+/* MODULES */
+
 .module-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
 }
 
 .module-card{
-    background:#111;
-    border:1px solid #222;
-    border-radius:20px;
-    padding:25px;
-    transition:.3s;
+background:
+linear-gradient(
+135deg,
+#111,
+#080808);
+
+border:1px solid #222;
+
+border-radius:20px;
+
+padding:30px;
+
+transition:.3s;
 }
 
 .module-card:hover{
-    transform:translateY(-5px);
-    border-color:#d4a42c;
+transform:translateY(-5px);
+
+border-color:#d4a42c;
+
+box-shadow:
+0 0 25px rgba(212,164,44,.15);
 }
 
 .module-number{
-    color:#d4a42c;
-    text-transform:uppercase;
-    font-size:.8rem;
-    letter-spacing:2px;
-    margin-bottom:10px;
+font-size:.75rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#d4a42c;
+margin-bottom:10px;
 }
 
 .module-card h3{
-    margin-bottom:10px;
+margin-bottom:15px;
 }
 
 .module-card p{
-    color:#bbb;
+color:#aaa;
+line-height:1.8;
 }
 
-.lesson-box{
-    background:#111;
-    border:1px solid #222;
-    border-radius:20px;
-    padding:30px;
-    margin-top:50px;
+/* FEATURED LESSON */
+
+.lesson{
+margin-top:70px;
+
+background:#111;
+
+border:1px solid #222;
+
+border-radius:20px;
+
+padding:35px;
 }
 
-.lesson-box h3{
-    color:#d4a42c;
-    margin-bottom:20px;
+.lesson h2{
+color:#d4a42c;
+margin-bottom:20px;
 }
 
-.example{
-    background:#1b1b1b;
-    border-left:4px solid #d4a42c;
-    padding:15px;
-    margin-top:20px;
+.lesson p{
+color:#ccc;
+line-height:1.8;
+}
+
+.gurbani{
+background:#1b1b1b;
+
+border-left:4px solid #d4a42c;
+
+padding:20px;
+
+margin-top:20px;
+
+font-size:1.5rem;
 }
 
 button{
-    margin-top:20px;
-    background:#d4a42c;
-    color:black;
-    border:none;
-    padding:12px 25px;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:bold;
+margin-top:25px;
+
+background:#d4a42c;
+
+color:#000;
+
+border:none;
+
+padding:14px 25px;
+
+border-radius:40px;
+
+font-weight:bold;
+
+cursor:pointer;
 }
 
 .answer{
-    display:none;
-    margin-top:15px;
-    background:#222;
-    padding:15px;
-    border-radius:10px;
+display:none;
+
+margin-top:20px;
+
+background:#1b1b1b;
+
+padding:20px;
+
+border-radius:12px;
 }
 
+/* FOOTER */
+
 footer{
-    text-align:center;
-    padding:50px 20px;
-    color:#666;
-    border-top:1px solid #222;
-    margin-top:80px;
+margin-top:80px;
+
+border-top:1px solid #222;
+
+padding:40px;
+
+text-align:center;
+
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:2.3rem;
+}
+
+.logo{
+width:280px;
+}
+
+.gurbani{
+font-size:1.2rem;
+}
+
 }
 
 </style>
@@ -152,11 +246,16 @@ footer{
 
 <section class="hero">
 
+  <img src="../images/logo/logo.png"
+       class="logo"
+       alt="GurmatKhajana Logo">
+
   <h1>Gurbani Grammar Academy</h1>
 
   <p>
-    Learn Gurbani Viakaran step by step through lessons,
-    examples, pronunciation guidance and interactive learning.
+    Learn Gurbani Viakaran through interactive lessons,
+    grammar rules, pronunciation guidance and examples
+    from Sri Guru Granth Sahib Ji.
   </p>
 
 </section>
@@ -172,49 +271,67 @@ footer{
     <div class="module-card">
       <div class="module-number">Module 1</div>
       <h3>Introduction</h3>
-      <p>
-        Why study Gurbani Grammar and understanding the 8 word types.
-      </p>
+      <p>Why study Gurbani Grammar and understanding the 8 word types.</p>
     </div>
 
     <div class="module-card">
       <div class="module-number">Module 2</div>
-      <h3>Rules of Aunkar</h3>
-      <p>
-        Learn the first and second rules of Aunkar.
-      </p>
+      <h3>Aunkar Rules</h3>
+      <p>Learn the first and second rules of Aunkar.</p>
     </div>
 
     <div class="module-card">
       <div class="module-number">Module 3</div>
-      <h3>Pronunciation</h3>
-      <p>
-        Understanding Gurbani pronunciation and grammar together.
-      </p>
+      <h3>Sihari Rules</h3>
+      <p>Understanding pronunciation and grammatical structure.</p>
+    </div>
+
+    <div class="module-card">
+      <div class="module-number">Module 4</div>
+      <h3>Nouns & Pronouns</h3>
+      <p>Understanding Gurbani word types.</p>
+    </div>
+
+    <div class="module-card">
+      <div class="module-number">Module 5</div>
+      <h3>Verbs</h3>
+      <p>Learning Gurbani actions and meanings.</p>
+    </div>
+
+    <div class="module-card">
+      <div class="module-number">Module 6</div>
+      <h3>Advanced Grammar</h3>
+      <p>Building deeper Gurbani understanding.</p>
     </div>
 
   </div>
 
-  <div class="lesson-box">
+  <div class="lesson">
 
-    <h3>Module 1 Preview</h3>
+    <h2>Featured Lesson</h2>
 
     <p>
-      Understanding Gurbani Grammar helps us understand
-      the true meaning of Gurbani and improve pronunciation.
+      One of the most common questions in Gurbani Grammar is:
+      Why are some vowel markers written but not pronounced?
     </p>
 
-    <div class="example">
+    <div class="gurbani">
       ਅਕਾਲ ਮੂਰਤਿ
     </div>
 
-    <button onclick="showAnswer()">
-      Why is the Sihari not pronounced?
+    <button onclick="toggleAnswer()">
+      Show Explanation
     </button>
 
-    <div class="answer" id="answerBox">
-      Gurbani Grammar explains why some vowel markers
-      are written but not pronounced when reading Gurbani.
+    <div id="answer" class="answer">
+
+      Understanding Gurbani Grammar helps us understand
+      both pronunciation and meaning.
+
+      Many learners ask why some vowel markers are written
+      but not pronounced. Gurbani Grammar provides the rules
+      that explain these patterns.
+
     </div>
 
   </div>
@@ -222,20 +339,23 @@ footer{
 </div>
 
 <footer>
+
   GurmatKhajana • Gurbani Grammar Academy
+
 </footer>
 
 <script>
 
-function showAnswer(){
+function toggleAnswer(){
 
-var box =
-document.getElementById("answerBox");
+var answer =
+document.getElementById("answer");
 
-if(box.style.display === "block"){
-    box.style.display = "none";
-}else{
-    box.style.display = "block";
+if(answer.style.display==="block"){
+answer.style.display="none";
+}
+else{
+answer.style.display="block";
 }
 
 }
