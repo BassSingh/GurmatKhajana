@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gurbani Grammar Academy | GurmatKhajana</title>
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    line-height:1.7;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(212,164,44,0.15),
+    rgba(0,0,0,1)
+    );
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#d4a42c;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    color:#ccc;
+    font-size:1.1rem;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#d4a42c;
+    font-size:2rem;
+}
+
+.module-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.module-card{
+    background:#111;
+    border:1px solid #222;
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
+}
+
+.module-card:hover{
+    transform:translateY(-5px);
+    border-color:#d4a42c;
+}
+
+.module-number{
+    color:#d4a42c;
+    text-transform:uppercase;
+    font-size:.8rem;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.module-card h3{
+    margin-bottom:10px;
+}
+
+.module-card p{
+    color:#bbb;
+}
+
+.lesson-box{
+    background:#111;
+    border:1px solid #222;
+    border-radius:20px;
+    padding:30px;
+    margin-top:50px;
+}
+
+.lesson-box h3{
+    color:#d4a42c;
+    margin-bottom:20px;
+}
+
+.example{
+    background:#1b1b1b;
+    border-left:4px solid #d4a42c;
+    padding:15px;
+    margin-top:20px;
+}
+
+button{
+    margin-top:20px;
+    background:#d4a42c;
+    color:black;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.answer{
+    display:none;
+    margin-top:15px;
+    background:#222;
+    padding:15px;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    color:#666;
+    border-top:1px solid #222;
+    margin-top:80px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+  <h1>Gurbani Grammar Academy</h1>
+
+  <p>
+    Learn Gurbani Viakaran step by step through lessons,
+    examples, pronunciation guidance and interactive learning.
+  </p>
+
+</section>
+
+<div class="container">
+
+  <div class="section-title">
+    <h2>Course Modules</h2>
+  </div>
+
+  <div class="module-grid">
+
+    <div class="module-card">
+      <div class="module-number">Module 1</div>
+      <h3>Introduction</h3>
+      <p>
+        Why study Gurbani Grammar and understanding the 8 word types.
+      </p>
+    </div>
+
+    <div class="module-card">
+      <div class="module-number">Module 2</div>
+      <h3>Rules of Aunkar</h3>
+      <p>
+        Learn the first and second rules of Aunkar.
+      </p>
+    </div>
+
+    <div class="module-card">
+      <div class="module-number">Module 3</div>
+      <h3>Pronunciation</h3>
+      <p>
+        Understanding Gurbani pronunciation and grammar together.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="lesson-box">
+
+    <h3>Module 1 Preview</h3>
+
+    <p>
+      Understanding Gurbani Grammar helps us understand
+      the true meaning of Gurbani and improve pronunciation.
+    </p>
+
+    <div class="example">
+      ਅਕਾਲ ਮੂਰਤਿ
+    </div>
+
+    <button onclick="showAnswer()">
+      Why is the Sihari not pronounced?
+    </button>
+
+    <div class="answer" id="answerBox">
+      Gurbani Grammar explains why some vowel markers
+      are written but not pronounced when reading Gurbani.
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  GurmatKhajana • Gurbani Grammar Academy
+</footer>
+
+<script>
+
+function showAnswer(){
+
+var box =
+document.getElementById("answerBox");
+
+if(box.style.display === "block"){
+    box.style.display = "none";
+}else{
+    box.style.display = "block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
