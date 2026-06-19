@@ -1,597 +1,192 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Gurbani Grammar Academy | GurmatKhajana</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#000;
-color:#fff;
-font-family:Arial,sans-serif;
-overflow-x:hidden;
-}
-
-body::before{
-content:'';
-position:fixed;
-inset:0;
-
-background:
-radial-gradient(circle at top,
-rgba(212,164,44,.08),
-transparent 45%);
-
-pointer-events:none;
-z-index:-1;
-}
-
-body::after{
-content:'';
-position:fixed;
-inset:0;
-
-background:
-
-radial-gradient(circle at 15% 20%,
-rgba(212,164,44,.10),
-transparent 25%),
-
-radial-gradient(circle at 85% 30%,
-rgba(212,164,44,.08),
-transparent 30%),
-
-radial-gradient(circle at 50% 80%,
-rgba(255,255,255,.03),
-transparent 35%);
-
-pointer-events:none;
-z-index:-2;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-/* NAVBAR */
-
-.navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:999;
-
-padding:22px 6%;
-
-display:flex;
-justify-content:flex-end;
-align-items:center;
-
-background:
-linear-gradient(to bottom,
-rgba(0,0,0,.88),
-rgba(0,0,0,.15));
-
-backdrop-filter:blur(10px);
-
-border-bottom:
-1px solid rgba(255,255,255,.05);
-}
-
-.nav-links{
-display:flex;
-gap:35px;
-}
-
-.nav-links a{
-font-size:.82rem;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#ddd;
-transition:.3s;
-}
-
-.nav-links a:hover{
-color:#d4a42c;
-}
-
-/* HERO */
-
-.hero{
-position:relative;
-min-height:75vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-overflow:hidden;
-
-background:
-linear-gradient(rgba(0,0,0,.5),
-rgba(0,0,0,.9)),
-url('../images/gallery/siteimages/2.jpeg')
-center/cover fixed;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-
-background:
-radial-gradient(circle at center,
-transparent 10%,
-rgba(0,0,0,.72) 100%);
-}
-
-.akj-top-logo{
-position:absolute;
-top:40px;
-left:50%;
-transform:translateX(-50%);
-z-index:10;
-}
-
-.akj-top-logo img{
-width:90px;
-}
-
-.hero-content{
-position:relative;
-z-index:20;
-text-align:center;
-padding-top:80px;
-}
-
-.main-logo img{
-width:min(90vw,520px);
-display:block;
-margin:auto;
-margin-bottom:20px;
-}
-
-.hero-title{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-color:#d4a42c;
-margin-bottom:20px;
-}
-
-.hero-text{
-max-width:850px;
-margin:auto;
-line-height:1.8;
-color:#ddd;
-font-size:1.1rem;
-}
-
-/* SECTIONS */
-
-.section{
-padding:100px 7%;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:50px;
-}
-
-.section-title span{
-color:#d4a42c;
-letter-spacing:3px;
-font-size:.8rem;
-text-transform:uppercase;
-}
-
-.section-title h2{
-font-family:'Cormorant Garamond',serif;
-font-size:3rem;
-margin-top:10px;
-}
-
-/* MODULE CARDS */
-
-.module-grid{
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
-
-gap:24px;
-}
-
-.module-card{
-position:relative;
-overflow:hidden;
-
-border-radius:24px;
-
-min-height:320px;
-
-background:
-linear-gradient(
-135deg,
-rgba(20,20,20,.65),
-rgba(10,10,10,.35));
-
-border:
-1px solid rgba(255,255,255,.06);
-
-transition:.4s;
-}
-
-.module-card:hover{
-transform:translateY(-8px);
-
-border-color:
-rgba(212,164,44,.35);
-
-box-shadow:
-0 20px 50px rgba(0,0,0,.45);
-}
-
-.module-card img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.5s;
-}
-
-.module-card:hover img{
-transform:scale(1.06);
-}
-
-.module-overlay{
-position:absolute;
-inset:0;
-
-display:flex;
-align-items:flex-end;
-
-padding:30px;
-
-background:
-linear-gradient(
-to top,
-rgba(0,0,0,.95),
-rgba(0,0,0,.15));
-}
-
-.module-category{
-color:#d4a42c;
-letter-spacing:2px;
-font-size:.8rem;
-margin-bottom:10px;
-}
-
-.module-overlay h3{
-font-size:2rem;
-margin-bottom:10px;
-}
-
-.module-overlay p{
-color:#ddd;
-line-height:1.8;
-}
-
-/* FEATURED LESSON */
-
-.lesson-box{
-
-max-width:1000px;
-margin:auto;
-
-background:
-rgba(255,255,255,.03);
-
-border:
-1px solid rgba(255,255,255,.06);
-
-border-radius:24px;
-
-padding:40px;
-}
-
-.lesson-box p{
-line-height:2;
-color:#ddd;
-}
-
-.gurbani{
-background:#111;
-border-left:4px solid #d4a42c;
-
-padding:20px;
-margin:25px 0;
-
-font-size:1.5rem;
-}
-
-.btn{
-display:inline-block;
-padding:15px 28px;
-border-radius:50px;
-
-background:#d4a42c;
-color:black;
-
-font-weight:bold;
-
-cursor:pointer;
-border:none;
-}
-
-.answer{
-display:none;
-
-margin-top:20px;
-
-padding:20px;
-
-background:#111;
-
-border-radius:16px;
-
-line-height:1.9;
-}
-
-/* FOOTER */
-
-footer{
-padding:40px 20px;
-text-align:center;
-color:#888;
-border-top:1px solid rgba(255,255,255,.06);
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-.hero-title{
-font-size:2.4rem;
-}
-
-.main-logo img{
-max-width:280px;
-}
-
-.section-title h2{
-font-size:2rem;
-}
-
-.module-card{
-min-height:260px;
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<nav class="navbar">
-
-  <div class="nav-links">
-
-    <a href="../index.html">Home</a> <a href="../about.html">About</a> <a href="../articles/index.html">Articles</a> <a href="../jeevani/index.html">Jeevani</a>
-
-  </div>
-
-</nav>
-
-<section class="hero">
-
-  <div class="akj-top-logo">
-
-    <img src="../images/logo/akj_black_khanda.png">
-
-  </div>
-
-  <div class="hero-content">
-
-    <div class="main-logo">
-
-      <img src="../images/logo/logo.png">
-
-    </div>
-
-    <h1 class="hero-title">
-      Gurbani Grammar Academy
-    </h1>
-
-    <p class="hero-text">
-      Learn Gurbani Viakaran through interactive lessons,
-      pronunciation guidance and examples from Sri Guru Granth Sahib Ji.
-    </p>
-
-  </div>
-
-</section>
-
 <section class="section">
 
+  ```
   <div class="section-title">
 
-    <span>Grammar Course</span>
+    <span>Gurbani Grammar Academy</span>
 
-    <h2>Course Modules</h2>
-
-  </div>
-
-  <div class="module-grid">
-
-    <a href="module1.html" class="module-card">
-
-      <img src="../images/gallery/siteimages/1.jpg">
-
-      <div class="module-overlay">
-
-        <div>
-
-          <div class="module-category">
-            Module 1
-          </div>
-
-          <h3>Introduction</h3>
-
-          <p>
-            Why Study Grammar and the 8 Word Types
-          </p>
-
-        </div>
-
-      </div>
-
-    </a>
-
-    <a href="#" class="module-card">
-
-      <img src="../images/gallery/siteimages/2.jpeg">
-
-      <div class="module-overlay">
-
-        <div>
-
-          <div class="module-category">
-            Module 2
-          </div>
-
-          <h3>Aunkar Rules</h3>
-
-          <p>
-            Learn the first and second rules of Aunkar
-          </p>
-
-        </div>
-
-      </div>
-
-    </a>
-
-    <a href="#" class="module-card">
-
-      <img src="../images/gallery/siteimages/Talwara2.jpg">
-
-      <div class="module-overlay">
-
-        <div>
-
-          <div class="module-category">
-            Module 3
-          </div>
-
-          <h3>Sihari Rules</h3>
-
-          <p>
-            Pronunciation and Gurbani Structure
-          </p>
-
-        </div>
-
-      </div>
-
-    </a>
+    <h2>Learning Journey</h2>
 
   </div>
 
-</section>
+  <!-- Progress -->
 
-<section class="section">
+  <div style="
+max-width:900px;
+margin:0 auto 60px;
+">
 
-  <div class="section-title">
+    <div style="
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+    color:#d4a42c;
+    font-weight:bold;
+    ">
 
-    <span>Featured Lesson</span>
-
-    <h2>Why Study Gurbani Grammar?</h2>
-
-  </div>
-
-  <div class="lesson-box">
-
-    <p>
-
-      There is an urgent need to raise awareness of the importance
-      of studying Gurbani and its grammar (Viakaran).
-
-      Understanding grammar helps us understand the true meaning
-      and pronunciation of Gurbani.
-
-    </p>
-
-    <div class="gurbani">
-
-      ਅਕਾਲ ਮੂਰਤਿ
+      <span>Your Progress</span>
+      <span>0%</span>
 
     </div>
 
-    <button onclick="toggleLesson()" class="btn">
-      Show Explanation
-    </button>
+    <div style="
+    height:14px;
+    background:#111;
+    border-radius:50px;
+    overflow:hidden;
+    ">
 
-    <div id="lessonAnswer" class="answer">
-
-      One of the first questions students ask is:
-
-      Why is the Sihari written but not pronounced?
-
-      Gurbani Grammar provides the rules that explain these
-      patterns and helps us understand both pronunciation
-      and meaning.
+      <div style="
+        width:0%;
+        height:100%;
+        background:#d4a42c;
+        ">
+      </div>
 
     </div>
 
   </div>
 
+  <!-- Modules -->
+
+  <div style="
+max-width:900px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+">
+
+    <a href="module1.html" style="
+    background:#111;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.3s;
+    ">
+
+      <div>
+
+        <div style="
+            color:#d4a42c;
+            font-size:.8rem;
+            letter-spacing:2px;
+            text-transform:uppercase;
+            margin-bottom:10px;
+            ">
+          Module 1
+        </div>
+
+        <h3 style="margin-bottom:8px;">
+          Introduction
+        </h3>
+
+        <p style="color:#aaa;">
+          Why Study Grammar • 8 Word Types
+        </p>
+
+      </div>
+
+      <div style="
+        background:#d4a42c;
+        color:black;
+        padding:10px 20px;
+        border-radius:50px;
+        font-weight:bold;
+        ">
+        Start
+      </div>
+
+    </a>
+
+    <div style="
+    background:#0a0a0a;
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:25px;
+    opacity:.7;
+    ">
+
+      <div style="
+        color:#d4a42c;
+        font-size:.8rem;
+        letter-spacing:2px;
+        text-transform:uppercase;
+        margin-bottom:10px;
+        ">
+        Module 2
+      </div>
+
+      <h3 style="margin-bottom:8px;">
+        Aunkar Rules
+      </h3>
+
+      <p style="color:#888;">
+        Locked until Module 1 completed
+      </p>
+
+    </div>
+
+    <div style="
+    background:#0a0a0a;
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:25px;
+    opacity:.7;
+    ">
+
+      <div style="
+        color:#d4a42c;
+        font-size:.8rem;
+        letter-spacing:2px;
+        text-transform:uppercase;
+        margin-bottom:10px;
+        ">
+        Module 3
+      </div>
+
+      <h3 style="margin-bottom:8px;">
+        Sihari Rules
+      </h3>
+
+      <p style="color:#888;">
+        Locked until Module 2 completed
+      </p>
+
+    </div>
+
+    <div style="
+    background:#0a0a0a;
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:25px;
+    opacity:.7;
+    ">
+
+      <div style="
+        color:#d4a42c;
+        font-size:.8rem;
+        letter-spacing:2px;
+        text-transform:uppercase;
+        margin-bottom:10px;
+        ">
+        Module 4
+      </div>
+
+      <h3 style="margin-bottom:8px;">
+        Nouns & Pronouns
+      </h3>
+
+      <p style="color:#888;">
+        Coming Soon
+      </p>
+
+    </div>
+
+  </div>
+  ```
+
 </section>
-
-<footer>
-
-  © 2026 GurmatKhajana.com • Gurbani Grammar Academy
-
-</footer>
-
-<script>
-
-function toggleLesson(){
-
-const box =
-document.getElementById('lessonAnswer');
-
-if(box.style.display === 'block'){
-box.style.display = 'none';
-}
-else{
-box.style.display = 'block';
-}
-
-}
-
-</script>
-
-</body>
-</html>
