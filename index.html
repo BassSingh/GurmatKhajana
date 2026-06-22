@@ -129,6 +129,7 @@ a{
 .hero{
     position:relative;
     min-height:100vh;
+    height:100vh;
 
     display:flex;
     justify-content:center;
@@ -136,11 +137,34 @@ a{
 
     overflow:hidden;
 
+    background:#000;
+}
+
+/* VIDEO BACKGROUND */
+
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+}
+
+/* DARK OVERLAY OVER VIDEO */
+.hero-video-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+
     background:
-    linear-gradient(rgba(0,0,0,0.50),
-    rgba(0,0,0,0.9)),
-    url('images/gallery/siteimages/2.jpeg')
-    center/cover fixed;
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.0) 25%,
+        rgba(0,0,0,0.0) 65%,
+        rgba(0,0,0,0.75) 100%
+    );
 }
 
 .hero::before{
@@ -150,10 +174,10 @@ a{
 
     background:
     radial-gradient(circle at center,
-    transparent 10%,
-    rgba(0,0,0,0.72) 100%);
+    transparent 40%,
+    rgba(0,0,0,0.25) 100%);
 
-    backdrop-filter:blur(2px);
+    z-index:2;
 }
 
 /* EXTRA HERO GLOW */
@@ -170,13 +194,15 @@ a{
     transparent 45%);
 
     pointer-events:none;
+
+    z-index:3;
 }
 
 /* TOP KHANDA */
 
 .akj-top-logo{
     position:absolute;
-    top:50px;
+    top:60px;
     left:50%;
     transform:translateX(-50%);
     z-index:50;
@@ -202,7 +228,7 @@ a{
 
     text-align:center;
 
-    padding-top:150px;
+    padding-top:80px;
 }
 
 /* MAIN LOGO */
@@ -523,7 +549,6 @@ footer{
 
 @media(max-width:950px){
 
-
 .article-grid{
     grid-template-columns:1fr;
 }
@@ -557,74 +582,6 @@ footer{
 .nav-links a{
     font-size:0.62rem;
     letter-spacing:1px;
-}
-
-/* HERO */
-
-.hero{
-    position:relative;
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    overflow:hidden;
-
-    background:
-    linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.88)),
-
-    url('images/gallery/siteimages/2.jpeg');
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-}
-
-/* CINEMATIC LIGHTING */
-
-.hero::before{
-    content:'';
-
-    position:absolute;
-    inset:0;
-
-    background:
-    radial-gradient(circle at top,
-    rgba(212,164,44,0.22),
-    transparent 35%),
-
-    radial-gradient(circle at center,
-    transparent 20%,
-    rgba(0,0,0,0.72) 100%),
-
-    linear-gradient(
-    to top,
-    rgba(0,0,0,0.92),
-    transparent 45%);
-
-    z-index:1;
-}
-
-/* FILM GRAIN */
-
-.hero::after{
-    content:'';
-
-    position:absolute;
-    inset:0;
-
-    background-image:
-    url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-
-    opacity:0.18;
-
-    mix-blend-mode:soft-light;
-
-    z-index:2;
 }
 
 .hero-content{
@@ -750,7 +707,6 @@ footer{
         <a href="/about.html">About</a>
         <a href="/articles/index.html">Articles</a>
         <a href="/jeevani/index.html">Jeevani</a>
-
     </div>
 
 </nav>
@@ -758,6 +714,20 @@ footer{
 <!-- HERO -->
 
 <section class="hero">
+
+    <!-- VIDEO BACKGROUND -->
+    <video
+            class="hero-video"
+            src="video/BFJ.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto">
+    </video>
+
+    <!-- OVERLAY TO DARKEN VIDEO -->
+    <div class="hero-video-overlay"></div>
 
     <div class="akj-top-logo">
 
@@ -884,7 +854,6 @@ footer{
                         ਸ੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਸਾਹਿਬ ਦੀ ਬਾਣੀ ਵਿਚੋਂ
                     </p>
 
-
                 </div>
 
             </div>
@@ -902,7 +871,6 @@ footer{
     <div class="section-title">
 
         <span>Jeevani</span>
-
 
     </div>
 
