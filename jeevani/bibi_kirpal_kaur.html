@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bibi Kirpal Kaur Ji • GurmatKhajana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'EB Garamond',serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 15% 20%,
+    rgba(212,164,44,0.06),
+    transparent 25%),
+    radial-gradient(circle at 85% 60%,
+    rgba(212,164,44,0.04),
+    transparent 30%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-family:'Inter',sans-serif;
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.5) 50%,
+    rgba(0,0,0,0.97) 100%),
+    url('/images/gallery/jeevani/Kirpal_Kaur.jpg')
+    center top/cover no-repeat;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(ellipse at center bottom,
+    rgba(212,164,44,0.08),
+    transparent 60%);
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    max-width:900px;
+
+    padding:0 40px 80px;
+
+    text-align:center;
+}
+
+.hero-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+
+    margin-bottom:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+}
+
+.hero-label::before,
+.hero-label::after{
+    content:'';
+    width:60px;
+    height:1px;
+    background:rgba(212,164,44,0.4);
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+    font-weight:600;
+    color:#fff;
+
+    margin-bottom:16px;
+
+    line-height:1.1;
+}
+
+.hero-content h1 em{
+    color:#d4a42c;
+    font-style:normal;
+}
+
+.hero-dates{
+    color:#888;
+    letter-spacing:3px;
+    font-size:0.9rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+}
+
+/* ARTICLE BODY */
+
+.article-body{
+    max-width:780px;
+    margin:0 auto;
+    padding:90px 40px 120px;
+}
+
+/* OPENING QUOTE */
+
+.opening-quote{
+    text-align:center;
+    margin-bottom:80px;
+
+    padding:50px 40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(212,164,44,0.06),
+    rgba(212,164,44,0.02));
+
+    border:1px solid rgba(212,164,44,0.15);
+
+    position:relative;
+}
+
+.opening-quote::before{
+    content:'\201C';
+
+    position:absolute;
+    top:-30px;
+    left:50%;
+    transform:translateX(-50%);
+
+    font-family:'Cinzel',serif;
+    font-size:6rem;
+    color:rgba(212,164,44,0.25);
+    line-height:1;
+}
+
+.opening-quote p{
+    font-family:'EB Garamond',serif;
+    font-size:1.35rem;
+    font-style:italic;
+    color:#d4a42c;
+    line-height:1.9;
+}
+
+.opening-quote cite{
+    display:block;
+    margin-top:18px;
+    color:#888;
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-family:'Inter',sans-serif;
+}
+
+/* PROSE */
+
+.prose p{
+    font-family:'EB Garamond',serif;
+    font-size:1.22rem;
+    line-height:2;
+    color:#d8d8d8;
+    margin-bottom:32px;
+}
+
+.prose p:first-child::first-letter{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    font-weight:600;
+    color:#d4a42c;
+    float:left;
+    line-height:0.8;
+    margin-right:10px;
+    margin-top:8px;
+}
+
+/* SECTION DIVIDER */
+
+.section-divider{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin:60px 0;
+}
+
+.section-divider span{
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,0.08);
+}
+
+.section-divider p{
+    color:#d4a42c;
+    letter-spacing:3px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+    white-space:nowrap;
+}
+
+/* PULL QUOTE */
+
+.pull-quote{
+    margin:50px 0;
+
+    padding:40px 45px;
+
+    border-left:3px solid #d4a42c;
+
+    background:
+    linear-gradient(to right,
+    rgba(212,164,44,0.05),
+    transparent);
+
+    border-radius:0 16px 16px 0;
+}
+
+.pull-quote p{
+    font-family:'EB Garamond',serif;
+    font-size:1.4rem;
+    font-style:italic;
+    color:#e8d5a3;
+    line-height:1.8;
+    margin:0;
+}
+
+.pull-quote cite{
+    display:block;
+    margin-top:14px;
+    color:#888;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-family:'Inter',sans-serif;
+}
+
+/* LIFE DATES BLOCK */
+
+.life-dates{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+
+    margin:60px 0;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(212,164,44,0.04),
+    rgba(212,164,44,0.01));
+
+    border:1px solid rgba(212,164,44,0.1);
+}
+
+.life-dates-item{
+    text-align:center;
+}
+
+.life-dates-item .ld-label{
+    font-family:'Inter',sans-serif;
+    font-size:0.72rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#666;
+    margin-bottom:10px;
+}
+
+.life-dates-item .ld-value{
+    font-family:'Cinzel',serif;
+    font-size:1.1rem;
+    color:#d4a42c;
+    line-height:1.5;
+}
+
+.life-dates-divider{
+    width:1px;
+    background:rgba(212,164,44,0.15);
+    align-self:stretch;
+}
+
+/* CLOSING */
+
+.closing-block{
+    margin-top:80px;
+    text-align:center;
+
+    padding:60px 40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.8),
+    rgba(10,10,10,0.6));
+
+    border:1px solid rgba(212,164,44,0.12);
+}
+
+.closing-block p{
+    font-family:'EB Garamond',serif;
+    font-size:1.25rem;
+    font-style:italic;
+    color:#ccc;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+.closing-block strong{
+    display:block;
+    margin-top:20px;
+    color:#d4a42c;
+    font-style:normal;
+    font-size:1rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* BACK LINK */
+
+.back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:60px;
+
+    color:#888;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+
+    transition:0.3s ease;
+}
+
+.back-link:hover{
+    color:#d4a42c;
+}
+
+.back-link::before{
+    content:'←';
+    font-size:1rem;
+}
+
+/* ATTRIBUTION */
+
+.attribution{
+    margin-top:50px;
+    padding:24px 32px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,0.06);
+    color:#666;
+    font-family:'Inter',sans-serif;
+    font-size:0.82rem;
+    letter-spacing:1px;
+    text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+
+    font-family:'Inter',sans-serif;
+    font-size:0.85rem;
+}
+
+/* FADE IN ANIMATION */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-content{
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.article-body{
+    animation:fadeUp 1s ease 0.3s both;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    display:none;
+}
+
+.top-main-logo img{
+    width:120px;
+}
+
+.hero{
+    min-height:90vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding:0 24px 60px;
+}
+
+.hero-content h1{
+    font-size:2.8rem;
+}
+
+.article-body{
+    padding:60px 24px 80px;
+}
+
+.opening-quote{
+    padding:35px 24px;
+}
+
+.opening-quote p{
+    font-size:1.15rem;
+}
+
+.prose p{
+    font-size:1.1rem;
+}
+
+.pull-quote{
+    padding:30px 28px;
+}
+
+.pull-quote p{
+    font-size:1.2rem;
+}
+
+.closing-block{
+    padding:40px 24px;
+}
+
+.life-dates{
+    gap:30px;
+    padding:30px 20px;
+    flex-wrap:wrap;
+}
+
+.life-dates-divider{
+    display:none;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+  <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/articles/index.html">Articles</a>
+    <a href="/jeevani/index.html">Jeevani</a>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-label">
+      Jeevani
+    </div>
+
+    <h1>Bibi <em>Kirpal</em> Kaur Ji</h1>
+
+    <p class="hero-dates"></p>
+
+  </div>
+
+</section>
+
+<!-- ARTICLE -->
+
+<div class="article-body">
+
+  <a href="/jeevani/index.html" class="back-link">
+    Back to Jeevani
+  </a>
+
+  <div class="opening-quote">
+    <p>
+      A paathi of rare fluency, a kirtani of deep devotion, and a daughter of the
+      Panth whom Bhai Sahib Randhir Singh Ji himself raised, loved, and blessed —
+      Bibi Kirpal Kaur Ji's jeevan was a living testament to the grace of Gurbani.
+    </p>
+  </div>
+
+  <div class="life-dates">
+    <div class="life-dates-item">
+      <div class="ld-label">Born</div>
+      <div class="ld-value">15 September 1935<br>Montgomery, Punjab</div>
+    </div>
+    <div class="life-dates-divider"></div>
+    <div class="life-dates-item">
+      <div class="ld-label">Partition</div>
+      <div class="ld-value">1947<br>Model Town, Ludhiana</div>
+    </div>
+    <div class="life-dates-divider"></div>
+    <div class="life-dates-item">
+      <div class="ld-label">Returned to Waheguru</div>
+      <div class="ld-value">19 March<br>Birmingham, UK</div>
+    </div>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      Bibi Kirpal Kaur Ji was born on 15th September 1935 in Montgomery, a city that
+      now lies within Pakistan. The upheaval of Partition in 1947 brought her family,
+      like so many others, across the new border to Model Town, Ludhiana — and it was
+      here, through the quiet workings of Waheguru's hukam, that destiny placed her in
+      the company that would shape her entire jeevan.
+    </p>
+
+    <p>
+      Among her classmates in Model Town was Bibi Daler Kaur, daughter of Bhai Sahib
+      Randhir Singh Ji of Narangwal — the great Gursikh, scholar, and sant whose love
+      for Gurbani and unwavering commitment to the Guru's rehat had inspired countless
+      souls across the Panth. Through this friendship, young Kirpal Kaur was drawn into
+      the warmth of that spiritual household, and Bhai Sahib, moved by her sincerity and
+      the tragedy of losing her own father at such a tender age, took her under his wing
+      and raised her as his own daughter.
+    </p>
+
+  </div>
+
+  <div class="section-divider">
+    <span></span>
+    <p>A Daughter of Bhai Sahib</p>
+    <span></span>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      Bhai Sahib's home in Model Town and his village of Narangwal were places where
+      Akhand Paath flowed continuously and Gurbani was the very breath of daily life.
+      It was in this blessed environment that Bhai Sahib encouraged young Kirpal Kaur
+      to read Larivaar paath during the many Akhand Paaths that took place in both
+      locations. She took to Gurbani with a devotion and natural aptitude that was
+      evident to all — by the age of ten, she had become a fluent and proficient paathi
+      of remarkable ability.
+    </p>
+
+    <p>
+      Bhai Sahib's love for Bibi Kirpal Kaur Ji extended to every aspect of her life.
+      It was he who arranged her Anand Karaj to Bhai Madan Singh, and in an act of
+      extraordinary grace and blessing, Bhai Sahib himself performed kirtan at their
+      wedding. Before she departed for the United Kingdom in the early 1960s, Bhai
+      Sahib gave her his own mala as a parting gift — a gesture of love, connection,
+      and blessing that she treasured for the rest of her life. He also continued to
+      write letters to both Bibi ji and Bhai Madan Singh, maintaining a bond that
+      distance could never diminish.
+    </p>
+
+  </div>
+
+  <div class="section-divider">
+    <span></span>
+    <p>A Life of Sewa in Birmingham</p>
+    <span></span>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      Bibi Kirpal Kaur Ji settled in Birmingham in the early 1960s, where she worked
+      as a librarian for twenty years — a role that sat quietly alongside a far deeper
+      vocation: the sewa of Gurbani and sangat. She was among the pioneers who brought
+      the spirit of the Akhand Kirtani Jatha to the United Kingdom, at a time when
+      such gatherings were almost entirely unheard of on British shores.
+    </p>
+
+  </div>
+
+  <div class="pull-quote">
+    <p>
+      She was one of only three kirtanis who performed kirtan through the entire night
+      — at a time when rehnsabais in the UK were yet to find their place.
+    </p>
+    <cite>Recollections of the Sangat</cite>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      Bibi ji arranged one of the very first AKJ rehnsabais in the United Kingdom at
+      Guru Nanak Gurdwara, Smethwick — an event that marked a landmark moment for
+      Sikhi in Britain. That night, she was one of only three kirtanis who sang kirtan
+      through the night, at a time when such gatherings carried a profound and pioneering
+      weight. Her participation was not merely musical — it was an act of deep spiritual
+      courage and commitment.
+    </p>
+
+    <p>
+      Her fluency in Gurbani was exceptional. She completed a full sehaj paath on five
+      separate occasions across three days — an undertaking that speaks not only to her
+      proficiency, but to the depth of her connection with Waheguru's bani. In her
+      regular paath, reading fifty ang in an hour was quite natural. The words of
+      Guru Sahib flowed through her with ease born of a lifetime of love.
+    </p>
+
+  </div>
+
+  <div class="section-divider">
+    <span></span>
+    <p>Chardi Kala to the Last</p>
+    <span></span>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      In her later years, Bibi Kirpal Kaur Ji faced considerable physical trials. A
+      stroke affected her speech, and a fall that fractured her leg and ankle left her
+      bedridden. Yet all who visited her remarked upon the same thing — her chardi kala,
+      her radiant face, and the unmistakable presence of a soul at peace with Waheguru's
+      hukam.
+    </p>
+
+    <p>
+      In the final days before her departure from this world, those close to her noticed
+      a quiet but profound change. Bhai Madan Singh and her niece, who were present,
+      spoke of how she would not permit any conversation in her room other than Gurbani.
+      More striking still, she began asking her niece repeatedly to make sure her keski
+      was properly in place — something she had never done before. It was as though, in
+      those last hours, she was preparing herself with great care to stand before her
+      Guru.
+    </p>
+
+    <p>
+      Bibi Kirpal Kaur Ji passed away peacefully in her sleep at home on Sunday, 19th
+      March, sometime between two and five in the morning — departing in the quiet hours
+      of the amrit vela, just as she had spent so many of her waking ones.
+    </p>
+
+  </div>
+
+  <div class="closing-block">
+    <p>
+      A jewel of the Panth, a daughter raised by Bhai Sahib Randhir Singh Ji himself,
+      and a soul whose jeevan of Gurbani, sewa, and chardi kala leaves a loss felt
+      not only in Birmingham, but across the entire Sikh world. May Waheguru bless her
+      with eternal abode at His feet.
+    </p>
+    <strong>ਵਾਹਿਗੁਰੂਜੀਕਾਖ਼ਾਲਸਾ ਵਾਹਿਗੁਰੂਜੀਕੀਫ਼ਤਹਿ</strong>
+  </div>
+
+  <div class="attribution">
+    Compiled from the recollections of the sangat and family
+  </div>
+
+</div>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+</body>
+</html>
