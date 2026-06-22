@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mata Joginder Kaur Ji • GurmatKhajana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'EB Garamond',serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 15% 20%,
+    rgba(212,164,44,0.06),
+    transparent 25%),
+    radial-gradient(circle at 85% 60%,
+    rgba(212,164,44,0.04),
+    transparent 30%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-family:'Inter',sans-serif;
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.5) 50%,
+    rgba(0,0,0,0.97) 100%),
+    url('../images/gallery/jeevani/MJK.jpg')
+    center top/cover no-repeat;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(ellipse at center bottom,
+    rgba(212,164,44,0.08),
+    transparent 60%);
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    max-width:900px;
+
+    padding:0 40px 80px;
+
+    text-align:center;
+}
+
+.hero-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+
+    margin-bottom:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+}
+
+.hero-label::before,
+.hero-label::after{
+    content:'';
+    width:60px;
+    height:1px;
+    background:rgba(212,164,44,0.4);
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+    font-weight:600;
+    color:#fff;
+
+    margin-bottom:16px;
+
+    line-height:1.1;
+}
+
+.hero-content h1 em{
+    color:#d4a42c;
+    font-style:normal;
+}
+
+.hero-dates{
+    color:#888;
+    letter-spacing:3px;
+    font-size:0.9rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+}
+
+/* ARTICLE BODY */
+
+.article-body{
+    max-width:780px;
+    margin:0 auto;
+    padding:90px 40px 120px;
+}
+
+/* OPENING QUOTE */
+
+.opening-quote{
+    text-align:center;
+    margin-bottom:80px;
+
+    padding:50px 40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(212,164,44,0.06),
+    rgba(212,164,44,0.02));
+
+    border:1px solid rgba(212,164,44,0.15);
+
+    position:relative;
+}
+
+.opening-quote::before{
+    content:'\201C';
+
+    position:absolute;
+    top:-30px;
+    left:50%;
+    transform:translateX(-50%);
+
+    font-family:'Cinzel',serif;
+    font-size:6rem;
+    color:rgba(212,164,44,0.25);
+    line-height:1;
+}
+
+.opening-quote p{
+    font-family:'EB Garamond',serif;
+    font-size:1.35rem;
+    font-style:italic;
+    color:#d4a42c;
+    line-height:1.9;
+}
+
+.opening-quote cite{
+    display:block;
+    margin-top:18px;
+    color:#888;
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-family:'Inter',sans-serif;
+}
+
+/* PROSE */
+
+.prose p{
+    font-family:'EB Garamond',serif;
+    font-size:1.22rem;
+    line-height:2;
+    color:#d8d8d8;
+    margin-bottom:32px;
+}
+
+.prose p:first-child::first-letter{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    font-weight:600;
+    color:#d4a42c;
+    float:left;
+    line-height:0.8;
+    margin-right:10px;
+    margin-top:8px;
+}
+
+/* SECTION DIVIDER */
+
+.section-divider{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin:60px 0;
+}
+
+.section-divider span{
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,0.08);
+}
+
+.section-divider p{
+    color:#d4a42c;
+    letter-spacing:3px;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+    white-space:nowrap;
+}
+
+/* PULL QUOTE */
+
+.pull-quote{
+    margin:50px 0;
+
+    padding:40px 45px;
+
+    border-left:3px solid #d4a42c;
+
+    background:
+    linear-gradient(to right,
+    rgba(212,164,44,0.05),
+    transparent);
+
+    border-radius:0 16px 16px 0;
+}
+
+.pull-quote p{
+    font-family:'EB Garamond',serif;
+    font-size:1.4rem;
+    font-style:italic;
+    color:#e8d5a3;
+    line-height:1.8;
+    margin:0;
+}
+
+.pull-quote cite{
+    display:block;
+    margin-top:14px;
+    color:#888;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-style:normal;
+    font-family:'Inter',sans-serif;
+}
+
+/* CLOSING */
+
+.closing-block{
+    margin-top:80px;
+    text-align:center;
+
+    padding:60px 40px;
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(20,20,20,0.8),
+    rgba(10,10,10,0.6));
+
+    border:1px solid rgba(212,164,44,0.12);
+}
+
+.closing-block p{
+    font-family:'EB Garamond',serif;
+    font-size:1.25rem;
+    font-style:italic;
+    color:#ccc;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+.closing-block strong{
+    display:block;
+    margin-top:20px;
+    color:#d4a42c;
+    font-style:normal;
+    font-size:1rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* BACK LINK */
+
+.back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:60px;
+
+    color:#888;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-family:'Inter',sans-serif;
+
+    transition:0.3s ease;
+}
+
+.back-link:hover{
+    color:#d4a42c;
+}
+
+.back-link::before{
+    content:'←';
+    font-size:1rem;
+}
+
+/* ATTRIBUTION */
+
+.attribution{
+    margin-top:50px;
+    padding:24px 32px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.02);
+    border:1px solid rgba(255,255,255,0.06);
+    color:#666;
+    font-family:'Inter',sans-serif;
+    font-size:0.82rem;
+    letter-spacing:1px;
+    text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+
+    font-family:'Inter',sans-serif;
+    font-size:0.85rem;
+}
+
+/* FADE IN ANIMATION */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-content{
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.article-body{
+    animation:fadeUp 1s ease 0.3s both;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    display:none;
+}
+
+.top-main-logo img{
+    width:120px;
+}
+
+.hero{
+    min-height:90vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding:0 24px 60px;
+}
+
+.hero-content h1{
+    font-size:2.8rem;
+}
+
+.article-body{
+    padding:60px 24px 80px;
+}
+
+.opening-quote{
+    padding:35px 24px;
+}
+
+.opening-quote p{
+    font-size:1.15rem;
+}
+
+.prose p{
+    font-size:1.1rem;
+}
+
+.pull-quote{
+    padding:30px 28px;
+}
+
+.pull-quote p{
+    font-size:1.2rem;
+}
+
+.closing-block{
+    padding:40px 24px;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+  <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/articles/index.html">Articles</a>
+    <a href="/jeevani/index.html">Jeevani</a>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-label">
+      Jeevani
+    </div>
+
+    <h1>Mata <em>Joginder</em> Kaur Ji</h1>
+
+    <p class="hero-dates">A Devoted Servant of Waheguru</p>
+
+  </div>
+
+</section>
+
+<!-- ARTICLE -->
+
+<div class="article-body">
+
+  <a href="/jeevani/index.html" class="back-link">
+    Back to Jeevani
+  </a>
+
+  <div class="opening-quote">
+    <p>
+      A Gursikh whose love for Waheguru, devotion to Gurbani, and connection with
+      the sangat of the Akhand Kirtani Jatha left a quiet and lasting mark on all
+      those whose lives she touched.
+    </p>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      Mata Joginder Kaur Ji lived a jeevan rooted in Naam, Rehat, and sincere love
+      for Guru Sahib. Those who knew her remember not outward display, but the quiet
+      steadiness of a soul deeply attached to Waheguru — a presence that brought warmth,
+      calm, and spiritual sincerity wherever she went.
+    </p>
+
+    <p>
+      Her jeevan was one of devotion lived in the everyday — within family, within sangat,
+      and within the heart. Through the decades, her connection to the Akhand Kirtani
+      Jatha and the Gursikhs she met along the way shaped and deepened her path in ways
+      she would always remember with gratitude.
+    </p>
+
+  </div>
+
+  <div class="section-divider">
+    <span></span>
+    <p>Amrit and the Search for Sangat</p>
+    <span></span>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      In 1968, after receiving Amrit alongside her husband, Swaran Singh Malhi, Mata
+      Joginder Kaur Ji felt a deep desire to meet fellow Gursikhs. This search led them
+      to the Akhand Kirtani Jatha, where they were deeply moved by the sangat's devotion
+      to Gurbani and their unwavering commitment to the three pillars of Sikhi — earning
+      an honest living, serving others selflessly, and cultivating spiritual awareness
+      through Naam Simran.
+    </p>
+
+    <p>
+      It was during this time that they first heard of a revered Gursikh named Bau Mal
+      Singh Ji from Tarn Taran — a former military man, a lifelong companion of Bhai
+      Sahib Randhir Singh Ji of Narangwal, and after Bhai Sahib's passing, his successor
+      as head of the AKJ.
+    </p>
+
+  </div>
+
+  <div class="section-divider">
+    <span></span>
+    <p>A Spiritual Encounter</p>
+    <span></span>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      In 1968, Mata Joginder Kaur Ji and Papaji travelled to visit Bau Mal Singh Ji at
+      his home in Tarn Taran. Upon their arrival, they were astonished when Bau Ji
+      approached her with profound bairaag, his eyes filled with tears — despite this
+      being their very first meeting, and she being a complete stranger to him.
+    </p>
+
+  </div>
+
+  <div class="pull-quote">
+    <p>
+      "Where have you been? I have been waiting for you for many years."
+    </p>
+    <cite>Bau Mal Singh Ji, upon first meeting Mata Joginder Kaur Ji</cite>
+  </div>
+
+  <div class="prose">
+
+    <p>
+      With deep emotion, Bau Ji looked at her and asked where she had been, saying he
+      had waited many years. When Mata Joginder Kaur Ji, bewildered, asked what he meant,
+      Bau Ji replied with quiet certainty — in their previous life, she had been his
+      mother.
+    </p>
+
+    <p>
+      This deeply spiritual encounter marked the beginning of a profound connection between
+      Mata Joginder Kaur Ji, Papaji, and Bau Mal Singh Ji's family. Their bond grew so
+      strong that Bau Ji, in a gesture of great love and respect, gifted them a sarab loh
+      mala and a bata — items that had once been given to him personally by Bhai Randhir
+      Singh Ji himself. This spiritual connection remained a cherished part of her life,
+      and the relationship between the two families deepened in ways that words can
+      scarcely express.
+    </p>
+
+  </div>
+
+  <div class="closing-block">
+    <p>
+      Mata Joginder Kaur Ji's jeevan stands as a reminder that Waheguru's hand is present
+      in every sincere soul's path — drawing together those bound across lifetimes through
+      love, devotion, and the blessed company of Gursikhs.
+    </p>
+    <strong>ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ • ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ</strong>
+  </div>
+
+  <div class="attribution">
+    Written by Dr Gurnam Singh
+  </div>
+
+</div>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+</body>
+</html>
