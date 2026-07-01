@@ -278,6 +278,44 @@ a{
     margin-bottom:40px;
 }
 
+/* LANGUAGE SWITCHER */
+
+.language-switcher{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.language-switcher button{
+    padding:14px 28px;
+    border:none;
+    border-radius:50px;
+
+    background:#1a1a1a;
+    color:#d4a42c;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid rgba(212,164,44,0.3);
+
+    transition:0.3s ease;
+}
+
+.language-switcher button:hover{
+    background:#d4a42c;
+    color:black;
+}
+
+.language-switcher button.active{
+    background:#d4a42c;
+    color:black;
+}
+
 .gurbani-block{
     margin:70px 0;
 
@@ -324,6 +362,7 @@ a{
     border-left:2px solid rgba(212,164,44,0.35);
 
     margin-top:-10px;
+    margin-bottom:50px;
 }
 
 .back-home{
@@ -410,6 +449,10 @@ footer{
     padding:18px 20px;
 }
 
+.language-switcher button{
+    width:100%;
+}
+
 }
 
 </style>
@@ -477,28 +520,74 @@ footer{
 
   <div class="article-content">
 
-    <div class="gurbani-block">
+    <!-- LANGUAGE SWITCHER -->
 
-      <div class="gurmukhi">
-        ਕਿੰਗਰੀ ਬਜਾਇ ਜੋਤਿ-ਦੀਪਕ ਜਗਾਇ ਰਸ, ਪਿਰਮ ਰਸਾਇ *ਤੇਲ ਤੱਤ ਨਿਰਵਾਰ ਦੇ । ਪ੍ਰੇਮ ਤੱਤ ਰਤਿ ਰੱਤੀ ਨਾਮ ਦੀ ਜੁਗਤਿ ਬੱਤੀ, ਡਾਰ ਕੇ ਮਝਾਰ ਜੋਤਿ ਬਿਮਲ ਜਗਾਰ ਦੇ । ਪਿਰਮ ਰਹਸ ਪਾਇ ਦੇਹੁਰੀ ਦੀਵਟ ਵਿਚਿ, ਦੀਪਕ ਜਗਾਇ ਕੈ ਭਵਨ ਉਜਿਆਰਦੇ । ਬਿਸਮ ਉਦੋਤਿ ਜੋਤਿ ਰਸਕ ਪੁਜਾਰੀ ਹੋਇ, ਪੂਜਿ ਪੂਜਿ ਤੋਹਿ ਤੇਰੀ ਆਰਤੀ ਉਤਾਰਦੇ ।੧੧।
+    <div class="language-switcher">
+
+      <button onclick="showPunjabi()" id="paBtn" class="active">
+        ਪੰਜਾਬੀ
+      </button>
+
+      <button onclick="showEnglish()" id="enBtn">
+        English
+      </button>
+
+    </div>
+
+    <!-- PUNJABI CONTENT -->
+
+    <div id="punjabi-content">
+
+      <div class="gurbani-block">
+
+        <div class="gurmukhi">
+          ਕਿੰਗਰੀ ਬਜਾਇ ਜੋਤਿ-ਦੀਪਕ ਜਗਾਇ ਰਸ, ਪਿਰਮ ਰਸਾਇ *ਤੇਲ ਤੱਤ ਨਿਰਵਾਰ ਦੇ । ਪ੍ਰੇਮ ਤੱਤ ਰਤਿ ਰੱਤੀ ਨਾਮ ਦੀ ਜੁਗਤਿ ਬੱਤੀ, ਡਾਰ ਕੇ ਮਝਾਰ ਜੋਤਿ ਬਿਮਲ ਜਗਾਰ ਦੇ । ਪਿਰਮ ਰਹਸ ਪਾਇ ਦੇਹੁਰੀ ਦੀਵਟ ਵਿਚਿ, ਦੀਪਕ ਜਗਾਇ ਕੈ ਭਵਨ ਉਜਿਆਰਦੇ । ਬਿਸਮ ਉਦੋਤਿ ਜੋਤਿ ਰਸਕ ਪੁਜਾਰੀ ਹੋਇ, ਪੂਜਿ ਪੂਜਿ ਤੋਹਿ ਤੇਰੀ ਆਰਤੀ ਉਤਾਰਦੇ ।੧੧।
+        </div>
+
+      </div>
+
+      <div class="gurbani-block">
+
+        <div class="gurmukhi">
+          ਜਾਗਤ ਜੋਤੀਸ਼ ਰੂਪ ਤੇਰਾ ਪਰਤੱਖ ਕਰਿ, ਨਭ ਘੱਟ ਮਧਿ ਤੁਧ ਪ੍ਰਗਟ ਨਿਹਾਰੀਏ। ਕੁਰਸ਼ ਅਰਸ਼ ਛਿਤ ਫ਼ਰਸ਼ ਬਿਰਾਜਮਾਨ, ਪੇਖਿ ਪੇਖਿ ਸੁੰਦਰ ਸਰੂਪ ਨਮਸਕਾਰੀਏ। ਮੰਦ ਮੰਦ ਸੁਖ ਕੰਦ ਮੁਖ ਮੁਸਕਾਇ ਤੇਰਾ, ਰੀਝਿ ਰੀਝਿ ਤੰਨ ਮੰਨ ਘੁੰਮਿ ਘੁੰਮਿ ਵਾਰੀਏ। ਪੂਜਿ ਪੂਜਿ ਤੇਰੀ ਦਿੱਬ-ਜੋਤਿ-ਰੰਗ ਮੂਰਤੀ ਨੂੰ, ਭਾਵਨੀ ਸਹਿਤ ਤੇਰੀ ਆਰਤੀ ਉਤਾਰੀਏ ।੧੨।
+        </div>
+
+      </div>
+
+      <div class="source-block">
+        ਪੁਸਤਕ 'ਦਰਸ਼ਨ ਝਲਕਾਂ' ਵਿਚੋਂ
+      </div>
+
+      <div class="footnote">
+        *ਤੱਤ ਪਦਾਰਥ ਦਾ ਨਿਰਣਾ ਰੂਪ ਤੇਲ ਪਾ ਕੇ । ਅਕਾਸ਼ ਦੀ ਟਿੱਕੀ, ਸੂਰਜ ਨੂਰ ਅਰਸਾਂ ਕੁਰਸਾਂ ਵਿਚ । ਧਰਤੀ ।
       </div>
 
     </div>
 
-    <div class="gurbani-block">
+    <!-- ENGLISH CONTENT -->
 
-      <div class="gurmukhi">
-        ਜਾਗਤ ਜੋਤੀਸ਼ ਰੂਪ ਤੇਰਾ ਪਰਤੱਖ ਕਰਿ, ਨਭ ਘੱਟ ਮਧਿ ਤੁਧ ਪ੍ਰਗਟ ਨਿਹਾਰੀਏ। ਕੁਰਸ਼ ਅਰਸ਼ ਛਿਤ ਫ਼ਰਸ਼ ਬਿਰਾਜਮਾਨ, ਪੇਖਿ ਪੇਖਿ ਸੁੰਦਰ ਸਰੂਪ ਨਮਸਕਾਰੀਏ। ਮੰਦ ਮੰਦ ਸੁਖ ਕੰਦ ਮੁਖ ਮੁਸਕਾਇ ਤੇਰਾ, ਰੀਝਿ ਰੀਝਿ ਤੰਨ ਮੰਨ ਘੁੰਮਿ ਘੁੰਮਿ ਵਾਰੀਏ। ਪੂਜਿ ਪੂਜਿ ਤੇਰੀ ਦਿੱਬ-ਜੋਤਿ-ਰੰਗ ਮੂਰਤੀ ਨੂੰ, ਭਾਵਨੀ ਸਹਿਤ ਤੇਰੀ ਆਰਤੀ ਉਤਾਰੀਏ ।੧੨।
+    <div id="english-content" style="display:none;">
+
+      <p>
+        Playing the Kingri (a traditional stringed instrument), kindle the lamp of Divine Light. Fill it with the essence of love as its oil, refined from the highest spiritual truth. Let deep love be the wick, and let the method of the Divine Name be its thread. Place it within the shrine of the heart and ignite the pure, radiant flame.
+      </p>
+
+      <p>
+        Having realized the mystery of Divine Love, place this lamp within the temple of the heart. Light it, and let its brilliance illuminate your entire inner being. Becoming a worshipper immersed in the wondrous radiance of the Divine Light, again and again perform Your Aarti (ceremonial worship) with devotion. (11)
+      </p>
+
+      <p>
+        Awakened to Your form as the all-pervading Divine Light, I behold You manifest before me. Within the vast expanse of the sky, I perceive Your revealed presence. Upon the heavens (Arsh), the celestial realms (Kursh), the earth, and all beneath it, You are enthroned. Gazing again and again upon Your beautiful form, I bow in reverence.
+      </p>
+
+      <p>
+        Your gentle smile, the very source of peace and bliss, enchants me. Filled with delight, I lovingly dedicate my body and mind to You over and over. Worshipping Your radiant, Divine, Light-filled form with heartfelt devotion, I perform Your Aarti. (12)
+      </p>
+
+      <div class="source-block">
+        From the book 'Darshan Jhalkan'
       </div>
 
-    </div>
-
-    <div class="source-block">
-      ਪੁਸਤਕ 'ਦਰਸ਼ਨ ਝਲਕਾਂ' ਵਿਚੋਂ
-    </div>
-
-    <div class="footnote">
-      *ਤੱਤ ਪਦਾਰਥ ਦਾ ਨਿਰਣਾ ਰੂਪ ਤੇਲ ਪਾ ਕੇ । ਅਕਾਸ਼ ਦੀ ਟਿੱਕੀ, ਸੂਰਜ ਨੂਰ ਅਰਸਾਂ ਕੁਰਸਾਂ ਵਿਚ । ਧਰਤੀ ।
     </div>
 
     <a href="/index.html" class="back-home">
@@ -512,6 +601,28 @@ footer{
 <footer>
   © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
 </footer>
+
+<script>
+
+function showPunjabi(){
+
+    document.getElementById('punjabi-content').style.display = 'block';
+    document.getElementById('english-content').style.display = 'none';
+
+    document.getElementById('paBtn').classList.add('active');
+    document.getElementById('enBtn').classList.remove('active');
+}
+
+function showEnglish(){
+
+    document.getElementById('punjabi-content').style.display = 'none';
+    document.getElementById('english-content').style.display = 'block';
+
+    document.getElementById('enBtn').classList.add('active');
+    document.getElementById('paBtn').classList.remove('active');
+}
+
+</script>
 
 </body>
 </html>
