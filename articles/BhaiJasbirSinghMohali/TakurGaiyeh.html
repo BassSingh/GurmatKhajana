@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GurmatKhajana • ਠਾਕੁਰੁ ਗਾਈਐ ਆਤਮ ਰੰਗਿ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    display:none;
+}
+
+.top-main-logo img{
+    width:135px;
+}
+
+}
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.88)),
+
+    url('/images/gallery/siteimages/mohali2.jpeg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 5%,
+    rgba(0,0,0,0.72) 100%);
+
+    backdrop-filter:blur(2px);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:1100px;
+
+    text-align:center;
+
+    padding:100px 20px 60px;
+}
+
+.main-logo img{
+    display:block;
+    width:100%;
+    max-width:520px;
+    height:auto;
+
+    margin:auto;
+}
+
+.article-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:0.85rem;
+
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:3.4rem;
+    line-height:1.4;
+
+    margin-bottom:25px;
+}
+
+.article-meta{
+    color:#d0d0d0;
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+/* ARTICLE BODY */
+
+.article-wrapper{
+    width:100%;
+    max-width:950px;
+
+    margin:auto;
+
+    padding:90px 30px 120px;
+}
+
+.featured-image{
+    width:100%;
+    height:620px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:55px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.45);
+}
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+}
+
+.article-content{
+    font-size:1.2rem;
+    line-height:2.4;
+    color:#e2e2e2;
+}
+
+.article-content p{
+    margin-bottom:40px;
+}
+
+.gurbani-block{
+    margin:70px 0;
+
+    padding:50px 40px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(18,18,18,0.96),
+    rgba(8,8,8,0.98));
+
+    border:1px solid rgba(212,164,44,0.2);
+
+    text-align:center;
+}
+
+.gurbani-block .gurmukhi{
+    font-size:1.7rem;
+    line-height:2;
+    color:#d4a42c;
+
+    margin-bottom:25px;
+}
+
+.source-block{
+    text-align:center;
+
+    color:#a89040;
+
+    font-size:1rem;
+    letter-spacing:1px;
+
+    margin:-15px 0 50px;
+}
+
+.footnote{
+    font-size:0.92rem;
+    line-height:1.9;
+    color:#999;
+
+    padding:24px 30px;
+
+    border-left:2px solid rgba(212,164,44,0.35);
+
+    margin-top:20px;
+    margin-bottom:50px;
+}
+
+/* LANGUAGE SWITCHER */
+
+.language-switcher{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.language-switcher button{
+    padding:14px 28px;
+    border:none;
+    border-radius:50px;
+
+    background:#1a1a1a;
+    color:#d4a42c;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid rgba(212,164,44,0.3);
+
+    transition:0.3s ease;
+}
+
+.language-switcher button:hover{
+    background:#d4a42c;
+    color:black;
+}
+
+.language-switcher button.active{
+    background:#d4a42c;
+    color:black;
+}
+
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:60px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:#d4a42c;
+    color:black;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.back-home:hover{
+    transform:translateY(-3px);
+}
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero{
+    min-height:70vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding-top:80px;
+}
+
+.main-logo img{
+    max-width:250px;
+}
+
+.hero-content h1{
+    font-size:2rem;
+}
+
+.article-wrapper{
+    padding:60px 20px 90px;
+}
+
+.featured-image{
+    height:340px;
+    border-radius:24px;
+}
+
+.article-content{
+    font-size:1rem;
+    line-height:2.2;
+}
+
+.gurbani-block{
+    padding:35px 24px;
+}
+
+.gurbani-block .gurmukhi{
+    font-size:1.3rem;
+    line-height:1.8;
+}
+
+.footnote{
+    padding:18px 20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+
+  <img src="/images/logo/logo.png"
+       alt="GurmatKhajana Logo">
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/articles/index.html">Articles</a>
+    <a href="/jeevani/index.html">Jeevani</a>
+
+  </div>
+
+</nav>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="article-label">
+      GurmatKhajana Article
+    </div>
+
+    <h1>
+      ਠਾਕੁਰੁ ਗਾਈਐ ਆਤਮ ਰੰਗਿ ॥
+    </h1>
+
+    <div class="article-meta">
+      ਵਲੋਂ: ਭਾਈ ਜਸਬੀਰ ਸਿੰਘ ਬੀਰ ਜੀ
+    </div>
+
+  </div>
+
+</section>
+
+<section class="article-wrapper">
+
+  <div class="featured-image">
+
+    <img src="/images/gallery/siteimages/mohali.jpeg"
+         alt="ਠਾਕੁਰੁ ਗਾਈਐ ਆਤਮ ਰੰਗਿ">
+
+  </div>
+
+  <div class="article-content">
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-switcher">
+
+      <button onclick="showPunjabi()" id="paBtn" class="active">
+        ਪੰਜਾਬੀ
+      </button>
+
+      <button onclick="showEnglish()" id="enBtn">
+        English
+      </button>
+
+    </div>
+
+    <!-- PUNJABI CONTENT -->
+
+    <div id="punjabi-content">
+
+      <p>
+        ਭਾਈ ਜਸਬੀਰ ਸਿੰਘ ਬੀਰ (ਉਮਰ 71 ਸਾਲ) ਅਖੰਡ ਕੀਰਤਨ ਜਥੇ ਵਾਲੇ ਪਟਿਆਲੇ ਦੇ ਜਮਪਲ ਹਨ। ਸਕੂਲੀ ਪੜ੍ਹਾਈ ਕਰਦੇ ਸਮੇਂ ਗੁਰਸਿੱਖਾਂ ਦੀ ਪ੍ਰਾਪਤ ਹੋਈ ਸੰਗਤ ਸਦਕਾ ਗੁਰੂ ਘਰ ਦੀ ਰਹੁ-ਰੀਤ ਅਤੇ ਸਿਖਿਆ ਵਿਚ ਪਰਪੱਕ ਹੁੰਦੇ ਗਏ। ਇਨ੍ਹਾਂ ਨੂੰ ਸੰਤ ਬਾਬਾ ਹਰਨਾਮ ਸਿੰਘ ਜੀ ਦੇ ਸੰਪਰਕ ਵਿਚ ਆਉਣ ਦਾ ਸੁਭਾਗ ਸ੍ਰ. ਮਹਿੰਦਰ ਸਿੰਘ ਐਸ.ਡੀ.ਓ. ਸਾਹਿਬ ਰਾਹੀਂ ਪ੍ਰਾਪਤ ਹੋਇਆ। ਸ਼੍ਰੋਮਣੀ ਗੁਰਦੁਆਰਾ ਪ੍ਰਬੰਧਕ ਕਮੇਟੀ ਸ੍ਰੀ ਅੰਮ੍ਰਿਤਸਰ ਵਲੋਂ 1973 ਵਿਚ ਗਿਆਨੀ ਗੁਰਦਿੱਤ ਸਿੰਘ (‘ਮੇਰਾ ਪਿੰਡ' ਵਾਲੇ) ਦੀ ਅਗਵਾਈ ਵਿਚ ਸਿੰਘ ਸਭਾ ਸ਼ਤਾਬਦੀ ਕਮੇਟੀ ਸਥਾਪਿਤ ਕੀਤੀ ਗਈ ਸੀ। ਇਸ ਦਾ ਉਦੇਸ਼ ਲਗ ਭਗ 1873 ਵਿਚ ਕਾਇਮ ਹੋਈ ‘ਸਿੰਘ ਸਭਾ ਲਹਿਰ’ ਅਨੁਸਾਰ ਸਿਖ ਸਮਾਜ ਦੀ ਬੇਹਤਰੀ ਲਈ ਵੱਖ-ਵੱਖ ਪ੍ਰਚਾਰਮਈ ਕਾਰਜ ਕਰਨੇ ਸਨ। ਇਸ ਸ਼ਤਾਬਦੀ ਕਮੇਟੀ ਦਾ ਦਫ਼ਤਰ ‘ਗੁਰੂ ਰਾਮ ਦਾਸ ਸਰਾਂ' ਦੇ ਇਕ ਹਿੱਸੇ ਵਿਚ ਸੀ। ਇਸ ਦਫ਼ਤਰ ਵਿੱਚ ਹੀ ਭਾਈ ਜਸਬੀਰ ਸਿੰਘ ਦਫ਼ਤਰ ਸਕੱਤਰ ਜਾਂ ਸਹਾਇਕ ਸੰਪਾਦਕ ਵਜੋਂ ਕੰਮ ਕਰਦੇ ਸਨ। ਇਨ੍ਹਾਂ ਦੀ ਰਿਹਾਇਸ਼ ਵੀ ਦਫ਼ਤਰ ਦੇ ਵਿਚ ਹੀ ਸੀ ਅਤੇ ਇਹ ਦਿਨ ਰਾਤ ਗਿਆਨੀ ਗੁਰਦਿੱਤ ਸਿੰਘ ਜੀ ਦੀ ਅਗਵਾਈ ਵਿਚ ਸਾਰੇ ਕੰਮ ਕਰਿਆ ਕਰਦੇ ਸਨ। ਇਨ੍ਹਾਂ ਹੀ ਦਿਨਾਂ ਵਿਚ ਮੇਰੇ ਅਤੇ ਮੇਰੇ ਦੋਸਤ ਪਰਮਿੰਦਰ ਸਿੰਘ ਸਹੋਤਾ ਦੀ ਜਸਬੀਰ ਸਿੰਘ ਬੀਰ ਨਾਲ ਜਾਣ-ਪਛਾਣ ਹੋਈ ਸੀ। ਸਿੱਖ ਸਾਹਿਤ ਪ੍ਰਾਪਤ ਕਰਨ ਅਤੇ ਸ੍ਰੀ ਦਰਬਾਰ ਸਾਹਿਬ ਦੇ ਦਰਸ਼ਨਾਂ ਲਈ ਅਸੀਂ ਜਦੋਂ ਵੀ ਅੰਮ੍ਰਿਤਸਰ ਜਾਣਾ ਤਾਂ ਜਸਬੀਰ ਸਿੰਘ ਬੀਰ ਪਾਸ ਹੀ ਠਹਿਰਣਾ।
+      </p>
+
+      <p>
+        ਉਨ੍ਹਾਂ ਦਿਨਾਂ ਵਿੱਚ ‘ਸਿੰਘ ਸਭਾ ਪੱਤ੍ਰਿਕਾ' ਦੇ ਵੱਖ-ਵੱਖ ਵਿਸ਼ੇਸ਼ ਅੰਕ ਪ੍ਰਕਾਸ਼ਤ ਕੀਤੇ ਗਏ ਜੋ ਬਹੁਤ ਹੀ ਵਡਮੁੱਲੇ ਸਨ। ਭਾਈ ਜਸਬੀਰ ਸਿੰਘ ਕਦੇ-ਕਦੇ ਗੁਰਦੁਆਰਾ ਰਾਮਪੁਰ ਖੇੜਾ ਸਾਹਿਬ ਵੀ ਮਿਲ ਪੈਂਦੇ ਸਨ। ਕੁਝ ਸਾਲਾਂ ਬਾਅਦ ਇਹ ਦੋਸਤੀ ਬੀਤੇ ਦੀ ਗੱਲ ਹੋ ਗਈ। ਫਿਰ ਲਗਭਗ 42 ਸਾਲ ਬਾਅਦ ਫੇਸ ਬੁੱਕ ਰਾਹੀਂ ਭਾਈ ਜਸਬੀਰ ਸਿੰਘ ‘ਬੀਰ’ ਨਾਲ ਸੰਪਰਕ ਹੋਇਆ ਤੇ ਪਤਾ ਲੱਗਾ ਕਿ ਉਹ ਪਿਛਲੇ ਕਈ ਸਾਲਾਂ ਤੋਂ ਇੰਗਲੈਂਡ ਦੇ ਸ਼ਹਿਰ ਮਨਚੈਸਟਰ ਵਿਚ ਰਹਿੰਦੇ ਹਨ। ਇਸ ਵਾਰ ਜਨਵਰੀ 2018 ਵਿਚ ਗੁਰੁਦਆਰਾ ਸ੍ਰੀ ਸਿੰਘ ਸਭਾ ਮਾਡਲ ਟਾਊਨ ਲੁਧਿਆਣਾ ਵਿਖੇ ਦਸਵੇਂ ਪਾਤਸ਼ਾਹ ਦੇ ਪ੍ਰਕਾਸ਼ ਦਿਵਸ ਸਮੇਂ ਉਨ੍ਹਾਂ ਨੂੰ ਮਿਲ ਕੇ ਬਹੁਤ ਖ਼ੁਸ਼ੀ ਹੋਈ। ਹੋਰਨਾਂ ਗੱਲਾਬਾਤਾਂ ਤੋਂ ਇਲਾਵਾ ਜਸਬੀਰ ਸਿੰਘ ‘ਬੀਰ' ਹੋਰਾਂ ਨੇ ਮੇਰੇ ਪੁੱਛਣ ਉਤੇ ਸੰਤ ਹਰਨਾਮ ਸਿੰਘ ਜੀ ਰਾਮਪੁਰ ਖੇੜਾ ਸਾਹਿਬ ਵਾਲਿਆਂ ਨਾਲ ਆਪਣੀ ਸਾਂਝ ਦੀਆਂ ਘੜੀਆਂ ਇਉਂ ਸਾਂਝੀਆਂ ਕੀਤੀਆਂ:
+      </p>
+
+      <p>
+        “ਦਾਸ (ਜਸਬੀਰ ਸਿੰਘ ਬੀਰ) ਦਾ ਜੱਦੀ ਘਰ ਰਾਘੋ ਮਾਜਰਾ ਪਟਿਆਲਾ ਵਿਚ ਸੀ। ਮੈਂ ਪਹਿਲਾਂ ਖ਼ਾਲਸਾ ਸੇਵਕ ਜਥਾ ਹਾਈ ਸਕੂਲ ਅਤੇ ਢੁਡਿਆਲ ਖ਼ਾਲਸਾ ਸਕੂਲ ਦਾ ਵਿਦਿਆਰਥੀ ਸੀ। ਇਸ ਸਮੇਂ ਦੌਰਾਨ ਚੰਗੇ ਭਾਗਾਂ ਨੂੰ ਕੁਝ ਗੁਰਮੁਖਾਂ ਦੀ ਸੰਗਤ ਪ੍ਰਾਪਤ ਹੋਣ ਸਦਕਾ ਮੈਂ ਗੁਰੂ ਘਰ ਨਾਲ ਜੁੜ ਕੇ ਸ਼ਬਦ ਕੀਰਤਨ ਵਿਚ ਤਬਲੇ ਦੀ ਸੇਵਾ ਕਰਿਆ ਕਰਦਾ ਸੀ। ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਐੱਸ.ਡੀ.ਓ. ਜਿਹੜੇ ਪਹਿਲਾਂ ਓਵਰ ਸੀਅਰ ਸਨ, ਨੇ ਮੈਨੂੰ ਇਕ ਦਿਨ ਕਿਹਾ ਕਿ ਅਸੀਂ ਗੁਰਦੁਆਰਾ ਰਾਮਪੁਰ ਖੇੜੇ ਕੀਰਤਨ ਕਰਨ ਜਾਣਾ ਹੈ। ਉਨ੍ਹਾਂ ਨੇ ਕਿਹਾ ਕਿ ਤਬਲਾ ਨਾਲ ਲੈ ਕੇ ਜਾਣਾ ਹੈ। ਉਨ੍ਹਾਂ ਦੇ ਰਾਹੀਂ ਹੀ ਮੈਂ ਸੰਤ ਹਰਨਾਮ ਸਿੰਘ ਜੀ ਰਾਮਪੁਰ ਖੇੜਾ ਸਾਹਿਬ ਵਾਲਿਆਂ ਦੇ ਦਰਸ਼ਨ ਕੀਤੇ ਸਨ। ਇਕ ਦਿਨ ਉਨ੍ਹਾਂ ਨੇ ਬੱਸ ਰਾਹੀਂ ਮੈਨੂੰ ਗੁਰਦੁਆਰੇ ਰਾਮਪੁਰ ਖੇੜਾ ਸਾਹਿਬ ਵਾਲੇ ਮਹਾਂ ਪੁਰਖਾਂ ਨਾਲ ਮਿਲਾਉਣ ਲਈ ਦਿਨ ਨਿਸ਼ਚਤ ਕਰ ਲਿਆ। ਮੈਂ ਕਦੀ ਬਸ ਦਾ ਸਫ਼ਰ ਨਹੀਂ ਕੀਤਾ ਸੀ। ਉਨ੍ਹਾਂ ਦਾ ਪਿੰਡ ਦਸੂਹਾ ਸੀ ਅਤੇ ਡਿਊਟੀ ਪਟਿਆਲੇ ਕਰਦੇ ਸਨ। ਮੈਂ ਉਨ੍ਹਾਂ ਕੋਲ ਪਹੁੰਚ ਗਿਆ। ਇਹ ਬਰਸਾਤਾਂ ਦੇ ਦਿਨ ਸਨ। ਜਦੋਂ ਅਸੀਂ ਤੁਹਾਡੇ ਪਿੰਡ ਗੋਂਦਪੁਰ ਪਹੁੰਚੇ ਤਾਂ ਚੋਅ ਵਿਚ ਹੜ੍ਹ ਆਇਆ ਹੋਇਆ ਸੀ। ਉੱਪਰ ਪਹਾੜਾਂ ਵੱਲ ਭਾਰੀ ਬਾਰਸ਼ ਹੋਣ ਕਾਰਨ ਚੋਅ ਵਿਚ ਪਾਣੀ ਬਹੁਤ ਚੜ੍ਹਿਆ ਹੋਇਆ ਸੀ। ਚੋਅ ਦੇ ਦੋਵੀਂ ਪਾਸੀਂ ਟਰੈਫਿਕ ਰੁਕੀ ਹੋਈ ਸੀ। ਸ਼ਾਮ ਪਈ ਹੋਈ ਸੀ। ਸੂਰਜ ਛਿਪਣ ਵਾਲਾ ਸੀ। ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਐਸ.ਡੀ.ਓ. ਆਪਣੀ ਕਾਲਿਜ ਪੜ੍ਹਾਈ ਸਮੇਂ ‘ਬੈਸਟ ਤੈਰਾਕ’ ਦਾ ਇਨਾਮ ਜਿੱਤਣ ਵਾਲੇ ਸੀ। ਉਨ੍ਹਾਂ ਨੇ ਚੋਅ ਪਾਰ ਕਰਨ ਦਾ ਫੈਸਲਾ ਕਰ ਲਿਆ। ਮੈਂ ਤਾਂ ਸਰੀਰ ਕਰਕੇ ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਹੌਲਾ ਜਿਹਾ ਸੀ। ਮੈਨੂੰ ਉਹਨਾਂ ਨੇ ਆਪਣੇ ਮੋਢਿਆਂ ਉੱਪਰ ਚੁੱਕ ਲਿਆ ਅਤੇ ਮੈਂ ਆਪਣੇ ਮੋਢਿਆਂ ਉੱਪਰ ਤਬਲੇ ਨੂੰ ਸੰਭਾਲ ਲਿਆ। ਭਾਈ ਸਾਹਿਬ ਕਹਿੰਦੇ, “ਭਈ ਜਸਬੀਰ ਸਿੰਘ ਜਿਧਰੋਂ ਪਹਾੜਾਂ ਵੱਲੋਂ ਪਾਣੀ ਆਉਂਦਾ ਹੈ, ਤੂੰ ਉਧਰ ਨਹੀਂ ਵੇਖਣਾ"। ਜਦੋਂ ਅਸੀਂ ਅੱਧ ਤੋਂ ਵੱਧ ਪਾਰ ਲੰਘ ਗਏ ਤਾਂ ਮੇਰੇ ਤੋਂ ਰਿਹਾ ਨਾ ਗਿਆ ਤੇ ਜਿਧਰ ਵੇਖਣ ਤੋਂ ਮੈਨੂੰ ਵਰਜਿਆ ਗਿਆ ਸੀ, ਮੈਂ ਉਧਰ ਨੂੰ ਵੇਖਣਾ ਚਾਹਿਆ। ਜਦੋਂ ਮੈਂ ਉਧਰੋਂ ਪਾਣੀ ਦੀਆਂ ਛੱਲਾਂ ਆਉਂਦੀਆਂ ਵੇਖੀਆਂ ਤਾਂ ਡਰ ਨਾਲ ਇਕ ਦਮ ਮੈਂ ਚੀਖ ਮਾਰ ਦਿੱਤੀ। ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਐਸ.ਡੀ.ਓ. ਸਾਹਿਬ ਕਹਿੰਦੇ, “ਭਈ ਤੈਨੂੰ ਕਿਹਾ ਸੀ, ਉਧਰ ਨਾ ਵੇਖੀਂ। ਇਸ ਤਰ੍ਹਾਂ ਤੂੰ ਵੀ ਡੁਬੇਂਗਾ ਤੇ ਨਾਲ ਮੈਂ ਵੀ, ਸਿੱਧਾ ਵੇਖ!” ਖੈਰ ਅਸੀਂ ਚੋਅ ਪਾਰ ਕਰ ਗਏ।
+      </p>
+
+      <p>
+        ਉਦੋਂ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਨੂੰ ਹੁਣ ਵਾਲੀ ਸੜਕ ਦਾ ਰਸਤਾ ਨਾਲ ਨਹੀਂ ਸੀ, ਸਗੋਂ ਇਕ ਦੋ ਖੇਤਾਂ ਦੇ ਫਰਕ ਨਾਲ ਰਸਤਾ ਜਾਂਦਾ ਸੀ। ਜਦੋਂ ਅਸੀਂ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਦੇ ਨੇੜੇ ਪਹੁੰਚੇ ਤਾਂ ਸੰਤ ਹਰਨਾਮ ਸਿੰਘ ਜੀ ਸੈਰ ਕਰਦੇ ਸਾਨੂੰ ਬਾਹਰ ਹੀ ਮਿਲ ਪਏ। ਇਹ ਮੇਰੀ ਪਹਿਲੀ ਮੁਲਾਕਾਤ ਸੀ। ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਜੀ ਨੇ ਉਨ੍ਹਾਂ ਨੂੰ ਮੇਰੇ ਆਉਣ ਬਾਰੇ ਦੱਸਿਆ ਹੋਇਆ ਸੀ। ਉਨ੍ਹਾਂ ਦਿਨਾਂ ਵਿੱਚ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਦਾ ਹਾਲ ਹੁਣ ਵਾਲਾ ਨਹੀਂ ਸੀ, ਇਸ ਤੋਂ ਛੋਟਾ ਸੀ। ਬਾਬਾ ਜੀ ਵੀ ਇਕ ਛੰਨ ਵਿਚ ਰਹਿੰਦੇ ਸਨ। ਉਦੋਂ ਬਾਬਾ ਜੀ ਪਾਸ ਬਹੁਤ ਘੱਟ ਸਿੰਘ ਰਹਿੰਦੇ ਸਨ। ਬਾਬਾ ਜੀ ਨੇ ਮੇਰੇ ਨਾਲ ਪਿਆਰ ਕੀਤਾ। ਉਨ੍ਹਾਂ ਦਾ ਜੀਵਨ ਬੜਾ ਸਹਿਜ ਵਾਲਾ ਸੀ। ਮੇਰਾ ਮਨ ਬਾਬਾ ਜੀ ਵੱਲ ਮੋਹਿਆ ਗਿਆ। ਇਸ ਤੋਂ ਬਾਅਦ ਸਮੇਂ-ਸਮੇਂ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਬਾਬਾ ਜੀ ਕੋਲ ਹਾਜ਼ਰੀ ਭਰਦਾ ਰਿਹਾ।
+      </p>
+
+      <p>
+        ਇਕ ਵਾਰ ਅਖੰਡ ਕੀਰਤਨੀ ਜਥਾ ਪਟਿਆਲਾ ਦੇ ਸਿੰਘਾਂ ਨੇ ਬਸ ਰਾਹੀਂ ਗੁਰਧਾਮਾਂ ਦੀ ਯਾਤਰਾ ਉਤੇ ਜਾਣ ਦਾ ਪ੍ਰੋਗਰਾਮ ਬਣਾਇਆ ਸੀ। ਉਸ ਬਸ ਵਿੱਚ ਬਾਬਾ ਜੀ ਨੇ ਯਾਤਰਾ ਵਿਚ ਸ਼ਾਮਲ ਹੋਣ ਲਈ ਪੰਜ-ਛੇ ਸੀਟਾਂ ਰੱਖਵਾਈਆਂ ਸਨ। ਬਾਬਾ ਜੀ ਦੇ ਨਾਲ ਭਾਈ ਵਧਾਵਾ ਸਿੰਘ ਜੀ ਭਾਸ਼ਾ ਵਿਭਾਗ ਵਾਲੇ, ਡਾ. ਪਰੀਤਮ ਸਿੰਘ ਜੀ, ਉਨ੍ਹਾਂ ਦੀ ਧਰਮਪਤਨੀ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਛੋਟਾ ਬੇਟਾ, ਭਾਈ ਨਿਰਮਲ ਸਿੰਘ ਜੀ, ਭਾਈ ਸੇਵਾ ਸਿੰਘ ਜੀ, ਜਿਹੜੇ ਹੁਣ ਸੰਤ ਸੇਵਾ ਸਿੰਘ ਜੀ ਹਨ, ਏਨੇ ਕੁ ਪ੍ਰੇਮੀ ਸਨ। ਭਾਈ ਫੌਜਾ ਸਿੰਘ ਤੇ ਉਨ੍ਹਾਂ ਦੀ ਪਤਨੀ ਅਖੰਡ ਕੀਰਤਨੀ ਜਥੇ ਵੱਲੋਂ ਸਨ। ਇਹ ਸਾਡੇ ਨਾਲ ਪਟਿਆਲੇ ਤੋਂ ਬੰਬਈ ਤੱਕ ਯਾਤਰਾ ਦੇ ਵਿਚ ਰਹੇ ਸਨ। ਸਾਡਾ ਪੜਾਅ ਕਿਸੇ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਵਿਖੇ ਹੁੰਦਾ ਸੀ ਜਿਥੇ ਰਾਤ ਨੂੰ ਰੈਣ ਸਬਾਈ ਕੀਰਤਨ ਹੁੰਦਾ ਸੀ।
+      </p>
+
+      <p>
+        ਜਦੋਂ ਅਸੀਂ ਬੰਬਈ ਪਹੁੰਚੇ ਤਾਂ ਮਹਾਂਰਾਸ਼ਟਰ ਦੇ ਲੋਕ ਬਾਬਾ ਨਾਮਦੇਵ ਜੀ ਦੀ ਸ਼ਤਾਬਦੀ ਮਨਾ ਰਹੇ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਇਥੇ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਦਾਦਰ ਵਿਖੇ ਹੇਠਲੀ ਮੰਜ਼ਿਲ 'ਤੇ ਵਿਸ਼ੇਸ਼ ਸਮਾਗਮ ਰੱਖਿਆ ਹੋਇਆ ਸੀ। ਇਸ ਸਮੇਂ ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਜੀ ਐਸ.ਡੀ.ਓ. ਨੇ ਨਾਮਦੇਵ ਜੀ ਦੇ ਸ਼ਬਦ ਦਾ ਕੀਰਤਨ ਕੀਤਾ ਸੀ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਨਾਦਿ ਸਮਾਇਲੋ ਰੇ ਸਤਿਗੁਰੁ ਭੇਟਿਲੇ ਦੇਵਾ ॥੧॥ ਰਹਾਉ ॥
+        </div>
+      </div>
+
+      <p>
+        ਭਾਈ ਵਧਾਵਾ ਸਿੰਘ ਜੀ ਨੇ ਮਹਾਰਾਸ਼ਟਰ ਦੀ ਸੰਗਤ ਹੋਣ ਕਾਰਨ ਇਸੇ ਸ਼ਬਦ ਦੀ ਵਿਆਖਿਆ ਪੰਜਾਬੀ, ਹਿੰਦੀ ਤੇ ਅੰਗ੍ਰੇਜ਼ੀ ਵਿਚ ਕੀਤੀ ਸੀ।
+      </p>
+
+      <p>
+        ਇਹ 20-25 ਦਿਨ ਦੀ ਯਾਤਰਾ ਸੀ। ਬਾਬਾ ਜੀ ਫਿਰ ਗਵਾਲੀਅਰ ਨੇੜੇ ਉਤਰ ਗਏ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਡਾ. ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਨੂੰ ਮਿਲਣਾ ਸੀ ਜਿਨ੍ਹਾਂ ਨੇ ਕਈ ਕਿਤਾਬਾਂ ਵੀ ਲਿਖੀਆਂ ਅਤੇ ਕਥਾ ਵੀ ਕਰਦੇ ਹੁੰਦੇ ਸਨ। ਉਨ੍ਹਾਂ ਦਾ ਸਥਾਨ ਭਰਤਪੁਰ ਦੇ ਕੋਲ ਸੀ। ਜਲੰਧਰ ਦੇ ਇਕ ਸੱਜਣ ਨੇ, ਉਹ ਉਨ੍ਹਾਂ ਦੇ ਪੈਂਫਲਿਟ ਛਾਪ ਕੇ ਸੰਗਤਾਂ ਵਿਚ ਵੰਡਦੇ ਹਨ। ਮੈਨੂੰ ਹੁਣ ਯਾਦ ਨਹੀਂ, ਸ਼ਾਇਦ ਬਾਬਾ ਜੀ ਫਿਰ ਸਾਡੇ ਨਾਲ ਆਗਰੇ ਆ ਕੇ ਰਲ ਗਏ ਸਨ।
+      </p>
+
+      <p>
+        ਇਸ ਤੋਂ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਫਿਰ ਬਾਬਾ ਹਰਨਾਮ ਸਿੰਘ ਜੀ ਨੇ ਇਕ ਯਾਤਰਾ ਦਾ ਪ੍ਰਬੰਧ ਆਪ ਕੀਤਾ ਸੀ। ਉਨ੍ਹਾਂ ਨੇ ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਜੀ ਐਸ.ਡੀ.ਓ. ਨੂੰ ਕਿਹਾ ਕਿ ਪਹਿਲਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਯਾਤਰਾ 'ਤੇ ਲੈ ਕੇ ਗਏ ਸੀ ਅਤੇ ਹੁਣ ਸਾਡੇ ਨਾਲ ਵੀ ਚੱਲੋ। ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਜੀ ਛੁੱਟੀ ਜਾਂ ਕਿਸੇ ਹੋਰ ਮਜ਼ਬੂਰੀ ਕਾਰਨ ਨਾ ਜਾ ਸਕੇ ਤਾਂ ਉਨ੍ਹਾਂ ਨੇ ਆਪਣੀ ਥਾਂ ਮੈਨੂੰ ਬਾਬਾ ਜੀ ਨਾਲ ਭੇਜ ਦਿੱਤਾ। ਇਸ ਯਾਤਰਾ ਵਿੱਚ ਮੇਰੇ ਨਾਲ ਭਾਈ ਮਨੋਹਰ ਸਿੰਘ ਜੀ ਰੈੱਡ ਕਰਾਸ ਵਾਲੇ ਅਤੇ ਤੁਹਾਡੇ ਮਹਿਕਮੇ ਦੇ ਕਰਮਜੀਤ ਸਿੰਘ ਬੁਕ ਸਟੋਰ ਦੇ ਇਨਚਾਰਜ ਵੀ ਸਨ। ਬਾਬਾ ਜੀ ਦੀ ਇਹ ਸਿਖਿਆ ਸੀ ਕਿ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਤੋਂ ਥੋੜੀ ਦੂਰ ਪਹਿਲਾਂ ਹੀ ਸਾਰੇ ਯਾਤਰੂ ਬਸ ਵਿਚੋਂ ਉਤਰ ਕੇ ਇਹ ਸ਼ਬਦ ਪੜ੍ਹਦੇ ਪੜ੍ਹਦੇ ਗੁਰ ਅਸਥਾਨ ਵੱਲ ਜਾਣਗੇ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਕਵਨ ਗੁਨ ਪ੍ਰਾਨਪਤਿ ਮਿਲਉ ਮੇਰੀ ਮਾਈ॥<br>
+          ਮੋਹਿ ਪਰਦੇਸਨਿ ਦੂਰ ਤੇ ਆਈ॥
+        </div>
+      </div>
+
+      <div class="source-block">
+        Ang 204
+      </div>
+
+      <p>
+        ਮੇਰੀ ਡਿਊਟੀ ਸੀ ਹਰਮੋਨੀਅਮ ਗਲੇ ਵਿਚ ਪਾ ਕੇ ਸ਼ਬਦ ਪੜਣਾ ਅਤੇ ਭਾਈ ਮਨੋਹਰ ਸਿੰਘ ਹੋਰਾਂ ਕੋਲ ਢੋਲਕੀ ਹੁੰਦੀ ਸੀ ਜਿਹੜੇ ਹੁਣ ਕੈਨੇਡਾ ਰਹਿੰਦੇ ਹਨ। ਲਗਭਗ ਸਾਰੇ ਅਸਥਾਨਾਂ ਉਤੇ ਇਸੇ ਤਰ੍ਹਾਂ ਹੀ ਗਏ। ਇਸ ਯਾਤਰਾ ਸਮੇਂ ਦੀ ਇਕ ਯਾਦਗਾਰੀ ਫੋਟੋ ਹੈ, ਜੋ ‘ਬਲਿਓ ਚਰਾਗ’ ਦੇ ਵਿਚ ਮੈਂ ਛਪਵਾਈ ਸੀ। ਇਸ ਫੋਟੋ ਦੇ ਵਿਚ ਸੰਤ ਹਰਨਾਮ ਸਿੰਘ ਜੀ ਅਤੇ ਸਿੰਘ ਵਿਖਾਈ ਦਿੰਦੇ ਹਨ।
+      </p>
+
+      <p>
+        ਇਸ ਯਾਤਰਾ ਵਿਚ ਮੇਰੇ ਨਾਲ ਜੁੜੀਆਂ ਕੁਝ ਹਾਸ ਰਸ ਵਰਗੀਆਂ ਘਟਨਾਵਾਂ ਹਨ। ਗੁਰਦੁਆਰਾ ਨਾਨਕਮਤਾ ਸਾਹਿਬ ਠਹਿਰਣ ਸਮੇਂ ਮੇਰਾ ਜੋੜਾ ਗੁੰਮ ਹੋ ਗਿਆ, ਜਿਹੜਾ ਕਿ ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਹੋਰਾਂ ਨੇ ਮੈਨੂੰ ਯਾਤਰਾ 'ਤੇ ਜਾਣ ਸਮੇਂ ਲੈ ਕੇ ਦਿੱਤਾ। ਕਿਸੇ ਨੇ ਬਾਬਾ ਜੀ ਨੂੰ ਦੱਸ ਦਿੱਤਾ ਕਿ ਜਸਬੀਰ ਸਿੰਘ ਹੁਣ ਨੰਗੇ ਪੈਰੀਂ ਘੁੰਮਦਾ ਹੈ। ਲਖਨਉ ਅਸੀਂ ਗੁਰਦੁਆਰਾ ਬਾਬਾ ਮੋਹਨ ਸਿੰਘ ਜੀ ਵਿਖੇ ਠਹਿਰੇ ਹੋਏ ਸੀ, ਮੈਨੂੰ ਯਾਦ ਹੈ। ਬਾਬਾ ਜੀ ਮੈਨੂੰ ਕਹਿੰਦੇ ‘ਸਿੰਘਾ ਚਲ ਥੋੜੀ ਸੈਰ ਕਰਕੇ ਆਈਏ।' ਉਨ੍ਹਾਂ ਦੇ ਨਾਲ ਬਾਬਾ ਜੀ ਦਾ ਡਰਾਈਵਰ ਮਹਿੰਦਰ ਸਿੰਘ ਮਾਛੀਆਂ ਵਾਲਾ ਅਤੇ ਨੰਬਰਦਾਰ ਚੰਨਣ ਸਿੰਘ ਰਸੂਲਪੁਰ ਵੀ ਸੀ। ਬਾਬਾ ਜੀ ਬਾਟਾ ਕੰਪਨੀ ਦੀ ਦੁਕਾਨ ਅੰਦਰ ਸਾਨੂੰ ਲੈ ਗਏ ਅਤੇ ਉਸ ਸਮੇਂ ਦੀ ਮਹਿੰਗੀ ਜੁਤੀ ਮੈਨੂੰ 99 ਰੁਪਏ ਦੀ ਲੈ ਕੇ ਦਿੱਤੀ। ਮੈਂ ਨਾਂਹ ਨੁਕਰ ਕਰਾਂ ਕਿ ਬਾਬਾ ਜੀ ਅਜੇ ਯਾਤਰਾ ਹੋਰ ਪਈ ਹੈ, ਇਹ ਮਹਿੰਗੀ ਜੁੱਤੀ ਮੇਰੀ ਤੋਂ ਫਿਰ ਗੁੰਮ ਹੋ ਜਾਣੀ ਹੈ। ਬਾਬਾ ਜੀ ਕਹਿੰਦੇ, ‘ਗੁਰੂ ਸਾਹਿਬ ਹੋਰ ਦੇ ਦੇਣਗੇ, ਗੁਰੂ ਕਾ ਕੀਰਤਨੀਆਂ ਨੰਗੇ ਪੈਰੀਂ ਨਹੀਂ ਚਾਹੀਦਾ।' ਸੋ ਮੈਂ ਬਾਬਾ ਜੀ ਦਾ ਹੁਕਮ ਮੰਨ ਲਿਆ। ਫਿਰ ਅਸੀਂ ਹਜ਼ੂਰ ਸਾਹਿਬ ਪਹੁੰਚ ਗਏ। ਉਨ੍ਹਾਂ ਦਿਨਾਂ ਵਿਚ ਉਥੋਂ ਦੇ ਹਾਲਾਤ ਅਤੇ ਵਾਤਾਵਰਣ ਅੱਜ ਵਰਗਾ ਸੁਹਾਵਣਾ ਨਹੀਂ ਸੀ। ਉਨ੍ਹਾਂ ਦਿਨਾਂ ਵਿਚ ਗੁਰ ਅਸਥਾਨ ਤੋਂ ਦੂਰ ਇਕ ਡਿਊਡੀ ਸੀ। ਮੈਂ ਜੁੱਤੀ ਉਤਾਰ ਕੇ ਕੁਝ ਪਉੜੀਆਂ ਚੜ ਕੇ ਦੂਰੋਂ ਹੀ ਅੱਖਾਂ ਮੂੰਦ ਕੇ ਅਰਦਾਸ ਕਰ ਰਿਹਾ ਸੀ ਕਿ ਮੇਰੀ ਉਹੋ ਬਾਬਾ ਜੀ ਨੇ ਲੈ ਕੇ ਦਿੱਤੀ ਹੋਈ ਨਵੀਂ ਗੁਰਗਾਬੀ ਕੋਈ ਲੈ ਗਿਆ।
+      </p>
+
+      <p>
+        ਬਾਬਾ ਜੀ ਨੂੰ ਫਿਰ ਪਤਾ ਲਗ ਗਿਆ। ਮੈਂ ਬਹੁਤ ਅਰਜ਼ ਕੀਤੀ ਕਿ ਹੁਣ ਮੈਂ ਜੁੱਤੀ ਨਹੀਂ ਲੈਣੀ। ਬਾਬਾ ਜੀ ਕਹਿਣ ਕਿ ਇਹ ਤਾਂ ਚੰਗਾ ਨਹੀਂ ਲੱਗਦਾ। ਮੈਂ ਬੇਨਤੀ ਕੀਤੀ ਜੀ ਚਲੋ ਫਿਰ ਮੈਨੂੰ ਵੀ ਸ਼ੇਪ ਦੀ ਚੱਪਲ ਲੈ ਦਿਓ। ਇਸ ਤਰ੍ਹਾਂ ਬਾਬਾ ਜੀ ਨੇ ਮੈਨੂੰ ਬਹੁਤ ਪਿਆਰ ਦਿੱਤਾ।
+      </p>
+
+      <p>
+        ਜਦੋਂ ਪਟਿਆਲੇ ਵਿਚ ਮੈਂ ਆਪਣੀ ‘ਜ਼ੋਰਾਵਰ ਪ੍ਰੈਸ’ ਲਗਾਈ ਤਾਂ ਬਾਬਾ ਜੀ ਨੇ ਅਰਦਾਸ ਕਰਨ ਉਪਰੰਤ ਹੁਕਮਨਾਮਾ ਲਿਆ ਸੀ। ਵੀਚਾਰ ਕਰਦਿਆਂ ਬਾਬਾ ਜੀ ਨੇ ਦੱਸਿਆ ਸੀ ਕਿ ਜਸਬੀਰ ਸਿੰਘ ਇਹ ਕਾਰੋਬਾਰ ਤੁਹਾਡਾ ਦੇਰ ਤੱਕ ਨਹੀਂ ਚੱਲਣ ਵਾਲਾ, ਗੁਰੂ ਸਾਹਿਬ ਤੁਹਾਡੇ ਤੋਂ ਹੋਰ ਸੇਵਾ ਕੋਈ ਲੈਣਗੇ। ਇਸ ਪ੍ਰੈਸ ਵਿਚ ਭਾਈ ਵਧਾਵਾ ਸਿੰਘ ਦੀਆਂ ਲਿਖੀਆਂ ਦੋ ਕਿਤਾਬਾਂ ‘ਆਤਮਾ ਕੀ ਹੈ’ ਅਤੇ ‘ਨਾਮ ਕੀ ਹੈ’ ਹੀ ਛਪੀਆਂ ਸਨ। ਭਾਈ ਵਧਾਵਾ ਸਿੰਘ ਜੀ ਮੇਰੇ ਬੜੇ ਮਦਦਗਾਰ ਸਨ। ਪਹਿਲੇ ‘ਨਾਮ ਅਭਿਆਸ ਕਮਾਈ ਸਮਾਗਮ' ਵਿਚ ਅਖੰਡ ਕੀਰਤਨੀ ਜਥੇ ਦੇ ਬਹੁਤੇ ਸਿੰਘ ਸਨ। ਇਹ ਸਮਾਗਮ ਜੁਲਾਈ ਦੇ ਦਿਨਾਂ ਵਿਚ ਸੀ। ਇਨ੍ਹਾਂ ਦਿਨਾਂ ਵਿਚ ਅੰਬ ਬਹੁਤ ਹੁੰਦੇ ਸਨ। ਕੇਵਲ ਇਕ ਵਾਰ ਕਿਸੇ ਵੀਚਾਰ ਕਾਰਨ ਇਸ ਦਾ ਸਮਾਂ ਬਦਲਿਆ ਸੀ। ਇਸ ਸਮਾਗਮ ਵਿਚ ਭਾਈ ਵਧਾਵਾ ਸਿੰਘ ਜੀ ਨੇ ਆਖਰੀ ਵਾਰ ਕਥਾ ਕੀਤੀ ਤੇ ਫਿਰ ਉਹ ਅਮਰੀਕਾ ਚਲੇ ਗਏ ਸਨ। ਮੈਨੂੰ ਯਾਦ ਹੈ ਕਿ ਇਕ ਵਾਰ ਗੁਰਦੁਆਰਾ ਸਾਹਿਬ ਸਮਾਗਮ ਹੋ ਰਿਹਾ ਸੀ ਕਿ ਪਹਾੜ ਵਲੋਂ ਝੱਖੜ ਆਇਆ। ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਅਤੇ ਭਾਈ ਜੋਗਿੰਦਰ ਸਿੰਘ ਤਲਵਾੜਾ ਕੀਰਤਨ ਕਰ ਰਹੇ ਸਨ। ਭਾਈ ਜੋਗਿੰਦਰ ਸਿੰਘ ਤਲਵਾੜਾ ਸ਼ਬਦ ਪੜ ਰਹੇ ਸਨ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਦੇਖੌ ਭਾਈ ਗੵਾਨ ਕੀ ਆਈ ਆਂਧੀ ॥<br>
+          ਸਭੈ ਉਡਾਨੀ ਭ੍ਰਮ ਕੀ ਟਾਟੀ ਰਹੈ ਨ ਮਾਇਆ ਬਾਂਧੀ ॥੧॥ ਰਹਾਉ ॥
+        </div>
+      </div>
+
+      <div class="source-block">
+        Ang 331
+      </div>
+
+      <p>
+        ਜਦੋਂ ਆਖਰੀ ਤੁਕ ‘ਆਂਧੀ ਪਾਛੇ ਜੋ ਜਲੁ ਬਰਖੈ ਤਿਹਿ ਤੇਰਾ ਜਨੁ ਭੀਨਾ' ਦਾ ਗਾਇਨ ਕਰ ਰਹੇ ਸਨ, ਤਾਂ ਬਾਹਰ ਭਾਰੀ ਬਾਰਸ਼ ਆਉਣ ਕਾਰਨ ਬਾਹਰ ਦੀ ਸੰਗਤ ਅੰਦਰ ਆ ਗਈ ਤੇ ਸੰਗਤ ਭਰਵੀਂ ਲੱਗਣ ਲਗ ਪਈ। ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਹੋਰਾਂ ਨੇ ‘ਹੁਕਮੀ ਬਰਸਣ ਲਾਗੇ ਮੇਹਾ।' ਸ਼ਬਦ ਪੜ੍ਹਿਆ। ਬੀਬੀ ਕਿਰਪਾਲ ਕੌਰ ਨੇ ਹੇਠ ਲਿਖੇ ਸ਼ਬਦ ਦਾ ਗਾਇਨ ਕੀਤਾ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਕਿਆ ਉਠਿ ਉਠਿ ਦੇਖਹੁ ਬਪੁੜੇਂ ਇਸੁ ਮੇਘੈ ਹਥਿ ਕਿਛੁ ਨਾਹਿ ॥<br>
+          ਜਿਨਿ ਏਹੁ ਮੇਘੁ ਪਠਾਇਆ ਤਿਸੁ ਰਾਖਹੁ ਮਨ ਮਾਂਹਿ ॥
+        </div>
+      </div>
+
+      <div class="source-block">
+        Ang 1280
+      </div>
+
+      <p>
+        ਇਨ੍ਹਾਂ ਤਿੰਨਾਂ ਕੀਰਤਨੀਆਂ ਦੇ ਇਸ ਰੰਗ ਬਾਰੇ ਮੈਂ ਕਿਧਰੇ ਇਕ ਵਾਰ ਇਕ ਲੇਖ ਵੀ ਲਿਖਿਆ ਹੋਇਆ ਹੈ।
+      </p>
+
+      <p>
+        ਮੇਰੇ ਮਨ ਵਿਚ ਕੀਰਤਨ ਕਰਨ ਦਾ ਚਾਓ ਸੀ। ਦਸਵੀਂ ਕਰਕੇ ਮੈਂ ਸ਼ਹੀਦ ਸਿਖ ਮਿਸ਼ਨਰੀ ਕਾਲਿਜ ਵਿਚ ਦਾਖਲ ਹੋ ਗਿਆ। ਉਦੋਂ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਯੂਨੀਵਰਸਿਟੀ ਦੀ ਸਥਾਪਨਾ ਹੋ ਗਈ ਸੀ। ਸ਼੍ਰੋਮਣੀ ਕਮੇਟੀ ਚਾਹੁੰਦੀ ਸੀ ਕਿ ਇਹ ਸ਼ਹੀਦ ਸਿਖ ਮਿਸ਼ਨਰੀ ਕਾਲਿਜ ਇਸ ਯੂਨੀਵਰਸਿਟੀ ਨਾਲ ਅਫਿਲੀਏਟ ਹੋ ਜਾਵੇ। ਉਸ ਲਈ ਬੈਚਲਰ ਅਤੇ ਮਾਸਟਰ ਲੈਵਲ ਦੀਆਂ ਦੋ ਕਲਾਸਾਂ ਸ਼ੁਰੂ ਕੀਤੀਆਂ ਗਈਆਂ ਸਨ। ਡਾ. ਬਲਕਾਰ ਸਿੰਘ, ਡਾ. ਕੇਹਰ ਸਿੰਘ ਅਤੇ ਮੇਵਾ ਸਿੰਘ ਸਿੱਧੂ ਇਹ ਮੇਰੇ ਨਾਲ ਸਨ। ਇਨ੍ਹਾਂ ਨੇ ਵੀ ਐਮ. ਏ. ਓਥੋਂ ਕੀਤੀ। ਡਾ. ਤਾਰਨ ਸਿੰਘ ਸਾਡੇ ਪ੍ਰਿੰਸੀਪਲ ਸਨ। (ਪ੍ਰਿੰਸੀਪਲ) ਹਰਭਜਨ ਸਿੰਘ ਉਸ ਵੇਲੇ ਸਾਡੇ ਕਾਲਿਜ ਹੋਸਟਲ ਦੇ ਇਨਚਾਰਜ ਸਨ।
+      </p>
+
+      <p>
+        ਜਦੋਂ ਮੈਂ ਪੜ੍ਹਾਈ ਕਰ ਰਿਹਾ ਸੀ ਤਾਂ ਮੈਨੂੰ ਪੜ੍ਹਨ-ਲਿਖਣ ਦਾ ਸ਼ੌਕ ਪੈ ਗਿਆ ਸੀ। ਪਟਿਆਲੇ ਸਾਡੇ ਘਰ ਦੇ ਨੇੜੇ, ਜਿਥੇ ਭਾਈ ਵਧਾਵਾ ਸਿੰਘ ਜੀ ਨੇ ਮਕਾਨ ਬਣਾਇਆ ਸੀ, ਇਸ ਦਾ ਅਸੀਂ ਪੰਜਾਂ ਸਿੰਘਾਂ ਨੇ ਨੀਂਹ ਪੱਥਰ ਰੱਖਿਆ ਸੀ।
+      </p>
+
+      <p>
+        ਉਸ ਗਲੀ ਵਿਚ 5-7 ਵਿਦਵਾਨ — ਡਾ. ਗੰਡਾ ਸਿੰਘ, ਪ੍ਰੋ. ਪ੍ਰੀਤਮ ਸਿੰਘ, ਗਿਆਨੀ ਲਾਲ ਸਿੰਘ, ਗਿਆਨੀ ਗੁਰਦਿੱਤ ਸਿੰਘ ਆਦਿ ਰਹਿੰਦੇ ਸਨ। ਭਾਈ ਫੌਜਾ ਸਿੰਘ (ਸ਼ਹੀਦ) ਐਗਰੀਕਲਚਰ ਇੰਸਪੈਕਟਰ ਦਾ ਬੀਬੀ ਅਮਰਜੀਤ ਕੌਰ (ਅਧਿਆਪਕਾ) ਨਾਲ ਅਨੰਦ ਕਾਰਜ ਕਰਨ ਸਮੇਂ ਅਸੀਂ ਪੰਜ ਸਿੰਘ ਵੀ ਹਾਜ਼ਰ ਸੀ — ਦਾਸ ਜਸਬੀਰ ਸਿੰਘ, ਬਾਬੂ ਮੱਲ ਸਿੰਘ ਜੀ, ਗਿਆਨੀ ਗੁਰਬਚਨ ਸਿੰਘ ਜੀ (ਮੈਨੇਜਰ-‘ਸੂਰਾ’) ਭਾਈ ਜੀਵਨ ਸਿੰਘ ਜੀ ਤੇ ਭਾਈ ਸੇਵਾ ਸਿੰਘ ਜੀ (ਸਿੰਘ ਬ੍ਰਦਰਜ਼)। ਜਿੰਨਾਂ ਚਿਰ ਮੈਂ ਸ੍ਰੀ ਅੰਮ੍ਰਿਤਸਰ ਸਾਹਿਬ ਰਿਹਾਂ, ਓਨਾਂ ਚਿਰ ਉਨਾਂ ਨਾਲ ਮੇਲ-ਜੋਲ ਬਣਿਆਂ ਰਿਹਾ।
+      </p>
+
+      <p>
+        ਮਿਸ਼ਨਰੀ ਕਾਲਿਜ ਵਿਚ ਡਾ. ਤਾਰਨ ਸਿੰਘ ਹੋਰਾਂ ਹੇਠ ਲਿਖੇ ਸ਼ਬਦ ਦੀ ਕਥਾ ਸੁਣਾਈ ਸੀ:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਜਾ ਕਉ ਹਰਿ ਰੰਗ ਲਾਗੋ ਇਸੁ ਜੁਗ ਮਹਿ ਸੋ ਕਹੀਅਤ ਹੈ ਸੂਰਾ॥
+        </div>
+      </div>
+
+      <div class="source-block">
+        Ang 679
+      </div>
+
+      <p>
+        ਤੇ ਜਦੋਂ 1973 ਵਿਚ ਗਿਆਨੀ ਗੁਰਦਿੱਤ ਸਿੰਘ ਨਾਲ ਸੰਪਰਕ ਹੋਇਆ ਤਾਂ ‘ਸੂਰਾ’ ਨਾਂ ਦਾ ਮੈਗਜੀਨ ਕੱਢਣਾ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤਾ। ਗੁਰਦੁਆਰਾ ਅਲਵਰ ਵਿਚ ਗਿਆਨੀ ਸੰਤ ਸਿੰਘ ਮਸਕੀਨ ਜੀ ਪ੍ਰਧਾਨ ਸਨ। ਫਿਰ ਕਥਾ ਕਰਨ ਲਗ ਪਏ ਅਤੇ ਸਿੰਘਾਪੁਰ ਚਲੇ ਗਏ। ਉਥੇ ਹੀ ਗੰਗਾ ਨਗਰ ਵਾਲੇ ਡਾ. ਅਨੂਪ ਸਿੰਘ ਸਨ। ਉਨ੍ਹਾਂ ਦੇ ਕਹਿਣ ਤੇ ਮਸਕੀਨ ਜੀ ਦੀ ਕਥਾ ਦੇ ਲੈਕਚਰਾਂ ਦੀਆਂ ਦੋ ਕਿਤਾਬਾਂ ਮੈਂ ਸੰਪਾਦਿਤ ਕੀਤੀਆਂ। ਭਾਈ ਮਹਿੰਦਰ ਸਿੰਘ ਐਸ.ਡੀ.ਓ. ਦੇ ਸਹਿਯੋਗ ਨਾਲ ਮੈਂ ਪਹਿਲਾਂ ਕੈਨੇਡਾ ਤੇ ਅਮਰੀਕਾ ਗਿਆ ਤੇ ਫਿਰ ਪਿਛਲੇ 15 ਸਾਲਾਂ ਤੋਂ ਹੁਣ ਇੰਗਲੈਂਡ ਵਿਚ ਹਾਂ।”
+      </p>
+
+      <div class="footnote">
+        ਗੁਰੂ ਸਾਹਿਬ ਦੀ ਕਿਰਪਾ ਨਾਲ, ਇਹ ਡਿਜੀਟਾਈਜ਼ੇਸ਼ਨ ਸੇਵਾ ਦਾਸ ਭੁਪਿੰਦਰ ਸਿੰਘ (ਧਰਮ ਪ੍ਰਚਾਰ ਲੀਡ – ਏ.ਕੇ.ਜੇ. ਯੂ.ਕੇ.) ਵੱਲੋਂ ਕੀਤੀ ਗਈ ਹੈ। ਦਾਸ ਕਿਸੇ ਵੀ ਭੁੱਲ-ਚੁੱਕ ਲਈ ਖਿਮਾ ਦਾ ਜਾਚਕ ਹੈ।
+      </div>
+
+    </div><!-- end punjabi-content -->
+
+
+    <!-- ENGLISH CONTENT -->
+
+    <div id="english-content" style="display:none;">
+
+      <p>
+        Bhai Jasbir Singh Bir (aged 71) is a son of Patiala, affiliated with the Akhand Kirtani Jatha. During his school years, the blessed company of devout Gursikhs drew him ever deeper into the ways and teachings of the Guru's house. It was through S. Mahinder Singh SDO Sahib that he was blessed with the fortune of coming into contact with Sant Baba Harnam Singh Ji. In 1973, the Shiromani Gurdwara Parbandhak Committee, Amritsar, established the Singh Sabha Centenary Committee under the guidance of Giani Gurdit Singh (of 'Mera Pind' fame). Its purpose was to carry out various missionary works for the betterment of Sikh society, in keeping with the spirit of the Singh Sabha Movement founded around 1873. The offices of this committee were situated in a section of Guru Ram Das Saray. It was here that Bhai Jasbir Singh served as office secretary and assistant editor, residing within the office itself, working day and night under Giani Gurdit Singh Ji's leadership. It was during these days that I and my friend Parminder Singh Sahota came to know Jasbir Singh Bir. Whenever we would visit Amritsar to obtain Sikh literature or for the darshan of Sri Darbar Sahib, we would always stay with Jasbir Singh Bir.
+      </p>
+
+      <p>
+        During those days, various special issues of the 'Singh Sabha Patrika' were published — truly invaluable works. Bhai Jasbir Singh would also occasionally be seen at Gurdwara Rampur Khera Sahib. After some years, this friendship faded into the past. Then, approximately 42 years later, contact was re-established with Bhai Jasbir Singh 'Bir' through Facebook, and it became known that he had been living in Manchester, England for many years. This time, in January 2018, we were filled with great joy upon meeting him at Gurdwara Sri Singh Sabha, Model Town, Ludhiana, during the Parkash Divas celebrations of the Tenth Patshah. Among other conversations, upon my asking, Jasbir Singh 'Bir' Ji shared these cherished moments of his connection with Sant Harnam Singh Ji of Rampur Khera Sahib:
+      </p>
+
+      <p>
+        "My ancestral home was in Ragho Majra, Patiala. I was first a student at Khalsa Sewak Jatha High School and then Dhudial Khalsa School. During this time, by great fortune, I came into the company of some Gurmukhs, and through their influence, I connected with the Guru's house and began doing seva by playing the tabla during Shabad Kirtan. One day, Bhai Mahinder Singh SDO — who had previously served as Overseer — told me that we were to go to Gurdwara Rampur Khera to do kirtan, and to bring the tabla along. It was through him that I first had the blessed darshan of Sant Harnam Singh Ji of Rampur Khera Sahib. One day he fixed a date to take me by bus to meet the great soul at Gurdwara Rampur Khera Sahib. I had never travelled by bus before. His village was Dasuha and he was posted at Patiala. I reached him. Those were the days of the monsoon. When we arrived at your village Gondpur, the stream was flooded — heavy rain in the mountains above had caused the water to rise greatly. Traffic on both sides of the stream had come to a standstill. Evening had fallen; the sun was about to set. Bhai Mahinder Singh SDO had won the 'Best Swimmer' award during his college days. He decided to cross the stream. I was already slight in build. He lifted me onto his shoulders, and I balanced the tabla on my own shoulders. Bhai Sahib said: 'Bhai Jasbir Singh, do not look in the direction from which the water comes down from the mountains.' When we had crossed more than half the stream, I could no longer resist and looked in the very direction I had been told not to. When I saw the waves of water rushing towards us, I let out a cry of fear. Bhai Mahinder Singh SDO Sahib said: 'I told you not to look that way. If you carry on like this, you will drown — and me along with you. Look straight ahead!' And so we safely crossed the stream.
+      </p>
+
+      <p>
+        In those days, there was no road leading directly to Gurdwara Sahib as there is now; the path ran through a field or two. When we drew near to Gurdwara Sahib, Sant Harnam Singh Ji, who was out for a walk, met us outside — this was my very first meeting with him. Bhai Mahinder Singh Ji had already informed them of my coming. In those days, Gurdwara Sahib was smaller than it is today. Baba Ji also lived in a simple hut. At that time, very few Singhs resided with Baba Ji. Baba Ji showed me great love. His life was one of profound peace and equanimity. My heart was drawn deeply to Baba Ji. From that time onwards, I continued to attend and present myself before Baba Ji at Gurdwara Sahib from time to time.
+      </p>
+
+      <p>
+        On one occasion, the Singhs of the Akhand Kirtani Jatha Patiala arranged a bus yatra to visit the holy Gurdwaras. Baba Ji had reserved five or six seats on that bus to join the pilgrimage. Accompanying Baba Ji were Bhai Wadhawa Singh Ji of the Languages Department, Dr. Pritam Singh Ji, his wife and their youngest son, Bhai Nirmal Singh Ji, and Bhai Sewa Singh Ji — who is now Sant Sewa Singh Ji. Bhai Fauja Singh and his wife were part of the Akhand Kirtani Jatha group. They accompanied us from Patiala to Bombay throughout the journey. Our halts were at various Gurdwara Sahibs, where Rainsbai Kirtan was held through the night.
+      </p>
+
+      <p>
+        When we reached Bombay, the people of Maharashtra were celebrating the centenary of Baba Namdev Ji. A special programme had been arranged on the ground floor of Gurdwara Sahib, Dadar. On this occasion, Bhai Mahinder Singh Ji SDO performed kirtan of Namdev Ji's Shabad:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਨਾਦਿ ਸਮਾਇਲੋ ਰੇ ਸਤਿਗੁਰੁ ਭੇਟਿਲੇ ਦੇਵਾ ॥੧॥ ਰਹਾਉ ॥
+        </div>
+      </div>
+
+      <p>
+        Bhai Wadhawa Singh Ji, owing to the Maharashtrian sangat present, delivered the exposition of this very Shabad in Punjabi, Hindi, and English.
+      </p>
+
+      <p>
+        The yatra lasted 20 to 25 days. Baba Ji then alighted near Gwalior — he needed to meet Dr. Kartar Singh Ji, who had written several books and also used to do katha. His residence was near Bharatpur. A gentleman from Jalandhar would print his pamphlets and distribute them among the sangat. I cannot now recall exactly, but I believe Baba Ji rejoined us again at Agra.
+      </p>
+
+      <p>
+        Some time after this, Baba Harnam Singh Ji himself organised another yatra. He said to Bhai Mahinder Singh Ji SDO: "Previously you took us on a yatra — now come with us on ours." Bhai Mahinder Singh Ji was unable to go, due to leave or some other obligation, so he sent me in his place to accompany Baba Ji. On this yatra, I was joined by Bhai Manohar Singh Ji of the Red Cross and Karmajit Singh, in-charge of your department's book store. Baba Ji's teaching was that all pilgrims should alight from the bus some distance before reaching Gurdwara Sahib, and proceed towards the holy shrine while reciting this Shabad:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਕਵਨ ਗੁਨ ਪ੍ਰਾਨਪਤਿ ਮਿਲਉ ਮੇਰੀ ਮਾਈ॥<br>
+          ਮੋਹਿ ਪਰਦੇਸਨਿ ਦੂਰ ਤੇ ਆਈ॥
+        </div>
+      </div>
+
+      <div class="source-block">Ang 204</div>
+
+      <p>
+        My duty was to wear the harmonium around my neck and lead the Shabad, while Bhai Manohar Singh — who now lives in Canada — carried the dholki. We arrived at nearly every holy shrine in this manner. A cherished photograph from this yatra exists, which I had published in 'Blio Charag'. In that photograph, Sant Harnam Singh Ji and the Singhs can be seen.
+      </p>
+
+      <p>
+        There were also a few amusing incidents connected to me during this yatra. While staying at Gurdwara Nanakamta Sahib, my shoes went missing — the very pair that Bhai Mahinder Singh had bought for me before the journey. Someone informed Baba Ji that Jasbir Singh was now walking around barefoot. We were staying at Gurdwara Baba Mohan Singh Ji in Lucknow, I remember clearly. Baba Ji said to me: 'Singh, come, let us go for a short walk.' Along with us were Baba Ji's driver Mahinder Singh (from Machhi village) and Numberdar Channan Singh Rasulpur. Baba Ji took us inside the Bata shoe shop and bought me a fine pair of shoes worth 99 rupees — which was expensive at that time. I protested, saying there was still much of the journey left and the shoes would surely go missing again. Baba Ji replied: 'Guru Sahib will provide more. Guru's kirtaniya should not go barefoot.' So I accepted Baba Ji's word. We then arrived at Hazur Sahib. In those days, the atmosphere and surroundings there were not as pleasant as they are today. At that time there was a gateway some distance from the holy shrine. I had removed my shoes and climbed a few steps, and was standing at a distance with my eyes closed in ardas — when the very new shoes Baba Ji had gifted me were taken by someone.
+      </p>
+
+      <p>
+        Baba Ji came to know again. I pleaded earnestly that I would not accept another pair of shoes. Baba Ji said that it did not look right. I humbly requested: 'Then please at least buy me a simple pair of chappals.' In this way, Baba Ji showed me immense love and care.
+      </p>
+
+      <p>
+        When I set up my 'Zorawar Press' in Patiala, Baba Ji took a Hukamnama after performing ardas. Reflecting upon it, Baba Ji shared: 'Jasbir Singh, this business of yours will not continue for long — Guru Sahib intends to take some other seva from you.' In that press, only two books written by Bhai Wadhawa Singh were printed: 'Aatma Ki Hai' and 'Naam Ki Hai'. Bhai Wadhawa Singh Ji was of great help to me. At the first 'Naam Abhyaas Kamaai Samagam', most of the Singhs were from the Akhand Kirtani Jatha. This gathering was held in the days of July, when mangoes are plentiful. Only once, for some reason, was its timing changed. At this Samagam, Bhai Wadhawa Singh Ji performed katha for the last time, and thereafter left for America. I recall that once, while a Samagam was taking place at Gurdwara Sahib, a storm came in from the mountains. Bhai Mahinder Singh and Bhai Joginder Singh Talwara were doing kirtan. Bhai Joginder Singh Talwara was reciting the Shabad:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਦੇਖੌ ਭਾਈ ਗੵਾਨ ਕੀ ਆਈ ਆਂਧੀ ॥<br>
+          ਸਭੈ ਉਡਾਨੀ ਭ੍ਰਮ ਕੀ ਟਾਟੀ ਰਹੈ ਨ ਮਾਇਆ ਬਾਂਧੀ ॥੧॥ ਰਹਾਉ ॥
+        </div>
+      </div>
+
+      <div class="source-block">Ang 331</div>
+
+      <p>
+        As they were singing the final line — 'After the storm, the rain falls, and Your servant is drenched in it' — heavy rain began to pour outside, the sangat outside rushed in, and the hall filled beautifully. Bhai Mahinder Singh then recited the Shabad: 'By the Hukam of the Lord, the rain begins to fall.' Bibi Kirpal Kaur sang:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਕਿਆ ਉਠਿ ਉਠਿ ਦੇਖਹੁ ਬਪੁੜੇਂ ਇਸੁ ਮੇਘੈ ਹਥਿ ਕਿਛੁ ਨਾਹਿ ॥<br>
+          ਜਿਨਿ ਏਹੁ ਮੇਘੁ ਪਠਾਇਆ ਤਿਸੁ ਰਾਖਹੁ ਮਨ ਮਾਂਹਿ ॥
+        </div>
+      </div>
+
+      <div class="source-block">Ang 1280</div>
+
+      <p>
+        About this beautiful harmony between these three kirtaniyas, I have written an article somewhere on one occasion.
+      </p>
+
+      <p>
+        I had a deep yearning to do kirtan. After my tenth grade, I enrolled in Shaheed Sikh Missionary College. By that time, Guru Nanak Dev University had been established. The Shiromani Committee wished for Shaheed Sikh Missionary College to be affiliated with the university, and so Bachelor and Master level classes were started. Dr. Balkar Singh, Dr. Kehar Singh, and Mewa Singh Sidhu were with me, and they too completed their MA from there. Dr. Taran Singh was our principal. (Principal) Harbhajan Singh was the in-charge of our college hostel at that time.
+      </p>
+
+      <p>
+        While studying, I developed a deep love for reading and writing. Near our home in Patiala, where Bhai Wadhawa Singh Ji had built a house, the five of us Singhs laid the foundation stone together.
+      </p>
+
+      <p>
+        In that street lived 5 to 7 scholars — Dr. Ganda Singh, Prof. Pritam Singh, Giani Lal Singh, Giani Gurdit Singh, and others. When Bhai Fauja Singh (Shaheed), an Agriculture Inspector, had his Anand Karaj with Bibi Amarjit Kaur (a teacher), five Singhs were also present — Daas Jasbir Singh, Babu Mall Singh Ji, Giani Gurbachan Singh Ji (Manager of 'Soora'), Bhai Jeevan Singh Ji, and Bhai Sewa Singh Ji (Singh Brothers). For as long as I remained at Sri Amritsar Sahib, I kept close association with them.
+      </p>
+
+      <p>
+        At Missionary College, Dr. Taran Singh Ji had shared the katha of the Shabad:
+      </p>
+
+      <div class="gurbani-block">
+        <div class="gurmukhi">
+          ਜਾ ਕਉ ਹਰਿ ਰੰਗ ਲਾਗੋ ਇਸੁ ਜੁਗ ਮਹਿ ਸੋ ਕਹੀਅਤ ਹੈ ਸੂਰਾ॥
+        </div>
+      </div>
+
+      <div class="source-block">Ang 679</div>
+
+      <p>
+        And when, in 1973, contact was made with Giani Gurdit Singh, I began publishing a magazine named 'Soora'. Giani Sant Singh Maskeen Ji was president at Gurdwara Alwar. He then began doing katha and went to Singapore, where Dr. Anoop Singh of Ganga Nagar was also present. At his request, I edited two books of Maskeen Ji's katha lectures. With the support of Bhai Mahinder Singh SDO, I first went to Canada and America, and for the past 15 years I have been in England."
+      </p>
+
+      <div class="footnote">
+        With Guru Sahib's kirpa, this digitisation seva has been carried out by Daas Bhupinder Singh (Dharam Parchar Lead – AKJ UK). Daas humbly seeks forgiveness for any mistakes or shortcomings.
+      </div>
+
+    </div><!-- end english-content -->
+
+    <a href="/articles/BhaiJasbirSinghMohali/index.html" class="back-home">
+      ← Back To Bhai Jasbir Singh Ji Mohali
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+<script>
+
+function showPunjabi(){
+    document.getElementById('punjabi-content').style.display = 'block';
+    document.getElementById('english-content').style.display = 'none';
+    document.getElementById('paBtn').classList.add('active');
+    document.getElementById('enBtn').classList.remove('active');
+}
+
+function showEnglish(){
+    document.getElementById('punjabi-content').style.display = 'none';
+    document.getElementById('english-content').style.display = 'block';
+    document.getElementById('enBtn').classList.add('active');
+    document.getElementById('paBtn').classList.remove('active');
+}
+
+</script>
+
+</body>
+</html>
