@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GurmatKhajana • ਗੁਰਮਤਿ ਪਰਚਾਰ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* MOBILE NAV */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    display:none;
+}
+
+.top-main-logo img{
+    width:135px;
+}
+
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.88)),
+
+    url('/images/gallery/siteimages/tal.jpeg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 5%,
+    rgba(0,0,0,0.72) 100%);
+
+    backdrop-filter:blur(2px);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:1100px;
+
+    text-align:center;
+
+    padding:100px 20px 60px;
+}
+
+.main-logo img{
+    display:block;
+    width:100%;
+    max-width:520px;
+    height:auto;
+
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.article-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:0.85rem;
+
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    line-height:1.3;
+    color:#d4a42c;
+
+    margin-bottom:25px;
+}
+
+.article-meta{
+    color:#d0d0d0;
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+/* ARTICLE BODY */
+
+.article-wrapper{
+    width:100%;
+    max-width:950px;
+
+    margin:auto;
+
+    padding:90px 30px 120px;
+}
+
+.featured-image{
+    width:100%;
+    height:620px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:55px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.45);
+}
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.article-content{
+    font-size:1.2rem;
+    line-height:2.4;
+    color:#e2e2e2;
+}
+
+.article-content p{
+    margin-bottom:40px;
+}
+
+/* LANGUAGE SWITCHER */
+
+.language-switcher{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.language-switcher button{
+    padding:14px 28px;
+    border-radius:50px;
+
+    background:#1a1a1a;
+    color:#d4a42c;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid rgba(212,164,44,0.3);
+
+    transition:0.3s ease;
+}
+
+.language-switcher button:hover{
+    background:#d4a42c;
+    color:black;
+}
+
+.language-switcher button.active{
+    background:#d4a42c;
+    color:black;
+}
+
+/* PROFILE ENTRIES (each preacher) */
+
+.profile-block{
+    margin:55px 0;
+
+    padding:38px 40px;
+
+    border-radius:26px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(18,18,18,0.96),
+    rgba(8,8,8,0.98));
+
+    border:1px solid rgba(212,164,44,0.2);
+}
+
+.profile-block h3{
+    font-family:'Cinzel',serif;
+    color:#d4a42c;
+    font-size:1.5rem;
+    margin-bottom:18px;
+    letter-spacing:1px;
+}
+
+.profile-block p{
+    margin-bottom:0;
+    font-size:1.1rem;
+    line-height:2.1;
+}
+
+.section-divider{
+    text-align:center;
+    color:#d4a42c;
+    font-size:1.4rem;
+    letter-spacing:6px;
+    margin:70px 0 30px;
+    opacity:0.6;
+}
+
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:60px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:#d4a42c;
+    color:black;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.back-home:hover{
+    transform:translateY(-3px);
+}
+
+.attribution{
+    margin-top:50px;
+    padding:35px 40px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:rgba(255,255,255,0.02);
+}
+
+.attribution p{
+    color:#aaa;
+    font-size:1rem;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero{
+    min-height:70vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding-top:100px;
+}
+
+.main-logo img{
+    max-width:250px;
+}
+
+.hero-content h1{
+    font-size:2.2rem;
+}
+
+.article-wrapper{
+    padding:60px 20px 90px;
+}
+
+.featured-image{
+    height:340px;
+    border-radius:24px;
+}
+
+.article-content{
+    font-size:1rem;
+    line-height:2.2;
+}
+
+.profile-block{
+    padding:28px 24px;
+}
+
+.profile-block h3{
+    font-size:1.25rem;
+}
+
+.profile-block p{
+    font-size:1rem;
+}
+
+.language-switcher button{
+    width:100%;
+}
+
+.attribution{
+    padding:28px 24px;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+  <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/articles/index.html">Articles</a>
+    <a href="/jeevani/index.html">Jeevani</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="main-logo">
+      <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+    </div>
+
+    <div class="article-label">
+      GurmatKhajana Article
+    </div>
+
+    <h1>ਗੁਰਮਤਿ ਪਰਚਾਰ</h1>
+
+    <div class="article-meta">
+      Sri Guru Amardas Ji's 22 Manjis — from Jeevan Katha Sri Guru Amardas Ji, Bhai Joginder Singh Ji Talwara
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ARTICLE -->
+
+<section class="article-wrapper">
+
+  <div class="featured-image">
+    <img src="/images/gallery/siteimages/talwara.jpg" alt="Goindwal Sahib">
+  </div>
+
+  <div class="article-content">
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-switcher">
+
+      <button onclick="showPunjabi()" id="paBtn" class="active">
+        ਪੰਜਾਬੀ
+      </button>
+
+      <button onclick="showEnglish()" id="enBtn">
+        English
+      </button>
+
+    </div>
+
+    <!-- PUNJABI CONTENT -->
+
+    <div id="punjabi-content">
+
+      <p>
+        ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਗੁਰਮਤਿ ਦਾ ਪ੍ਰਚਾਰ ਕਰਨ ਲਈ ਸਿੱਖ ਸੰਗਤਾਂ ਨੂੰ ਸੰਗਠਿਤ ਕਰਨ ਵੱਲ ਵਿਸ਼ੇਸ਼ ਧਿਆਨ ਦਿੱਤਾ। ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਨੇ ਚਾਰ ਉਦਾਸੀਆਂ ਵਿਚ ਵੱਖ-ਵੱਖ ਥਾਵਾਂ 'ਤੇ ਧਰਮਸਾਲਾਂ ਕਾਇਮ ਕੀਤੀਆਂ ਸਨ ਤੇ ਉਨ੍ਹਾਂ ਦੇ ਪ੍ਰਬੰਧ ਲਈ ਸਥਾਨਿਕ ਸੰਗਤ ਵਿੱਚੋਂ ਇਕ ਇਕ ਮੁਖੀਆ (ਧਰਮਸਾਲੀਆ) ਥਾਪਿਆ ਸੀ।
+      </p>
+
+      <p>
+        ਸਿੱਖ ਧਰਮ ਦੇ ਸਿਧਾਂਤ ਬੜੇ ਉਸਾਰੂ ਤੇ ਸੁਧਾਰਕ ਹੋਣ ਕਾਰਨ ਜਿਥੇ ਇਹ ਲੋਕ-ਪ੍ਰਿਯ ਹੋ ਗਿਆ ਸੀ, ਉਥੇ ਜਾਤ-ਅਭਿਮਾਨੀ ਤੇ ਕਰਮ-ਕਾਂਡੀ ਬੰਦਿਆਂ ਵੱਲੋਂ ਇਸ ਦੀ ਵਿਰੋਧਤਾ ਵੀ ਸ਼ੁਰੂ ਹੋ ਗਈ ਸੀ। ਸੋ ਲੋੜ ਸੀ ਕਿ ਧਰਮ ਪਰਚਾਰ ਦਾ ਕੌਮ ਨਿਯਮ ਬੱਧ ਕਰ ਕੇ ਪੱਕੇ ਪੈਰੀਂ ਖੜਾ ਕੀਤਾ ਜਾਏ। ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਇਸ ਮੰਤਵ ਦੀ ਪੂਰਤੀ ਲਈ 22 ਮੰਜੀਆਂ ਥਾਪੀਆਂ ਤੇ ਇਸ ਲਈ ਗੁਰਮਤਿ ਵਿਚ ਪਰਪੱਕ 22 ਪਰਚਾਰਕ ਨਿਯੁਕਤ ਕੀਤੇ, ਜਿਨ੍ਹਾਂ ਦਾ ਵੇਰਵਾ ਮਹਾਨ ਕੋਸ਼ ਵਿਚ ਇਸ ਪ੍ਰਕਾਰ ਦਿੱਤਾ ਹੋਇਆ ਹੈ :
+      </p>
+
+      <div class="section-divider">◆ ◆ ◆</div>
+
+      <div class="profile-block">
+        <h3>ਅੱਲਾ ਯਾਰ</h3>
+        <p>ਘੋੜਿਆਂ ਦਾ ਵਪਾਰ ਕਰਦਾ ਸੀ। ਬਿਆਸ ਦੇ ਕਿਨਾਰੇ ਇਕ ਦਿਨ ਇਸ ਦਾ ਭਾਈ ਪਾਰੋ ਪਰਮ-ਹੰਸ ਡੱਲਾ ਨਿਵਾਸੀ ਨਾਲ ਮੇਲ ਹੋਇਆ, ਜਿਸ ਤੋਂ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦੇ ਦਰਸ਼ਨ ਦੀ ਸਿੱਕ ਹੋਈ। ਭਾਈ ਸਾਹਿਬ ਦੇ ਨਾਲ ਗੁਰੂ-ਦਰਬਾਰ ਪਹੁੰਚ ਕੇ ਗੁਰਸਿੱਖੀ ਧਾਰਨ ਕੀਤੀ ਅਤੇ ਗੁਰਮੁਖ ਸਿੱਖਾਂ ਵਿਚ ਗਿਣਿਆ ਗਿਆ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਸੱਚਨ ਸੱਚ</h3>
+        <p>ਮੰਦਰ ਨਾਮੇ ਪਿੰਡ (ਜ਼ਿਲਾ ਲਾਹੌਰ, ਤਹਿਸੀਲ ਸ਼ਕਰਪੁਰ) ਦਾ ਵਸਨੀਕ ਇਕ ਬ੍ਰਾਹਮਣ, ਜੋ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋਇਆ। ਇਹ ਹਰ ਵੇਲੇ "ਸੱਚਨ ਸੱਚ" ਸ਼ਬਦ ਕਹਿਆ ਕਰਦਾ ਸੀ। ਇਸੇ ਕਾਰਨ ਇਸ ਦਾ ਇਹੋ ਨਾਮ ਪ੍ਰਸਿੱਧ ਹੋ ਗਿਆ। ਹਰੀਪੁਰ ਦੇ ਰਾਜੇ ਨਾਲ ਆਈਆਂ ਰਾਣੀਆਂ ਵਿੱਚੋਂ ਇਕ ਪਾਗਲ ਹੋ ਗਈ, ਜਿਸ ਨੂੰ ਉਹ ਗੋਇੰਦਵਾਲ ਹੀ ਛੱਡ ਗਿਆ ਸੀ। ਸਤਿਗੁਰਾਂ ਨੇ ਉਸ ਨੂੰ ਅਰੋਗ ਕਰ ਕੇ ਉਸ ਦਾ ਅਨੰਦ ਸੱਚਨ ਸੱਚ ਨਾਲ ਕਰਵਾ ਦਿੱਤਾ। ਇਹ ਜੋੜਾ ਜੀਵਨ-ਭਰ ਗੁਰਮਤਿ ਦਾ ਪ੍ਰਚਾਰ ਕਰਦਾ ਰਿਹਾ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਸਾਧਾਰਣ</h3>
+        <p>ਇਹ ਗੋਇੰਦਵਾਲ ਦਾ ਵਸਨੀਕ ਇਕ ਲੁਹਾਰ ਸੀ, ਜੋ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਦੀ ਸ਼ਰਨ ਆ ਕੇ ਸਿੱਖ ਬਣਿਆ ਤੇ ਗੁਰਮੁਖਿ ਪਦਵੀ ਦਾ ਅਧਿਕਾਰੀ ਹੋਇਆ। ਇਸ ਨੇ ਬਾਉਲੀ ਸਾਹਿਬ ਦੇ ਜਲ ਅੰਦਰ ਗੁਪਤ ਰਹਿਣ ਵਾਲੀ ਕਾਠ ਦੀ ਪਉੜੀ ਬਣਾਈ ਸੀ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਸਾਵਣ ਮਲ</h3>
+        <p>ਬਾਬਾ ਸਾਵਣ ਮਲ ਜੀ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦੇ ਭਤੀਜੇ ਸਨ। ਗੋਇੰਦਵਾਲ ਵਿਚ ਗੁਰੂ-ਦਰਬਾਰ ਅਤੇ ਸੰਗਤਾਂ ਲਈ ਨਿਵਾਸ ਬਣਾਉਣ ਲਈ ਜਦ ਕਾਠ ਦੀ ਜ਼ਰੂਰਤ ਹੋਈ ਤਾਂ ਇਨ੍ਹਾਂ ਨੂੰ ਹਰੀਪੁਰ ਵੱਲ ਪਹਾੜੀ ਲੱਕੜੀ ਲਿਆਉਣ ਲਈ ਭੇਜਿਆ ਗਿਆ। ਆਪ ਦੇ ਧਰਮ ਪਰਚਾਰ ਦਾ ਸਦਕਾ ਹਰੀਪੁਰ ਦਾ ਰਾਜਾ ਪਰਿਵਾਰ ਸਮੇਤ ਗੋਇੰਦਵਾਲ ਸਤਿਗੁਰਾਂ ਦੀ ਸ਼ਰਨ ਆਇਆ ਅਤੇ ਸਿੱਖ ਬਣਿਆ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਸੁੱਖਣ</h3>
+        <p>ਧਮਿਆਲ ਪਿੰਡ ਦਾ (ਜੋ ਰਾਵਲਪਿੰਡੀ ਤੋਂ ਤਿੰਨ ਮੀਲ ਹੈ) ਵਸਨੀਕ ਖੱਤਰੀ, ਜੋ ਦੁਰਗਾ ਭਗਤ ਸੀ, ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦੀ ਸ਼ਰਨ ਵਿਚ ਆ ਕੇ ਗੁਰਮੁਖਿ ਸਿੱਖਾਂ ਵਿਚ ਗਿਣਿਆ ਗਿਆ। ਭਾਈ ਸੁੱਖਣ ਜੀ ਨੇ ਪੋਠੋਹਾਰ ਵਿਚ ਗੁਰਸਿੱਖੀ ਦਾ ਵੱਡਾ ਪਰਚਾਰ ਕੀਤਾ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਹੰਦਾਲ</h3>
+        <p>ਜੰਡਿਆਲਾ ਨਿਵਾਸੀ ਹੰਦਾਲ ਜੱਟ ਸੰਮਤ 1630 ਵਿਚ ਸੁਖੀ ਦੇ ਗਰਭ ਤੋਂ ਗਾਜੀ ਦੇ ਘਰ ਜਨਮਿਆ। ਇਸ ਦੀ ਸ਼ਾਦੀ ਹਮਜ਼ੇ ਚਾਹਲ ਦੀ ਪੁੱਤਰੀ ਉਦਮੀ ਨਾਲ ਹੋਈ, ਜਿਸ ਤੋਂ ਬਿਧੀ ਚੰਦ ਪੁੱਤਰ ਪੈਦਾ ਹੋਇਆ। ਭਾਈ ਹੰਦਾਲ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਅਨਿੰਨ ਸਿੱਖ ਹੋਇਆ, ਜਿਸ ਦੀ ਘਾਲ-ਕਮਾਈ 'ਤੇ ਪ੍ਰਸੰਨ ਹੋ ਕੇ ਗੁਰੂ ਜੀ ਨੇ ਪਰਚਾਰਕ ਥਾਪ ਕੇ ਮੰਜੀ ਬਖ਼ਸ਼ੀ। ਇਹ ਪ੍ਰੇਮੀ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੇ ਲੰਗਰ ਦੀ ਸੇਵਾ ਬੜੇ ਪ੍ਰੇਮ ਨਾਲ ਕਰਦਾ ਰਿਹਾ। ਇਸ ਦੇ ਪਿੰਡ ਦਾ ਨਾਮ ਗੁਰੂ ਕਾ ਜੰਡਿਆਲਾ ਪ੍ਰਸਿੱਧ ਹੋਇਆ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਕੇਦਾਰੀ</h3>
+        <p>ਵਟਾਲੇ ਦਾ ਵਸਨੀਕ ਲੂੰਬਾ ਖੱਤਰੀ, ਜੋ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋ ਕੇ ਵੱਡਾ ਕਰਣੀ ਵਾਲਾ ਪ੍ਰਸਿੱਧ ਹੋਇਆ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਖੇਡਾ</h3>
+        <p>ਖੇਮਕਰਨ (ਜ਼ਿਲਾ ਲਾਹੌਰ) ਦਾ ਵਸਨੀਕ ਇਕ ਦੁਰਗਾ ਭਗਤ ਬ੍ਰਾਹਮਣ, ਜੋ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋ ਕੇ ਕਰਤਾਰ ਦਾ ਅਨਿੰਨ ਸੇਵਕ ਹੋਇਆ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਪਾਰੋ</h3>
+        <p>ਜਾਤਿ ਦਾ ਜੁਲਕਾ ਖੱਤਰੀ ਭਾਈ ਪਾਰੋ ਜੀ ਡੱਲੇ ਦਾ ਨਿਵਾਸੀ ਸੀ। ਇਹ ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ ਦਾ ਸਿੱਖ ਬਣਿਆ ਸੀ। ਗੁਰੂ-ਦਰਬਾਰ ਵਿਚ ਸੇਵਾ ਕਰ ਕੇ ਇਸ ਨੇ ਪਰਮ-ਹੰਸ ਦੀ ਪਦਵੀ ਹਾਸਲ ਕੀਤੀ। ਸਤਿਗੁਰੂ ਜੀ ਨੇ ਇਸ ਨੂੰ ਪਰਚਾਰਕ ਥਾਪ ਕੇ ਮੰਜੀ ਬਖ਼ਸ਼ੀ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਫੇਰਾ</h3>
+        <p>ਮੀਰਪੁਰ (ਇਲਾਕਾ ਜੰਮੂ) ਦਾ ਵਸਨੀਕ ਕਟਾਰਾ ਜਾਤਿ ਦਾ ਖੱਤਰੀ, ਜੋ ਜੋਗੀਆਂ ਦਾ ਚੇਲਾ ਸੀ, ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਗੁਰਸਿੱਖ ਹੋ ਕੇ ਆਤਮ ਗਿਆਨੀ ਹੋਇਆ। ਇਸ ਨੇ ਪਹਾੜੀ ਇਲਾਕੇ ਵਿਚ ਸਿੱਖੀ ਦਾ ਬਹੁਤ ਪਰਚਾਰ ਕੀਤਾ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਗੰਗੂ ਸ਼ਾਹ</h3>
+        <p>ਗੜ੍ਹਸ਼ੰਕਰ ਦਾ ਵਸਨੀਕ ਗੰਗੂ ਸ਼ਾਹ ਖੱਤਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋਇਆ। ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਨੇ ਇਸ ਨੂੰ ਧਰਮ ਪਰਚਾਰ ਲਈ ਸਿਰਮੌਰ ਦੇ ਇਲਾਕੇ ਭੇਜਿਆ ਅਤੇ ਮੰਜੀ ਬਖ਼ਸ਼ੀ। ਇਸ ਦਾ ਪ੍ਰਸਿੱਧ ਅਸਥਾਨ 'ਦਾਊ' (ਜ਼ਿਲਾ ਅੰਬਾਲਾ) ਵਿਚ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਦਰਬਾਰੀ (੨)</h3>
+        <p>ਪਿੰਡ ਮਜੀਠਾ (ਜ਼ਿਲਾ ਅੰਮ੍ਰਿਤਸਰ) ਦਾ ਵਸਨੀਕ ਲੂੰਬਾ ਖੱਤਰੀ ਭਾਈ ਦਰਬਾਰੀ, ਜੋ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋ ਕੇ ਗੁਰਮੁਖ ਪਦਵੀ ਦਾ ਅਧਿਕਾਰੀ ਹੋਇਆ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਬੂਆ (੨)</h3>
+        <p>ਹਰਿਗੋਬਿੰਦਪੁਰ ਦਾ ਵਸਨੀਕ ਤੇਹਣ ਖੱਤਰੀ ਭਾਈ ਬੂਆ, ਜੋ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋ ਕੇ ਪਰਮ-ਹੰਸ ਪਦਵੀ ਨੂੰ ਪ੍ਰਾਪਤ ਹੋਇਆ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਬੇਣੀ (੨)</h3>
+        <p>ਪਿੰਡ ਚੂਹਨੀਆਂ (ਜ਼ਿਲਾ ਲਾਹੌਰ) ਦਾ ਵਸਨੀਕ ਇਕ ਪੰਡਿਤ ਦਿਗਵਿਜਯ ਕਰਦਾ ਫਿਰਦਾ ਸੀ, ਇਹ ਜਦ ਗੋਇੰਦਵਾਲ ਆਇਆ ਤਦ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਦਰਸ਼ਨ ਕਰ ਕੇ ਵਿਦਿਆ-ਅਭਿਮਾਨ ਛੱਡ ਕੇ ਗੁਰਸਿੱਖ ਹੋਇਆ। ਮਲਾਰ ਰਾਗ ਵਿਚ "ਇਹੁ ਮਨੁ ਗਿਰਹੀ ਕਿ ਇਹੁ ਮਨੁ ਉਦਾਸੀ" ਸ਼ਬਦ ਏਸੇ ਪ੍ਰਥਾਈ ਗੁਰੂ ਸਾਹਿਬ ਨੇ ਉਚਾਰਿਆ। ਇਹ ਵੱਡਾ ਕਰਣੀ ਵਾਲਾ ਪਰਚਾਰਕ ਹੋਇਆ। ਇਸ ਦਾ ਨਾਉਂ ਬੇਣੀ ਮਾਧੋ ਭੀ ਲਿਖਿਆ ਮਿਲਦਾ ਹੈ। ਇਸ ਦੀ ਵੰਸ਼ ਵਿਚ ਹਰਿਦਿਆਲ ਉੱਤਮ ਕਵੀ ਹੋਇਆ ਹੈ, ਜਿਸ ਨੇ ਸਾਰੁਕਤਾਵਲੀ ਅਤੇ ਵੈਰਾਗ ਸ਼ਤਕ ਦਾ ਮਨੋਹਰ ਉਲਥਾ ਕੀਤਾ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਮਹੇਸ਼ਾ</h3>
+        <p>ਸੁਲਤਾਨਪੁਰ ਨਿਵਾਸੀ ਇਕ ਧੀਰ ਜਾਤਿ ਦਾ ਖੱਤਰੀ, ਜੋ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਅਨਿੰਨ ਸਿੱਖ ਹੋ ਕੇ ਆਤਮ ਗਿਆਨੀ ਹੋਇਆ। ਗੁਰੂ ਸਾਹਿਬ ਨੇ ਇਸ ਨੂੰ ਪਰਚਾਰਕ ਦੀ ਮੰਜੀ ਬਖ਼ਸ਼ੀ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਮਾਈ ਦਾਸ ਜੀ</h3>
+        <p>ਨਰੋਲੀ ਪਿੰਡ (ਮਾਝੇ) ਦਾ ਵਸਨੀਕ ਇਕ ਸ੍ਯੰਪਾਕੀ ਵੈਸ਼ਨਵ, ਜੋ ਸਤਿਗੁਰ ਅਮਰਦਾਸ ਜੀ ਦੀ ਸ਼ਰਨ ਆਇਆ ਅਤੇ ਗੁਰਸਿੱਖ ਮਾਣਕ ਚੰਦ ਦੀ ਸੰਗਤਿ ਨਾਲ ਆਤਮ-ਗਿਆਨ ਨੂੰ ਪ੍ਰਾਪਤ ਹੋਇਆ। ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਇਸ ਨੂੰ ਪਰਚਾਰਕ ਦੀ ਮੰਜੀ ਬਖ਼ਸ਼ੀ। ਆਪ ਜੀ ਨੇ ਮਾਝੇ ਦੇ ਇਲਾਕੇ ਵਿਚ ਗੁਰਸਿੱਖੀ ਦਾ ਵੱਡਾ ਪਰਚਾਰ ਕੀਤਾ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਮਾਣਕ ਚੰਦ</h3>
+        <p>ਵੈਰੋਵਾਲ ਦਾ ਇਕ ਵਸਨੀਕ ਪਥਰੀਆ ਖੱਤਰੀ, ਜਿਸ ਨੇ ਗੋਇੰਦਵਾਲ ਦੀ ਬਾਉਲੀ ਦਾ ਕੜ ਤੋੜਿਆ ਅਰ ਡੁੱਬ ਕੇ ਮਰ ਗਿਆ। ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਉਸ ਨੂੰ ਜੀਵਨ ਬਖ਼ਸ਼ਿਆ ਅਰ ਨਾਉਂ ਜੀਵੜਾ ਰੱਖਿਆ। ਇਹ ਵੱਡਾ ਕਰਣੀ ਵਾਲਾ ਗੁਰਮੁਖ ਹੋਇਆ। ਇਸ ਦੀ ਔਲਾਦ ਹੁਣ ਗੋਇੰਦਵਾਲ ਵਿਚ 'ਜੀਵੜੇ' ਪ੍ਰਸਿੱਧ ਹੈ। ਇਸਦੀ ਸੰਗਤ ਕਰ ਕੇ ਮਾਈ ਦਾਸ ਬੈਰਾਗੀ ਗੁਰਸਿੱਖੀ ਦਾ ਅਧਿਕਾਰੀ ਹੋਇਆ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਮੁਰਾਰੀ (ਮਥੋ ਮੁਰਾਰੀ)</h3>
+        <p>ਜ਼ਿਲਾ ਲਾਹੌਰ ਖਾਈ ਪਿੰਡ ਦਾ ਇਕ ਵਸਨੀਕ ਪ੍ਰੇਮਾ ਖੱਤਰੀ, ਜੋ ਕੋੜ੍ਹੀ ਹੋ ਗਿਆ ਸੀ, ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦੀ ਮੇਹਰ ਦੁਆਰਾ ਅਰੋਗ ਹੋ ਗਿਆ। ਸਤਿਗੁਰੂ ਜੀ ਨੇ ਇਸ ਦਾ ਨਾਮ ਮੁਰਾਰੀ ਰੱਖਿਆ। ਸ਼ੀਹੇਂ ਉਪਲ ਖੱਤਰੀ ਨੇ ਆਪਣੀ ਪੁੱਤਰੀ ਮਥੋ ਭਾਈ ਮੁਰਾਰੀ ਨੂੰ ਵਿਆਹ ਦਿੱਤੀ। ਇਸ ਉੱਤਮ ਜੋੜੀ ਨੇ ਗੁਰਮਤਿ ਦਾ ਭਾਰੀ ਪਰਚਾਰ ਕੀਤਾ। ਦੋਹਾਂ ਦਾ ਸੰਮਿਲਤ ਨਾਮ ਇਤਿਹਾਸ ਵਿਚ ਪ੍ਰਸਿੱਧ ਹੋਇਆ। ਸਤਿਗੁਰਾਂ ਨੇ ਮਥੋਂ ਮੁਰਾਰੀ ਨੂੰ ਮੰਜੀ ਬਖ਼ਸ਼ੀ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਰਾਜਾ ਰਾਮ</h3>
+        <p>ਇਕ ਸਾਰਸੁਤ ਬ੍ਰਾਹਮਣ, ਜੋ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋ ਕੇ, ਜਾਤੀ ਅਭਿਮਾਨ ਤੋਂ ਛੁਟਕਾਰਾ ਪਾ, ਆਤਮ ਗਿਆਨੀ ਹੋਇਆ, ਇਸ ਨੂੰ ਗੁਰੂ ਸਾਹਿਬ ਨੇ ਪਰਚਾਰਕ ਦੀ ਮੰਜੀ ਬਖ਼ਸ਼ੀ। ਆਪ ਜੀ ਦੀ ਔਲਾਦ ਹੁਣ ਪਿੰਡ ਸੰਧਮਾ ਜ਼ਿਲਾ ਜਲੰਧਰ ਵਿਚ ਵੱਸਦੀ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਰੰਗ ਸ਼ਾਹ</h3>
+        <p>ਪਿੰਡ ਮੱਲੂ ਪੋਤੇ (ਜ਼ਿਲਾ ਜਲੰਧਰ) ਦਾ ਇਕ ਵਸਨੀਕ ਅਰੋੜਾ, ਜੋ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋ ਕੇ ਉੱਤਮ ਧਰਮ ਪਰਚਾਰਕ ਹੋਇਆ, ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਨੇ ਇਸ ਨੂੰ ਮੰਜੀ ਬਖ਼ਸ਼ੀ। ਇਸ ਨੇ ਦੁਆਬੇ ਵਿਚ ਗੁਰਸਿੱਖੀ ਦੇ ਫੈਲਾਉਣ ਦਾ ਪੂਰਾ ਜਤਨ ਕੀਤਾ। ਇਸ ਦੀ ਔਲਾਦ ਹੁਣ ਬੰਗੇ ਵਿਚ ਵੱਸਦੀ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਰੰਗ ਦਾਸ</h3>
+        <p>ਪਿੰਡ ਘੜੂੰਆਂ (ਜ਼ਿਲਾ ਅੰਬਾਲਾ) ਦਾ ਵਸਨੀਕ ਭੰਡਾਰੀ ਖੱਤਰੀ, ਜੋ ਵੈਰਾਗੀਆਂ ਦਾ ਚੇਲਾ ਸੀ। ਇਹ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋ ਕੇ ਆਤਮ ਗਿਆਨੀ ਹੋਇਆ। ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਨੇ ਇਸ ਨੂੰ ਪਰਚਾਰਕ ਦੀ ਮੰਜੀ ਬਖ਼ਸ਼ੀ। ਭਾਈ ਰੰਗ ਦਾਸ ਦੀ ਵੰਸ਼ ਘੜੂੰਏਂ ਵਿਚ ਆਬਾਦ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>ਲਾਲੋ (੨)</h3>
+        <p>ਡੱਲਾ ਨਿਵਾਸੀ ਸਭਰਵਾਲ ਖੱਤਰੀ, ਜੋ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਦਾ ਸਿੱਖ ਹੋ ਕੇ ਆਤਮ-ਗਿਆਨੀ ਹੋਇਆ। ਇਸ ਨੂੰ ਗੁਰੂ ਪਾਤਸ਼ਾਹ ਜੀ ਨੇ ਪਰਚਾਰਕ ਦੀ ਮੰਜੀ ਬਖ਼ਸ਼ੀ। ਇਹ ਉੱਤਮ ਵੈਦ ਸੀ, ਖ਼ਾਸ ਕਰਕੇ ਤੋਈਆ ਤਾਪ ਦੂਰ ਕਰਨ ਵਿਚ ਕਮਾਲ ਰੱਖਦਾ ਸੀ।</p>
+      </div>
+
+      <div class="attribution">
+        <p>
+          ਇਹ ਲਿਖਤ "ਜੀਵਨ ਕਥਾ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ" ਵਿੱਚੋਂ ਲਈ ਗਈ ਹੈ, ਲੇਖਕ ਭਾਈ ਜੋਗਿੰਦਰ ਸਿੰਘ ਜੀ ਤਲਵਾੜਾ।
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ENGLISH CONTENT -->
+
+    <div id="english-content" style="display:none;">
+
+      <p>
+        Sri Guru Amardas Ji paid special attention to organising the Sikh sangats in order to spread the preaching of Gurmat. Sri Guru Nanak Dev Ji, during his four udasis, had established dharamsalas at various places, and for their administration had appointed a local head (dharamsalia) from among the local sangat.
+      </p>
+
+      <p>
+        Because the principles of the Sikh faith were so constructive and reforming, it had become popular among the people — but at the same time, opposition to it also began from those proud of caste and bound up in ritualism. There was therefore a need to place the preaching of the faith on a firm, rule-bound footing. To fulfil this purpose, Sri Guru Amardas Ji established 22 Manjis, and for this appointed 22 preachers well-grounded in Gurmat, whose details are given in the Mahan Kosh as follows:
+      </p>
+
+      <div class="section-divider">◆ ◆ ◆</div>
+
+      <div class="profile-block">
+        <h3>Alla Yar</h3>
+        <p>He traded in horses. One day, on the bank of the Beas, he met his brother Paro, a Param-Hans residing in Dalla, through whom he developed a longing to have the darshan of Guru Amardas Ji. Going with Bhai Sahib to the Guru's court, he embraced Sikhi and was counted among the Gurmukh Sikhs.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Sachan Sach</h3>
+        <p>A resident of the village called Mandar (District Lahore, Tehsil Shakarpur), a Brahmin who became a Sikh of Guru Amardas Ji. He would constantly utter the words "Sachan Sach" (Truly True), and it was for this reason that this became his well-known name. One of the queens who had come with the Raja of Haripur went mad, and he had left her behind in Goindwal. The Satguru restored her to health and had her married to Sachan Sach. This couple continued preaching Gurmat throughout their lives.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Sadharan</h3>
+        <p>A resident of Goindwal, a blacksmith, who came into the shelter of Sri Guru Amardas and became a Sikh, attaining the rank of Gurmukh. He built the wooden staircase that remained hidden within the waters of the Baoli Sahib.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Sawan Mal</h3>
+        <p>Baba Sawan Mal Ji was a nephew of Sri Guru Amardas Ji. When wood was needed to build the Guru's court and residences for the sangat in Goindwal, he was sent towards Haripur to bring hill timber. Through his preaching of the faith, the Raja of Haripur, along with his family, came to Goindwal into the shelter of the Satguru and became a Sikh.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Sukhan</h3>
+        <p>A Khatri resident of Dhamial village (three miles from Rawalpindi), who was a devotee of Durga, came into the shelter of Sri Guru Amardas Ji and was counted among the Gurmukh Sikhs. Bhai Sukhan Ji carried out great preaching of Gursikhi in the Pothohar region.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Handal</h3>
+        <p>A resident of Jandiala, Handal Jatt was born in Samvat 1630 to Sukhi, in the house of Gazi. He was married to Udmi, daughter of Hamze Chahal, from whom his son Bidhi Chand was born. Bhai Handal became a devoted Sikh of Sri Guru Amardas Ji, and pleased with his diligent service, the Guru appointed him a preacher and granted him a Manji. This loving devotee served the Guru's langar with great love. His village came to be known as Guru Ka Jandiala.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Kedari</h3>
+        <p>A Lumba Khatri resident of Batala, who became a Sikh of Sri Guru Amardas Ji and became renowned as a person of great deeds.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Kheda</h3>
+        <p>A resident of Khemkaran (District Lahore), a Brahmin devotee of Durga, who became a Sikh of Sri Guru Amardas Ji and a devoted servant of the Creator.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Paro</h3>
+        <p>Bhai Paro Ji, a Khatri of the Julka caste, was a resident of Dalla. He had become a Sikh of Guru Angad Dev Ji. Through his service in the Guru's court, he attained the rank of Param-Hans. The Satguru appointed him a preacher and granted him a Manji.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Phera</h3>
+        <p>A Khatri of the Katara caste, resident of Mirpur (Jammu region), who had been a disciple of yogis, became a Gursikh of Sri Guru Amardas Ji and attained self-realisation. He carried out much preaching of Sikhi in the hill regions.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Gangu Shah</h3>
+        <p>Gangu Shah, a Khatri resident of Garhshankar, became a Sikh of Guru Amardas Ji. Guru Sahib sent him to the Sirmaur region to preach the faith and granted him a Manji. His well-known site is at "Dau" (District Ambala).</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Darbari (2)</h3>
+        <p>Bhai Darbari, a Lumba Khatri resident of village Majitha (District Amritsar), became a Sikh of Guru Amardas Ji and attained the rank of Gurmukh.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Booa (2)</h3>
+        <p>Bhai Booa, a Tehan Khatri resident of Harigobindpur, became a Sikh of Sri Guru Amardas Ji and attained the rank of Param-Hans.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Beni (2)</h3>
+        <p>A Pandit resident of village Chuhniyan (District Lahore) used to wander about achieving "digvijay" (scholarly conquest of all directions). When he came to Goindwal and had the darshan of Guru Amardas Ji, he gave up the pride of learning and became a Gursikh. It was on this very occasion that the Guru uttered the shabad in Raag Malaar, "Ihu manu girahi ki ihu manu udasi." He became a preacher of great deeds. His name is also found written as Beni Madho. In his lineage came the excellent poet Haridiyal, who produced a fine translation of the Saarukatavali and the Vairag Shatak.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Mahesha</h3>
+        <p>A Khatri of the Dhir caste, resident of Sultanpur, who became a devoted Sikh of Guru Amardas Ji and attained self-realisation. Guru Sahib granted him the Manji of a preacher.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Mai Das Ji</h3>
+        <p>A resident of Naroli village (in the Majha area), a Vaishnav, who came into the shelter of Satgur Amardas Ji, and through the company of the Gursikh Manak Chand attained self-realisation. Sri Guru Amardas Ji granted him the Manji of a preacher. He carried out great preaching of Gursikhi in the Majha region.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Manak Chand</h3>
+        <p>A Pathria Khatri resident of Vairowal, who broke the railing of the Baoli in Goindwal and drowned. Sri Guru Amardas Ji restored his life and gave him the name Jeevra. He became a Gurmukh of great deeds. His descendants are now known in Goindwal as the "Jeevre." It was through fellowship with him that Mai Das Bairagi attained the rank of a Gursikh.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Murari (Matho Murari)</h3>
+        <p>A Prema Khatri resident of village Khai (District Lahore), who had contracted leprosy, was healed through the grace of Sri Guru Amardas Ji. The Satguru gave him the name Murari. Sheehen Upal Khatri gave his daughter Matho in marriage to Bhai Murari. This excellent couple carried out great preaching of Gurmat. Their combined name became famous in history. The Satguru granted the Manji to Matho Murari.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Raja Ram</h3>
+        <p>A Saraswat Brahmin who became a Sikh of Sri Guru Amardas Ji and, freed from caste pride, attained self-realisation. Guru Sahib granted him the Manji of a preacher. His descendants now live in village Sodhma, District Jalandhar.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Rang Shah</h3>
+        <p>An Arora resident of village Malu Pote (District Jalandhar), who became a Sikh of Sri Guru Amardas Ji and an excellent preacher of the faith. Guru Sahib granted him a Manji. He made every effort to spread Gursikhi in the Doaba region. His descendants now live in Banga.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Rang Das</h3>
+        <p>A Bhandari Khatri resident of village Gharunan (District Ambala), who had been a disciple of vairagis. He became a Sikh of Sri Guru Amardas Ji and attained self-realisation. Guru Sahib granted him the Manji of a preacher. The descendants of Bhai Rang Das are settled in Gharunen.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>Lalo (2)</h3>
+        <p>A Sabharwal Khatri resident of Dalla, who became a Sikh of Sri Guru Amardas Ji and attained self-realisation. The Guru Patshah granted him the Manji of a preacher. He was an excellent physician (vaid), especially skilled at curing fevers.</p>
+      </div>
+
+      <div class="attribution">
+        <p>
+          This passage is taken from "Jeevan Katha Sri Guru Amardas Ji," written by Bhai Joginder Singh Ji Talwara.
+        </p>
+      </div>
+
+    </div>
+
+    <a href="/jeevani/index.html" class="back-home">
+      ← Back To Jeevani
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+<script>
+
+function showPunjabi(){
+    document.getElementById('punjabi-content').style.display = 'block';
+    document.getElementById('english-content').style.display = 'none';
+    document.getElementById('paBtn').classList.add('active');
+    document.getElementById('enBtn').classList.remove('active');
+}
+
+function showEnglish(){
+    document.getElementById('punjabi-content').style.display = 'none';
+    document.getElementById('english-content').style.display = 'block';
+    document.getElementById('enBtn').classList.add('active');
+    document.getElementById('paBtn').classList.remove('active');
+}
+
+</script>
+
+</body>
+</html>
