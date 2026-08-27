@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GurmatKhajana • ਸ੍ਰੀ ਜਪੁ ਜੀ ਸਾਹਿਬ ਦਾ ਸਮੁੱਚਾ ਭਾਵ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#050505;color:#eee;font-family:Inter,'Noto Sans Gurmukhi',sans-serif;line-height:1.8}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at top,rgba(212,164,44,.09),transparent 46%)}
+a{color:inherit;text-decoration:none}
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:999;padding:22px 6%;display:flex;justify-content:flex-end;background:linear-gradient(to bottom,rgba(0,0,0,.94),rgba(0,0,0,.2));backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-links{display:flex;gap:35px}
+.nav-links a{font-size:.82rem;letter-spacing:2px;text-transform:uppercase;color:#ddd;transition:.3s}
+.nav-links a:hover{color:#d4a42c}
+.top-main-logo{position:fixed;top:14px;left:40px;z-index:1001}
+.top-main-logo img{width:150px;display:block;filter:drop-shadow(0 0 20px rgba(212,164,44,.15))}
+.hero{min-height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(0,0,0,.43),rgba(0,0,0,.91)),url('/images/gallery/siteimages/tal.jpeg') center/cover fixed}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,transparent 5%,rgba(0,0,0,.74) 100%);backdrop-filter:blur(2px)}
+.hero-content{position:relative;z-index:2;max-width:1050px;padding:100px 20px 70px}
+.hero-logo img{width:100%;max-width:420px;margin:0 auto 28px}
+.label{color:#d4a42c;letter-spacing:4px;text-transform:uppercase;font-size:.82rem;margin-bottom:16px}
+h1{font-family:Cinzel,'Noto Sans Gurmukhi',serif;font-size:3.4rem;line-height:1.35;color:#d4a42c;margin-bottom:20px}
+.meta{color:#ccc;font-size:1rem;letter-spacing:.7px}
+.wrapper{max-width:1280px;margin:auto;padding:80px 28px 120px}
+.intro-note{padding:34px 42px;margin-bottom:34px;border:1px solid rgba(212,164,44,.2);border-radius:24px;background:linear-gradient(135deg,rgba(20,20,20,.96),rgba(8,8,8,.98))}
+.intro-note h2{font-family:'Noto Sans Gurmukhi',sans-serif;color:#d4a42c;font-size:1.55rem;margin-bottom:18px}
+.intro-note p,.content p{margin-bottom:24px}
+.intro-note p:last-child,.content p:last-child{margin-bottom:0}
+.lang-switch{display:flex;gap:12px;justify-content:center;margin:0 auto 35px;flex-wrap:wrap}
+.lang-switch button{padding:12px 25px;border-radius:50px;background:#191919;color:#d4a42c;border:1px solid rgba(212,164,44,.32);font-weight:600;cursor:pointer;transition:.3s}
+.lang-switch button.active,.lang-switch button:hover{background:#d4a42c;color:#050505}
+.content.en-only .punjabi,.content.pa-only .english{display:none}
+.top-sections{display:grid;gap:16px}
+details.section{border:1px solid rgba(212,164,44,.22);border-radius:20px;background:rgba(14,14,14,.92);overflow:hidden}
+details.section>summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#d4a42c;font-family:'Noto Sans Gurmukhi',sans-serif;font-weight:600;font-size:1.18rem}
+details.section>summary::-webkit-details-marker,details.pauri>summary::-webkit-details-marker,details.khand>summary::-webkit-details-marker{display:none}
+details.section>summary:after,details.pauri>summary:after,details.khand>summary:after{content:"+";font-family:Inter,sans-serif;font-size:1.5rem;font-weight:300}
+details[open]>summary:after{content:"−"}
+.section-body{padding:0 34px 34px}
+.section-body>p{margin:0 0 24px}
+.pauri-list{display:grid;gap:12px}
+details.pauri{border:1px solid rgba(255,255,255,.08);border-radius:15px;background:rgba(255,255,255,.018);overflow:hidden}
+details.pauri>summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:'Noto Sans Gurmukhi',sans-serif;color:#f0d98b;font-size:1.05rem}
+details.pauri>summary em{font-family:Inter,sans-serif;font-style:normal;font-size:.78rem;letter-spacing:1px;color:#888;text-transform:uppercase}
+.pauri-grid,.khand-grid,.pauri-lead{display:block;padding:0 18px 28px;max-width:1120px;margin:0 auto}
+.punjabi{font-family:'Noto Sans Gurmukhi',sans-serif;color:#e2e2e2}
+.punjabi p,.english p{font-size:1.08rem;line-height:2.15;margin:0 auto 24px;color:#e2e2e2;max-width:1080px}
+.punjabi p:last-child,.english p:last-child{margin-bottom:0}
+.english{border-left:0;padding-left:0}
+.quote{margin:18px 0;padding:16px 20px;border-left:3px solid #d4a42c;background:rgba(212,164,44,.06);font-family:'Noto Sans Gurmukhi',sans-serif;white-space:pre-line}
+details.khand{margin:12px 20px;border:1px solid rgba(212,164,44,.13);border-radius:13px;background:rgba(0,0,0,.18)}
+details.khand>summary{list-style:none;cursor:pointer;padding:15px 17px;display:flex;justify-content:space-between;align-items:center;color:#d4a42c;font-family:'Noto Sans Gurmukhi',sans-serif}
+details.khand>summary em{font-family:Inter,sans-serif;color:#888;font-style:normal;font-size:.78rem}
+.note{margin:40px auto 0;max-width:1080px;padding:25px 30px;border-radius:20px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);color:#aaa}
+.coming{padding:55px 25px;text-align:center;border-top:1px solid rgba(255,255,255,.05)}
+.coming-pa{font-family:'Noto Sans Gurmukhi',sans-serif;color:#d4a42c;font-size:1.35rem;margin-bottom:8px}
+.coming-en{font-family:Cinzel,serif;color:#aaa;letter-spacing:3px;font-size:.85rem}
+.back{display:inline-flex;margin-top:45px;padding:14px 28px;border-radius:50px;background:#d4a42c;color:#050505;font-weight:600}
+footer{padding:38px 20px;text-align:center;color:#777;border-top:1px solid rgba(255,255,255,.06);font-size:.9rem}
+@media(max-width:760px){
+.navbar{padding:18px 20px} .nav-links{gap:14px} .nav-links a{font-size:.58rem;letter-spacing:.7px} .top-main-logo{display:none}
+.hero{min-height:62vh;background-attachment:scroll} h1{font-size:2.1rem} .hero-content{padding-top:95px}
+.wrapper{padding:55px 16px 85px} .intro-note{padding:25px 22px} details.section>summary{padding:20px;font-size:1rem}
+.section-body{padding:0 12px 18px} .pauri-grid,.khand-grid,.pauri-lead{grid-template-columns:1fr;gap:20px;padding:0 14px 20px}
+.english{border-left:0;padding:0}
+details.khand{margin:10px 12px} .punjabi p,.english p{font-size:.96rem;line-height:2.05}
+}
+</style>
+</head>
+<body>
+
+<div class="top-main-logo"><img src="/images/logo/logo.png" alt="GurmatKhajana Logo"></div>
+
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/articles/index.html">Articles</a>
+        <a href="/jeevani/index.html">Jeevani</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-logo"><img src="/images/logo/logo.png" alt="GurmatKhajana Logo"></div>
+        <div class="label">GurmatKhajana • Bhai Joginder Singh Ji Talwara</div>
+        <h1>ਜਪੁ ਜੀ ਸਾਹਿਬ ਸਰਲ ਸਟੀਕ</h1>
+        <div class="meta">The overall meaning of Sri Japji Sahib, based on Bhai Joginder Singh Ji Talwara's explanation/commentary.</div>
+    </div>
+</section>
+
+<main class="wrapper">
+    <div class="lang-switch">
+        <button id="paBtn" class="active" onclick="setLang('pa')">ਪੰਜਾਬੀ</button>
+        <button id="enBtn" onclick="setLang('en')">English</button>
+    </div>
+
+    <div class="content pa-only" id="content">
+        <div class="top-sections">
+
+            <details class="section">
+                <summary><span>ਸ੍ਰੀ ਜਪੁ ਜੀ ਦਾ ਸਮੁੱਚਾ ਭਾਵ</span><span>Overall Meaning</span></summary>
+                <div class="section-body">
+                    <div class="intro-note">
+                        <h2>ਭੂਮਿਕਾ / Introduction</h2>
+                        <div class="punjabi"><p>‘ਜਪੁ’ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੀ ਆਰੰਭਕ ਬਾਣੀ ਹੈ । ਇਸ ਨਾਲ ‘ਜੀ’ ਅਤੇ ‘ਸਾਹਿਬ’ ਦੋ ਆਦਰ-ਵਾਚੀ ਪਦਾਂ ਦੀ ਵਰਤੋਂ ਹੋਣ ਕਾਰਨ ਇਸ ਬਾਣੀ ਦਾ ਨਾਮ ‘ਜਪੁ ਜੀ ਸਾਹਿਬ’ ਪ੍ਰਚਲਤ ਹੋ ਗਿਆ ਹੈ। ਬਾਣੀ ਦੇ ਅਰੰਭ ਵਿਚ ਅਤੇ ਅੰਤ ਵਿਚ ਇਕ ਇਕ ‘ਸਲੋਕ’ ਹੈ ਅਤੇ ਵਿਚਕਾਰ ੩੮ ਪਉੜੀਆਂ ਹਨ।</p>
+                            <p>ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦਾ ਅਰੰਭਕ ਮੰਗਲ (ਮੂਲ-ਮੰਤ੍ਰ) &quot;੧ਓ ਸਤਿਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲ ਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰ ਪ੍ਰਸਾਦਿ ॥&quot; ‘ਜਪੁ’ ਬਾਣੀ ਤੋਂ ਭਾਵੇਂ ਵੱਖਰਾ ਹੈ, ਪਰ ਅਮਲੀ ਤੌਰ ‘ਤੇ ਇਸ ਬਾਣੀ ਦਾ ਅਨਿਖੜਵਾਂ ਭਾਗ ਬਣ ਗਿਆ ਹੈ। ਇਹ ਮੂਲ-ਮੰਤ੍ਰ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਵਿਚ ੩੨ ਹੋਰਨਾਂ ਥਾਵਾਂ ‘ਤੇ ਰਾਗਾਂ ਅਤੇ ਰਾਗ-ਮੁਕਤ ਬਾਣੀਆਂ ਦੇ ਅਰੰਭਕ ਮੰਗਲਾ-ਚਰਣ ਵਾਂਗ ‘ਜਪੁ’ ਬਾਣੀ ਦਾ ਵੀ ਮੰਗਲਾ-ਚਰਣ ਮੰਨਿਆ ਜਾਂਦਾ ਹੈ।</p>
+                            <p>‘ਜਪੁ’ ਬਾਣੀ ਦੇ ਸਿਰਲੇਖ ਵਿਚ ਇਸ ਦੇ ਰਚਨਹਾਰ ਮਹਲੇ ਬਾਰੇ ਕੋਈ ਸੰਕੇਤ ਨਹੀਂ, ਪਰ ਰਵਾਇਤ ਅਨੁਸਾਰ ਇਹ ‘ਮਹਲਾ ੧’ ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦੀ ਰਚਨਾ ਮੰਨੀ ਜਾਂਦੀ ਹੈ।</p>
+                            <p>‘ਜਪੁ’ ਬਾਣੀ ਅੰਮ੍ਰਿਤ ਤਿਆਰ ਕੀਤੇ ਜਾਣ ਸਮੇਂ ਪੜ੍ਹੇ ਜਾਣ ਵਾਲੀਆਂ ਪੰਜ ਬਾਣੀਆਂ ਵਿਚੋਂ ਅਰੰਭਕ ਬਾਣੀ ਹੈ ਅਤੇ ਖ਼ਾਲਸਾ ਜੀ ਦੇ ਅੰਮ੍ਰਿਤ ਵੇਲੇ ਦੇ ਨਿਤ-ਨੇਮ ਵਿਚ ਸ਼ਾਮਲ ਹੈ।</p>
+                            <p>ਸਿਖ-ਜਗਤ ਵਿਚ ਪ੍ਰਚਲਤ ਇਕ ਰਵਾਇਤੀ ਮਨੌਤ ਅਨੁਸਾਰ ਸ੍ਰੀ ‘ਜਪੁ’ ਜੀ ਸਾਹਿਬ ‘ਮੂਲ-ਮੰਤ੍ਰ’ ਦੀ ਵਿਆਖਿਆ ਹੈ ਅਤੇ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੀ ਸਮੱਗਰ ਬਾਣੀ ਸ੍ਰੀ ‘ਜਪੁ’ ਜੀ ਸਾਹਿਬ ਦੀ ਵਿਆਖਿਆ ਹੈ। ਇਸ ਬਾਣੀ ਵਿਚ ਗੁਰਮਤਿ ਦੇ ਲਗ-ਪਗ ਸਾਰੇ ਸਿਧਾਂਤ ਸੂਤ੍ ਰੂਪ ਵਿਚ ਨਿਰੂਪਣ ਕੀਤੇ ਹੋਏ ਹਨ।</p>
+                            <p>ਸਮੱਗਰ ਗੁਰਬਾਣੀ ਵਾਂਗ ਇਸ ਬਾਣੀ ਦਾ ਮੂਲ-ਵਿਸ਼ਾ ਵੀ ਆਤਮ-ਪਰਮਾਤਮ ਦੇ ਮਿਲਾਪ ਦੀ ਰਹੱਸ-ਮਈ ਗਾਥਾ ਹੀ ਹੈ। ਮੂਲ-ਮੰਤ੍ਰ ਵਿਚ</p>
+                            <p>ਵਿਆਪਕ ਬ੍ਰਹਮ ਦੇ ਸ਼ਬਦੀ-ਚਿਤ੍ਰ ਦੁਆਰਾ ਉਸ ਪਰਮ-ਚੇਤਨਾ ਦਾ ਸਰੂਪ (ਸਚੁ) ਨਿਰੂਪਣ ਕੀਤਾ ਹੋਇਆ ਹੈ ਅਤੇ ਉਸ ਦੇ ਮੂਲ-ਗੁਣ ਦਰਸਾ ਕੇ ਉਸ ਦੀ ਗਿਆਨ-ਪ੍ਰਾਪਤੀ ਅਤੇ ਮਿਲਾਪ ਦੇ ਬਸੀਠ (ਗੁਰੂ) ਅਤੇ ਮਿਲਾਪ ਦੇ ਸਾਧਨ (ਪ੍ਰਸਾਦ) ਵਲ ਸੰਕੇਤ ਕੀਤਾ ਹੋਇਆ ਹੈ।</p>
+                            <p>ਮੂਲ-ਮੰਤ੍ਰ ਦੁਆਰਾ ਵਿਆਪਕ-ਬ੍ਰਹਮ ਦੇ ਸਰੂਪ (ਸਚੁ) ਦੀ ਲਖਤਾ ਕਰਾਉਣ ਮਗਰੋਂ ਜਗਿਆਸੂ ਅੰਦਰ ਇਸ &quot;ਪਰਾ-ਪੂਰਬਲਾ ਸਰੂਪ&quot; ਦੀ ਦ੍ਰਿੜ੍ਹਤਾ ਕਰਾਉਣ ਲਈ ਅਰੰਭਕ ਸਲੋਕ ਵਿਚ ਇਸ ਨੂੰ ਤ੍ਰੈ-ਕਾਲ ‘ਸਚੁ&#x27; ਦਰਸਾਉਣ ਤੋਂ ਇਲਾਵਾ ਕਾਲ-ਰਚਨਾ ਤੋਂ ਵੀ ਪਹਿਲਾਂ ਦਾ &#x27;ਆਦਿ ਸਚੁ&#x27; ਕਰ ਕੇ ਵਰਣਾਇਆ ਹੋਇਆ ਹੈ।</p></div>
+                        <div class="english">
+                            <p><strong>Jap</strong> is the opening Bani of Sri Guru Granth Sahib Ji. Because the two honorific words “Ji” and “Sahib” are used with it, the Bani has become commonly known as “Japji Sahib.” There is one Salok at the beginning and one at the end, with 38 pauris in between.</p>
+                            <p>The opening invocation of Sri Guru Granth Sahib Ji, the Mool Mantar—“Ik Oankar Sat Naam Karta Purakh Nirbhau Nirvair Akaal Moorat Ajooni Saibhang Gur Prasad”—is technically distinct from Jap Bani, but in practice has become inseparably associated with it. It is regarded as the opening invocation of Jap Bani in the same way that it appears as an invocation at the beginning of many other places in Sri Guru Granth Sahib Ji.</p>
+                            <p>The heading of Jap Bani gives no indication of its authoring Mahala, but according to tradition it is regarded as the composition of Mahala 1, Sri Guru Nanak Dev Ji.</p>
+                            <p>Jap Bani is the first of the five Banis recited in the preparation of Amrit and forms part of the Amrit Vela Nitnem of the Khalsa.</p>
+                            <p>According to a traditional understanding prevalent in the Sikh world, Sri Japji Sahib is an exposition of the Mool Mantar, while the whole of Sri Guru Granth Sahib Ji is an exposition of Sri Japji Sahib. Almost all the principles of Gurmat are presented in seed form within this Bani.</p>
+                            <p>Like the whole of Gurbani, the central theme of this Bani is the mysterious account of the union of the self with the Supreme. The Mool Mantar describes the nature (Sach) of the all-pervading Brahm through a verbal portrait of the Supreme Consciousness, and by describing His fundamental qualities points towards the Guru as the mediator of knowledge and union, and to Prasad as the means of that union.</p>
+                            <p>After the Mool Mantar establishes the nature (Sach) of the all-pervading Brahm, the opening Salok further establishes this “primordial nature” by describing Him as Truth throughout the three times and as the “Primal Truth” even before the creation of time.</p>
+                        </div>
+                    </div>
+
+                    <div class="pauri-list">
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੧</span><em>Pauri 1</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਪਹਿਲੀ ਪਉੜੀ ਵਿਚ ਵਿਆਪਕ-ਬ੍ਰਹਮ ਦੇ ਮਿਲਾਪ ਲਈ ਪ੍ਰਚਲਤ ਕਰਮ-ਕਾਂਡੀ ਸਾਧਨਾ; ਬਾਹਰਲੀ ਸੁਚ ਕਰਨੀ, ਮੌਨ ਧਾਰਨੀ, ਨਿਰ-ਅਹਾਰ ਰਹਿਣਾ, ਆਦਿ ਦਾ ਵਰਣਨ ਕਰ ਕੇ ਉਹਨਾਂ ਦੀ ਨਿਸਫਲਤਾ ਦ੍ਰਿੜ੍ਹ ਕਰਾਈ ਹੋਈ ਹੈ। ਫਿਰ ਸੁਆਲ ਕੀਤਾ ਹੋਇਆ ਹੈ: “ਸਚ ਵਿਚ ਸਮਾਉਣ ਲਈ ‘ਸਚਿਆਰ&#x27; ਕਿਵੇਂ ਹੋਵੀਏ? ਆਤਮ-ਪਰਮਾਤਮ ਦੇ ਵਿਚਕਾਰ ਹਉਮੈ ਅਧੀਨ ਉਸਰਿਆ ਕੂੜ ਦਾ ਪੜਦਾ ਕਿਵੇਂ ਟੁਟੇ?” ਅਤੇ ਨਾਲ ਹੀ ਜਵਾਬ ਦਿਤਾ ਹੋਇਆ ਹੈ: “ਜੀਵਨ-ਪ੍ਰਯੰਤ ਉਸ ਰਜ਼ਾਮ ਦੇ ਮਾਲਕ ਦੇ &#x27;ਹੁਕਮ&#x27; ਵਿਚ ਵਿਚਰਨ ਨਾਲ, ਜੋ ਜੀਵ ਦੇ ਨਾਲ ਹੀ ਉਸ ਦੇ ਕਰਮ-ਲੇਖ ਵਿਚ ਧੁਰ-ਦਰਗਾਹੋਂ ਲਿਖਿਆ ਆਉਂਦਾ ਹੈ, ਜੀਵ ‘ਸਚਿਆਰ&#x27; ਹੋ ਸਕਦਾ ਹੈ।” ਇਕ ਗੰਭੀਰ ਦਾਰਸ਼ਨਿਕ ਨੁਕਤੇ ਨੂੰ ਸੁਖੈਨ ਤਰੀਕੇ ਨਾਲ ਸਮਝ-ਗੋਚਰੇ ਕਰਨ ਲਈ ਸਵਾਲ ਜਵਾਬ ਦਾ ਇਹ ਇਕ ਵਿਸ਼ੇਸ਼ ਢੰਗ ਵਰਤਿਆ ਗਿਆ ਹੈ।</p></div>
+                                <div class="english"><p>In the first pauri, the ineffectiveness of the ritual practices commonly used for union with the all-pervading Brahm—such as external purification, observing silence, remaining without food, and so on—is established. A question is then posed: “How can one become sachiar, one who is attuned to Truth, and merge in Truth? How can the veil of falsehood, raised through haumai between the self and the Supreme, be broken?” The answer is given at the same time: “By living throughout one&#x27;s life in the Hukam of the Master of Divine Will—the Hukam written from the Primal Court into the being and karmic record of the individual—the person can become sachiar.” The question-and-answer method is used here as a distinctive way of making a profound philosophical point easy to understand.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨</span><em>Pauri 2</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਇਸ ਪਉੜੀ ਵਿਚ &#x27;ਹੁਕਮ&#x27; ਦੀ ਸੰਖੇਪ ਜਿਹੀ ਭਾਵ-ਪੂਰਤ ਵਿਆਖਿਆ ਕੀਤੀ ਹੋਇਆ ਹੈ। ਸਾਰੀ ਦ੍ਰਿਸ਼ਟ-ਅਦ੍ਰਿਸ਼ਟ ਰਚਨਾ ਹੁਕਮੀ ਦੇ ਹੁਕਮ ਅਧੀਨ ਰੂਪਮਾਨ ਹੋਈ ਹੈ ਅਤੇ ਇਸ ਵਿਚਿਤ੍ਰ ਰਚਨਾ ਦੀ ਸਮੁੱਚੀ ਪਰਕ੍ਰਿਆ ਹੁਕਮ ਅਧੀਨ ਹੀ ਚਲ ਰਹੀ ਹੈ। ਹੁਕਮ ਸਭਨਾਂ ਜੀਵ-ਜੰਤੂਆਂ ਉਤੇ ਇਕ-ਸਾਰ ਲਾਗੂ ਹੈ, ਕੋਈ ਵੱਡਾ-ਛੋਟਾ ਇਸ ਹੁਕਮ ਦੇ ਘੇਰੇ ਤੋਂ ਬਾਹਰ ਨਹੀਂ। ਹੁਕਮ ਦੀ ਸੋਝੀ ਓਨੀ ਦੇਰ ਤਕ ਆ ਸਕਣੀ ਸੰਭਵ ਨਹੀਂ, ਜਿੰਨੀ ਦੇਰ ਤਕ ਜੀਵ &#x27;ਹਉਮੈ&#x27; ਵਿਚ ਗ੍ਰਸਤ ਹੈ। ਵਾਸਤਵ ਵਿਚ ਹੁਕਮ-ਪਛਾਣ ਅਵਸਥਾ ਦੀ ਪਰਖ-ਵੱਟੀ ਹੀ ਇਹ ਹੈ ਕਿ ਮਨੁੱਖ ਹਉਂ-ਹਉਂ, ਮੈਂ-ਮੈਂ ਕਰਨ ਦੀ ਕੁ-ਵਾਦੀ ਤੋਂ ਬਾਜ਼ ਆ ਜਾਵੇ। ‘ਹੁਕਮ’ ਤੋਂ ਭਾਵ ਹੈ ‘ਰੱਬੀ-ਰਜ਼ਾਅ’ ਅਤੇ ‘ਹਉਮੈ’ ਤੋਂ ਭਾਵ ਹੈ ‘ਮੇਰੀ ਮਰਜ਼ੀ’। ਇਹ ਦੋਵੇਂ ਪਰਸਪਰ ਵਿਰੋਧੀ ਸੰਕਲਪ ਹਨ। ਹੁਕਮ ਬੁਝ ਲੈਣ ਨਾਲ ਹਉਮੈ ਮਿਟ ਜਾਂਦੀ ਹੈ।</p></div>
+                                <div class="english"><p>This pauri gives a brief but meaningful explanation of Hukam. The entire visible and invisible creation has come into manifestation under the Hukam of the One whose Hukam it is, and the whole process of this wondrous creation continues under Hukam. Hukam applies equally to all living beings; no one, great or small, is outside its sphere. Understanding Hukam is not possible for as long as the individual remains absorbed in haumai.</p>
+                                    <p>In reality, the test of having recognised Hukam is that a person gives up the destructive habit of “I, I” and “mine, mine.” Hukam means Divine Will, while haumai means “my will.” These are opposing concepts. When Hukam is understood, haumai disappears.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੩-੪</span><em>Pauris 3–4</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਇਹਨਾਂ ਪਉੜੀਆਂ ਵਿਚ ਹਉਮੈ ਦਾ ਅਭਾਵ ਕਰਨ ਅਤੇ ਹੁਕਮ ਦੀ ਸੋਝੀ ਪ੍ਰਾਪਤ ਕਰਨ ਦੇ ਸਾਧਨ ਦਾ ਵਰਣਨ ਹੈ ਤੇ ਉਹ ਹੈ ਵਿਆਪਕ ਬ੍ਰਹਮ ਦਾ ਗੁਣਾਨਵਾਦ ਕਰਨਾ। ਵਿਆਪਕ-ਬ੍ਰਹਮ ਅਨੰਤ ਗੁਣਾਂ ਦਾ ਸੁਆਮੀ ਹੈ, ਇਸ ਲਈ ਉਸ ਦਾ ਗੁਣਾਨਵਾਦ ਵੀ ਅਮੁੱਕ ਹੈ। ਜੀਵ ਵੱਖ ਵੱਖ ਦ੍ਰਿਸ਼ਟੀ-ਕੋਣ ਤੋਂ ਅਤੇ ਵੱਖ ਵੱਖ ਭਾਵਨਾ ਅਧੀਨ ਉਸ ਦਾ ਗੁਣਾਨਵਾਦ ਕਰਦੇ ਹਨ ਅਤੇ ਇਸ ਵਜੋਂ ਉਸ ਦਾਤਾਰ-ਪ੍ਰਭੂ ਤੋਂ ਮਨ-ਬਾਂਛਤ ਦਾਤਾਂ ਪ੍ਰਾਪਤ ਕਰਦੇ ਹਨ। ਪਰ ਸਭ ਤੋਂ ਸਰਬੋਤਮ ਦਾਤਿ ਹੈ ਉਸ ਦੇ ਨੂਰੀ ਦਰਬਾਰ ਦੇ ਦਰਸ਼ਨ ਅਤੇ ਉਸ ਦੇ ਪਿਆਰ ਦੀ ਪ੍ਰਾਪਤੀ। ਗੁੜ੍ਹ ਭਾਵ ਨੂੰ ਸੁਖੈਨ ਤਰੀਕੇ ਨਾਲ ਸਮਝ-ਗੋਚਰੇ ਕਰਨ ਲਈ ਸੁਆਲ ਕੀਤਾ ਗਿਆ ਹੈ : “ਫਿਰ ਕੀ ਜੀਵਨ-ਲਕਸ਼ ਸਨਮੁਖ ਰੱਖਿਆ ਜਾਏ, ਜਿਸ ਸਦਕਾ ਜੀਵਨ ਪ੍ਰਯੰਤ ਸੱਚੇ ਸਾਹਿਬ ਦੇ ਦਰਬਾਰ ਦਾ ਦਰਸ਼ਨ ਹੁੰਦਾ ਰਵੇ ? ਮੂੰਹ ਤੋਂ ਕੀ ਬੋਲ ਬੋਲੀਏ, ਜਿਸ ਨੂੰ ਸੁਣ ਕੇ ਸੱਚਾ ਸਾਹਿਬ ਸਾਨੂੰ ਪਿਆਰ ਕਰੇ ?” ਨਾਲ ਹੀ ਇਹਨਾਂ ਪ੍ਰਸ਼ਨਾਂ ਦਾ ਉੱਤਰ ਦਿੱਤਾ ਹੋਇਆ ਹੈ : “ਅੰਮ੍ਰਿਤ ਵੇਲੇ ਦੀ ਨਿਰੰਤਰ ਸੰਭਾਲ ਕਰਨੀ ਜੀਵਨ-ਲਕਸ਼ ਬਣਾਈਏ ਅਤੇ ਉਸ ਦਾ ਸਦਾ-ਥਿਰ ਕਰ ਦੇਣ ਵਾਲਾ ਨਾਮ ਜਪ ਕੇ ਪ੍ਰੇਮ-ਪ੍ਰਤੀਤ ਦੁਆਰਾ ਉਸ ਦੀ ਮਹਿਮਾ ਗਾਉਣ ਦੀ ਭੇਟਾ ਅਰਪਨ ਕਰੀਏ, ਤਾਂ ਪ੍ਰਭੂ-ਦਰਸ਼ਨ ਅਤੇ ਪ੍ਭ-ਪਿਆਰ ਦੇ ਪਾਤਰ ਅਵੱਸ਼ ਹੀ ਬਣ ਸਕੀਦਾ ਹੈ।”</p></div>
+                                <div class="english"><p>These pauris describe the means by which haumai is removed and understanding of Hukam is attained: singing and proclaiming the virtues of the all-pervading Brahm. The all-pervading Brahm is the Master of infinite virtues, and therefore the praise of those virtues is also endless. Living beings praise Him from different perspectives and with different devotional feelings, and through this they receive the gifts they desire from the Giver-Lord. Yet the highest gift is the vision of His luminous court and the attainment of His love.</p>
+                                    <p>To make the deeper meaning easy to understand, questions are asked: “What goal should be placed before life so that, throughout life, one may behold the court of the True Master? What should one speak with one&#x27;s mouth that, on hearing it, the True Master may love us?” The answers are also given: make constant care of the ambrosial hours a goal of life, and by reciting His ever-abiding Naam, offer the gift of singing His glory with love and faith. In this way one can surely become worthy of the vision of the Lord and of Divine love.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੫</span><em>Pauri 5</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਵਿਆਪਕ-ਬ੍ਰਹਮ ਜੋਤੀ ਸਰੂਪ ਹੈ, ਨਿਰਾ ਨੂਰ ਹੈ। ਉਸ ਨੂਰ ਤੋਂ ਸਾਰੀ ਪ੍ਰਕਿਰਤੀ ਹੋਂਦ ਵਿਚ ਆਈ ਹੈ, ਪਰ ਉਹ ਆਪ ਸੁਤੇ-ਪ੍ਰਕਾਸ਼ ਹੈ। ਕੋਈ ਪੰਜ-ਭੂਤਕੀ ਅਕਾਰ (ਮੂਰਤੀ) ਬਣਾ ਕੇ ਉਸ ਨੂੰ ਨਿਰੰਕਾਰ ਦਾ ਸਰੂਪ ਆਕਾਰ ਮਿਥ ਲੈਣਾ ਅਤੇ ਉਸ ਦੀ ਪੂਜਾ-ਅਰਚਾ ਕਰਨੀ ਕੋਰੀ ਅਗਿਆਨਤਾ ਹੈ। ਵਿਆਪਕ-ਬ੍ਰਹਮ ਦੀ ਪੂਜਾ ਦਾ ਇਕੋ ਇਕ ਸਾਧਨ ਪੂਰਨ ਸ਼ਰਧਾ ਅਤੇ ਪ੍ਰੇਮ ਨਾਲ ਉਸ ਗੁਣੀ-ਨਿਧਾਨ ਦੀ ਮਹਿਮਾ ਦਾ ਗਾਇਨ ਕਰਨਾ ਅਥਵਾ ਸ੍ਰਵਣ ਕਰਨਾ ਹੈ।</p>
+                                    <p>ਇਹ ਸਫਲ ਸਾਧਨ ਜੀਵ ਦਾ ਦੁਖਾਂ ਤੋਂ ਛੁਟਕਾਰਾ ਕਰਾ ਕੇ, ਉਸ ਨੂੰ ਆਤਮ-ਸੁਖ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ ਅਤੇ ਨਿਜ-ਘਰ ਦਾ ਵਾਸਾ ਬਖ਼ਸ਼ਦਾ ਹੈ।</p>
+                                    <p>ਅੰਤਰ-ਆਤਮੈ ਵਿਆਪਕ-ਬ੍ਰਹਮ ਨਾਲ ਅਭੇਦ ਹੋਣ ਦੇ ਨਾਤੇ &#x27;ਗੁਰੂ&#x27; ਦੇਵਾਂ-ਸਿਰ-ਦੇਵ ਹੈ ਅਤੇ ਗੁਰੂ ਦਾ ਸ਼ਬਦ ਸਾਰੇ ਗਿਆਨਾਂ-ਸਿਰ-ਗਿਆਨ, &#x27;ਪਰਮ-ਗਿਆਨ&#x27; ਹੈ। ਗੁਰ-ਸ਼ਬਦ ਦਾ ਧਿਆਨ ਧਰਨ ਵਾਲੇ ਨੂੰ ਗਿਆਨ-ਪ੍ਰਾਪਤੀ ਲਈ ਕਿਸੇ ਦੇਵੀ-ਦੇਵਤੇ ਜਾਂ ਕਿਸੇ ਨਾਦ-ਵੇਦ ਦੀ ਕੋਈ ਮੁਥਾਜੀ ਨਹੀਂ ਰਹਿੰਦੀ।</p></div>
+                                <div class="english"><p>The all-pervading Brahm is of the nature of Divine Light; He is pure radiance. The whole of nature has come into existence from that Light, while He Himself is self-luminous. To make an image out of the five elements, assume that it is the embodied form of the Formless, and worship it is sheer ignorance. The one means of worshipping the all-pervading Brahm is to sing or listen to the glory of that treasure-house of virtues with complete faith and love.</p>
+                                    <p>This successful spiritual practice frees the individual from suffering, grants inner bliss, and gives a dwelling in one&#x27;s true home.</p>
+                                    <p>Because the Guru is one with the all-pervading Brahm at the level of the inner self, the Guru is supreme among the divine, and the Guru&#x27;s Shabad is supreme among all knowledge—it is supreme knowledge. One who meditates upon the Guru&#x27;s Shabad no longer depends upon any deity or upon the Vedas or mystical sounds for the attainment of knowledge.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੬</span><em>Pauri 6</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਆਤਮ-ਤਲ &#x27;ਤੇ ਵਿਆਪਕ-ਬ੍ਰਹਮ ਨਾਲ ਅਭੇਦ ਸਤਿਗੁਰੂ ਦੀ ਨਾਮ-ਸਿਖਿਆ ਸੁਣਨ ਸਦਕਾ ਜੀਵ ਦੀ ਮਤਿ ਗਿਆਨ-ਪ੍ਰਕਾਸ਼ ਨਾਲ ਜਗਮਗਾ ਉਠਦੀ ਹੈ। ਇਸ ਵਿਚ ਰਤਨਾਂ, ਜਵਾਹਰਾਂ, ਮਾਣਕਾਂ ਸਾਰਖੇ ਰੱਬੀ-ਗੁਣ ਪ੍ਰਵੇਸ਼ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਅੰਦਰਲਾ ਨਿਰਮਲ ਅਤੇ ਪਵਿੱਤਰ ਹੋ ਜਾਂਦਾ ਹੈ। ਇੰਜ ਜੀਵ ਦਾ ਮਾਨੋ ਆਤਮ-ਇਸ਼ਨਾਨ ਹੋ ਜਾਂਦਾ ਹੈ। ਬਾਹਰਲੇ ਤੀਰਥਾਂ ਉਤੇ ਇਸ਼ਨਾਨ ਕਰਨ ਨਾਲ ਆਤਮਾ ਨਿਰਮਲ ਨਹੀਂ ਹੋ ਸਕਦਾ ਅਤੇ ਆਤਮ-ਨਿਰਮਲਤਾ ਤੋਂ ਬਗ਼ੈਰ ਪ੍ਰਭੂ ਦੀ ਨਦਰਿ ਵਿਚ ਕਬੂਲ ਹੋ ਸਕਣਾ ਸੰਭਵ ਨਹੀਂ। ਆਤਮ-ਨਿਰਮਲਤਾ ਦਾ ਸਾਧਨ ਨਾਮ-ਸਿਮਰਨ ਹੈ, ਜਿਸ ਦੀ ਜਾਚਨਾ ਗੁਰੂ ਤੋਂ ਖਿਨ ਖਿਨ ਕਰਨੀ ਬਣਦੀ ਹੈ।</p></div>
+                                <div class="english"><p>By hearing the Naam-teaching of the True Guru, who is one with the all-pervading Brahm at the level of the inner self, the individual&#x27;s understanding becomes illuminated with the light of knowledge. Divine virtues like jewels, gems and precious stones enter within, and the inner being becomes pure and immaculate. In this way the individual undergoes, as it were, an inner bathing.</p>
+                                    <p>Bathing at external places of pilgrimage cannot purify the soul, and without inner purity it is not possible to be accepted in the Divine glance of grace. The means of inner purification is remembrance of Naam, and one must learn this practice from the Guru moment by moment.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੭</span><em>Pauri 7</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਕਿਸੇ ਮਨੁੱਖ ਨੂੰ ਚਹੁੰ ਜੁਗਾਂ ਜਿੰਨੀ ਕੀ, ਚਾਲੀ ਜੁਗਾਂ ਜਿੱਡੀ ਪ੍ਰਸੰਨ ਲੰਮੀ ਉਮਰ ਅਤੇ ਜਗਤ-ਪ੍ਰਸਿੱਧੀ ਪ੍ਰਾਪਤ ਹੋ ਜਾਵੇ, ਰਿਧੀ ਸਿਧੀ ਅਥਵਾ ਮਾਇਕੀ ਐਸ਼ਵਰਜ ਕਾਰਨ ਸੰਸਾਰ ਉਤੇ ਚੰਗਾ ਨਾਮਣਾ ਵੀ ਪ੍ਰਾਪਤ ਹੋਵੇ, ਪਰ ਜੇ ਦਾਤਾਰ-ਪ੍ਰਭੂ ਦੀਆਂ ਇਹਨਾਂ ਅਮੋਲਕ ਦਾਤਾਂ ਵਿਚੋਂ ਅਜਿਹੇ ਤੇਜ-ਪ੍ਰਤਾਪੀ ਮਨੁੱਖ ਨੂੰ ਦਾਤਾਰ-ਪ੍ਰਭੂ ਨਜ਼ਰ ਨਹੀਂ ਆਉਂਦਾ ਤਾਂ ਉਹ ਅਕਿਰਤਘਣ ਹੈ, ਜਿਸ ਦੇ ਨੇੜੇ ਕੋਈ ਢੁਕਣਾ ਪਸੰਦ ਨਹੀਂ ਕਰਦਾ। ਕੋਈ ਮਨੁੱਖ ਖ਼ੁਦ ਕਿਸੇ ਕਿਸਮ ਦਾ ਦੋਸ਼ੀ ਹੁੰਦਾ ਹੋਇਆ ਵੀ ਅਜਿਹੇ ਨਾ-ਸ਼ੁਕਰੇ ਮਨੁੱਖ ਉਤੇ ਅਕਿਰਤਘਣਤਾ ਦਾ ਉੱਗਰ ਦੋਸ਼ ਥੱਪਦਾ ਹੈ, ਭਾਵ, ਅਜਿਹਾ ਅਕਿਰਤਘਣ ਮਨੁੱਖ ਮੰਦੀਂ ਹੂ ਮੰਦਾ ਗਰਦਾਨਿਆ ਜਾਂਦਾ ਹੈ।</p>
+                                    <p>ਅਜਿਹੇ ਉੱਗਰ ਦੋਸ਼ ਦੇ ਅਧਿਕਾਰੀ ਨੂੰ ਗੁਣਵੰਤਾ ਕਰਨ ਦਾ ਸਮਰੱਥਾਵਾਨ ਕੇਵਲ ਤੇ ਕੇਵਲ ਵਾਹਿਗੁਰੂ ਹੀ ਹੈ, ਇਹ ਕਿਸੇ ਹੋਰ ਦੇ ਵਸ ਦੀ ਗੱਲ ਨਹੀਂ।</p></div>
+                                <div class="english"><p>A person may receive an extraordinarily long and pleasant life—equal to four ages, or even forty ages—and may gain worldwide fame, good reputation and material splendour through spiritual powers or worldly wealth. Yet if, amid these priceless gifts of the Giver-Lord, such a powerful and glorious person does not perceive the Giver-Lord, that person is ungrateful, and no one wishes to draw near to such a person. Even someone who is himself guilty of various faults may level the severe charge of ingratitude against such an unthankful person; in other words, an ungrateful person is regarded as exceedingly low.</p>
+                                    <p>Only Waheguru has the power to transform one who bears such a severe fault into a virtuous person. This is beyond the capacity of anyone else.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੮-੧੧</span><em>Pauris 8–11</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਇਹਨਾਂ ਚਹੁੰਆਂ ਪਉੜੀਆਂ ਵਿਚ ਸਤਿਗੁਰੂ ਦੀ ਨਾਮ-ਸਿਖਿਆ ਸ੍ਰਵਨ ਕਰਨ ਦੀ ਮਹਿਮਾ ਦਰਸਾਈ ਹੋਈ ਹੈ।</p>
+                                    <p>ਜਿਥੇ ਨਾਮ ਸੁਣਨ ਅਤੇ ਮੰਨਣ ਦੀ ਮਹਿਮਾ ਅਗਾਧ-ਬੋਧ ਹੈ, ਉਥੇ ਨਾਮ-ਸੁਣਨ ਦਾ ਰਹਿੱਸ ਵੀ ਅਗਾਧ-ਬੋਧ ਹੈ। ਅਰੰਭ ਵਿਚ ਗੁਰਸਿਖ ਜਗਿਆਸੂ ਨੇ ਗੁਰਮਤਿ ਦੀ ਦ੍ਰਿੜ੍ਹਾਈ ਜੁਗਤਿ (ਗੁਰੂ ਦੁਆਰੈ ਹੋਇ ਸੋਝੀ ਪਾਇਸੀ ॥—੭੩੦) ਅਨੁਸਾਰ ਨਾਮ-ਗੁਰਮੰਤ੍ਰ ਗੁਰੂ ਪਾਸੋਂ ਸੁਣਨਾ ਹੁੰਦਾ ਹੈ। ਜੇ ਜਗਿਆਸਾ ਤੀਬਰ ਹੋਵੇ ਤਾਂ ਗੁਰੂ-ਜੁਗਤਿ ਵਿਚ ਕੰਨਾਂ ਦੁਆਰਾ ਸੁਣਿਆ ਨਾਮ-ਗੁਰਮੰਤ੍ਰ ਜਗਿਆਸੂ ਦੇ ਰਗੋ-ਰੇਸ਼ੇ ਵਿਚ ਰਚ ਜਾਂਦਾ ਹੈ। ਉਪਰੰਤ ਨਾਮ-ਗੁਰ-ਮੰਤ੍ਰ ਦੀ ਅਤੁੱਟ ਘਾਲ-ਕਮਾਈ ਦੇ ਤੁਫ਼ੈਲ ਸਾਸ ਗ੍ਰਾਸ ਜਪਿਆ ਅਤੇ ਨਾਲੇ ਨਾਲ ਪੂਰਨ ਸਾਵਧਾਨਤਾ ਤੇ ਇਕਾਗ੍ਰਤਾ ਸਹਿਤ ਸ੍ਰਵਣਾਂ ਦੁਆਰਾ ਸੁਣਿਆ ਨਾਮ ਸਹਜੇ ਸਹਜੇ ਅਜਪਾ ਜਾਪ ਬਣ ਜਾਂਦਾ ਹੈ। ਫਿਰ ਸਰੀਰ ਦਾ ਹਰੇਕ ਰੋਮ ਰਸਨਾ ਬਣ ਜਾਂਦਾ ਹੈ ਅਤੇ ਰੋਮ ਰੋਮ ਵਿਚੋਂ ਉਠਦੀ ਨਾਮ ਦੀ ਬਿਸਮ-ਬਿਨੋਦੀ ਅਨਹਦ-ਧੁਨਿ ਸ੍ਰਵਣ-ਚੇਤਨਾ ਦੁਆਰਾ ਨਿਰੰਤਰ ਇਕ-ਰਸ ਸੁਣਾਈ ਦੇਂਦੀ ਰਹਿੰਦੀ ਹੈ ਅਤੇ ਇਸ ਦੀਆਂ ਅਨੰਦੀ-ਤਰੰਗਾਂ ਦੇ ਅਦਭੁਤ ਰਸ ਵਿਚ ਜਗਿਆਸੂ ਖੀਵਾ ਹੋਇਆ ਰਹਿੰਦਾ ਹੈ। ਇਹ ‘ਗੁਪਤੀ ਬਾਣੀ ਪਰਗਟੁ ਹੋਇ’—੯੪੪ ਦੀ ਰਹਿੱਸ-ਮਈ ਦਸ਼ਾ ਹੈ; ਜਿਸ ‘ਤੇ ਵਾਪਰੇ, ਉਹੀ ਇਸ ਦੇ ਅਨੰਦ ਨੂੰ ਜਾਣਦਾ ਹੈ :</p>
+                                    <div class="quote">ਮਾਈ ਰੀ ਪੇਖਿ ਰਹੀ ਬਿਸਮਾਦ ॥
+                                        ਅਨਹਦ ਧੁਨੀ ਮੇਰਾ ਮਨੁ ਮੋਹਿਓ ਅਚਰਜ ਤਾ ਕੇ ਸ੍ਵਾਦ ॥੧॥ ਰਹਾਉ ॥  ੭੭੧॥
+                                        (੧੨੨੬)
+                                        ਮਹਾ ਮੰਤ੍ਰੁ ਗੁਰ ਹਿਰਦੈ ਬਸਿਓ ਅਚਰਜ ਨਾਮੁ ਸੁਨਿਓ ਰੀ ॥੩॥  ੫੧॥ (੩੮੪)
+                                        ਰਿਧੀਆਂ ਸਿਧੀਆਂ ਅਤੇ ਨਿਧੀਆਂ ਨਾਮ-ਸਿਖਿਆ ਸ੍ਰਵਨ ਕਰਨ ਵਾਲੇ ਵਡਭਾਗੇ ਸਤ-ਪੁਰਖਾਂ ਦੀ ਸੇਵਾ ਕਮਾਉਣ ਲਈ ਉਹਨਾਂ ਦੀ ਪ੍ਰਕਰਮਾ ਕਰਦੀਆਂ ਰਹਿੰਦੀਆਂ ਹਨ, ਪਰ ਉਹ ਇਹਨਾਂ ਸ਼ਕਤੀਆਂ ਦੇ ਸੁਆਮੀ ਹੋਣ ਦੇ ਬਾਵਜੂਦ ਨਿਰਲੇਪ ਅਤੇ ਹੰਗਤਾ-ਰਹਿਤ ਰਹਿੰਦੇ ਹਨ! ਨਾਮ-ਪ੍ਰਗਾਸ ਸਦਕਾ ਉਹ</div>
+                                    <p>ਪਾਰ-ਦਰਸੀ ਹੋ ਜਾਂਦੇ ਹਨ, ਅਥਵਾ, ਉਹਨਾਂ ਨੂੰ ਤਿੰਨਾਂ ਭਵਨਾਂ ਦੀ ਸੋਝੀ ਹੋ ਜਾਂਦੀ ਹੈ। ਦੈਵੀ-ਸੋਝੀ ਹੋਣ &#x27;ਤੇ ਉਹਨਾਂ ਨੂੰ ਸ਼ਾਸਤ੍ਰ ਸਿੰਮ੍ਰਿਤੀਆਂ ਵੇਦਾਂ ਦੀ ਮੁਥਾਜੀ ਨਹੀਂ ਰਹਿੰਦੀ। ਸਤ, ਸੰਤੋਖ ਗਿਆਨ ਆਦਿ ਰੱਬੀ-ਗੁਣਾਂ ਦੀ ਬਖਸ਼ਿਸ਼ ਸਦਕਾ ਉਹ ਖ਼ੁਦ ਸੁਗੰਧਤ ਹੋ ਕੇ ਆਲੇ ਦੁਆਲੇ ਨੂੰ ਨਿਰਮਲ ਅਤੇ ਸੁਗੰਧਤ ਕਰਦੇ ਰਹਿੰਦੇ ਹਨ। ਉਹ ਸਦਾ ਬ੍ਰਹਮ-ਧਿਆਨ ਵਿਚ ਨਿਮਗਨ ਰਹਿੰਦੇ ਹਨ। ਭਗਤੀ ਦੇ ਸਿਰ ਸਦਕੇ ਉਹਨਾਂ ਅੰਦਰ ਸਦਾ ਖੇੜਾ ਅਤੇ ਵਿਗਾਸ ਰਹਿੰਦਾ ਹੈ ਅਤੇ ਦੁਖਾਂ ਪਾਪਾਂ ਦਾ ਸੁਤੇ ਹੀ ਨਾਸ ਹੋ ਜਾਂਦਾ ਹੈ।</p></div>
+                                <div class="english"><p>These four pauris describe the glory of listening to the Naam-teaching of the True Guru.</p>
+                                    <p>Just as the glory of hearing and accepting Naam is beyond comprehension, so too is the mystery of hearing Naam. In the beginning, according to the Gurmat method of establishing understanding (“Through the Guru one comes to understanding”—730), the seeker hears the Naam-Gurmantra from the Guru. If the longing for spiritual understanding is intense, the Naam-Gurmantra heard through the ears by the Guru&#x27;s method becomes absorbed into every fibre of the seeker. Thereafter, through unbroken spiritual effort, the Naam-Gurmantra is recited with every breath and morsel, and the Naam that is heard with complete alertness and concentration gradually becomes ajapa-jaap, effortless remembrance.</p>
+                                    <p>Then every hair of the body becomes, as it were, a tongue, and the wondrous, blissful unstruck sound of Naam arising from every hair is continuously heard by the consciousness of hearing. The seeker remains absorbed in its waves of bliss and wondrous sweetness. This is the mysterious state described as “the hidden Bani becomes manifest”—944; only the one to whom it happens knows its joy.</p>
+                                    <p>The spiritually accomplished ones who hear the Naam-teaching are so fortunate that riddhis, siddhis and nidhis continually circle around them in order to serve them, yet even though they are masters of these powers, they remain detached and free of ego. Through the illumination of Naam they become far-seeing, gaining understanding of the three realms. With divine insight they no longer depend upon the Shastras, Smritis or Vedas. Through the gift of virtues such as truth, contentment and knowledge, they themselves become fragrant and make their surroundings pure and fragrant. They remain absorbed in contemplation of Brahm. Through devotion there is continual joy and blossoming within them, and suffering and sin are destroyed naturally.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੧੨-੧੫</span><em>Pauris 12–15</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਇਹਨਾਂ ਚਹੰਆਂ ਪਉੜੀਆਂ ਵਿਚ ਸਤਿਗੁਰੂ ਦੀ ਨਾਮ-ਸਿਖਿਆ ਨੂੰ ਮੰਨਣ ਕਰਨ ਦਾ ਮਹੱਤਵ ਦਰਸਾਇਆ ਹੋਇਆ ਹੈ। ਨਾਮ-ਸਿਖਿਆ ਨੂੰ ਮੰਨਣ ਕਰਨ ਵਾਲੇ ਦੇ ਅੰਤਸ਼ਕਰਣ ਵਿਚ ਪ੍ਰਕਾਸ਼ ਹੋ ਜਾਂਦਾ ਹੈ, ਜਿਸ ਦੇ ਫਲ-ਸਰੂਪ ਉਹ ਜਮ-ਪੰਥ ਅਤੇ ਜਮ-ਜਾਲ ਦੇ ਖ਼ਤਰੇ ਤੋਂ ਸੁਚੇਤ ਹੋ ਕੇ ਵਿਕਾਰਾਂ ਦੇ ਹੱਲਿਆਂ ਅਤੇ ਜਮ-ਦੂਤਾਂ ਦੇ ਧਕੇ-ਧੌੜਿਆਂ ਤੋਂ ਬਚ ਜਾਂਦਾ ਹੈ। ਧਰਮ ਨਾਲ ਸਾਂਝ ਪਾ ਕੇ ਉਹ ਗੁਰਮਤਿ ਦੇ ਅਚੱਲ ਗਾਡੀ-ਰਾਹ ਉਤੇ ਬਗ਼ੈਰ ਕਿਸੇ ਰੋਕ-ਟੋਕ ਦੇ ਚਲਦਾ ਹੋਇਆ ਪਤਿ-ਆਬਰੋ ਸਹਿਤ ਪ੍ਰਭੂ-ਦਰ ਉਤੇ ਜਾ ਕਬੂਲ ਪੈਂਦਾ ਹੈ। ਗੁਰੂ ਦੀ ਗੁਰੂ-ਸਰੂਪ ਸਿਖਿਆ ਨੂੰ ਮੰਨ ਕੇ ਕੇਵਲ ਆਪ ਹੀ ਨਹੀਂ, ਸਾਰੀ ਕੁਲ ਦਾ ਅਤੇ ਸੰਗੀ-ਸਾਥੀਆਂ ਦਾ ਵੀ ਉਧਾਰ ਕਰ ਲੈਂਦਾ ਹੈ। ਪ੍ਰਭੂ-ਦਰ ਦਾ ਜਾਚਕ ਬਣ ਕੇ ਉਹ ਦਰ ਦਰ ਦੀ ਮੁਥਾਜੀ ਤੋਂ ਬਚ ਜਾਂਦਾ ਹੈ। ਨਿਰੰਜਨ-ਨਾਮ ਦੀ ਬਰਕਤ ਨਾਲ ਉਹ ਮਾਇਆ ਦੀ ਕਾਲਖ ਤੋਂ ਮੁਕਤ ਹੋ ਜਾਂਦਾ ਹੈ।</p></div>
+                                <div class="english"><p>These four pauris show the importance of accepting and living by the Naam-teaching of the True Guru. The one who accepts the Naam-teaching becomes illumined within. As a result, the person becomes alert to the dangers of the path and snare of Yama, and is protected from attacks by vices and the harassment of the messengers of death. By forming a relationship with Dharma, the person travels without obstruction on the firm, unchanging road of Gurmat and reaches the Lord&#x27;s court with honour and dignity, where the person is accepted. By accepting the Guru&#x27;s Guru-like teaching, the individual not only saves himself or herself, but also becomes a means of uplift for the whole family and companions. Becoming a supplicant at the Lord&#x27;s court, the person is freed from dependence upon every other door. Through the blessing of the Immaculate Naam, the person becomes free from the blackness of Maya.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੧੬</span><em>Pauri 16</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਨਾਮ-ਸਿਖਿਆ ਸੁਣਨ ਅਤੇ ਮੰਨਣ ਮਗਰੋਂ ਗੁਰੂ ਦੇ ਧਿਆਨੀ, ਧਰਮੱਗ ਪੁਰਸ਼, &#x27;ਪੰਚ&#x27; ਦੀ ਉਪਾਧੀ ਨਾਲ ਭੂਸ਼ਤ ਹੋ ਕੇ ਅਤੇ ਪ੍ਰਭੂ-ਦਰ ਉਤੇ ਕਬੂਲ ਹੋ ਕੇ &#x27;ਪ੍ਰਵਾਣ&#x27; ਅਤੇ &#x27;ਪ੍ਰਧਾਨ&#x27; ਹੋ ਨਿਬੜਦੇ ਹਨ।</p>
+                                    <p>&#x27;ਦਇਆ&#x27; ਤੋਂ ਉਪਜਿਆ &#x27;ਧਰਮ&#x27; ਹੀ ਹੈ, ਜਿਸ ਨੇ ਅਗੇ ਆਪਣੇ ਸਿਰਮੌਰ ਗੁਣ &#x27;ਸੰਤੋਖ&#x27; ਨੂੰ ਸਥਾਪਿਤ ਕਰ ਕੇ ਵਿਸ਼ਵ-ਸੰਸਾਰ ਨੂੰ ਮਰਯਾਦਾ ਵਿਚ ਬੰਨ੍ਹ ਰਖਿਆ ਹੈ। ਜੋ ਮਨੁੱਖ ਧਰਮ ਦੇ ਧਰਣੀ-ਧਰ ਹੋਣ ਦੇ ਭੇਤ ਨੂੰ ਜਾਣ ਲਵੇ, ਉਹ ਸਚਿਆਰ ਹੋ ਨਿਬੜਦਾ ਹੈ। ਫਿਰ ਉਸ ਨੂੰ ਸੋਝੀ ਹੋ ਆਉਂਦੀ ਹੈ ਕਿ ਧਰਤੀ ਨੂੰ ਕਿਸੇ ਮਿਥਿਹਾਸਿਕ ਬਲਦ ਨੇ ਨਹੀਂ, ਸਗੋਂ ਧਰਮ ਨੇ ਹੀ ਬੰਨ੍ਹਿਆ ਹੋਇਆ ਹੈ।</p>
+                                    <p>ਉਸ ਨੂੰ ਸੋਝੀ ਹੋ ਜਾਂਦੀ ਹੈ ਕਿ ਕਾਦਰ ਦੀ ਕੁਦਰਤਿ ਵਿਚ ਵਿਚਰਦੇ ਅਨੇਕ ਜੀਵ-ਜੰਤੂ ਪ੍ਰਭੂ-ਹੁਕਮ ਦੀ ਤਾਰ ਵਿਚ ਪੋਤੇ ਹੋਏ ਹਨ । ਇਹ ਸਾਰਾ ਬ੍ਰਹਮੰਡ-ਪਸਾਰਾ ਪ੍ਰਭੂ ਦੇ ਹੁਕਮ ਦੀ ਹੀ ਅਦਭੁਤ ਲੀਲ੍ਹਾ ਹੈ । ਨਾ ਕਾਦਰ ਦਾ ਅਤੇ ਨਾ ਹੀ ਉਸ ਦੀ ਕੁਦਰਤਿ ਦਾ ਬਿਆਨ ਕੀਤਾ ਜਾਣਾ ਸੰਭਵ ਹੈ । ਸੋ, ਜੀਵ ਨੂੰ ਹਰ ਹਾਲਤ ਸਦਾ-ਸਲਾਮਤਿ ਨਿਰੰਕਾਰ ਦੀ ਰਜ਼ਾਅ ਵਿਚ ਰਾਜ਼ੀ ਰਹਿਣਾ ਬਣਦਾ ਹੈ ।</p></div>
+                                <div class="english"><p>After hearing and accepting the Naam-teaching, those contemplative and righteous people who become adorned with the title of “Panch” and are accepted at the Lord&#x27;s court become recognised as “approved” and “foremost.”</p>
+                                    <p>It is Dharma that arises from Daya (compassion), and it establishes its foremost virtue, Santokh (contentment), thereby binding the world within moral order. One who understands the secret of Dharma as the sustaining foundation becomes sachiar. Such a person then understands that the earth is not held in place by a mythical bull, but by Dharma.</p>
+                                    <p>The person understands that the many living beings moving within the Creator&#x27;s creation are woven into the thread of the Lord&#x27;s Hukam. This entire expanse of the universe is the wondrous play of Divine Hukam. Neither the Creator nor His creation can be fully described. Therefore the individual should remain content, in every circumstance, with the Will of the ever-safe and Formless One.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੧੭-੧੮-੧੯</span><em>Pauris 17–19</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਇਹਨਾਂ ਤਿੰਨਾਂ ਹੀ ਪਉੜੀਆਂ ਵਿਚ ਪ੍ਰਭੂ ਦੇ ਅਸੰਖ ਚੇਤਨਾ-ਪ੍ਰਵਾਹਾਂ ਦਾ ਵਰਣਨ ਹੈ । ਉਸ ਦੀ ਨਾਨਾ-ਪ੍ਰਕਾਰੀ ਕੁਦਰਤਿ ਵਿਚ ਇਕ ਪਾਸੇ ਅਨੇਕ ਜਪੀ, ਤਪੀ, ਪ੍ਰੇਮੀ, ਵੇਦ-ਪਾਠੀ, ਜੋਗੀ, ਭਗਤ, ਦਾਨੀ, ਸੂਰਮੇ ਅਤੇ ਮੋਨੀ ਲੋਕ ਹਨ, ਦੂਜੇ ਪਾਸੇ ਮਹਾ-ਮੂਰਖ, ਹਰਾਮ-ਖਾਣੇ, ਜ਼ਾਲਮ, ਗਲ-ਵਢ ਹਤਿਆਰੇ, ਕੂੜਿਆਰ, ਮਲ-ਭਖੀ ਮਲੇਛ ਅਤੇ ਨਿੰਦਕ ਹਨ । ਇਹ ਸਾਰੇ ਜੀਵ ਉਸ ਦੀ ਅਦਭੁਤ ਜਗਤ-ਖੇਡ ਦਾ ਹੀ ਅੰਗ ਹਨ ।</p>
+                                    <p>ਇਹ ਸਾਰੇ ਉਸ ਦੇ ਆਪਣੇ ਬਣਾਏ ਹੋਏ ਹਨ, ਇਹਨਾਂ ਨੂੰ ਆਪਣੀ ਰੱਬੀ ਵਿਉਂਤ ਅਧੀਨ ਵੱਖ ਵੱਖ ਕਾਰ ਸਉਂਪੀ ਹੋਈ ਹੈ । ਆਪਣੇ ਆਪ ਵਿਚ ਨਾ ਕੋਈ ਚੰਗਾ ਹੈ ਨਾ ਮੰਦਾ । ਕਾਦਰ ਅਤੇ ਉਸ ਦੀ ਅਦਭੁਤ ਰਚਨਾ ਤੋਂ ਕੁਰਬਾਨ !</p>
+                                    <p>ਉਸ ਦੀ ਕੁਦਰਤਿ ਵਿਚ ਅਨੇਕਾਂ ਹੀ ਨਾਂਵ-ਥਾਂਵ ਹਨ, ਜਿਨ੍ਹਾਂ ਦਾ ਲੇਖਾ ਜੋਖਾ ਕਰ ਸਕਣਾ ਅਸੰਭਵ ਹੈ । ਜੇ ਕੋਈ ਮਨੁੱਖ ਆਪਣੀ ਕੂੜ-ਮਤਿ ਅਧੀਨ ਕਿਆਫ਼ੇ-ਕਿਆਸ ਲਾ ਕੇ ਕੋਈ ਗਿਣਤੀ ਮਿਣਤੀ ਕਰਦਾ ਹੈ ਤਾਂ ਇਹ ਉਸ ਦਾ ਹੋਛਾ-ਪਣ ਹੈ ।</p>
+                                    <p>ਕਾਦਰ ਅਤੇ ਉਸ ਦੀ ਕੁਦਰਤਿ ਦਾ ਗਿਆਨ ਅੱਖਰਾਂ (ਵਿਗਿਆਨ) ਰਾਹੀਂ ਸਮਝਿਆ-ਸਮਝਾਇਆ ਜਾ ਸਕਦਾ ਹੈ । ਵਿਧਾਤਾ ਵਲੋਂ ਹਰੇਕ ਜੀਵ ਦੇ ਮੱਥੇ ਉੱਤੇ ਲਿਖੇ ਸੰਜੋਗ-ਲੇਖ ਦਾ ਵਰਣਨ ਵੀ ਪੰਡਤਾਂ ਅਤੇ ਜੋਤਸ਼ੀਆਂ ਵਲੋਂ ਅੱਖਰਾਂ ਦੁਆਰਾ ਹੀ ਕੀਤਾ ਜਾਂਦਾ ਹੈ । ਸੁਤੇ-ਪ੍ਰਕਾਸ਼ ਹੋਣ ਦੇ ਨਾਤੇ ਵਿਧਾਤਾ-ਪੁਰਖ ਕਿਸੇ ਸੰਜੋਗ-ਲੇਖ ਦੀ ਲਿਖਤ ਤੋਂ ਮੁਕਤ ਹੈ । ਨਾ ਕਾਦਰ ਦਾ ਕੋਈ ਅੰਤ ਹੈ, ਨਾ ਉਸ ਦੀ ਕੁਦਰਤਿ ਦਾ । ਅੰਤ ਲੈਣ ਦੇ ਬਖੇੜੇ ਨੂੰ ਛਡ ਕੇ ਉਸ ਦੀ ਰਜ਼ਾਅ ਵਿਚ ਰਾਜ਼ੀ ਰਹਿਣਾ ਹੀ ਬਣਦਾ ਹੈ ।</p></div>
+                                <div class="english"><p>These three pauris describe the countless streams and expressions of consciousness within the Lord&#x27;s creation. In His many-sided nature there are, on one side, countless meditators, ascetics, lovers, reciters of the Vedas, yogis, devotees, charitable people, warriors and silent practitioners; on the other side are great fools, those who live by wrongdoing, tyrants, murderers, liars, flesh-eating outcasts and slanderers. All these beings are part of His wondrous play of the world.</p>
+                                    <p>All of them have been created by Him, and under His Divine arrangement each has been given different work to perform. In themselves, none is absolutely good and none absolutely bad. Blessed be the Creator and His wondrous creation!</p>
+                                    <p>Within His creation are countless names and places whose full account is impossible to calculate. If someone, under false understanding, makes estimates and attempts to count them, that is merely human small-mindedness.</p>
+                                    <p>Knowledge of the Creator and His creation can be expressed and explained through letters and learning. The account of the destiny written upon the forehead of each being by the Ordainer is likewise described by scholars and astrologers through letters. As the Self-Illuminating One, the Ordainer Himself is free from any written destiny. Neither the Creator nor His creation has an end. Rather than becoming entangled in the attempt to find that end, one should remain content in His Will.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨੦</span><em>Pauri 20</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਜੀਵਨ-ਯਾਤਰਾ ਵਿਚ ਮਨੁੱਖ ਜੋ ਚੰਗੇ ਜਾਂ ਮੰਦੇ ਕਰਮ ਕਰਦਾ ਹੈ, ਉਹਨਾਂ ਦਾ ਫਲ ਉਸ ਨੂੰ ਅਵੱਸ਼ ਭੋਗਣਾ ਪੈਂਦਾ ਹੈ । ਇਹ ਅਟੱਲ ਨੇਮ ਹੈ, ਪਰ ‘ਮਨੁੱਖੀ ਕਰਮ’ ਪ੍ਰਬਲ ਹੋਣ ਦੇ ਬਾਵਜੂਦ ਆਪਣੇ ਆਪ ਵਿਚ ਸੁਤੰਤਰ ਨਹੀਂ । ‘ਕਰਮਾਂ’ ਉਪਰ ‘ਰੱਬੀ ਹੁਕਮ’ ਦਾ ਕੁੰਡਾ ਹੈ ਅਤੇ ‘ਮਨੁੱਖੀ ਕਰਮਾਂ’ ਦਾ ਨਿਬੇੜਾ ‘ਰੱਬੀ ਹੁਕਮ’ ਅਧੀਨ ਹੀ ਹੁੰਦਾ ਹੈ । ਪੁੰਨੀ (ਸ਼ੁਭ-ਕਰਮੀ) ਅਤੇ ਪਾਪੀ (ਪਾਪ-ਕਰਮੀ) ਇਹ ਦੋਵੇਂ ਪਰਸਪਰ ਵਿਰੋਧੀ ਆਚਰਣਿਕ ਲੱਛਣ ਹਨ, ਪਰ ਇਹ ਫਜ਼ੂਲ ਦੰਦ-ਕਥਾ ਦਾ ਵਿਸ਼ਾ ਨਹੀਂ । ਕੇਵਲ ਕਥਨ ਮਾਤ੍ਰ ਨਾਲ ਕੋਈ ਮਨੁੱਖ ਚੰਗਾ ਨਹੀਂ ਬਣ ਸਕਦਾ, ਕੋਈ ਮੰਦਾ ਨਹੀਂ ਹੋ ਸਕਦਾ । ਚੰਗੇ ਜਾਂ ਮੰਦੇ ਹੋਣ ਦਾ ਅਧਾਰ ਉਸ ਦੇ ਕੀਤੇ ਚੰਗੇ ਜਾਂ ਮੰਦੇ ਕਰਮ ਅਤੇ ਇਹਨਾਂ ਕਰਮਾਂ ਦੇ ਪਿਛੋਕੜ ਵਿਚਲੀ ਚੰਗੀ ਜਾਂ ਮੰਦੀ ਭਾਵਨਾ ਹੁੰਦੀ ਹੈ । ਜਿਵੇਂ ਮੈਲ ਨਾਲ ਭਰਿਆ ਕੋਈ ਕਪੜਾ, ਜਾਂ ਕੋਈ ਸਰੀਰਕ ਅੰਗ ਸਾਬਣ ਅਤੇ ਪਾਣੀ ਨਾਲ ਧੋਤਾ ਜਾ ਸਕਦਾ ਹੈ, ਤਿਵੇਂ ਹੀ, ਮਨੁੱਖੀ-ਮਨ ਨੂੰ ਲੱਗਾ ਪਾਪਾਂ ਦਾ ਗੰਦ ਨਾਮ ਦੇ ਪਿਆਰ ਨਾਲ ਧੋਤਾ ਜਾ ਸਕਦਾ ਹੈ ।</p></div>
+                                <div class="english"><p>In the journey of life, whatever good or bad actions a person performs, their results must be experienced. This is an unalterable law. Yet human actions, despite their power, are not independent in themselves. Divine Hukam has the final authority over actions, and the consequences of human actions are settled under Divine Hukam.</p>
+                                    <p>The terms “punni” (one who performs good deeds) and “paapi” (one who performs sinful deeds) describe opposing ethical qualities, but this is not a matter for empty storytelling. A person does not become good merely by being called good, nor bad merely by being called bad. The basis of being good or bad is the good or bad actions performed and the good or bad intention behind those actions. Just as a dirty cloth or bodily part can be washed with soap and water, so the impurity of sins attached to the human mind can be washed away through love of Naam.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨੧</span><em>Pauri 21</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਤੀਰਥ-ਇਸ਼ਨਾਨ, ਤਪ-ਸਾਧਨਾ, ਅਹਿੰਸਾ, ਦਾਨ ਆਦਿ ਕਰਮ-ਕਾਂਡੀ ਸਾਧਨ ਨਾਮ ਦੇ ਮੁਕਾਬਲੇ ਬਿਲਕੁਲ ਤੁੱਛ ਹਨ । ਗੁਰ-ਸ਼ਬਦ ਨੂੰ ਪ੍ਰੇਮ ਨਾਲ ਸੁਣਨ ਅਤੇ ਮੰਨਣ ਨਾਲ ਜੀਵ ਦਾ ਅੰਦਰਲੇ ਆਤਮ-ਤੀਰਥ ਉੱਤੇ ਇਸ਼ਨਾਨ ਹੋ ਜਾਂਦਾ ਹੈ । ਦੈਵੀ-ਗੁਣ ਪ੍ਰਭੂ ਦੀ ਦੇਣ ਹਨ । ਪ੍ਰਭੂ ਦੀ ਮਿਹਰ-ਦਾਤਿ ਬਗ਼ੈਰ ਜੀਵ ਤੋਂ ਪ੍ਰਭੂ-ਭਗਤੀ ਹੋ ਸਕਣੀ ਅਸੰਭਵ ਹੈ ।</p>
+                                    <p>ਪ੍ਰਭੂ ਸਤਿ-ਚਿਤ-ਅਨੰਦ ਸਰੂਪ ਹੈ, ਉਸ ਨਾਲ ਜੁੜਨ ਵਾਲੇ ਮਨੁੱਖ ਦੇ ਅੰਦਰ ਵੀ ਇਹ ਰੱਬੀ-ਗੁਣ ਪ੍ਰਵੇਸ਼ ਕਰ ਜਾਂਦੇ ਹਨ ।</p>
+                                    <p>ਜਗਤ-ਪਸਾਰਾ ਕਦੋਂ ਹੋਂਦ ਵਿਚ ਆਇਆ, ਇਹ ਗੱਲ ਕਰਣਹਾਰ ਕਰਤਾਰ ਤੋਂ ਸਿਵਾ ਕੋਈ ਹੋਰ ਨਹੀਂ ਜਾਣਦਾ । ਸਾਰੀ ਦ੍ਰਿਸ਼ਟਮਾਨ, ਅਦ੍ਰਿਸ਼ਟ ਰਚਨਾ ਦਾ ‘ਕਰਤਾ’ ਉਸ ਤੋਂ ਸਿਵਾ ਕੋਈ ਹੋਰ ਨਹੀਂ । ਸਭ ਜੀਵ ਉਸ ਕਰਤਾਰ ਦੀ ਬਖਸ਼ੀ ਕਰਤਾਰੀ ਸ਼ਕਤੀ ਸਦਕਾ ਹੀ ਕੁਝ ਕਰਦੇ ਕਰਾਉਂਦੇ ਹਨ । ਜੋ ਕੋਈ ਹੱਛਾ ਮਨੁੱਖ ਆਪਣੇ ਆਪ ਨੂੰ ‘ਕਰਤਾ’ ਮੰਨਣ ਦਾ ਭਰਮ ਪਾਲਦਾ ਹੈ ਤਾਂ ਇਹ ਉਸ ਦੀ ਹੱਛੀ ਹਮਾਕਤ ਹੈ, ਜਿਸ ਵਜੋਂ ਉਸ ਨੂੰ ਅੰਤ ਨਮੋਸ਼ੀ ਸਹਿਣੀ ਪੈਂਦੀ ਹੈ । ਆਪਣੇ ਆਪ ਭਾਵੇਂ ਕੋਈ ਵੱਡਾ ਅਕਲਈਆ ਬਣਿਆ ਫਿਰੇ, ਕਾਦਰ ਅਤੇ ਉਸ ਦੀ ਕੁਦਰਤਿ ਦਾ ਪੂਰਾ ਪੂਰਾ ਵਰਣਨ ਕਰ ਸਕਣਾ ਕਿਸੇ ਦੇ ਵੱਸ ਦੀ ਗੱਲ ਨਹੀਂ।</p></div>
+                                <div class="english"><p>Ritual practices such as bathing at places of pilgrimage, austerities, non-violence and charity are insignificant compared with Naam. By lovingly hearing and accepting the Guru&#x27;s Shabad, the individual bathes at the inner pilgrimage-place of the soul. Divine virtues are gifts of the Lord. Without the Lord&#x27;s gift of grace, it is impossible for the individual to perform true devotion to Him.</p>
+                                    <p>The Lord is of the nature of Sat-Chit-Anand—Truth, Consciousness and Bliss. These Divine qualities also enter the person who becomes joined to Him.</p>
+                                    <p>No one except the Creator-Karta knows when the expanse of the world came into existence. There is no other doer besides Him of the entire visible and invisible creation. All beings act and accomplish things only through the creative power granted by that Creator. If a person foolishly believes himself or herself to be the independent “doer,” this is great folly, for it ultimately leads to shame. A person may consider himself highly intelligent, but no one has the capacity to describe the Creator and His creation in full.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨੨-੨੩</span><em>Pauris 22–23</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਪ੍ਰਭੂ ਦੀ ਅਨੰਤ ਰਚਨਾ ਵਿਚ ਅਣਗਿਣਤ ਹੀ ਪਤਾਲ ਅਤੇ ਅਕਾਸ਼ ਹਨ। ਪ੍ਰਭੂ-ਰਚਨਾ ਦਾ ਲੇਖਾ ਕੀਤਿਆਂ ਮਨੁੱਖੀ ਅਕਲ ਦੇ ਖੰਭ ਝੜ ਜਾਂਦੇ ਹਨ, ਅੰਤ ਨਹੀਂ ਲਭਦਾ। ਸਲਾਹੁਣ-ਯੋਗ ਪ੍ਰਭੂ ਦੀ ਸਿਫ਼ਤਿ-ਸਾਲਾਹ ਦੇ ਤੁਫ਼ੈਲ ਆਤਮ-ਚੇਤਨਾ, ਪਰਮ-ਚੇਤਨਾ ਵਿਚ ਹੀ ਲੀਨ ਹੋ ਜਾਂਦੀ ਹੈ, ਫਿਰ ਇਸ ਦੀ ਅਡਰੀ ਹੋਂਦ ਨਹੀਂ ਰਹਿੰਦੀ, ਜਿਵੇਂ ਨਦੀਆਂ-ਨਾਲੇ ਸਮੁੰਦਰ ਵਿਚ ਪੈਣ ਮਗਰੋਂ ਉਹਨਾਂ ਦੀ ਵੱਖਰੀ ਪਛਾਣ ਹੋਣੀ ਅਸੰਭਵ ਹੋ ਜਾਂਦੀ ਹੈ।</p>
+                                    <p>ਬੇਓੜਕ ਧਨ-ਸੰਪਤੀ ਦੇ ਮਾਲਕ ਸ਼ਾਹ ਪਾਤਸ਼ਾਹ, ਜੋ ਧਰਤੀ ਤੋਂ ਇਲਾਵਾ ਸਮੁੰਦਰਾਂ ਉਤੇ ਵੀ ਅਧਿਕਾਰ ਰੱਖਣ ਦੇ ਦਾਅਵੇਦਾਰ ਹੋਣ, ਏਨਾ ਐਸ਼੍ਵਰਜ ਹੋਣ ਦੇ ਬਾਵਜੂਦ ਉਹ ਕੀੜੀ ਵਤ ਤੁੱਛ ਮਨੁੱਖ ਦੀ ਬਰਾਬਰੀ ਨਹੀਂ ਕਰ ਸਕਦੇ, ਜਿਸ ਦੇ ਪੱਲੇ ਪ੍ਰਭੂ-ਸਿਮਰਨ ਦਾ ਧਨ ਹੋਵੇ।</p></div>
+                                <div class="english"><p>In the infinite creation of the Lord there are countless nether regions and heavens. When a person attempts to account for the Lord&#x27;s creation, the wings of human intellect fall away and no end can be found. Through the praise of the Praiseworthy Lord, individual consciousness becomes absorbed in Supreme Consciousness and then no separate existence remains, just as rivers and streams lose their separate identity after entering the ocean.</p>
+                                    <p>Kings and emperors who possess limitless wealth and claim authority not only over the earth but over the seas cannot equal even the insignificant person who possesses the wealth of remembrance of the Lord.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨੪-੨੫</span><em>Pauris 24–25</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਪ੍ਰਭੂ ਅਤੇ ਉਸ ਦਾ ਰੁਤਬਾ ਵੱਡੀ-ਹੂੰ-ਵੱਡਾ ਹੈ। ਉਸ ਦਾ ‘ਨਾਉਂ&#x27; ਉੱਚੀ-ਹੂੰ-ਉੱਚਾ ਹੈ। ਨਾਮ ਅਤੇ ਨਾਮੀ ਪਰਸਪਰ ਅਭੇਦ ਹਨ। ਵੱਡੇ ਪ੍ਰਭੂ ਦਾ ਹਰ ਪੱਖ ਵੱਡਾ, ਅਦਭੁਤ ਅਤੇ ਅਮੁੱਲ ਹੈ, ਉਹ ਸਰਬ-ਕਲਾ-ਸਮਰੱਥ ਦਾਤਾਰ ਹੈ, ਬਾਕੀ ਸਾਰੇ ਅਖੌਤੀ ਸੰਸਾਰੀ ਦਾਤੇ ਉਸ ਦੇ ਦਰ ਦੇ ਮੰਗਤੇ ਹਨ।</p>
+                                    <p>ਦੁਖ ਅਤੇ ਭੁਖ ਵੀ ਦਾਤਾਰ-ਪ੍ਰਭੂ ਦੀਆਂ ਦਾਤਾਂ ਹੀ ਹਨ। ਮਾਇਕੀ ਬੰਧਨਾਂ ਦੀ ਕੈਦ ਅਤੇ ਇਸ ਤੋਂ ਛੁਟਕਾਰਾ ਪ੍ਰਭੂ ਦੀ ਰਜ਼ਾਅ ਵਿਚ ਹੀ ਹੁੰਦਾ ਹੈ। ਜਿਸ ਮਨੁੱਖ ਨੂੰ ਦਾਤਾਰ-ਪ੍ਰਭੂ ਤੋਂ ਸਿਫ਼ਤਿ-ਸਾਲਾਹ ਦੀ ਬਖਸ਼ਿਸ਼ ਹੋ ਜਾਵੇ, ਉਹ ਜਾਣੋਂ ਪਾਤਿਸ਼ਾਹਾਂ ਸਿਰ ਪਾਤਿਸ਼ਾਹ ਹੈ।</p></div>
+                                <div class="english"><p>The Lord and His status are the greatest of the great. His Name is the highest of the high. Naam and the One who is Naam are inseparable. Every aspect of the Great Lord is great, wondrous and priceless. He is the all-capable Giver; all other so-called worldly givers are beggars at His door.</p>
+                                    <p>Suffering and hunger too are gifts of the Giver-Lord. The imprisonment of worldly bonds and freedom from them both occur within the Lord&#x27;s Will. The person who receives from the Giver-Lord the gift of praising His virtues is, as it were, the king above kings.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨੬</span><em>Pauri 26</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਅਮੁੱਲ ਪ੍ਰਭੂ ਦੇ ਅਮੁੱਲ ਗੁਣਾਂ ਦਾ ਕਥਨ ਵੇਦ-ਪਾਠੀ ਵਿਦਵਾਨ ਲੋਕੀ ਕਥਨ ਕਰਦੇ ਹਨ। ਕਈ ਬ੍ਰਹਮੇ, ਇੰਦਰ, ਕਾਨ੍ਹ ਅਤੇ ਗੋਪੀਆਂ, ਸ਼ਿਵ ਜੀ ਅਤੇ ਹੋਰ ਜੋਗੀਰਾਜ, ਬੁਧੀਮਾਨ, ਦੇਵਤੇ, ਰਾਕਸ਼ ਅਤੇ ਰਿਸ਼ੀ-ਮੁਨੀ ਉਸ ਦੇ ਗੁਣਾਂ</p>
+                                    <p>ਦਾ ਕਥਨ ਨਿਰੰਤਰ ਕਰਦੇ ਰਹਿੰਦੇ ਹਨ, ਪਰ ਪ੍ਰਭੂ-ਗੁਣਾਂ ਦਾ ਪੂਰੇ ਤੌਰ &#x27;ਤੇ ਕਥਨ ਕਰ ਸਕਣਾ, ਕਿਸੇ ਦੇ ਵਸ ਦੀ ਗੱਲ ਨਹੀਂ। ਜੇ ਕੋਈ ਹੋਛਾ ਮਨੁੱਖ ਅਜਿਹਾ ਦਾਅਵਾ ਬੰਨ੍ਹਦਾ ਹੈ ਤਾਂ ਉਸ ਦਾ ਦਾਅਵਾ ਝੂਠਾ ਹੈ ਅਤੇ ਉਹ ਝੂਠਾ ਦਾਅਵੇਦਾਰ ਮੂਰਖਾਂ ਸਿਰ ਮੂਰਖ ਹੈ।</p></div>
+                                <div class="english"><p>Scholars learned in the Vedas speak of the priceless virtues of the priceless Lord. Many Brahmas, Indras, Krishnas and Gopis, Shiva and other great yogis, wise beings, deities, demons, and sages and seers continually speak of His virtues. Yet no one is capable of describing the Lord&#x27;s virtues completely. If an insignificant person makes such a claim, the claim is false, and the claimant is the greatest fool among fools.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨੭</span><em>Pauri 27</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਉਹ ਦਰ-ਘਰ (ਸਚੁ) ਕੇਹਾ ਅਨੂਪਮ ਹੈ ਜਿਥੇ ਟਿਕ ਕੇ ਇਹ ਅਨੁਭਵ ਹੁੰਦਾ ਹੈ ਕਿ ਸਾਰੀ ਪਰਕ੍ਰਿਤੀ ਪ੍ਰਭੂ ਦੇ ਅਮੋਲਕ ਗੁਣਾਂ ਦਾ ਗਾਇਨ ਕਰ ਕੇ ਉਸ ਨੂੰ ਚਿਤ ਵਿਚ ਸਮ੍ਹਾਲ ਰਹੀ ਹੈ ਅਤੇ ਪ੍ਰਭੂ ਸਭਨਾਂ ਦੀ ਨਿਰੰਤਰ ਸਾਰ-ਸੰਭਾਲ ਕਰ ਰਿਹਾ ਹੈ। ਪਉਣ, ਪਾਣੀ, ਅਗਨੀ, ਧਰਮ-ਰਾਜਾ, ਚਿਤੁ, ਗੁਪਤੁ, ਈਸ਼ਰ, ਬ੍ਰਹਮਾ, ਇੰਦਰ, ਸਿਧ, ਸਾਧ, ਜਤੀ, ਸਤੀ, ਸੰਤੋਖੀ, ਮਹਾਬਲੀ ਸੂਰਮੇ, ਪੰਡਿਤ, ਰਿਸ਼ੀ-ਮੁਨੀ, ਤਿੰਨਾਂ ਲੋਕਾਂ ਦੀਆਂ ਸੁੰਦਰੀਆਂ, ਖੰਡ, ਬ੍ਰਹਮੰਡ, ਚਾਰੇ ਖਾਣੀਆਂ, ਇਹ ਸਾਰੇ ਨਿਰੰਤਰ ਆਪੋ ਆਪਣੇ ਢੰਗ-ਤਰੀਕੇ ਨਾਲ ਜੁਗਾਂ ਜੁਗਾਂਤਰਾਂ ਤੋਂ ਨਿਰੰਤਰ ਪ੍ਰਭੂ ਦੇ ਗੁਣਾਂ ਦਾ ਗਾਇਨ ਕਰ ਰਹੇ ਹਨ। ਗੁਣ ਗਾਇਨ ਕਰਨ ਵਾਲਿਆਂ ਦਾ ਇਹ ਟੁਕ-ਮਾਤ੍ਰ ਵਰਣਨ ਹੈ। ਪੂਰਾ ਵਰਣਨ ਹੋ ਸਕਣਾ ਸੰਭਵ ਨਹੀਂ। ਪ੍ਰਭੂ ਦੀ ਮਿਹਰ ਸਦਕਾ ਹੀ ਕਿਸੇ ਨੂੰ ਗੁਣ ਗਾਉਣ ਦੀ ਦਾਤਿ ਨਸੀਬ ਹੁੰਦੀ ਹੈ। ਗੁਣ ਗਾਇਨ ਕਰਨ ਵਾਲੇ ਪ੍ਰਭੂ ਨੂੰ ਪਿਆਰੇ ਲਗਦੇ ਹਨ, ਕਿਉਜੁ ਗੁਣ-ਗਾਨ ਪ੍ਰਭੂ ਦਾ ਰਜ਼ਾਈ-ਹੁਕਮ ਹੈ।</p>
+                                    <p>ਸਦੀਵਕਾਲ ਸਤਿ (ਸਦਾ-ਥਿਰ) ਪ੍ਰਭੂ ਬਹੁ-ਰੰਗੀ ਚਰਾਚਰ ਰਚਨਾ ਰਚ ਕੇ ਆਪਣੇ ਹੁਕਮ ਵਿਚ ਚਲਾ ਰਿਹਾ ਹੈ। ਉਸ ਦੀ ਰਜ਼ਾਅ ਵਿਚ ਰਾਜ਼ੀ ਰਹਿਣਾ ਹੀ ਸ੍ਰੇਸ਼ਟ ਕਰਮ ਹੈ।</p></div>
+                                <div class="english"><p>What an incomparable court and abode of Truth it is, where one experiences that the whole of nature sings the Lord&#x27;s priceless virtues and holds Him within consciousness, while the Lord continually cares for all. Air, water, fire, Dharam Rai, Chit, Gupt, Ishar, Brahma, Indra, siddhs, sadhs, celibates, disciplined practitioners, contented ones, mighty warriors, scholars, sages and seers, the beauties of the three worlds, realms, universes and the four sources of life—all continually sing the Lord&#x27;s virtues in their own ways through the ages. This is only a tiny description of those who sing His virtues; a complete description is impossible. It is only through the Lord&#x27;s grace that anyone receives the gift of singing His virtues. Those who sing His virtues are dear to Him, because praise of His virtues is itself His Hukam.</p>
+                                    <p>The Eternal Truthful Lord has created the many-coloured, moving and unmoving creation and directs it according to His Hukam. To remain content in His Will is the highest action.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨੮</span><em>Pauri 28</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਗੁਰਮਤਿ-ਜੋਗ ਲਈ ਵਿਖਾਵੇ ਦੇ ਬਾਹਰਲੇ ਚਿੰਨ੍ਹਾਂ ਦੀ ਬਜਾਏ ਅੰਦਰਲੇ ਦੈਵੀ-ਗੁਣਾਂ ਦੀ ਧਾਰਨਾ ਜ਼ਰੂਰੀ ਹੈ। ਸੰਤੋਖ ਦੀ ਮੁੰਦਰਾ, ਸਰਮ (ਉਦਮ) ਦਾ ਖੱਪਰ, ਧਿਆਨ ਦੀ ਸੁਆਹ, ਕਾਲ ਦੀ ਖਿੰਥਾ ਧਾਰਨ ਕਰਨ ਦਾ ਉਪਦੇਸ਼ ਹੈ। ਦੇਹੀ ਨੂੰ ਪ੍ਰਭੂ-ਮਿਲਾਪ ਲਈ ਕੁਆਰੀ (ਗੁਰਮਤਿ ਜੋਗ ਕਮਾਉਣ ਦਾ ਵਸੀਲਾ), ਦ੍ਰਿੜ੍ਹ ਭਰੋਸੇ ਨੂੰ ਜੋਗ ਦੀ ਜੁਗਤੀ ਅਤੇ ਡੰਡਾ ਬਣਾਉਣਾ ਚਾਹੀਏ। ਸਾਰੀ ਲੋਕਾਈ ਨੂੰ ਬ੍ਰਹਮ-ਵਿਦਿਆ ਦੀ ਪ੍ਰਾਪਤੀ ਦਾ ਸਾਂਝੀਵਾਲ ਜਾਣਨਾ ਇਹ ਗੁਰਮਤਿ-ਜੋਗ ਦਾ ਆਈ-ਪੰਥ ਹੈ । ਮਨ ਜਿਤਣ ਨਾਲ ਜਾਣੋ ਸਾਰਾ ਜਗਤ ਜਿਤ ਲਿਆ । ਸਾਰੀ ਸ੍ਰਿਸ਼ਟੀ ਨੂੰ ਹੁਕਮ-ਨੱਥ ਵਿਚ ਨਥ ਕੇ ਚਲਾਉਣ ਵਾਲਾ ਨਾਥਾਂ-ਸਿਰ-ਨਾਥ ਕੇਵਲ ਉਹ ਪ੍ਰਭੂ ਹੈ ਜੋ ਸਭ ਦਾ ਮੂਲ-ਮੁੱਢ ਹੈ, ਰੂਪ ਰੰਗ ਤੋਂ ਨਿਆਰਾ ਹੈ ਅਤੇ ਸਦੀਵਕਾਲ ਸੱਚ ਦੀ ਵੇਸ-ਭੂਸ਼ਾ (ਪਹਿਨਣ-ਪੋਸ਼ਣ) ਵਾਲਾ ਹੈ । ਉਸ ਨੂੰ ਸਦ ਨਮਸਕਾਰ !</p></div>
+                                <div class="english"><p>For the yoga of Gurmat, it is necessary to adopt inner Divine virtues rather than outward signs adopted for display. The teaching is to wear the earrings of contentment, the begging-bowl of effort, the ash of meditation, and the blanket of awareness of time and mortality. The body should be made “virgin” for union with the Lord—that is, a means for practising the yoga of Gurmat. Firm faith should become the method and staff of this yoga. To regard all humanity as sharing equally in the attainment of Divine wisdom is the distinctive path of Gurmat-yoga. By conquering the mind, it is as though the whole world has been conquered.</p>
+                                    <p>The Lord alone is the Master above all masters, who keeps the whole creation moving within the restraint of Hukam. He is the very root and origin of all, beyond form and colour, and forever clothed in Truth. To Him there is eternal obeisance.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੨੯</span><em>Pauri 29</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਗੁਰਮੁਖਿ-ਜੋਗੀ ਲਈ ਆਤਮ-ਗਿਆਨ ਹੀ ਆਦਰਸ਼ਕ ਭੋਜਨ ਹੈ । ਜੀਅ-ਦਇਆ ਆਤਮ-ਪਦਾਰਥ ਦੀ ਵਰਤਾਵੀ ਹੈ । ਹਰੇਕ ਦੇ ਅੰਦਰ ਨਿਰੰਤਰ ਵਜਦੀ ਸ਼ਬਦ-ਧੁਨਿ ਆਦਰਸ਼ਕ ਨਾਦ ਹੈ । ਰਿਧੀ ਸਿਧੀ ਹੋਛਾ ਚਸਕਾ ਹੈ । ਜਗਤ ਦੇ ਮਾਲਕ ਵਲੋਂ ਸੰਜੋਗ (ਮਿਲਾਪ ਦਾ ਅਟੱਲ ਨੇਮ) ਅਤੇ ਵਿਜੋਗ (ਵਿਛੋੜੇ ਦਾ ਅਟੱਲ ਨੇਮ) ਦੁਆਰਾ ਸੰਸਾਰ ਦੀ ਪ੍ਰਕ੍ਰਿਆ ਚਲਾਈਦੀ ਹੈ । ਹਰੇਕ ਮਨੁੱਖ ਨੂੰ ਧੁਰੋਂ ਲਿਖੇ ਕਰਮ-ਲੇਖ ਅਨੁਸਾਰ ਹੀ ਛਾਂਦਾ ਮਿਲਦਾ ਹੈ ।</p></div>
+                                <div class="english"><p>For the Gurmukh-yogi, spiritual knowledge is the ideal food. Compassion for living beings is the provision for the spiritual life. The Shabad-sound that continually resounds within everyone is the ideal mystical sound. Riddhi and siddhi are merely a shallow attraction. The Lord of the world carries on the process of the world through Sanjog (the unalterable law of union) and Vijog (the unalterable law of separation). Each person receives what is allotted according to the karmic record written from the Primal Source.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੩੦</span><em>Pauri 30</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਬ੍ਰਹਮਾ, ਬਿਸ਼ਨ, ਮਹੇਸ਼—ਇਹ ਤਿੰਨੋਂ ਦੇਵਤੇ ਤ੍ਰਿਗੁਣੀ-ਮਾਇਆ ਦੇ ਚੇਲੇ ਹਨ। ਇਹ ਪ੍ਰਬਲ ਮਾਇਆ ਅਤੇ ਉਸ ਦੇ ਤਿੰਨੋਂ ਚੇਲੇ ਪ੍ਰਭੂ ਦੇ ਹੁਕਮ ਅਧੀਨ ਉਸ ਵਲੋਂ ਸਉਂਪੀ ਹੋਈ ਕਾਰ ਹੀ ਕਮਾਉਂਦੇ ਹਨ।</p></div>
+                                <div class="english"><p>Brahma, Vishnu and Mahesh—the three deities—are disciples of the three-guna Maya. This powerful Maya and its three disciples perform only the work assigned to them under the Lord&#x27;s Hukam.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੩੧</span><em>Pauri 31</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਸਿਰਜਣਹਾਰ-ਪ੍ਰਭੂ ਦਾ ਟਿਕਾਣਾ ਅਤੇ ਉਸ ਦੇ ਅਮੁੱਕ ਭੰਡਾਰੇ ਹਰੇਕ ਬ੍ਰਹਮੰਡ-ਭਵਨ ਵਿਚ ਮੌਜੂਦ ਹਨ। ਕਰਤਾਰ ਆਪਣੀ ਰਚਨਾ ਦੀ ਨਿਰੰਤਰ ਦੇਖ-ਭਾਲ ਅਤੇ ਸਾਰ-ਸੰਭਾਲ ਕਰਦਾ ਹੈ।</p></div>
+                                <div class="english"><p>The abode of the Creator-Lord and His inexhaustible treasures are present within every universe. The Creator continually watches over and cares for His creation.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੩੨</span><em>Pauri 32</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਪ੍ਰਭੂ ਨਾਲ ਇਕ-ਮਿਕਤਾ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਇਕੱਲੀ ਜੀਭ ਨਾਲ ਹੀ ਨਹੀਂ, ਰੋਮ ਰੋਮ ਨਾਲ ਜਾਪ ਕਰਨਾ ਜ਼ਰੂਰੀ ਹੈ। ਪਰ ਇਹ ਅਜਪਾ-ਜਾਪ ਦੀ ਦਾਤਿ ਆਪਣੇ ਕਿਸੇ ਜਤਨ, ਜਾਂ ਚਤੁਰਾਈ ਦੇ ਬਲ-ਬੋਤੇ ‘ਤੇ ਨਹੀਂ, ਕੇਵਲ ਪ੍ਰਭੂ ਦੀ ਮਿਹਰ ਦੀ ਨਦਰਿ ਦੁਆਰਾ ਪ੍ਰਾਪਤ ਹੋ ਸਕਦੀ ਹੈ । ‘ਨਦਰਿ’ ਦੇ ਗੁਰਮਤਿ- ਸਿਧਾਂਤ ਦੀ ਸੋਝੀ ਤੋਂ ਵਿਰਵੇ ਹਉ-ਗ੍ਰਸਤ ਮਨੁੱਖਾਂ ਦੀ ਅਜਪਾ-ਜਾਪ, ਅਥਵਾ, ਗਗਨ-ਉਡਾਰੀ ਦੀ ਸ਼ੇਖੀ ਨਿਰਾ ਝੂਠ ਹੀ ਹੁੰਦਾ ਹੈ।</p></div>
+                                <div class="english"><p>To attain oneness with the Lord, remembrance must take place not merely with the tongue but with every hair of the body. Yet the gift of ajapa-jaap cannot be obtained through one&#x27;s own effort or cleverness; it can be received only through the Lord&#x27;s gracious glance of grace. The boast of ajapa-jaap or “flying through the heavens” made by ego-ridden people who lack understanding of the Gurmat principle of Nadar is simply false.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੩੩</span><em>Pauri 33</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਹਰੇਕ ਮਨੁੱਖ ਪ੍ਰਭੂ ਦੀ ਕਠ-ਪੁਤਲੀ ਹੈ। ਬੋਲਣ ਵਿਚ, ਚੁਪ ਰਹਿਣ ਵਿਚ, ਜੀਵਣ ਵਿਚ, ਮਰਨ ਵਿਚ, ਮੰਗਣ ਵਿਚ, ਦੇਣ ਵਿਚ, ਸੁਰਤੀ ਲਾਉਣ ਵਿਚ, ਗਿਆਨ-ਵੀਚਾਰ ਵਿਚ, ਮਨੁੱਖ ਦਾ ਆਪਣਾ ਵਸੀਕਾਰ ਨਹੀਂ ਹੁੰਦਾ। ਸਭ ਕੁਝ ਪ੍ਰਭੂ ਦੇ ਹੱਥ-ਵਸ ਹੈ, ਉਹ ਆਪਣੀ ਵਿਉਂਤ ਵਿਚ ਸਭਨਾਂ ਜੀਵ-ਜੰਤੂਆਂ ਨੂੰ ਚਲਾਉਂਦਾ ਹੈ। ਆਪਣੇ ਆਪ ਵਿਚ ਨਾ ਕੋਈ ਉਤਮ ਹੈ ਨਾ ਨੀਚ।</p></div>
+                                <div class="english"><p>Every human being is like a puppet in the Lord&#x27;s hands. In speaking and remaining silent, in living and dying, in asking and giving, in focusing consciousness and contemplating knowledge, a person does not have independent control. Everything is within the Lord&#x27;s hands, and He moves all living beings according to His Divine arrangement. In themselves, none is high and none is low.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੩੪-੩੭</span><em>Pauris 34–37</em></summary>
+                            <div class="pauri-lead">
+                                <div class="punjabi"><p>ਇਹਨਾਂ ਚਹੁੰਆਂ ਪਉੜੀਆਂ ਵਿਚ ਪੰਜ-ਖੰਡਾਂ ਦਾ ਵਰਣਨ ਹੈ। ਇਹ ਪੰਜੇ ਖੰਡ [</p></div>
+                                <div class="english"><p>These four pauris describe the five khands. The five khands—</p></div>
+                            </div>
+
+                            <details class="khand">
+                                <summary><span>ਧਰਮ-ਖੰਡ</span><em>Dharam Khand</em></summary>
+                                <div class="khand-grid">
+                                    <div class="punjabi"><p>ਕੁਦਰਤਿ-ਪਸਾਰੇ ਵਿਚ ਕਰਤਾ ਪੁਰਖ ਵਲੋਂ ਸਿਰਜੀ ਧਰਮ-ਖੰਡ ਰੂਪੀ ਸੱਚੀ ਧਰਮ-ਸਾਲ ਨੂਰੀ-ਧਰਤੀ ਹੈ। ਵੱਖ ਵੱਖ ਖੰਡਾਂ ਬ੍ਰਹਮੰਡਾਂ ਵਿਚਲੇ ਵੱਖ ਵੱਖ ਰੂਪਾਂ-ਰੰਗਾਂ, ਜਾਤਾਂ-ਜਿਨਸਾਂ ਅਤੇ ਨਾਵਾਂ-ਥਾਵਾਂ ਦੇ ਜੀਵ ਜੀਵਨ-ਯਾਤਰਾ ਸੰਪੂਰਨ ਕਰਨ ਮਗਰੋਂ ਇਸ ਨੂਰੀ ਧਰਮ-ਸਾਲ ਪਰਤੀ ਵਿਚ ਪ੍ਰਵੇਸ਼ ਕਰਦੇ ਹਨ, ਜਿਥੇ ਉਹਨਾਂ ਦੇ ਕੀਤੇ ਕਰਮਾਂ ਦਾ ਲੇਖਾ-ਜੋਖਾ ਧਰਮ-ਨਿਆਉਂ ਅਧੀਨ ਹੁੰਦਾ ਹੈ, ਕੱਚੇ ਪੱਕੇ ਦੀ ਪਰਖ ਹੁੰਦੀ ਹੈ।</p>
+                                        <p>ਨਾਮ-ਬਾਣੀ ਦੇ ਅਭਿਆਸ ਰਾਹੀਂ ਜੀਵਨ-ਯਾਤਰਾ ਸਫਲ ਕਰ ਕੇ ਪ੍ਰਵਾਨ ਚੜ੍ਹੇ ਪੰਚ-ਜਨਾਂ ਦੇ ਦਿਬ-ਮੂਰਤੀ ਨੂਰੀ ਮਸਤਕਾਂ ਉੱਤੇ ਸੱਚੇ ਸਾਹਿਬ ਦਾ ਨਦਰਿ-ਨੀਸ਼ਾਨ ਏਥੇ ਉੱ ਕਰਿਆ ਜਾਂਦਾ ਹੈ।</p></div>
+                                    <div class="english"><p>Within the expanse of creation, Dharam Khand is the true dharamsala and luminous earth created by the Karta Purakh. After completing the journey of life, beings of different forms, colours, kinds, names and places from the various realms and universes enter this luminous dharamsala, where the account of their deeds is considered under Divine justice and the genuine is distinguished from the unripe.</p>
+                                        <p>Through practice of Naam-Bani, the Panch persons who have successfully completed the journey of life and attained spiritual acceptance receive, upon their luminous foreheads, the mark of the True Master’s gracious glance.</p></div>
+                                </div>
+                            </details>
+                            <details class="khand">
+                                <summary><span>ਗਿਆਨ-ਖੰਡ</span><em>Gian Khand</em></summary>
+                                <div class="khand-grid">
+                                    <div class="punjabi"><p>ਧਰਮ-ਖੰਡ ਦੀ ਸੱਚੀ ਧਰਮ-ਸਾਲ ਧਰਤੀ ਵਿਚ ਪਰਵਾਨੇ ਅਤੇ ਨਦਰਿ-ਨਿਸ਼ਾਨੇ ਪੰਚ ਜਨਾਂ ਨੂੰ ਫਿਰ ਗ਼ੈਬੀ-ਗਿਆਨ ਦੇ ਪ੍ਰਕਾਸ਼ ਵਾਲੇ ਗਿਆਨ-ਖੰਡ ਵਿਚ ਪ੍ਰਵੇਸ਼ ਨਸੀਬ ਹੁੰਦਾ ਹੈ। ਉਹਨਾਂ ਨੂੰ ਗਿਆਨ-ਪ੍ਰਚੰਡ ਦਿੱਬ-ਚਖਸ਼ੂਆਂ ਰਾਹੀਂ ਅਦਭੁਤ ਅਤੇ ਅਨੰਦ-ਦਾਇਕ ਗਿਆਨ-ਚਮਤਕਾਰ ਦ੍ਰਿਸ਼ਟੀ ਗੋਚਰ ਹੁੰਦੇ ਹਨ।</p>
+                                        <p>ਗਿਆਨ-ਖੰਡ ਦੇ ਗਿਆਨ-ਵਰਤਾਰੇ ਵਿਚ ਅਣਗਿਣਤ ਪ੍ਰਕਿਰਤਕ-ਤੱਤ : ਪਉਣਾਂ, ਪਾਣੀ, ਅਗਨੀਆਂ, ਖਾਣੀਆਂ, ਬਾਣੀਆਂ, ਕਰਮ-ਧਰਤੀਆਂ, ਸੁਮੇਰ ਪਰਬਤ, ਚੰਦ, ਸੂਰ ਅਤੇ ਰਤਨ-ਸਾਗਰ ਸਾਮਰਤੱਖ ਹੁੰਦੇ ਹਨ।</p>
+                                        <p>ਅਣਗਿਣਤ ਬ੍ਰਹਮੇ, ਵਿਸ਼ਨੂੰ, ਸ਼ਿਵ, ਸਿਧ, ਬੁਧ (ਬੁਧੀਮਾਨ), ਨਾਥ, ਦੇਵੀ ਦੇਵਤੇ, ਦੈਂਤ, ਧ੍ਰੂ ਅਤੇ ਉਸ ਦੇ ਉਪਦੇਸ਼-ਕਰਤਾ (ਨਾਰਦ) ਅਤੇ ਸ਼ਾਹ ਪਾਤਿਸ਼ਾਹ ਸਚੇ ਸਾਹਿਬ ਦੀ ਹੁਕਮ-ਕਾਰ ਕਮਾਉਂਦੇ ਦਿਸਦੇ ਹਨ।</p></div>
+                                    <div class="english"><p>Those Panch persons who have been accepted and marked in the true dharamsala of Dharam Khand then gain entry into Gian Khand, the realm illumined by transcendent knowledge. Through knowledge-filled spiritual vision they behold wondrous and bliss-giving manifestations of knowledge.</p>
+                                        <p>Within the activity of knowledge in Gian Khand, countless natural elements—winds, waters, fires, sources of life, Banis, realms of action, Mount Sumer, moons, suns and oceans of jewels—become directly perceptible.</p>
+                                        <p>Countless Brahmas, Vishnus, Shivas, siddhs, wise beings, naths, deities, demons, Dhruv and his teacher Narad, and kings and emperors are seen carrying out the work of the True Master&#x27;s Hukam.</p></div>
+                                </div>
+                            </details>
+                            <details class="khand">
+                                <summary><span>ਸਰਮ-ਖੰਡ</span><em>Saram Khand</em></summary>
+                                <div class="khand-grid">
+                                    <div class="punjabi"><p>ਗਿਆਨ-ਖੰਡ ਦੇ ਗਿਆਨ-ਪ੍ਰਚੰਡੀ ਵਿਸਮਾਦੀ ਕੌਤਕਾਂ ਨਾਲ ਬਿਸਮ-ਬਿਸਮਾਦ ਹੋਏ ਪੰਚ ਜਨਾਂ ਨੂੰ ਫਿਰ ਸਰਮ-ਖੰਡ ਵਿਚ ਪ੍ਰਵੇਸ਼ ਮਿਲਦਾ ਹੈ। ਸਰਮ-ਖੰਡ ਦੀ ਬਣਤਰ ਨਿਰਾ ਨੂਰ ਹੀ ਨੂਰ ਹੈ। ਇਸ ਨੂੰ ਮਿਹਨਤ-ਮੁਸ਼ੱਕਤ ਦਾ ਖੰਡ ਸਮਝਣ-ਸਮਝਾਉਣ ਵਾਲੇ ਵੀਰ ਟਪਲਾ ਖਾਂਦੇ ਹਨ, ਕਿਉਂਜ ਮਿਹਨਤ-ਮੁਸ਼ੱਕਤ ਦਾ ਮੰਡਲ ਤਾਂ ਸੰਸਾਰ-ਕਰਮ-ਖੇਤਰ ਹੈ। ਸਰਮ-ਖੰਡ ਵਿਚ ਤਾਂ ਪ੍ਰਵੇਸ਼ ਹੀ ਜੀਵਨ-ਕਾਲ ਵਿਚ ਕੀਤੀ ਕਰੜੀ ਨਾਮ-ਘਾਲਣਾ ਦੇ ਫਲ-ਸਰੂਪ ਮਿਲਦਾ ਹੈ। ਫਿਰ ਹੋਰ ਘਾਲਣਾ ਕਾਹਦੀ ? &#x27;ਸਰਮ&#x27; ਸ਼ਬਦ ਵਾਸਤਵ ਵਿਚ ਸੰਸਕ੍ਰਿਤ ਸ਼ਬਦ &#x27;ਸ਼ਰਮ-ਮਨ੍&#x27; ਦਾ ਪੰਜਾਬੀ ਰੂਪਾਂਤਰ ਹੈ, ਜਿਸ ਦਾ ਅਰਥ &#x27;ਖ਼ੁਸ਼ੀ-ਅਨੰਦ&#x27; ਹੈ। ਸੋ, ਸਰਮ-ਖੰਡ ਰੱਬੀ-ਖੁਸ਼ੀ ਅਤੇ ਅਨੰਦ ਦਾ ਮੰਡਲ ਹੈ।</p>
+                                        <p>ਸਰਮ-ਖੰਡ ਵਿਚ ਅਭਿਆਸੀ-ਜਨਾਂ ਦੀ ਸੁਰਤਿ, ਮਤਿ ਅਤੇ ਮਨੀਖਿਆ (ਮਨ ਦੀ ਉਹ ਹਾਲਤ ਜਿਸ ਵਿਚ ਇੱਛਾ ਪ੍ਰਧਾਨ ਹੈ) ਅਤੇ ਬੁਧਿ ਦੀ ਨੂਰੀ ਘਾੜਤ ਘੜੀ ਜਾਂਦੀ ਹੈ। ਉਥੇ ਦੈਵੀ-ਗੁਣਾਂ-ਸੰਪੰਨ ਸੁਰਾਂ ਅਤੇ ਦਿਬ-ਜੋਤਿ ਪ੍ਰਕਾਸ਼ਨੀ ਸਿਧੀ ਨੂੰ ਪ੍ਰਾਪਤ ਹੋਏ ਸਿੱਧਾਂ ਵਾਲੀ ਆਤਮ-ਸੋਝੀ ਘੜੀ ਜਾਂਦੀ ਹੈ। ਸਰਮ-ਖੰਡ ਦੀ ਗਹਿਣ-ਗਤਿ ਕਥਨ-ਕਹਿਣ ਤੋਂ ਬਾਹਰ ਹੈ।</p></div>
+                                    <div class="english"><p>After being overwhelmed with wonder at the brilliant and astonishing manifestations of knowledge in Gian Khand, the Panch persons enter Saram Khand. Its structure is pure luminous radiance. Those who understand it merely as a realm of physical labour misunderstand it, because the sphere of physical effort is the world&#x27;s field of action. Entry into Saram Khand is obtained as the fruit of the arduous practice of Naam carried out during life. What further labour is required there? The word “Saram” is understood here as a Punjabi form of the Sanskrit expression “sharam-man,” meaning joy and bliss. Thus Saram Khand is the realm of Divine joy and bliss.</p>
+                                        <p>In Saram Khand the awareness, understanding, inner inclination and intellect of the practitioners are formed in luminous ways. There the spiritual understanding associated with beings endowed with Divine virtues and with the perfected ones who have attained luminous spiritual realisation is shaped. The glory and nature of Saram Khand are beyond complete description.</p></div>
+                                </div>
+                            </details>
+                            <details class="khand">
+                                <summary><span>ਕਰਮ-ਖੰਡ</span><em>Karam Khand</em></summary>
+                                <div class="khand-grid">
+                                    <div class="punjabi"><p>ਕਰਮ-ਖੰਡ ਰੱਬੀ ਬਖ਼ਸ਼ਸ਼ ਦਾ ਖੰਡ ਹੈ। ਏਥੇ ਆਤਮ-ਬਲ ਦੀ ਪ੍ਰਧਾਨਤਾ ਹੈ। ਇਸ ਖੰਡ ਵਿਚ ਆਤਮ-ਜੇਤੂ ਮਹਾ-ਬਲੀ ਸੂਰਮੇ ਵਸਦੇ ਹਨ। ਕਾਮਾਦਿਕ ਵੈਰੀਆਂ ਨੂੰ ਪਛਾੜ ਕੇ ਆਤਮ-ਪਰਮਾਤਮ ਦੀ ਸੰਧੀ ਮਿਲਾਉਣ ਵਾਲੇ ਇਹਨਾਂ ਜੋਧਿਆਂ ਦੇ ਰਗੋ-ਰੇਸ਼ੇ ਵਿਚ ਰਮਤ-ਰਾਮ ਓਤਿ-ਪੋਤਿ ਸਮਾਇਆ ਹੁੰਦਾ ਹੈ। ਇਹਨਾਂ ਪ੍ਰੀਤਵਾਨਾਂ ਦੀਆਂ ਸੁਰਤਾਂ ਵਾਹਿਗੁਰੂ ਦੀ ਮਹਿਮਾ ਵਿਚ ਸੀਤੀਆਂ-ਪ੍ਰੋਤੀਆਂ ਹੁੰਦੀਆਂ ਹਨ, ਜਿਸ ਦੇ ਫਲ-ਸਰੂਪ ਉਹਨਾਂ ਦੇ ਨੂਰੋ-ਨੂਰ ਹੋਏ ਦਿੱਬ-ਸਰੂਪਾਂ ਦੀ ਝਾਲ ਨਹੀਂ ਝਲੀ ਜਾਂਦੀ। ਆਤਮ-ਤਲ ਉਤੇ ਰਮਤ-ਰਾਮ ਨਾਲ ਇਕ-ਮਿਕ ਹੋਇਆਂ ਨੂੰ ਨਾ ਕਿਸੇ ਠੱਗੀ-ਠੌਰੀ ਦਾ ਸੰਸਾ ਵਿਆਪਦਾ ਹੈ, ਨਾ ਮੌਤ ਦਾ ਡਰ। ਕਈ ਲੋਕਾਂ (ਖੰਡਾਂ ਬ੍ਰਹਮੰਡਾਂ) ਦੇ ਭਗਤ-ਜਨ ਏਥੇ ਸੱਚੇ ਪ੍ਰਭੂ ਨਾਲ ਨਿਰੰਤਰ ਆਤਮ-ਕੇਲ ਕਰਦੇ ਹਨ।</p></div>
+                                    <div class="english"><p>Karam Khand is the realm of Divine grace. Here spiritual strength is predominant. The mighty spiritual warriors who have conquered themselves dwell here. Having defeated enemies such as lust and other passions and united the self with the Supreme, these spiritual heroes have the all-pervading Lord permeating every fibre of their being. The awareness of these lovers is woven into the praise of Waheguru, and as a result their luminous spiritual forms radiate with such brilliance that their splendour cannot be endured by ordinary sight.</p>
+                                        <p>Those who have become one with the all-pervading Lord at the spiritual level are troubled neither by fear of deceit nor by fear of death. Devotees from many realms and universes continually enjoy spiritual communion with the True Lord here.</p></div>
+                                </div>
+                            </details>
+                            <details class="khand">
+                                <summary><span>ਸਚ-ਖੰਡ</span><em>Sach Khand</em></summary>
+                                <div class="khand-grid">
+                                    <div class="punjabi"><p>ਸਚ-ਖੰਡ ਸਾਰੇ ਜੋਤਿ-ਮੰਡਲਾਂ ਦਾ ਸਿਖਰਲਾ ਖੰਡ ਹੈ। ਸ੍ਰੀ ਜਪੁਜੀ ਸਾਹਿਬ ਦੀ ੩੭ਵੀਂ ਪਉੜੀ ਵਿਚ ਕਰਮ-ਖੰਡ ਅਤੇ ਸਚ-ਖੰਡ ਦਾ ਸਾਂਝਾ ਵਰਣਨ ਹੈ, ਜਿਸ ਤੋਂ ਵਿਦਤ ਹੁੰਦਾ ਹੈ ਕਿ ਇਹਨਾਂ ਦੋਹਾਂ ਖੰਡਾਂ ਦੀ ਪਰਸਪਰ ਸਾਂਝ ਹੈ। ਆਪੋ ਆਪਣੀ ਵਖਰੀ ਹੋਂਦ-ਆਭਾ ਦੇ ਬਾਵਜੂਦ ਇਹਨਾਂ ਦੀ ਪਰਸਪਰ ਅਭੇਦਤਾ ਹੈ। ਸਚ-ਖੰਡ ਨਿਰੰਕਾਰ ਦਾ ਨਿਵਾਸ-ਅਸਥਾਨ ਹੈ। ਇਹ ਖੰਡ ਨਾਮ-ਬਾਣੀ ਦੀ ਅਤੁੱਟ ਕਮਾਈ ਸਦਕਾ ਸਚਿਆਰ-ਪਦ ਨੂੰ ਪ੍ਰਾਪਤ ਹੋ ਕੇ ਪ੍ਰਵਾਣ ਪਏ ਭਗਤ-ਜਨਾਂ ਲਈ ਨਿਰੰਕਾਰ ਦੀ ਸਨਮੁਖ ਹਜ਼ੂਰੀ ਅਤੇ ਦਰਸ-ਮਿਲਾਪ ਦਾ ਪਰਮ-ਅਨੰਦੀ ਸੁਭਾਗ-ਮੰਡਲ ਹੈ। ਏਥੇ ਨਿਰੰਕਾਰ ਆਪਣੀ ਰਚੀ ਕੁਲ ਕਾਇਨਾਤ ਦੀ ਦੇਖ-ਭਾਲ ਕਰ ਕੇ ਅਤੇ ਆਪਣੇ ਖ਼ਾਸੁਲ-ਖ਼ਾਸ ਭਗਤ ਜਨਾਂ ਉਤੇ ਨਿਹਾਲਵੀਂ ਦ੍ਰਿਸ਼ਟੀ ਕਰ ਕਰ ਕੇ ਵਿਗਸਦਾ ਹੈ। ਏਥੇ ਨਿਰੰਕਾਰ ਦੇ ਵੈਰਾਟ-ਰੂਪ ਵਿਚ ਅਨੰਤ ਖੰਡ ਮੰਡਲ ਸਮਾਏ ਦ੍ਰਿਸ਼ਟੀਮਾਨ ਹੁੰਦੇ ਹਨ। ਏਥੋਂ ਹਰ ਪਾਸੇ ਹੁਕਮ ਦੀ ਕਾਰ ਹੁੰਦੀ ਪ੍ਰਤੱਖ ਦਿਸਦੀ ਹੈ। ਸਚ-ਖੰਡ ਦੇ ਵਰਤਾਰੇ ਦਾ ਪੂਰਨ ਤੌਰ &#x27;ਤੇ ਬਿਆਨ ਕਰ ਸਕਣਾ ਅਤਿ-ਕਠਨ ਹੈ।</p></div>
+                                    <div class="english"><p>Sach Khand is the highest of all the luminous realms. Pauri 37 of Sri Japji Sahib gives a combined description of Karam Khand and Sach Khand, showing the relationship between the two. Although they have their own distinct radiance and identity, they are inseparable from one another. Sach Khand is the abode of the Formless One. It is the supreme realm of blissful presence before and union with the Formless One for devotees who, through unbroken practice of Naam-Bani, have attained the state of sachiar and been accepted.</p>
+                                        <p>Here the Formless One delights while caring for the entire creation He has made and casting His gracious glance upon His beloved devotees. In His universal form, countless realms and universes are seen contained within Him. From here the working of Hukam in every direction is directly perceived. The full activity of Sach Khand is exceedingly difficult to describe.</p></div>
+                                </div>
+                            </details>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਪਉੜੀ ੩੮</span><em>Pauri 38</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਇਸ ਪਉੜੀ ਵਿਚ ਰੱਬੀ-ਟਕਸਾਲ ਦਾ ਵਰਣਨ ਹੈ। ਟਕਸਾਲ ਦਾ ਅਰਥ ਹੈ—ਸਰਕਾਰ ਵਲੋਂ ਪ੍ਰਵਾਣਤ ਉਹ ਸੰਸਥਾ, ਜਿਥੇ ਕਿਸੇ ਦੇਸ਼ ਦਾ ਪ੍ਰਚਲਤ ਸਿੱਕਾ ਘੜਿਆ ਜਾਂਦਾ ਹੈ। ਟਕਸਾਲ ਵਿਚ ਭੱਠੀ, ਅਹਰਣ, ਹਥੌੜੇ, ਅੱਗ, ਧੌਂਕਣੀ, ਕੁਠਾਲੀ ਦੀ ਸਹਾਇਤਾ ਨਾਲ ਸੁਨਿਆਰੇ ਦੁਆਰਾ ਕਿਸੇ ਧਾਤ ਤੋਂ ਪ੍ਰਵਾਨਤ ਸਿੱਕਾ ਘੜਿਆ ਜਾਂਦਾ ਹੈ, ਜਿਸ ਉਤੇ ਸ਼ਾਹੀ ਮੁਹਰ ਲਗਣ ਮਗਰੋਂ ਉਹ ਪ੍ਰਵਾਨਤ ਸਿੱਕਾ ਬਣਦਾ ਹੈ। ਇਸ ਅਲੰਕਾਰ ਨੂੰ ਲੈ ਕੇ ਇਸ ਪਉੜੀ ਵਿਚ ਸ਼ਬਦ ਅਥਵਾ ਮਨੁੱਖੀ ਮਨ ਨੂੰ ਰੱਬੀ ਟਕਸਾਲ ਵਿਚ ਘੜਨ ਦੀ ਜੁਗਤੀ ਦਰਸਾਈ ਗਈ ਹੈ। ਇਸ ਰੱਬੀ ਘਾੜਤ ਲਈ ਲੋੜੀਂਦੇ ਸਾਜ਼-ਸਮਾਨ ਦਾ ਵੇਰਵਾ ਇਸ ਪ੍ਰਕਾਰ ਹੈ :</p>
+                                    <p>ਦੁਨਿਆਵੀ ਟਕਸਾਲ ਦਾ ਸਾਜ਼-ਸਮਾਨ
+                                        ਰੱਬੀ ਟਕਸਾਲ ਦਾ ਸਾਜ਼-ਸਮਾਨ
+                                        ਪਾਹਾਰਾ (ਭੱਠੀ)
+                                        ਜਤ
+                                        ਸੁਨਿਆਰਾ
+                                        ਧੀਰਜ
+                                        ਅਹਰਣਿ
+                                        ਮਤਿ
+                                        ਹਥੀਆਰ (ਹਥੌੜਾ)
+                                        ਵੇਦ (ਗੁਰੂ-ਗਿਆਨ)
+                                        ਖਲਾ (ਧੌਂਕਣੀ)
+                                        ਭਾਉ (ਰੱਬੀ-ਡਰ)
+                                        ਅਗਨੀ
+                                        ਤਪ-ਤਾਉ (ਕਰੜੀ-ਘਾਲਣਾ, ਗੁਰੂ ਦੀ ਦੱਸੀ ਸੇਵਾ)
+                                        ਭਾਂਡਾ (ਕੁਠਾਲੀ)
+                                        ਭਾਉ (ਪ੍ਰੇਮ)
+                                        ਲੋੜੀਂਦਾ ਮਸਾਲਾ (ਸੁਹਾਗਾ ਆਦਿ)
+                                        ਅੰਮ੍ਰਿਤ-ਨਾਮ
+                                        ਕੋਈ ਧਾਤ
+                                        ਸ਼ਬਦ (ਸੰਕਲਪ ਕਰਨ ਵਾਲਾ—ਮਨ)</p>
+                                    <p>ਨੋਟ : ਇਥੇ ‘ਸ਼ਬਦ’ ਤੋਂ ਭਾਵ ਗੁਰ-ਸ਼ਬਦ ਨਹੀਂ, ਇਥੇ ‘ਸ਼ਬਦ’ ਦਾ ਅਰਥ ਹੈ ‘ਸੰਕਲਪ ਕਰਨ ਵਾਲਾ—ਮਨ’।</p>
+                                    <p>ਮਨ ਦੀ ਅਨੂਠੀ ਘਾੜਤ ਘੜਨ ਦੀ ਨਾ ਤਾਂ ਕਿਸੇ ਦੀ ਰੁਚੀ ਹੁੰਦੀ ਹੈ ਅਤੇ ਨਾ ਹੀ ਕਿਸੇ ਅੰਦਰ ਏਨੀ ਸਮਰੱਥਾ ਹੁੰਦੀ ਹੈ। ਮਨ ਨੂੰ ਘੜਨ ਦੀ ਵਿਲੱਖਣ ਅਤੇ ਵਿਚਿੱਤ੍ਰ ਕਾਰ ਉਹਨਾਂ ਵਡਭਾਗੇ ਮਨੁੱਖਾਂ ਨੂੰ ਨਸੀਬ ਹੁੰਦੀ ਹੈ ਜਿਨ੍ਹਾਂ ਉਤੇ ਕਰਤਾ ਪੁਰਖ ਦੀ ਮਿਹਰ ਦੀ ਨਜ਼ਰ ਹੋਵੇ ! ਜਿਨ੍ਹਾਂ ਦਾ ਮਨ ਰੱਬੀ-ਟਕਸਾਲ ਵਿਚ ਘੜਿਆ ਜਾਂਦਾ ਹੈ, ਉਹਨਾਂ ਨੂੰ ਨਦਰਾਲੂ ਪ੍ਰਭੂ ਮਿਹਰ ਦੀ ਨਦਰਿ ਨਾਲ ਨਿਹਾਲੋ ਨਿਹਾਲ ਕਰ ਦਿੰਦਾ ਹੈ।</p></div>
+                                <div class="english"><p>This pauri describes the Divine mint. A mint is an institution authorised by a government where the currency of a country is produced. In a mint, with the help of a furnace, anvil, hammers, fire, bellows and crucible, a goldsmith shapes approved coin from metal; once the royal seal is placed upon it, the coin becomes officially accepted. Using this metaphor, the pauri describes the method by which the Shabad—or, in this context, the human mind—is formed in the Divine mint. The necessary equipment for this Divine formation is given as follows:</p>
+                                    <p>Worldly mint: furnace, goldsmith, anvil, hammer, bellows, fire, crucible, required flux/material, metal.
+                                        Divine mint: restraint/discipline, patience, understanding, Veda (Guru-knowledge), Divine awe, arduous spiritual practice and service prescribed by the Guru, love, Amrit-Naam, and Shabad (the mind that forms intentions).</p>
+                                    <p>Note: Here “Shabad” does not mean Guru-Shabad; here “Shabad” means the mind—the one that forms intentions.</p>
+                                    <p>No one naturally has either the inclination or sufficient capacity to form the mind in this unique way. The wondrous and distinctive work of shaping the mind is granted to those fortunate people upon whom the Karta Purakh casts His gracious glance. Those whose minds are shaped in the Divine mint are blessed by the Grace-filled Lord with abundant grace and favour.</p></div>
+                            </div>
+                        </details>
+                        <details class="pauri">
+                            <summary><span>ਅੰਤਮ ਸਲੋਕ</span><em>Final Salok</em></summary>
+                            <div class="pauri-grid">
+                                <div class="punjabi"><p>ਮਨੁੱਖੀ ਸ਼ਖ਼ਸੀਅਤ ਦੇ ਦੋ ਪ੍ਰਮੁੱਖ ਅੰਗ ਹਨ—ਸਰੀਰ ਅਤੇ ਆਤਮਾ । ਜਿਵੇਂ
+                                    ਮਨੁੱਖੀ ਸ਼ਖ਼ਸੀਅਤ ਦੇ ਬਾਹਰਮੁਖੀ ਅੰਗ—ਸਰੀਰ—ਲਈ ਪ੍ਰਾਣ ਗੌਰਵ-ਮਈ ਅਨਸਰ ਹੈ, ਜਿਵੇਂ ਪਾਣੀ ਦਾ ਪਿਤਾ ਸਮਾਨ ਅਤੇ ਧਰਤੀ ਦਾ ਮਾਤਾ ਸਮਾਨ ਮਹੱਤਵ ਹੈ, ਤਿਵੇਂ ਹੀ ਅੰਤਰ-ਮੁਖੀ ਅੰਗ ਆਤਮਾ ਲਈ ਗੁਰ-ਸ਼ਬਦ ਗੁਰੂ ਹੈ, ਪਾਣੀ (ਨਾਮ-ਜਲ) ਅਤੇ ਧਰਤੀ (ਧੀਰਜ ਅਤੇ ਨਿਮਰਤਾ) ਮਹੱਤਵ ਪੂਰਣ ਹੈ।</p>
+                                    <p>ਪਉਣ ਗੁਰੂ ਗੁਰ ਸਬਦੁ ਹੈ ਵਾਹਿਗੁਰੂ ਗੁਰ ਸਬਦ ਸੁਣਾਇਆ ॥
+                                        ਪਾਣੀ ਪਿਤਾ ਪਵਿਤ੍ਰ੍ਰ ਕਰਿ ਗੁਰਮੁਖਿ ਪੰਥ ਨਿਵਾਣਿ ਚਲਾਇਆ ॥
+                                        ਧਰਤੀ ਮਾਤ ਮਹਤ ਕਰਿ ਓਤਿਪੋਤਿ ਸੰਜੋਗੁ ਬਣਾਇਆ ॥</p>
+                                    <p>(ਵਾਰ ੬, ਪਉੜੀ ੫, ਭਾਈ ਗੁਰਦਾਸ ਜੀ)</p>
+                                    <p>ਦੋ ਕਾਲ-ਟੋਟੇ ਦਿਨ ਅਤੇ ਰਾਤ ਜੀਵਾਂ ਦੇ ਸੁਖ-ਅਰਾਮ ਲਈ ਦਾਇਆ ਅਤੇ ਦਾਈ ਦਾ ਕਰਤਵ ਨਿਭਾਉਂਦੇ ਹਨ। ਸਾਰਾ ਸੰਸਾਰ ਇਹਨਾਂ ਜਾਨ-ਸੁਖਾਲਿਆਂ ਦੀ ਗੋਦ ਵਿਚ ਸੁਖ ਮਾਣਦਾ ਹੋਇਆ ਜੀਵਨ-ਖੇਡ ਖੇਡਦਾ ਹੈ।</p>
+                                    <p>ਜੀਵਨ-ਖੇਡ ਵਿਚਲੀ ਮਨੁੱਖ ਦੀ ਹਰੇਕ ਕਰਣੀ; ਚੰਗੀ ਜਾਂ ਮੰਦੀ ਦਾ ਲੇਖਾ-ਜੋਖਾ ਧਰਮ ਰਾਇ ਦੀ ਹਜ਼ੂਰੀ ਵਿਚ ਅਵੱਸ਼ ਹੀ ਹੁੰਦਾ ਹੈ। ਆਪੋ ਆਪਣੀ ਚੰਗੀ ਜਾਂ ਮੰਦੀ ਕਰਣੀ-ਕਰਤੂਤ ਮੂਜਬ ਹਰੇਕ ਜੀਵ ਨੂੰ ਰੱਬੀ ਨੇੜਤਾ ਜਾਂ ਦੂਰੀ ਪ੍ਰਾਪਤ ਹੁੰਦੀ ਹੈ।</p>
+                                    <p>ਮਨੁੱਖੀ ਜੀਵਨ ਦਾ ਮੁਖ ਮਨੋਰਥ ਨਾਮ ਜਪਣਾ ਹੈ। ਜੋ ਮਨੁੱਖ ਨਾਮ ਜਪਦੇ ਹਨ, ਉਹ ਹੀ ਸਫਲ ਘਾਲ ਘਾਲਦੇ ਹਨ। ਉਹਨਾਂ ਨੂੰ ਹਲਤ ਪਲਤ ਵਿਚ ਸੁਰਖ਼ਰੂਈ ਮਿਲਦੀ ਹੈ। ਏਥੇ ਹੀ ਬਸ ਨਹੀਂ, ਉਹਨਾਂ ਦੀ ਘਾਲਣਾ ਸਦਕਾ ਅਣਗਿਣਤ ਜੀਵਾਂ ਦਾ ਆਵਾ-ਗਵਨ ਤੋਂ ਛੁਟਕਾਰਾ ਹੋ ਜਾਂਦਾ ਹੈ।</p></div>
+                                <div class="english"><p>The human personality has two principal aspects—the body and the soul. Just as breath is the glorious vital element for the outward-facing aspect of human personality, the body, and just as water has the importance of a father and earth the importance of a mother, so for the inward-facing aspect, the soul, the Guru-Shabad is the Guru, while water (the water of Naam) and earth (patience and humility) are important.</p>
+                                    <p>“Air is the Guru; the Guru&#x27;s Shabad is the sound through which Waheguru is taught.
+                                        Water is the father, made pure, and the Gurmukh is led along the path of humility.
+                                        Earth is the mother; honoured greatly, it forms the bonds woven through all.”</p>
+                                    <p>(Vaar 6, Pauri 5, Bhai Gurdas Ji)</p>
+                                    <p>The two portions of time, day and night, fulfil the role of a caring mother and nurse for the comfort and rest of living beings. The whole world, enjoying comfort in the lap of these bringers of ease, plays the game of life.</p>
+                                    <p>In the game of life, every action of a human being—good or bad—is certainly accounted for in the presence of Dharam Rai. According to each being&#x27;s own good or bad actions and conduct, each receives nearness to or distance from the Divine.</p>
+                                    <p>The chief purpose of human life is to recite and remember Naam. Those who remember Naam are the ones who make the truly successful effort. They receive honour and fulfilment in both this life and the life hereafter. And it does not end there: through their spiritual effort, countless beings are freed from the cycle of coming and going.</p></div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="note">
+                        <strong>Translation note:</strong> The English text on this page is a translation of the supplied Punjabi exposition. Key Gurmat terms such as <em>Hukam, Naam, Shabad, Nadar, Sachiar, Maya</em> and the names of the five <em>Khands</em> have been retained where doing so preserves the meaning and terminology of the original.
+                    </div>
+                </div>
+            </details>
+
+            <details class="section">
+                <summary><span>ਵਿਆਕਰਣਿਕ ਸ਼ਬਦਾਵਲੀ ਦੀ ਵਿਆਖਿਆ</span><span>Explanation of Grammatical Terminology</span></summary>
+                <div class="coming">
+                    <div class="coming-pa">ਜਲਦ ਆ ਰਿਹਾ ਹੈ</div>
+                    <div class="coming-en">COMING SOON</div>
+                </div>
+            </details>
+
+            <details class="section">
+                <summary><span>ਜਪੁ ਜੀ ਸਾਹਿਬ ਸਰਲ ਸਟੀਕ</span><span>Simple Commentary on Japji Sahib</span></summary>
+                <div class="coming">
+                    <div class="coming-pa">ਜਲਦ ਆ ਰਿਹਾ ਹੈ</div>
+                    <div class="coming-en">COMING SOON</div>
+                </div>
+            </details>
+
+        </div>
+
+        <a href="/articles/Talwara/index.html" class="back">← Back To Talwara Articles</a>
+    </div>
+</main>
+
+<footer>© 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏</footer>
+
+<script>
+function setLang(lang){
+  const c=document.getElementById('content');
+  const pa=document.getElementById('paBtn');
+  const en=document.getElementById('enBtn');
+  if(lang==='en'){c.classList.add('en-only');c.classList.remove('pa-only');en.classList.add('active');pa.classList.remove('active');}
+  else{c.classList.add('pa-only');c.classList.remove('en-only');pa.classList.add('active');en.classList.remove('active');}
+}
+</script>
+</body>
+</html>
