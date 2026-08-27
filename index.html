@@ -8,6 +8,12 @@
     <title>GurmatKhajana</title>
     <link rel="icon" type="image/png" href="images/logo/favicon.png">
 
+    <meta name="description" content="GurmatKhajana — a living archive of articles and Jeevani preserving the spiritual legacy of notable Gursikhs.">
+    <meta property="og:title" content="GurmatKhajana">
+    <meta property="og:description" content="The Living Archive of Gursikh Legacy">
+    <meta property="og:image" content="/images/logo/logo.png">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -447,6 +453,32 @@ a{
     line-height:1.8;
 }
 
+/* VIEW ALL LINK */
+
+.view-all-wrap{
+    text-align:center;
+    margin-top:50px;
+}
+
+.btn-view-all{
+    display:inline-block;
+    padding:16px 42px;
+    border-radius:50px;
+    border:1px solid rgba(212,164,44,0.35);
+    background:rgba(212,164,44,0.06);
+    color:#d4a42c;
+    font-size:0.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:0.3s ease;
+}
+
+.btn-view-all:hover{
+    background:rgba(212,164,44,0.14);
+    border-color:rgba(212,164,44,0.55);
+    transform:translateY(-3px);
+}
+
 /* JEEVANI */
 
 .jeevani-grid{
@@ -695,6 +727,11 @@ footer{
     font-size:0.88rem;
 }
 
+.btn-view-all{
+    width:100%;
+    padding:15px 20px;
+}
+
 footer{
     font-size:0.85rem;
     line-height:1.7;
@@ -799,7 +836,7 @@ footer{
 
         <a href="articles/BhaiRandhirSingh/naamjugti.html" class="card">
 
-            <img src="images/gallery/siteimages/1.jpg">
+            <img src="images/gallery/siteimages/1.jpg" alt="ਨਾਮ ਜਪਣ ਦੀ ਜੁਗਤੀ - Naam Jugti">
 
             <div class="card-overlay">
 
@@ -824,7 +861,7 @@ footer{
 
         <a href="articles/BapuJee/krodh.html" class="card">
 
-            <img src="images/gallery/siteimages/bapujee.jpg">
+            <img src="images/gallery/siteimages/bapujee.jpg" alt="Bhai Sadhu Singh Bapu Jee on Krodh">
 
             <div class="card-overlay">
 
@@ -848,7 +885,7 @@ footer{
 
         <a href="articles/Talwara/mann.html" class="card">
 
-            <img src="/images/gallery/siteimages/Talwara2.jpg">
+            <img src="/images/gallery/siteimages/Talwara2.jpg" alt="ਮਨ - article from Sri Guru Tegh Bahadur Sahib's Bani">
 
             <div class="card-overlay">
 
@@ -872,6 +909,10 @@ footer{
 
     </div>
 
+    <div class="view-all-wrap">
+        <a href="/articles/index.html" class="btn-view-all">View All Articles</a>
+    </div>
+
 </section>
 
 <!-- JEEVANI -->
@@ -888,7 +929,7 @@ footer{
 
         <a href="jeevani/bhai_nirmal_singh.html" class="jeevani-card">
 
-            <img src="images/gallery/jeevani/Bhai_Nirmal_Singh.jpg">
+            <img src="images/gallery/jeevani/Bhai_Nirmal_Singh.jpg" alt="Bhai Nirmal Singh Ji">
 
             <div class="jeevani-overlay">
                 <div class="jeevani-label">Jeevani</div>
@@ -901,7 +942,7 @@ footer{
 
         <a href="jeevani/bhai_jagtar_singh.html" class="jeevani-card">
 
-            <img src="images/gallery/jeevani/Bhai_Jagtar_Singh.jpg">
+            <img src="images/gallery/jeevani/Bhai_Jagtar_Singh.jpg" alt="Bhai Jagtar Singh Ji">
 
             <div class="jeevani-overlay">
                 <div class="jeevani-label">Jeevani</div>
@@ -914,7 +955,7 @@ footer{
 
         <a href="jeevani/bibi_kirpal_kaur.html" class="jeevani-card">
 
-            <img src="images/gallery/jeevani/Kirpal_Kaur.jpg">
+            <img src="images/gallery/jeevani/Kirpal_Kaur.jpg" alt="Bibi Kirpal Kaur Ji">
 
             <div class="jeevani-overlay">
                 <div class="jeevani-label">Jeevani</div>
@@ -926,6 +967,11 @@ footer{
         </a>
 
     </div>
+
+    <div class="view-all-wrap">
+        <a href="/jeevani/index.html" class="btn-view-all">View All Jeevani</a>
+    </div>
+
 </section>
 
 <footer>
