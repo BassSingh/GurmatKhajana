@@ -27,10 +27,14 @@ a{color:inherit;text-decoration:none}
 h1{font-family:Cinzel,'Noto Sans Gurmukhi',serif;font-size:3.4rem;line-height:1.35;color:#d4a42c;margin-bottom:20px}
 .meta{color:#ccc;font-size:1rem;letter-spacing:.7px}
 .wrapper{max-width:1280px;margin:auto;padding:80px 28px 120px}
-.intro-note{padding:34px 42px;margin-bottom:34px;border:1px solid rgba(212,164,44,.2);border-radius:24px;background:linear-gradient(135deg,rgba(20,20,20,.96),rgba(8,8,8,.98))}
-.intro-note h2{font-family:'Noto Sans Gurmukhi',sans-serif;color:#d4a42c;font-size:1.55rem;margin-bottom:18px}
-.intro-note p,.content p{margin-bottom:24px}
-.intro-note p:last-child,.content p:last-child{margin-bottom:0}
+details.intro-note{margin-bottom:34px;border:1px solid rgba(212,164,44,.2);border-radius:24px;background:linear-gradient(135deg,rgba(20,20,20,.96),rgba(8,8,8,.98));overflow:hidden}
+details.intro-note>summary{list-style:none;cursor:pointer;padding:28px 42px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#d4a42c;font-family:'Noto Sans Gurmukhi',sans-serif;font-size:1.55rem;font-weight:600}
+details.intro-note>summary::-webkit-details-marker{display:none}
+details.intro-note>summary:after{content:"+";font-family:Inter,sans-serif;font-size:1.5rem;font-weight:300}
+details.intro-note[open]>summary:after{content:"−"}
+.intro-note-body{padding:0 42px 34px}
+.intro-note-body p,.content p{margin-bottom:24px}
+.intro-note-body p:last-child,.content p:last-child{margin-bottom:0}
 .lang-switch{display:flex;gap:12px;justify-content:center;margin:0 auto 35px;flex-wrap:wrap}
 .lang-switch button{padding:12px 25px;border-radius:50px;background:#191919;color:#d4a42c;border:1px solid rgba(212,164,44,.32);font-weight:600;cursor:pointer;transition:.3s}
 .lang-switch button.active,.lang-switch button:hover{background:#d4a42c;color:#050505}
@@ -65,7 +69,7 @@ footer{padding:38px 20px;text-align:center;color:#777;border-top:1px solid rgba(
 @media(max-width:760px){
 .navbar{padding:18px 20px} .nav-links{gap:14px} .nav-links a{font-size:.58rem;letter-spacing:.7px} .top-main-logo{display:none}
 .hero{min-height:62vh;background-attachment:scroll} h1{font-size:2.1rem} .hero-content{padding-top:95px}
-.wrapper{padding:55px 16px 85px} .intro-note{padding:25px 22px} details.section>summary{padding:20px;font-size:1rem}
+.wrapper{padding:55px 16px 85px} details.intro-note>summary{padding:20px 22px;font-size:1.15rem} .intro-note-body{padding:0 22px 22px} details.section>summary{padding:20px;font-size:1rem}
 .section-body{padding:0 12px 18px} .pauri-grid,.khand-grid,.pauri-lead{grid-template-columns:1fr;gap:20px;padding:0 14px 20px}
 .english{border-left:0;padding:0}
 details.khand{margin:10px 12px} .punjabi p,.english p{font-size:.96rem;line-height:2.05}
@@ -106,26 +110,28 @@ details.khand{margin:10px 12px} .punjabi p,.english p{font-size:.96rem;line-heig
             <details class="section">
                 <summary><span>ਸ੍ਰੀ ਜਪੁ ਜੀ ਦਾ ਸਮੁੱਚਾ ਭਾਵ</span><span>Overall Meaning</span></summary>
                 <div class="section-body">
-                    <div class="intro-note">
-                        <h2>ਭੂਮਿਕਾ / Introduction</h2>
-                        <div class="punjabi"><p>‘ਜਪੁ’ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੀ ਆਰੰਭਕ ਬਾਣੀ ਹੈ । ਇਸ ਨਾਲ ‘ਜੀ’ ਅਤੇ ‘ਸਾਹਿਬ’ ਦੋ ਆਦਰ-ਵਾਚੀ ਪਦਾਂ ਦੀ ਵਰਤੋਂ ਹੋਣ ਕਾਰਨ ਇਸ ਬਾਣੀ ਦਾ ਨਾਮ ‘ਜਪੁ ਜੀ ਸਾਹਿਬ’ ਪ੍ਰਚਲਤ ਹੋ ਗਿਆ ਹੈ। ਬਾਣੀ ਦੇ ਅਰੰਭ ਵਿਚ ਅਤੇ ਅੰਤ ਵਿਚ ਇਕ ਇਕ ‘ਸਲੋਕ’ ਹੈ ਅਤੇ ਵਿਚਕਾਰ ੩੮ ਪਉੜੀਆਂ ਹਨ।</p>
-                            <p>ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦਾ ਅਰੰਭਕ ਮੰਗਲ (ਮੂਲ-ਮੰਤ੍ਰ) &quot;੧ਓ ਸਤਿਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲ ਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰ ਪ੍ਰਸਾਦਿ ॥&quot; ‘ਜਪੁ’ ਬਾਣੀ ਤੋਂ ਭਾਵੇਂ ਵੱਖਰਾ ਹੈ, ਪਰ ਅਮਲੀ ਤੌਰ ‘ਤੇ ਇਸ ਬਾਣੀ ਦਾ ਅਨਿਖੜਵਾਂ ਭਾਗ ਬਣ ਗਿਆ ਹੈ। ਇਹ ਮੂਲ-ਮੰਤ੍ਰ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਵਿਚ ੩੨ ਹੋਰਨਾਂ ਥਾਵਾਂ ‘ਤੇ ਰਾਗਾਂ ਅਤੇ ਰਾਗ-ਮੁਕਤ ਬਾਣੀਆਂ ਦੇ ਅਰੰਭਕ ਮੰਗਲਾ-ਚਰਣ ਵਾਂਗ ‘ਜਪੁ’ ਬਾਣੀ ਦਾ ਵੀ ਮੰਗਲਾ-ਚਰਣ ਮੰਨਿਆ ਜਾਂਦਾ ਹੈ।</p>
-                            <p>‘ਜਪੁ’ ਬਾਣੀ ਦੇ ਸਿਰਲੇਖ ਵਿਚ ਇਸ ਦੇ ਰਚਨਹਾਰ ਮਹਲੇ ਬਾਰੇ ਕੋਈ ਸੰਕੇਤ ਨਹੀਂ, ਪਰ ਰਵਾਇਤ ਅਨੁਸਾਰ ਇਹ ‘ਮਹਲਾ ੧’ ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦੀ ਰਚਨਾ ਮੰਨੀ ਜਾਂਦੀ ਹੈ।</p>
-                            <p>‘ਜਪੁ’ ਬਾਣੀ ਅੰਮ੍ਰਿਤ ਤਿਆਰ ਕੀਤੇ ਜਾਣ ਸਮੇਂ ਪੜ੍ਹੇ ਜਾਣ ਵਾਲੀਆਂ ਪੰਜ ਬਾਣੀਆਂ ਵਿਚੋਂ ਅਰੰਭਕ ਬਾਣੀ ਹੈ ਅਤੇ ਖ਼ਾਲਸਾ ਜੀ ਦੇ ਅੰਮ੍ਰਿਤ ਵੇਲੇ ਦੇ ਨਿਤ-ਨੇਮ ਵਿਚ ਸ਼ਾਮਲ ਹੈ।</p>
-                            <p>ਸਿਖ-ਜਗਤ ਵਿਚ ਪ੍ਰਚਲਤ ਇਕ ਰਵਾਇਤੀ ਮਨੌਤ ਅਨੁਸਾਰ ਸ੍ਰੀ ‘ਜਪੁ’ ਜੀ ਸਾਹਿਬ ‘ਮੂਲ-ਮੰਤ੍ਰ’ ਦੀ ਵਿਆਖਿਆ ਹੈ ਅਤੇ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੀ ਸਮੱਗਰ ਬਾਣੀ ਸ੍ਰੀ ‘ਜਪੁ’ ਜੀ ਸਾਹਿਬ ਦੀ ਵਿਆਖਿਆ ਹੈ। ਇਸ ਬਾਣੀ ਵਿਚ ਗੁਰਮਤਿ ਦੇ ਲਗ-ਪਗ ਸਾਰੇ ਸਿਧਾਂਤ ਸੂਤ੍ ਰੂਪ ਵਿਚ ਨਿਰੂਪਣ ਕੀਤੇ ਹੋਏ ਹਨ।</p>
-                            <p>ਸਮੱਗਰ ਗੁਰਬਾਣੀ ਵਾਂਗ ਇਸ ਬਾਣੀ ਦਾ ਮੂਲ-ਵਿਸ਼ਾ ਵੀ ਆਤਮ-ਪਰਮਾਤਮ ਦੇ ਮਿਲਾਪ ਦੀ ਰਹੱਸ-ਮਈ ਗਾਥਾ ਹੀ ਹੈ। ਮੂਲ-ਮੰਤ੍ਰ ਵਿਚ</p>
-                            <p>ਵਿਆਪਕ ਬ੍ਰਹਮ ਦੇ ਸ਼ਬਦੀ-ਚਿਤ੍ਰ ਦੁਆਰਾ ਉਸ ਪਰਮ-ਚੇਤਨਾ ਦਾ ਸਰੂਪ (ਸਚੁ) ਨਿਰੂਪਣ ਕੀਤਾ ਹੋਇਆ ਹੈ ਅਤੇ ਉਸ ਦੇ ਮੂਲ-ਗੁਣ ਦਰਸਾ ਕੇ ਉਸ ਦੀ ਗਿਆਨ-ਪ੍ਰਾਪਤੀ ਅਤੇ ਮਿਲਾਪ ਦੇ ਬਸੀਠ (ਗੁਰੂ) ਅਤੇ ਮਿਲਾਪ ਦੇ ਸਾਧਨ (ਪ੍ਰਸਾਦ) ਵਲ ਸੰਕੇਤ ਕੀਤਾ ਹੋਇਆ ਹੈ।</p>
-                            <p>ਮੂਲ-ਮੰਤ੍ਰ ਦੁਆਰਾ ਵਿਆਪਕ-ਬ੍ਰਹਮ ਦੇ ਸਰੂਪ (ਸਚੁ) ਦੀ ਲਖਤਾ ਕਰਾਉਣ ਮਗਰੋਂ ਜਗਿਆਸੂ ਅੰਦਰ ਇਸ &quot;ਪਰਾ-ਪੂਰਬਲਾ ਸਰੂਪ&quot; ਦੀ ਦ੍ਰਿੜ੍ਹਤਾ ਕਰਾਉਣ ਲਈ ਅਰੰਭਕ ਸਲੋਕ ਵਿਚ ਇਸ ਨੂੰ ਤ੍ਰੈ-ਕਾਲ ‘ਸਚੁ&#x27; ਦਰਸਾਉਣ ਤੋਂ ਇਲਾਵਾ ਕਾਲ-ਰਚਨਾ ਤੋਂ ਵੀ ਪਹਿਲਾਂ ਦਾ &#x27;ਆਦਿ ਸਚੁ&#x27; ਕਰ ਕੇ ਵਰਣਾਇਆ ਹੋਇਆ ਹੈ।</p></div>
-                        <div class="english">
-                            <p><strong>Jap</strong> is the opening Bani of Sri Guru Granth Sahib Ji. Because the two honorific words “Ji” and “Sahib” are used with it, the Bani has become commonly known as “Japji Sahib.” There is one Salok at the beginning and one at the end, with 38 pauris in between.</p>
-                            <p>The opening invocation of Sri Guru Granth Sahib Ji, the Mool Mantar—“Ik Oankar Sat Naam Karta Purakh Nirbhau Nirvair Akaal Moorat Ajooni Saibhang Gur Prasad”—is technically distinct from Jap Bani, but in practice has become inseparably associated with it. It is regarded as the opening invocation of Jap Bani in the same way that it appears as an invocation at the beginning of many other places in Sri Guru Granth Sahib Ji.</p>
-                            <p>The heading of Jap Bani gives no indication of its authoring Mahala, but according to tradition it is regarded as the composition of Mahala 1, Sri Guru Nanak Dev Ji.</p>
-                            <p>Jap Bani is the first of the five Banis recited in the preparation of Amrit and forms part of the Amrit Vela Nitnem of the Khalsa.</p>
-                            <p>According to a traditional understanding prevalent in the Sikh world, Sri Japji Sahib is an exposition of the Mool Mantar, while the whole of Sri Guru Granth Sahib Ji is an exposition of Sri Japji Sahib. Almost all the principles of Gurmat are presented in seed form within this Bani.</p>
-                            <p>Like the whole of Gurbani, the central theme of this Bani is the mysterious account of the union of the self with the Supreme. The Mool Mantar describes the nature (Sach) of the all-pervading Brahm through a verbal portrait of the Supreme Consciousness, and by describing His fundamental qualities points towards the Guru as the mediator of knowledge and union, and to Prasad as the means of that union.</p>
-                            <p>After the Mool Mantar establishes the nature (Sach) of the all-pervading Brahm, the opening Salok further establishes this “primordial nature” by describing Him as Truth throughout the three times and as the “Primal Truth” even before the creation of time.</p>
+                    <details class="intro-note">
+                        <summary><span>ਭੂਮਿਕਾ</span><span>Introduction</span></summary>
+                        <div class="intro-note-body">
+                            <div class="punjabi"><p>‘ਜਪੁ’ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੀ ਆਰੰਭਕ ਬਾਣੀ ਹੈ । ਇਸ ਨਾਲ ‘ਜੀ’ ਅਤੇ ‘ਸਾਹਿਬ’ ਦੋ ਆਦਰ-ਵਾਚੀ ਪਦਾਂ ਦੀ ਵਰਤੋਂ ਹੋਣ ਕਾਰਨ ਇਸ ਬਾਣੀ ਦਾ ਨਾਮ ‘ਜਪੁ ਜੀ ਸਾਹਿਬ’ ਪ੍ਰਚਲਤ ਹੋ ਗਿਆ ਹੈ। ਬਾਣੀ ਦੇ ਅਰੰਭ ਵਿਚ ਅਤੇ ਅੰਤ ਵਿਚ ਇਕ ਇਕ ‘ਸਲੋਕ’ ਹੈ ਅਤੇ ਵਿਚਕਾਰ ੩੮ ਪਉੜੀਆਂ ਹਨ।</p>
+                                <p>ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦਾ ਅਰੰਭਕ ਮੰਗਲ (ਮੂਲ-ਮੰਤ੍ਰ) &quot;੧ਓ ਸਤਿਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲ ਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰ ਪ੍ਰਸਾਦਿ ॥&quot; ‘ਜਪੁ’ ਬਾਣੀ ਤੋਂ ਭਾਵੇਂ ਵੱਖਰਾ ਹੈ, ਪਰ ਅਮਲੀ ਤੌਰ ‘ਤੇ ਇਸ ਬਾਣੀ ਦਾ ਅਨਿਖੜਵਾਂ ਭਾਗ ਬਣ ਗਿਆ ਹੈ। ਇਹ ਮੂਲ-ਮੰਤ੍ਰ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਵਿਚ ੩੨ ਹੋਰਨਾਂ ਥਾਵਾਂ ‘ਤੇ ਰਾਗਾਂ ਅਤੇ ਰਾਗ-ਮੁਕਤ ਬਾਣੀਆਂ ਦੇ ਅਰੰਭਕ ਮੰਗਲਾ-ਚਰਣ ਵਾਂਗ ‘ਜਪੁ’ ਬਾਣੀ ਦਾ ਵੀ ਮੰਗਲਾ-ਚਰਣ ਮੰਨਿਆ ਜਾਂਦਾ ਹੈ।</p>
+                                <p>‘ਜਪੁ’ ਬਾਣੀ ਦੇ ਸਿਰਲੇਖ ਵਿਚ ਇਸ ਦੇ ਰਚਨਹਾਰ ਮਹਲੇ ਬਾਰੇ ਕੋਈ ਸੰਕੇਤ ਨਹੀਂ, ਪਰ ਰਵਾਇਤ ਅਨੁਸਾਰ ਇਹ ‘ਮਹਲਾ ੧’ ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦੀ ਰਚਨਾ ਮੰਨੀ ਜਾਂਦੀ ਹੈ।</p>
+                                <p>‘ਜਪੁ’ ਬਾਣੀ ਅੰਮ੍ਰਿਤ ਤਿਆਰ ਕੀਤੇ ਜਾਣ ਸਮੇਂ ਪੜ੍ਹੇ ਜਾਣ ਵਾਲੀਆਂ ਪੰਜ ਬਾਣੀਆਂ ਵਿਚੋਂ ਅਰੰਭਕ ਬਾਣੀ ਹੈ ਅਤੇ ਖ਼ਾਲਸਾ ਜੀ ਦੇ ਅੰਮ੍ਰਿਤ ਵੇਲੇ ਦੇ ਨਿਤ-ਨੇਮ ਵਿਚ ਸ਼ਾਮਲ ਹੈ।</p>
+                                <p>ਸਿਖ-ਜਗਤ ਵਿਚ ਪ੍ਰਚਲਤ ਇਕ ਰਵਾਇਤੀ ਮਨੌਤ ਅਨੁਸਾਰ ਸ੍ਰੀ ‘ਜਪੁ’ ਜੀ ਸਾਹਿਬ ‘ਮੂਲ-ਮੰਤ੍ਰ’ ਦੀ ਵਿਆਖਿਆ ਹੈ ਅਤੇ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਦੀ ਸਮੱਗਰ ਬਾਣੀ ਸ੍ਰੀ ‘ਜਪੁ’ ਜੀ ਸਾਹਿਬ ਦੀ ਵਿਆਖਿਆ ਹੈ। ਇਸ ਬਾਣੀ ਵਿਚ ਗੁਰਮਤਿ ਦੇ ਲਗ-ਪਗ ਸਾਰੇ ਸਿਧਾਂਤ ਸੂਤ੍ ਰੂਪ ਵਿਚ ਨਿਰੂਪਣ ਕੀਤੇ ਹੋਏ ਹਨ।</p>
+                                <p>ਸਮੱਗਰ ਗੁਰਬਾਣੀ ਵਾਂਗ ਇਸ ਬਾਣੀ ਦਾ ਮੂਲ-ਵਿਸ਼ਾ ਵੀ ਆਤਮ-ਪਰਮਾਤਮ ਦੇ ਮਿਲਾਪ ਦੀ ਰਹੱਸ-ਮਈ ਗਾਥਾ ਹੀ ਹੈ। ਮੂਲ-ਮੰਤ੍ਰ ਵਿਚ</p>
+                                <p>ਵਿਆਪਕ ਬ੍ਰਹਮ ਦੇ ਸ਼ਬਦੀ-ਚਿਤ੍ਰ ਦੁਆਰਾ ਉਸ ਪਰਮ-ਚੇਤਨਾ ਦਾ ਸਰੂਪ (ਸਚੁ) ਨਿਰੂਪਣ ਕੀਤਾ ਹੋਇਆ ਹੈ ਅਤੇ ਉਸ ਦੇ ਮੂਲ-ਗੁਣ ਦਰਸਾ ਕੇ ਉਸ ਦੀ ਗਿਆਨ-ਪ੍ਰਾਪਤੀ ਅਤੇ ਮਿਲਾਪ ਦੇ ਬਸੀਠ (ਗੁਰੂ) ਅਤੇ ਮਿਲਾਪ ਦੇ ਸਾਧਨ (ਪ੍ਰਸਾਦ) ਵਲ ਸੰਕੇਤ ਕੀਤਾ ਹੋਇਆ ਹੈ।</p>
+                                <p>ਮੂਲ-ਮੰਤ੍ਰ ਦੁਆਰਾ ਵਿਆਪਕ-ਬ੍ਰਹਮ ਦੇ ਸਰੂਪ (ਸਚੁ) ਦੀ ਲਖਤਾ ਕਰਾਉਣ ਮਗਰੋਂ ਜਗਿਆਸੂ ਅੰਦਰ ਇਸ &quot;ਪਰਾ-ਪੂਰਬਲਾ ਸਰੂਪ&quot; ਦੀ ਦ੍ਰਿੜ੍ਹਤਾ ਕਰਾਉਣ ਲਈ ਅਰੰਭਕ ਸਲੋਕ ਵਿਚ ਇਸ ਨੂੰ ਤ੍ਰੈ-ਕਾਲ ‘ਸਚੁ&#x27; ਦਰਸਾਉਣ ਤੋਂ ਇਲਾਵਾ ਕਾਲ-ਰਚਨਾ ਤੋਂ ਵੀ ਪਹਿਲਾਂ ਦਾ &#x27;ਆਦਿ ਸਚੁ&#x27; ਕਰ ਕੇ ਵਰਣਾਇਆ ਹੋਇਆ ਹੈ।</p></div>
+                            <div class="english">
+                                <p><strong>Jap</strong> is the opening Bani of Sri Guru Granth Sahib Ji. Because the two honorific words “Ji” and “Sahib” are used with it, the Bani has become commonly known as “Japji Sahib.” There is one Salok at the beginning and one at the end, with 38 pauris in between.</p>
+                                <p>The opening invocation of Sri Guru Granth Sahib Ji, the Mool Mantar—“Ik Oankar Sat Naam Karta Purakh Nirbhau Nirvair Akaal Moorat Ajooni Saibhang Gur Prasad”—is technically distinct from Jap Bani, but in practice has become inseparably associated with it. It is regarded as the opening invocation of Jap Bani in the same way that it appears as an invocation at the beginning of many other places in Sri Guru Granth Sahib Ji.</p>
+                                <p>The heading of Jap Bani gives no indication of its authoring Mahala, but according to tradition it is regarded as the composition of Mahala 1, Sri Guru Nanak Dev Ji.</p>
+                                <p>Jap Bani is the first of the five Banis recited in the preparation of Amrit and forms part of the Amrit Vela Nitnem of the Khalsa.</p>
+                                <p>According to a traditional understanding prevalent in the Sikh world, Sri Japji Sahib is an exposition of the Mool Mantar, while the whole of Sri Guru Granth Sahib Ji is an exposition of Sri Japji Sahib. Almost all the principles of Gurmat are presented in seed form within this Bani.</p>
+                                <p>Like the whole of Gurbani, the central theme of this Bani is the mysterious account of the union of the self with the Supreme. The Mool Mantar describes the nature (Sach) of the all-pervading Brahm through a verbal portrait of the Supreme Consciousness, and by describing His fundamental qualities points towards the Guru as the mediator of knowledge and union, and to Prasad as the means of that union.</p>
+                                <p>After the Mool Mantar establishes the nature (Sach) of the all-pervading Brahm, the opening Salok further establishes this “primordial nature” by describing Him as Truth throughout the three times and as the “Primal Truth” even before the creation of time.</p>
+                            </div>
                         </div>
-                    </div>
+                    </details>
 
                     <div class="pauri-list">
                         <details class="pauri">
@@ -217,9 +223,9 @@ details.khand{margin:10px 12px} .punjabi p,.english p{font-size:.96rem;line-heig
                         <details class="pauri">
                             <summary><span>ਪਉੜੀ ੧੭-੧੮-੧੯</span><em>Pauris 17–19</em></summary>
                             <div class="pauri-grid">
-                                <div class="punjabi"><p>ਇਹਨਾਂ ਤਿੰਨਾਂ ਹੀ ਪਉੜੀਆਂ ਵਿਚ ਪ੍ਰਭੂ ਦੇ ਅਸੰਖ ਚੇਤਨਾ-ਪ੍ਰਵਾਹਾਂ ਦਾ ਵਰਣਨ ਹੈ । ਉਸ ਦੀ ਨਾਨਾ-ਪ੍ਰਕਾਰੀ ਕੁਦਰਤਿ ਵਿਚ ਇਕ ਪਾਸੇ ਅਨੇਕ ਜਪੀ, ਤਪੀ, ਪ੍ਰੇਮੀ, ਵੇਦ-ਪਾਠੀ, ਜੋਗੀ, ਭਗਤ, ਦਾਨੀ, ਸੂਰਮੇ ਅਤੇ ਮੋਨੀ ਲੋਕ ਹਨ, ਦੂਜੇ ਪਾਸੇ ਮਹਾ-ਮੂਰਖ, ਹਰਾਮ-ਖਾਣੇ, ਜ਼ਾਲਮ, ਗਲ-ਵਢ ਹਤਿਆਰੇ, ਕੂੜਿਆਰ, ਮਲ-ਭਖੀ ਮਲੇਛ ਅਤੇ ਨਿੰਦਕ ਹਨ । ਇਹ ਸਾਰੇ ਜੀਵ ਉਸ ਦੀ ਅਦਭੁਤ ਜਗਤ-ਖੇਡ ਦਾ ਹੀ ਅੰਗ ਹਨ ।</p>
+                                <div class="punjabi"><p>ਇਹਨਾਂ ਤਿੰਨਾਂ ਹੀ ਪਉੜੀਆਂ ਵਿਚ ਪ੍ਰਭੂ ਦੇ ਅਸੰਖ ਚੇਤਨਾ-ਪ੍ਰਵਾਹਾਂ ਦਾ ਵਰਣਨ ਹੈ । ਉਸ ਦੀ ਨਾਨਾ-ਪ੍ਰਕਾਰੀ ਕੁਦਰਤਿ ਵਿਚ ਇਕ ਪਾਸੇ ਅਨੇਕ ਜਪੀ, ਤਪੀ, ਪ੍ਰੇਮੀ, ਵੇਦ-ਪਾਠੀ, ਜੋਗੀ, ਭਗਤ, ਦਾਨੀ, ਸੂਰਮੇ ਅਤੇ ਮੋਨੀ ਲੋਕ ਹਨ, ਦੂਜੇ ਪਾਸੇ ਮਹਾ-ਮੂਰਖ, ਹਰਾਮ-ਖਾਣੇ, ਜ਼ਾਲਮ, ਗਲ-ਵਢ ਹਤਿਆਰੇ, ਕੂੜਿਆਰ, ਮਲ-ਭਖੀ ਮਲੇਛ ਅਤੇ ਨਿੰਦਕ ਹਨ । ਇਹ ਸਾਰੇ ਜੀਵ ਉਸ ਦੀ ਅਦਭੁਤ ਜਗਤ-ਖੇਡ ਦਾ ਹੀ ਅੰਗ ਹਨ ।</p>
                                     <p>ਇਹ ਸਾਰੇ ਉਸ ਦੇ ਆਪਣੇ ਬਣਾਏ ਹੋਏ ਹਨ, ਇਹਨਾਂ ਨੂੰ ਆਪਣੀ ਰੱਬੀ ਵਿਉਂਤ ਅਧੀਨ ਵੱਖ ਵੱਖ ਕਾਰ ਸਉਂਪੀ ਹੋਈ ਹੈ । ਆਪਣੇ ਆਪ ਵਿਚ ਨਾ ਕੋਈ ਚੰਗਾ ਹੈ ਨਾ ਮੰਦਾ । ਕਾਦਰ ਅਤੇ ਉਸ ਦੀ ਅਦਭੁਤ ਰਚਨਾ ਤੋਂ ਕੁਰਬਾਨ !</p>
-                                    <p>ਉਸ ਦੀ ਕੁਦਰਤਿ ਵਿਚ ਅਨੇਕਾਂ ਹੀ ਨਾਂਵ-ਥਾਂਵ ਹਨ, ਜਿਨ੍ਹਾਂ ਦਾ ਲੇਖਾ ਜੋਖਾ ਕਰ ਸਕਣਾ ਅਸੰਭਵ ਹੈ । ਜੇ ਕੋਈ ਮਨੁੱਖ ਆਪਣੀ ਕੂੜ-ਮਤਿ ਅਧੀਨ ਕਿਆਫ਼ੇ-ਕਿਆਸ ਲਾ ਕੇ ਕੋਈ ਗਿਣਤੀ ਮਿਣਤੀ ਕਰਦਾ ਹੈ ਤਾਂ ਇਹ ਉਸ ਦਾ ਹੋਛਾ-ਪਣ ਹੈ ।</p>
+                                    <p>ਉਸ ਦੀ ਕੁਦਰਤਿ ਵਿਚ ਅਨੇਕਾਂ ਹੀ ਨਾਂਵ-ਥਾਂਵ ਹਨ, ਜਿਨ੍ਹਾਂ ਦਾ ਲੇਖਾ ਜੋਖਾ ਕਰ ਸਕਣਾ ਅਸੰਭਵ ਹੈ । ਜੇ ਕੋਈ ਮਨੁੱਖ ਆਪਣੀ ਕੂੜ-ਮਤਿ ਅਧੀਨ ਕਿਆਫ਼ੇ-ਕਿਆਸ ਲਾ ਕੇ ਕੋਈ ਗਿਣਤੀ ਮਿਣਤੀ ਕਰਦਾ ਹੈ ਤਾਂ ਇਹ ਉਸ ਦਾ ਹੋਛਾ-ਪਣ ਹੈ ।</p>
                                     <p>ਕਾਦਰ ਅਤੇ ਉਸ ਦੀ ਕੁਦਰਤਿ ਦਾ ਗਿਆਨ ਅੱਖਰਾਂ (ਵਿਗਿਆਨ) ਰਾਹੀਂ ਸਮਝਿਆ-ਸਮਝਾਇਆ ਜਾ ਸਕਦਾ ਹੈ । ਵਿਧਾਤਾ ਵਲੋਂ ਹਰੇਕ ਜੀਵ ਦੇ ਮੱਥੇ ਉੱਤੇ ਲਿਖੇ ਸੰਜੋਗ-ਲੇਖ ਦਾ ਵਰਣਨ ਵੀ ਪੰਡਤਾਂ ਅਤੇ ਜੋਤਸ਼ੀਆਂ ਵਲੋਂ ਅੱਖਰਾਂ ਦੁਆਰਾ ਹੀ ਕੀਤਾ ਜਾਂਦਾ ਹੈ । ਸੁਤੇ-ਪ੍ਰਕਾਸ਼ ਹੋਣ ਦੇ ਨਾਤੇ ਵਿਧਾਤਾ-ਪੁਰਖ ਕਿਸੇ ਸੰਜੋਗ-ਲੇਖ ਦੀ ਲਿਖਤ ਤੋਂ ਮੁਕਤ ਹੈ । ਨਾ ਕਾਦਰ ਦਾ ਕੋਈ ਅੰਤ ਹੈ, ਨਾ ਉਸ ਦੀ ਕੁਦਰਤਿ ਦਾ । ਅੰਤ ਲੈਣ ਦੇ ਬਖੇੜੇ ਨੂੰ ਛਡ ਕੇ ਉਸ ਦੀ ਰਜ਼ਾਅ ਵਿਚ ਰਾਜ਼ੀ ਰਹਿਣਾ ਹੀ ਬਣਦਾ ਹੈ ।</p></div>
                                 <div class="english"><p>These three pauris describe the countless streams and expressions of consciousness within the Lord&#x27;s creation. In His many-sided nature there are, on one side, countless meditators, ascetics, lovers, reciters of the Vedas, yogis, devotees, charitable people, warriors and silent practitioners; on the other side are great fools, those who live by wrongdoing, tyrants, murderers, liars, flesh-eating outcasts and slanderers. All these beings are part of His wondrous play of the world.</p>
                                     <p>All of them have been created by Him, and under His Divine arrangement each has been given different work to perform. In themselves, none is absolutely good and none absolutely bad. Blessed be the Creator and His wondrous creation!</p>
@@ -343,7 +349,7 @@ details.khand{margin:10px 12px} .punjabi p,.english p{font-size:.96rem;line-heig
                             <details class="khand">
                                 <summary><span>ਗਿਆਨ-ਖੰਡ</span><em>Gian Khand</em></summary>
                                 <div class="khand-grid">
-                                    <div class="punjabi"><p>ਧਰਮ-ਖੰਡ ਦੀ ਸੱਚੀ ਧਰਮ-ਸਾਲ ਧਰਤੀ ਵਿਚ ਪਰਵਾਨੇ ਅਤੇ ਨਦਰਿ-ਨਿਸ਼ਾਨੇ ਪੰਚ ਜਨਾਂ ਨੂੰ ਫਿਰ ਗ਼ੈਬੀ-ਗਿਆਨ ਦੇ ਪ੍ਰਕਾਸ਼ ਵਾਲੇ ਗਿਆਨ-ਖੰਡ ਵਿਚ ਪ੍ਰਵੇਸ਼ ਨਸੀਬ ਹੁੰਦਾ ਹੈ। ਉਹਨਾਂ ਨੂੰ ਗਿਆਨ-ਪ੍ਰਚੰਡ ਦਿੱਬ-ਚਖਸ਼ੂਆਂ ਰਾਹੀਂ ਅਦਭੁਤ ਅਤੇ ਅਨੰਦ-ਦਾਇਕ ਗਿਆਨ-ਚਮਤਕਾਰ ਦ੍ਰਿਸ਼ਟੀ ਗੋਚਰ ਹੁੰਦੇ ਹਨ।</p>
+                                    <div class="punjabi"><p>ਧਰਮ-ਖੰਡ ਦੀ ਸੱਚੀ ਧਰਮ-ਸਾਲ ਧਰਤੀ ਵਿਚ ਪਰਵਾਨੇ ਅਤੇ ਨਦਰਿ-ਨਿਸ਼ਾਨੇ ਪੰਚ ਜਨਾਂ ਨੂੰ ਫਿਰ ਗ਼ੈਬੀ-ਗਿਆਨ ਦੇ ਪ੍ਰਕਾਸ਼ ਵਾਲੇ ਗਿਆਨ-ਖੰਡ ਵਿਚ ਪ੍ਰਵੇਸ਼ ਨਸੀਬ ਹੁੰਦਾ ਹੈ। ਉਹਨਾਂ ਨੂੰ ਗਿਆਨ-ਪ੍ਰਚੰਡ ਦਿੱਬ-ਚਖਸ਼ੂਆਂ ਰਾਹੀਂ ਅਦਭੁਤ ਅਤੇ ਅਨੰਦ-ਦਾਇਕ ਗਿਆਨ-ਚਮਤਕਾਰ ਦ੍ਰਿਸ਼ਟੀ ਗੋਚਰ ਹੁੰਦੇ ਹਨ।</p>
                                         <p>ਗਿਆਨ-ਖੰਡ ਦੇ ਗਿਆਨ-ਵਰਤਾਰੇ ਵਿਚ ਅਣਗਿਣਤ ਪ੍ਰਕਿਰਤਕ-ਤੱਤ : ਪਉਣਾਂ, ਪਾਣੀ, ਅਗਨੀਆਂ, ਖਾਣੀਆਂ, ਬਾਣੀਆਂ, ਕਰਮ-ਧਰਤੀਆਂ, ਸੁਮੇਰ ਪਰਬਤ, ਚੰਦ, ਸੂਰ ਅਤੇ ਰਤਨ-ਸਾਗਰ ਸਾਮਰਤੱਖ ਹੁੰਦੇ ਹਨ।</p>
                                         <p>ਅਣਗਿਣਤ ਬ੍ਰਹਮੇ, ਵਿਸ਼ਨੂੰ, ਸ਼ਿਵ, ਸਿਧ, ਬੁਧ (ਬੁਧੀਮਾਨ), ਨਾਥ, ਦੇਵੀ ਦੇਵਤੇ, ਦੈਂਤ, ਧ੍ਰੂ ਅਤੇ ਉਸ ਦੇ ਉਪਦੇਸ਼-ਕਰਤਾ (ਨਾਰਦ) ਅਤੇ ਸ਼ਾਹ ਪਾਤਿਸ਼ਾਹ ਸਚੇ ਸਾਹਿਬ ਦੀ ਹੁਕਮ-ਕਾਰ ਕਮਾਉਂਦੇ ਦਿਸਦੇ ਹਨ।</p></div>
                                     <div class="english"><p>Those Panch persons who have been accepted and marked in the true dharamsala of Dharam Khand then gain entry into Gian Khand, the realm illumined by transcendent knowledge. Through knowledge-filled spiritual vision they behold wondrous and bliss-giving manifestations of knowledge.</p>
