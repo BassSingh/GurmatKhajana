@@ -724,27 +724,6 @@ a{
     transform:translateY(-2px);
 }
 
-@media(max-width:700px){
-    #steek{
-        padding-top:30px;
-    }
-    .steek-image{
-        height:220px;
-    }
-    .steek-content{
-        padding:30px 24px;
-    }
-    .steek-content h3{
-        font-size:2rem;
-    }
-    .steek-subtitle{
-        font-size:1.1rem;
-    }
-    .steek-btn{
-        width:100%;
-        text-align:center;
-    }
-}
 
 /* FOOTER */
 
@@ -918,6 +897,46 @@ footer{
 
 }
 
+/* FEATURED STEEK — RESPONSIVE (keep at end) */
+
+@media(max-width:950px){
+    .featured-steek{
+        grid-template-columns:1fr;
+    }
+    .steek-image{
+        height:300px;
+    }
+    .steek-image::after{
+        background:linear-gradient(to bottom,
+        transparent 50%,
+        rgba(12,12,18,0.9) 100%);
+    }
+}
+
+@media(max-width:700px){
+    #steek{
+        padding-top:30px;
+    }
+    .featured-steek{
+        min-height:auto;
+    }
+    .steek-image{
+        height:220px;
+    }
+    .steek-content{
+        padding:30px 24px;
+    }
+    .steek-content h3{
+        font-size:2rem;
+    }
+    .steek-subtitle{
+        font-size:1.1rem;
+    }
+    .steek-btn{
+        width:100%;
+        text-align:center;
+    }
+}
 </style>
 </head>
 
