@@ -154,6 +154,11 @@ a{
     height:100%;
     object-fit:cover;
     z-index:0;
+
+    transform:scale(1.35);
+    transform-origin:center;
+
+            filter:grayscale(0.3) sepia(0.1) contrast(1.05) brightness(0.85) blur(1.5px);
 }
 
 /* DARK OVERLAY OVER VIDEO */
@@ -165,9 +170,9 @@ a{
     background:
     linear-gradient(
         to bottom,
-        rgba(0,0,0,0.55) 0%,
-        rgba(0,0,0,0.0) 25%,
-        rgba(0,0,0,0.0) 65%,
+        rgba(0,0,0,0.6) 0%,
+        rgba(0,0,0,0.3) 25%,
+        rgba(0,0,0,0.3) 60%,
         rgba(0,0,0,1) 100%
     );
 }
@@ -250,6 +255,8 @@ a{
     object-fit:contain;
 
     margin:auto;
+
+    filter:drop-shadow(0 4px 25px rgba(0,0,0,0.75));
 }
 
 /* ARCHIVE LINE */
@@ -961,7 +968,7 @@ footer{
     <!-- VIDEO BACKGROUND -->
     <video
             class="hero-video"
-            src="video/BFJ.mp4"
+            src="video/BJS.mp4"
             autoplay
             muted
             loop
