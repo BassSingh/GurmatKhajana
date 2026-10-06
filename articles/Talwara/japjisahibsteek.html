@@ -6,7 +6,7 @@
     <title>GurmatKhajana • ਸ੍ਰੀ ਜਪੁ ਜੀ ਸਾਹਿਬ ਦਾ ਸਮੁੱਚਾ ਭਾਵ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&family=Noto+Serif+Gurmukhi:wght@500;700&display=swap" rel="stylesheet">
     <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -128,6 +128,43 @@ details.khand{margin:10px 12px} .punjabi p,.english p{font-size:.96rem;line-heig
 .mint-table th{color:#d4a42c;font-weight:600;padding-bottom:12px}
 .mint-table td:first-child,.mint-table th:first-child{width:40%}
 @media(max-width:760px){.mint-table{font-size:.92rem}.mint-table th,.mint-table td{padding:6px 14px 6px 0}}
+/* ===== FEATURED STEEK THEME (matches index card) ===== */
+body:before{background:
+  radial-gradient(circle at 85% 8%,rgba(255,140,0,.12),transparent 40%),
+  radial-gradient(circle at 10% 95%,rgba(30,60,140,.18),transparent 45%),
+  radial-gradient(circle at top,rgba(212,164,44,.08),transparent 46%)}
+.tri-bar{position:absolute;left:0;right:0;bottom:0;height:3px;z-index:3;background:linear-gradient(90deg,#ff8c00,#d4a42c,#3a6fd8)}
+.steek-label{display:inline-block;padding:7px 16px;border-radius:50px;background:rgba(255,140,0,.12);border:1px solid rgba(255,140,0,.3);color:#ffa94d;letter-spacing:3px;font-size:.72rem;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-family:'Noto Serif Gurmukhi','Cinzel',serif;font-size:3.4rem;line-height:1.5;padding-top:.15em;margin-bottom:4px;background:linear-gradient(90deg,#ffd27a,#ff9a3c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.steek-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:#d4a42c;margin-bottom:22px}
+.steek-divider{width:70px;height:1px;margin:0 auto 22px;background:linear-gradient(90deg,#ff8c00,#d4a42c)}
+.lang-switch button{border-color:rgba(255,140,0,.3);color:#ffa94d}
+.lang-switch button.active,.lang-switch button:hover{background:linear-gradient(90deg,#ff8c00,#d4a42c);color:#000;border-color:transparent;box-shadow:0 8px 25px rgba(255,140,0,.2)}
+details.section{position:relative;border:1px solid rgba(255,153,51,.25);border-radius:26px;
+  background:radial-gradient(circle at 92% 0%,rgba(255,140,0,.14),transparent 40%),radial-gradient(circle at 75% 100%,rgba(30,60,140,.22),transparent 50%),linear-gradient(135deg,rgba(25,18,8,.92),rgba(8,10,22,.88));
+  box-shadow:0 0 60px rgba(255,140,0,.06);transition:.4s ease}
+details.section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;z-index:2;background:linear-gradient(90deg,#ff8c00,#d4a42c,#3a6fd8)}
+details.section:hover,details.section[open]{border-color:rgba(255,153,51,.5);box-shadow:0 20px 50px rgba(0,0,0,.45),0 0 80px rgba(255,140,0,.1)}
+details.section>summary{padding:30px 32px 26px}
+details.section>summary span:first-child{font-family:'Noto Serif Gurmukhi','Noto Sans Gurmukhi',serif;font-size:1.45rem;line-height:1.5;padding-top:.1em;background:linear-gradient(90deg,#ffd27a,#ff9a3c);-webkit-background-clip:text;background-clip:text;color:transparent}
+details.section>summary span:last-child{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:1.25rem;color:#d4a42c;margin-left:auto}
+details.section>summary:after{color:#ffa94d}
+details.intro-note{border-color:rgba(255,153,51,.22);background:linear-gradient(135deg,rgba(28,20,10,.9),rgba(10,10,16,.95))}
+details.pauri{border-color:rgba(255,153,51,.1)}
+details.pauri[open]{border-color:rgba(255,153,51,.3);background:rgba(255,140,0,.03)}
+details.pauri[open]>summary span{color:#ffc46b}
+details.khand{border-color:rgba(255,153,51,.18)}
+.gurbani-block{position:relative;border-left:0;background:linear-gradient(90deg,rgba(255,140,0,.07),rgba(212,164,44,.04) 60%,rgba(30,60,140,.05))}
+.gurbani-block::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#ff8c00,#d4a42c,#3a6fd8)}
+.back{background:linear-gradient(90deg,#ff8c00,#d4a42c);box-shadow:0 8px 25px rgba(255,140,0,.25);transition:.3s ease}
+.back:hover{transform:translateY(-2px)}
+@media(max-width:760px){
+  .hero h1{font-size:2rem}
+  .steek-subtitle{font-size:1.15rem}
+  details.section>summary{padding:24px 20px 20px;flex-wrap:wrap;gap:4px}
+  details.section>summary span:first-child{font-size:1.15rem}
+  details.section>summary span:last-child{font-size:1.05rem;margin-left:0}
+}
 </style>
 </head>
 <body>
