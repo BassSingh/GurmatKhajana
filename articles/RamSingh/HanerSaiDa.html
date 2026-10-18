@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GurmatKhajana • ਹਨੇਰ ਸਾਈਂ ਦਾ !</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,164,44,0.08),
+    transparent 45%);
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    padding:22px 6%;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.2));
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    font-size:0.82rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#ddd;
+
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#d4a42c;
+}
+
+/* TOP LOGO */
+
+.top-main-logo{
+    position:fixed;
+
+    top:14px;
+    left:40px;
+
+    z-index:1001;
+}
+
+.top-main-logo img{
+    width:150px;
+    height:auto;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+}
+
+/* MOBILE NAV */
+
+@media(max-width:700px){
+
+.navbar{
+    padding:18px 20px;
+}
+
+.nav-links{
+    gap:16px;
+}
+
+.nav-links a{
+    font-size:0.62rem;
+    letter-spacing:1px;
+}
+
+.top-main-logo{
+    display:none;
+}
+
+.top-main-logo img{
+    width:135px;
+}
+
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.88)),
+
+    url('/images/gallery/siteimages/darbar.jpeg')
+    center/cover fixed;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    transparent 5%,
+    rgba(0,0,0,0.72) 100%);
+
+    backdrop-filter:blur(2px);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:1100px;
+
+    text-align:center;
+
+    padding:100px 20px 60px;
+}
+
+.main-logo img{
+    display:block;
+    width:100%;
+    max-width:520px;
+    height:auto;
+
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.article-label{
+    color:#d4a42c;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:0.85rem;
+
+    margin-bottom:18px;
+}
+
+.hero-content h1{
+    font-family:'Cinzel',serif;
+    font-size:4rem;
+    line-height:1.3;
+    color:#d4a42c;
+
+    margin-bottom:25px;
+}
+
+.article-meta{
+    color:#d0d0d0;
+    font-size:1rem;
+    letter-spacing:1px;
+    line-height:1.8;
+}
+
+/* ARTICLE BODY */
+
+.article-wrapper{
+    width:100%;
+    max-width:950px;
+
+    margin:auto;
+
+    padding:90px 30px 120px;
+}
+
+.featured-image{
+    width:100%;
+    height:620px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:55px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.45);
+}
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+}
+
+.article-content{
+    font-size:1.2rem;
+    line-height:2.4;
+    color:#e2e2e2;
+}
+
+.article-content p{
+    margin-bottom:40px;
+}
+
+/* LANGUAGE SWITCHER */
+
+.language-switcher{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+}
+
+.language-switcher button{
+    padding:14px 28px;
+    border-radius:50px;
+
+    background:#1a1a1a;
+    color:#d4a42c;
+
+    font-size:1rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid rgba(212,164,44,0.3);
+
+    transition:0.3s ease;
+}
+
+.language-switcher button:hover{
+    background:#d4a42c;
+    color:black;
+}
+
+.language-switcher button.active{
+    background:#d4a42c;
+    color:black;
+}
+
+/* EXAMPLE BLOCKS (disputed word-divisions) */
+
+.profile-block{
+    margin:30px 0;
+
+    padding:34px 40px;
+
+    border-radius:26px;
+
+    background:
+    linear-gradient(135deg,
+    rgba(18,18,18,0.96),
+    rgba(8,8,8,0.98));
+
+    border:1px solid rgba(212,164,44,0.2);
+}
+
+.profile-block h3{
+    font-family:'Cinzel',serif;
+    color:#d4a42c;
+    font-size:1.5rem;
+    margin-bottom:14px;
+    letter-spacing:1px;
+}
+
+.profile-block p{
+    margin-bottom:0;
+    font-size:1.1rem;
+    line-height:2.1;
+}
+
+.section-divider{
+    text-align:center;
+    color:#d4a42c;
+    font-size:1.4rem;
+    letter-spacing:6px;
+    margin:70px 0 30px;
+    opacity:0.6;
+}
+
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:60px;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:#d4a42c;
+    color:black;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+}
+
+.back-home:hover{
+    transform:translateY(-3px);
+}
+
+.attribution{
+    margin-top:50px;
+    padding:35px 40px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:rgba(255,255,255,0.02);
+}
+
+.attribution p{
+    color:#aaa;
+    font-size:1rem;
+    line-height:1.9;
+    margin-bottom:0;
+}
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    color:#888;
+
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero{
+    min-height:70vh;
+    background-attachment:scroll;
+}
+
+.hero-content{
+    padding-top:100px;
+}
+
+.main-logo img{
+    max-width:250px;
+}
+
+.hero-content h1{
+    font-size:2.2rem;
+}
+
+.article-wrapper{
+    padding:60px 20px 90px;
+}
+
+.featured-image{
+    height:340px;
+    border-radius:24px;
+}
+
+.article-content{
+    font-size:1rem;
+    line-height:2.2;
+}
+
+.profile-block{
+    padding:28px 24px;
+}
+
+.profile-block h3{
+    font-size:1.25rem;
+}
+
+.profile-block p{
+    font-size:1rem;
+}
+
+.language-switcher button{
+    width:100%;
+}
+
+.attribution{
+    padding:28px 24px;
+}
+
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="top-main-logo">
+  <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/articles/index.html">Articles</a>
+    <a href="/jeevani/index.html">Jeevani</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="main-logo">
+      <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
+    </div>
+
+    <div class="article-label">
+      GurmatKhajana Article
+    </div>
+
+    <h1>ਹਨੇਰ ਸਾਈਂ ਦਾ !</h1>
+
+    <div class="article-meta">
+      By Jathedar Bhai Sahib Bhai Ram Singh Ji
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ARTICLE -->
+
+<section class="article-wrapper">
+
+  <div class="featured-image">
+    <img src="/images/gallery/siteimages/Puranramsingh.jpg" alt="Jathedar Bhai Ram Singh Ji">
+  </div>
+
+  <div class="article-content">
+
+    <!-- LANGUAGE SWITCHER -->
+
+    <div class="language-switcher">
+
+      <button onclick="showPunjabi()" id="paBtn" class="active">
+        ਪੰਜਾਬੀ
+      </button>
+
+      <button onclick="showEnglish()" id="enBtn">
+        English
+      </button>
+
+    </div>
+
+    <!-- PUNJABI CONTENT -->
+
+    <div id="punjabi-content">
+
+      <p>
+        ਪਹਿਲੋਂ ਭੀ ਇਹ ਕਾਫ਼ੀ ਸਮਝਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਗਈ ਹੈ ਕਿ ਗੁਰੂ ਆਸ਼ੇ ਅਨੁਸਾਰ ਪਾਵਨ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦਾ ਲੜੀਵਾਰ (ਜੁੜਤ ਸ਼ਬਦਾਂ ਵਾਲਾ) ਸਰੂਪ ਹੀ ਠੀਕ, ਦਰੁਸਤ ਅਤੇ ਅਕਾਲ ਪੁਰਖ ਵੱਲੋਂ ਧੁਰ-ਧੁਰੰਦਰੀ ਗਿਣਿਆ ਮਿਥਿਆ ਸਰੂਪ ਹੈ। ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦਾ ਪਦ-ਛੇਦ ਸਰੂਪ ਚਾਤੁਰ ਮਨਮਤੀਆਂ ਦੀ ਸੋਚਣੀ ਦਾ ਸਿੱਟਾ ਹੈ। ਇਹ ਮਜ਼ਮੂਨ ਲਤੀਫ਼ (ਬਾਰੀਕ) ਹੈ। ਜੇਕਰ ਹੁਣ ਤਕ ਕੀਤੇ ਗਏ ਉਪਰਾਲੇ ਦੇ ਬਾਵਜੂਦ ਭੀ ਇਹ ਘੁੰਡੀ ਕੁਝ ਕੁ ਸੱਜਣਾਂ ਦੀ ਸਮਝ ਵਿਚ ਨਾ ਆ ਸਕੀ ਹੋਵੇ ਤਾਂ ਉਨ੍ਹਾਂ ਦੀ ਸਹਾਇਤਾ ਵਾਸਤੇ ਇਕ ਹੋਰ ਉਪਰਾਲਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।
+      </p>
+
+      <p>
+        ਗੁਰਬਾਣੀ ਦੇ ਲੜੀਦਾਰ ਸਰੂਪ ਤੋਂ ਪਾਠ ਕਰਨ ਵਾਲੇ ਪ੍ਰੇਮੀ, ਜਿਹੜੇ ਕਈ ਕਠਿਨ ਸ਼ਬਦਾਂ ਦੇ ਸ਼ੁਧ ਨਿਖੇੜ ਬਾਰੇ ਆਪਸ ਵਿਚ ਸਹਿਮਤੀ ਨਹੀਂ ਰੱਖਦੇ, ਗੁਰਬਾਣੀ ਦੇ ਗ਼ਲਤ ਉਚਾਰਨ ਨੂੰ, ਇਕ ਦੂਜੇ ਦਾ ਹੀ ਕਸੂਰ ਦੱਸਿਆ ਕਰਦੇ ਹਨ। ਕੋਈ ਕਹਿੰਦਾ ਹੈ ਪ੍ਰੋਫ਼ੈਸਰ ਸਾਹਿਬ ਸਿੰਘ ਜੀ ਦੇ ਟੀਕੇ ਮੁਤਾਬਿਕ ਸ਼ਬਦ-ਨਿਖੇੜ ਠੀਕ ਹੈ, ਕੋਈ ਕਹਿੰਦਾ ਹੈ ਭਾਈ ਕਾਹਨ ਸਿੰਘ ਜੀ ਦੇ ਕੋਸ਼ ਮੁਤਾਬਿਕ ਸ਼ਬਦ-ਨਿਖੇੜ ਠੀਕ ਹੈ, ਕੋਈ ਭਾਈ ਸਾਹਿਬ ਭਾਈ ਰਣਧੀਰ ਸਿੰਘ ਜੀ ਵੱਲੋਂ ਦਿੱਤੀ ਅਗਵਾਈ ਨੂੰ ਠੀਕ ਸਮਝਦਾ ਹੈ, ਕੋਈ ਕਿਸੇ ਟਕਸਾਲ ਨੂੰ ਅਤੇ ਕੋਈ ਕਿਸੇ ਟਕਸਾਲ ਨੂੰ ਠੀਕ ਮੰਨਦਾ ਹੈ। ਪਰ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਵੱਲ ਕੋਈ ਮਨੁੱਖ ਵੀ ਉਂਗਲ ਕਰਨ ਦੀ ਜੁਰੱਅਤ ਨਹੀਂ ਕਰ ਸਕਦਾ ਕਿ ਇਹ ਗ਼ਲਤੀਆਂ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੀਆਂ ਹਨ, ਕਿਉਂਕਿ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਅੰਦਰ 'ਸਮੂਹ ਗੁਰਬਾਣੀ' ਜੁੜਤ ਸ਼ਬਦਾਂ ਵਿਚ ਦਰਜ ਹੈ। ਲੜੀਦਾਰ ਸਰੂਪ ਤੋਂ ਠੀਕ ਜਾਂ ਗ਼ਲਤ ਉਚਾਰਨ ਕਰਨਾ ਪਾਠੀ ਜਨਾਂ ਦਾ ਆਪਣਾ ਹੀ ਕਰਤਵ ਹੈ। ਲੜੀਦਾਰ ਸਰੂਪ ਹੋਣ ਦੇ ਕਾਰਨ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਪਦ-ਛੇਦੀ-ਗ਼ਲਤੀਆਂ ਤੋਂ ਮੁਕਤ ਹਨ (ਗ਼ਲਤੀ-ਰਹਿਤ ਹਨ)। ਗੁਰੂ ਪੂਰਾ ਹੈ ਅਤੇ ਅਭੁੱਲਾ ਹੈ। ਅਸੀਂ ਅਧੂਰੇ ਹਾਂ ਅਤੇ ਸਦਾ ਹੀ ਭੁਲਣਹਾਰ ਹਾਂ।
+      </p>
+
+      <p>
+        ਹੁਣ ਆਪਾਂ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੇ ਪਦ-ਛੇਦ ਸਰੂਪ ਵੱਲ ਧਿਆਨ ਲਿਆਈਏ। ਕਈ ਪਦ-ਛੇਦ ਸਰੂਪ ਬਾਜ਼ਾਰੀ ਵਾਪਾਰੀਆਂ ਨੇ ਪਰਿੰਟ ਕਰਾਏ ਹਨ ਅਤੇ ਕਈ ਸ਼੍ਰੋਮਣੀ ਕਮੇਟੀ ਨੇ। ਇਨ੍ਹਾਂ ਵਿਚ ਕਈ ਪਦ-ਛੇਦੀ ਫਰਕ ਹਨ। ਇਨ੍ਹਾਂ ਸਰੂਪਾਂ ਵਿਚੋਂ ਕੋਈ ਭੀ ਇਕ ਸਰੂਪ ਸਮੂਹ ਟੀਕਾਕਾਰਾਂ ਦੀ ਤਸੱਲੀ ਨਹੀਂ ਕਰ ਸਕਦਾ। ਸ਼ਬਦਾਂ ਦੇ ਨਿਖੇੜ ਬਾਰੇ ਜਿਸ ਵਿਚ ਟੀਕਾਕਾਰ ਵੱਲੋਂ ਦਿੱਤੀ ਗਈ ਵਿਆਖਿਆ ਦਾ ਕੋਈ ਕਾਇਲ ਹੈ, ਉਹ ਉਸ ਟੀਕਾਕਾਰ ਨੂੰ ਦ੍ਰਿੜ੍ਹ ਵਿਸ਼ਵਾਸ ਨਾਲ ਠੀਕ ਸਮਝਦਾ ਹੈ ਅਤੇ ਬਾਕੀ ਦੇ ਟੀਕਾਕਾਰਾਂ ਦੀ ਦਲੀਲ ਨੂੰ ਗ਼ਲਤ ਸਮਝਦਾ ਹੈ। ਇਸ ਲਈ ਇਨ੍ਹਾਂ ਸਮੂਹ ਪਾਠੀਆਂ ਨੂੰ ਪਦ-ਛੇਦ ਸਰੂਪਾਂ ਵਿਚ ਕਈ ਕਈ ਗ਼ਲਤੀਆਂ ਪਰਿੰਟ ਹੋਈਆਂ ਨਜ਼ਰ ਆਉਂਦੀਆਂ ਹਨ, ਜਿਨ੍ਹਾਂ ਵੱਲ ਉਂਗਲਾਂ ਕਰ ਕੇ ਇਹ ਲੋਕ ਆਪਣੀ ਰਾਏ ਦਰੁਸਤ ਮਿਥਦੇ ਹਨ। ਇਸ ਤਰ੍ਹਾਂ ਗੁਰਬਾਣੀ ਦੇ ਗ਼ਲਤ ਉਚਾਰਨ ਦੀ ਜ਼ਿੰਮੇਵਾਰੀ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੇ ਸਿਰ ਹੀ ਥੱਪੀ ਜਾਂਦੀ ਹੈ। ਵਨੰਗੀ ਮਾਤਰ ਕੁਝ ਕੁ ਗ਼ਲਤੀਆਂ ਇਸ ਪ੍ਰਕਾਰ ਹਨ:
+      </p>
+
+      <div class="section-divider">◆ ◆ ◆</div>
+
+      <div class="profile-block">
+        <h3>੧</h3>
+        <p>ਇਕ ਟੀਕਾਕਾਰ ਕਹਿੰਦਾ ਹੈ, 'ਏਤੇ ਕੂਕਰ ਹਉ ਬੇਗਾਨਾ' ਪਾਠ ਠੀਕ ਹੈ<br>ਦੂਜਾ ਕਹਿੰਦਾ ਹੈ, 'ਏਤੇ ਕੂਕ ਰਹਉ ਬੇਗਾਨਾ' ਪਾਠ ਦਰੁਸਤ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>੨</h3>
+        <p>ਇਕ ਕਹਿੰਦਾ ਹੈ, 'ਦਰ ਸਰੀਤਾ' ਸ਼ਬਦ ਨਿਖੇੜ ਠੀਕ ਹੈ।<br>ਦੂਜਾ ਕਹਿੰਦਾ ਹੈ 'ਦਰਸ ਰੀਤਾ' ਨਿਖੇੜ ਠੀਕ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>੩</h3>
+        <p>ਕੋਈ 'ਪੰਚਾਹ ਰੁਨਿ ਦਲਿਅਉ' ਪਾਠ ਠੀਕ ਸਮਝਦਾ ਹੈ।<br>ਕੋਈ 'ਪੰਚਾਹਰੁ ਨਿਦਲਿਅਉ' ਨੂੰ ਠੀਕ ਸਮਝਦਾ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>੪</h3>
+        <p>ਕੋਈ 'ਸਬਦ ਸੁਰਤਿ ਕੀ ਨੀਵ ਰਖਾਈ' ਹੀ ਦਰੁਸਤ ਮੰਨੀ ਬੈਠਾ ਹੈ।<br>ਅਤੇ ਦੂਜੇ 'ਸਬਦ ਸੁਰਤਿ ਕੀਨੀ ਵਰਖਾਈ' ਨੂੰ ਸਪਸ਼ਟ ਕਰਦਾ ਹੈ।</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>੫</h3>
+        <p>ਕੋਈ 'ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ' ਨਿਖੇੜ ਨੂੰ ਠੀਕ ਸਮਝਦਾ ਹੈ<br>ਕੋਈ 'ਸਤਿ ਗੁਰਪ੍ਰਸਾਦਿ' ਨਿਖੇੜ ਨੂੰ ਠੀਕ ਕਹਿੰਦਾ ਹੈ।</p>
+      </div>
+
+      <div class="section-divider">◆ ◆ ◆</div>
+
+      <p>
+        ਇਸ ਪ੍ਰਕਾਰ ਹੋਰ ਅਨੇਕਾਂ ਸ਼ਬਦ ਹਨ, ਜਿਨ੍ਹਾਂ ਦੇ ਸ਼ੁਧ ਨਿਖੇੜ ਬਾਰੇ ਗੁਣਵਾਨ ਵਿਅਕਤੀਆਂ ਵਿਚ ਇਕ ਰਾਏ ਨਹੀਂ ਹੈ? ਇਕ ਪਦ-ਛੇਦ ਸਰੂਪ ਕਿਹੜੇ ਕਿਹੜੇ ਟੀਕਾਕਾਰ ਦੀ ਤਸੱਲੀ ਕਰਾਏਗਾ? ਸਭਨਾ ਦੀ ਤਸੱਲੀ ਕਰਾਉਣੀ ਤਾਂ ਇਕ ਪਦ-ਛੇਦ ਸਰੂਪ ਲਈ ਅਸੰਭਵ ਹੈ। ਜਿਸ ਟੀਕਾਕਾਰ ਦੀ ਤਸੱਲੀ ਨਾ ਹੋਈ, ਉਹੋ ਹੀ ਪਦ-ਛੇਦ ਗ਼ਲਤੀਆਂ ਉੱਤੇ ਨੱਕ ਚੜ੍ਹਾਏਗਾ। ਤਾਂ ਫਿਰ ਪਦ-ਛੇਦ ਸਰੂਪ ਦਾ ਸਤਿਕਾਰ ਕਿਥੇ ਰਹਿਆ?
+      </p>
+
+      <p>
+        ਹਨੇਰ ਸਾਈਂ ਦਾ! ਗੁਰੂ ਗ਼ਲਤ ਅਤੇ ਅਸੀਂ ਠੀਕ! ਅਫ਼ਸੋਸ ਸਦ ਅਫ਼ਸੋਸ! ਗੁਰਬਾਣੀ ਨੂੰ ਪਦ-ਛੇਦ ਕਰਨ ਨਾਲ, ਇਕ ਕਿਸਮ ਦਾ, ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੇ ਮੂੰਹ ਵਿਚ, ਗੁਰਬਾਣੀ ਦੇ ਗ਼ਲਤ ਉਚਾਰਨ ਨੂੰ ਪਾ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਇਹ ਸਭ ਨੂੰ ਯਾਦ ਰਹੇ ਕਿ ਸ੍ਰੀ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਸਾਹਿਬ ਜੀ ਨੇ ਲੜੀਦਾਰ ਸਰੂਪ ਨੂੰ ਮੱਥਾ ਟੇਕ ਕੇ ਗੁਰ-ਗੱਦੀ ਬਖ਼ਸ਼ੀ ਸੀ। ਇਸ ਲਈ ਲੜੀਦਾਰ ਸਰੂਪ ਹੀ ਗੁਰ-ਗੱਦੀ ਦੇ ਮਾਲਕ ਹਨ ਅਤੇ ਸਮੂਹ ਪੰਥ ਵੱਲੋਂ ਪੂਰਨ ਸਤਿਕਾਰ ਦੇ ਯੋਗ ਹੱਕਦਾਰ ਹਨ।
+      </p>
+
+      <p>
+        ਲੜੀਦਾਰ ਸਰੂਪ ਹੀ ਇਕ ਅਜਿਹਾ ਸਰੂਪ ਹੈ ਜੋ ਗੁਰਬਾਣੀ ਦੀ ਸੰਪੂਰਨਤਾ ਅਤੇ ਸਹੀ ਹੋਣ ਦਾ ਸਾਖੀ ਹੈ ਅਤੇ ਪਦ-ਛੇਦੀ ਗ਼ਲਤੀਆਂ ਤੋਂ ਮੁਕਤ ਹੈ। "ਹਮਭੂਲਹਤੁਮਸਦਾਅਭੂਲਾ....(੧੨੧੩)" ਵਾਲਾ ਗੁਰ-ਫ਼ੁਰਮਾਨ ਕੇਵਲ ਲੜੀਦਾਰ ਸਰੂਪ 'ਤੇ ਹੀ ਢੁਕਦਾ ਹੈ, ਪਦ ਛੇਦ ਸਰੂਪ 'ਤੇ ਨਹੀਂ। ਵੈਸੇ ਗੁਰਬਾਣੀ ਦਾ ਸਤਿਕਾਰ ਤਾਂ ਹਰ ਹਾਲਤ ਵਿਚ ਅਸਾਂ ਵਧ ਤੋਂ ਵਧ ਕਰਨਾ ਹੈ।
+      </p>
+
+      <p>
+        ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਅੰਦਰ ਸ਼ਬਦ-ਨਿਖੇੜ ਗ਼ਲਤੀਆਂ ਗੁਰਬਾਣੀ ਨੂੰ ਪਦ-ਛੇਦ ਕਰਨ ਨਾਲ ਹੀ ਉਤਪੰਨ ਹੋਈਆਂ ਹਨ। ਇਨ੍ਹਾਂ ਗ਼ਲਤੀਆਂ ਦੇ ਕਾਰਨ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਨੂੰ ਬਹਿਸ ਮੁਬਹਿਸੇ ਦਾ ਵਿਸ਼ਾ ਬਣਾ ਦਿੱਤਾ ਗਿਆ ਹੈ, ਜਿਸ ਦਾ ਦੋਸ਼ ਅਥਵਾ ਪੂਰੀ ਜ਼ਿੰਮੇਵਾਰੀ ਗੁਰਬਾਣੀ ਨੂੰ ਪਦ-ਛੇਦ ਕਰਨ ਵਾਲਿਆਂ ਸੱਜਣਾਂ ਦੀ ਹੈ, ਜੋ ਕਿ ਨਾ-ਕਾਬਲੇ ਮੁਆਫ਼ੀ ਹੈ। ਪਦ-ਛੇਦ ਸਰੂਪ ਦਾ ਪਰਚਾਰ ਕਰਨਾ, ਅਥਵਾ ਇਸ ਦੀ ਹਾਮੀ ਭਰਨਾ ਭੀ ਸਾਨੂੰ ਇਸ ਦੋਸ਼ ਤੋਂ ਬਰੀ ਨਹੀਂ ਹੋਣ ਦਿੰਦਾ।
+      </p>
+
+      <p>
+        ਇਸ ਲਈ ਸਮੂਹ ਗੁਰ-ਅਸਥਾਨਾਂ, ਧਰਮਸਾਲਾਂ ਅਤੇ ਘਰਾਂ ਅੰਦਰ, ਪਾਵਨ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੇ ਲੜੀਦਾਰ ਸਰੂਪ ਦਾ ਪ੍ਰਕਾਸ਼ ਹੋਣਾ ਉਚਿੱਤ, ਵਾਜਬ ਅਤੇ ਸਹੀ ਹੈ। ਕੇਵਲ ਇਸ ਤਰ੍ਹਾਂ ਕਰਨ ਨਾਲ ਹੀ ਗੁਰਬਾਣੀ-ਗ਼ਲਤ-ਉਚਾਰਨ ਦਾ ਦੋਸ਼, ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੇ ਸਿਰ ਤੋਂ ਹਟਾ ਮੁੜ ਪਾਠੀ ਸੱਜਣਾਂ ਦੇ ਸਿਰ ਥੱਪਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਫਿਰ ਦੋਸ਼ ਹੈ ਭੀ ਪਾਠੀ ਜਨਾਂ ਦਾ ਹੀ; ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦਾ ਨਹੀਂ ਹੈ। ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਦੇ ਸਿਰ ਤਾਂ ਇਹ ਬਦੋ-ਬਦੀ ਮੜ੍ਹਿਆ ਗਿਆ ਹੈ। ਅਤੇ ਮੜ੍ਹਿਆ ਪਦ-ਛੇਦੀ ਪ੍ਰੇਮੀਆਂ ਨੇ ਹੈ।
+      </p>
+
+      <p>
+        ਪੰਥ ਦੇ ਸਮੂਹ ਜ਼ਿੰਮੇਵਾਰ ਵਿਅਕਤੀਆਂ ਦੇ ਚਰਨਾਂ ਵਿਚ ਬੇਨਤੀ ਹੈ ਕਿ ਆਪਣਾ ਅੱਗਾ ਸਵਾਰਨ ਲਈ ਉਹ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੇ ਲੜੀਦਾਰ ਸਰੂਪ ਨੂੰ ਮੁੜ ਬਹਾਲ ਕਰਨ ਦਾ ਪੂਰਨ ਉਪਰਾਲਾ ਕਰਨ ਅਤੇ ਇਨ੍ਹਾਂ ਸਰੂਪਾਂ ਨੂੰ ਅਜਾਈਂ ਹੀ ਨਾ ਅਗਨੀ-ਭੇਟ ਕਰਦੇ ਤੁਰੇ ਜਾਣ।
+      </p>
+
+      <p>
+        ਗ਼ਲਤ ਜ਼ਿੱਦ ਉੱਤੇ ਅੜੀ ਜਾਣਾ ਸੋਭਦਾ ਨਹੀਂ। ਸਹੀ ਸ਼ਬਦ ਨਿਖੇੜ ਸਤਿਗੁਰੂ ਆਪ ਹੀ ਜਾਣਦੇ ਹਨ ਜਾਂ ਉਹ ਜਾਣਨਗੇ ਜਿਨ੍ਹਾਂ ਉੱਤੇ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਪੂਰਨ ਬਖ਼ਸ਼ਿਸ਼ ਕਰਨਗੇ। ਅਸੀਂ ਅਲਪੱਗ ਜੀਵ ਛਾਤੀ 'ਤੇ ਹੱਥ ਰੱਖ ਕੇ ਦਾਅਵੇ ਨਾਲ ਨਹੀਂ ਕਹਿ ਸਕਦੇ ਕਿ ਫਲਾਣਾ-ਫਲਾਣਾ ਸ਼ਬਦ-ਨਿਖੇੜ ਬਿਲਕੁਲ ਠੀਕ ਹੈ। ਹਾਂ, ਆਪਣੀ ਆਪਣੀ ਬੁੱਧੀ ਅਨੁਸਾਰ ਅਨੁਮਾਨ ਲਗਾ ਸਕਦੇ ਹਾਂ।
+      </p>
+
+      <p>
+        ਸ਼ੁਧ ਪਾਠ ਕਰਨ ਕਰਾਉਣ ਦੇ ਵਾਜਬ ਉਪਰਾਲੇ ਕੀਤੇ ਜਾਣੇ ਚਾਹੀਦੇ ਹਨ।
+      </p>
+
+      <div class="attribution">
+        <p>
+          ਇਹ ਲੇਖ ਜੱਥੇਦਾਰ ਭਾਈ ਸਾਹਿਬ ਭਾਈ ਰਾਮ ਸਿੰਘ ਜੀ (ਮੁਖੀ ਅਖੰਡ ਕੀਰਤਨੀ ਜਥਾ) ਵੱਲੋਂ ਲਿਖਿਆ ਗਿਆ ਅਤੇ 'ਸੂਰਾ' ਅੰਮ੍ਰਿਤਸਰ, ਮਾਰਚ-ਅਪ੍ਰੈਲ 2002 (ਪੰਨੇ 24–25) ਵਿਚ ਛਪਿਆ।
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ENGLISH CONTENT -->
+
+    <div id="english-content" style="display:none;">
+
+      <p>
+        Efforts have already been made to explain at some length that, in accordance with the Guru's intent, the larivaar (continuous, joined-word) saroop of the sacred Sri Guru Granth Sahib Ji alone is the correct and true saroop, ordained from the very beginning by Akal Purakh. The pad-chhed (word-separated) saroop of Guru Sahib Ji is the product of the thinking of clever manmatis. This subject is a subtle one. If, despite the efforts made so far, this knot has still not been untied for some, a further attempt is made here to help them.
+      </p>
+
+      <p>
+        Devotees who read from the larivaar saroop of Gurbani, and who do not agree among themselves on the correct division of many difficult words, blame one another for the mispronunciation of Gurbani. One says the word-division according to Professor Sahib Singh Ji's teeka is correct; another says the word-division according to Bhai Kahn Singh Ji's Kosh is correct; one considers the guidance given by Bhai Sahib Bhai Randhir Singh Ji to be right; one holds one Taksaal to be correct and another holds another. But no person can dare to point a finger at Sri Guru Granth Sahib Ji and say these mistakes belong to Sri Guru Granth Sahib Ji, because within Sri Guru Granth Sahib Ji "all of Gurbani" is recorded in joined words. Reading correctly or incorrectly from the larivaar saroop is the reader's own responsibility. Being in larivaar form, Guru Sahib Ji is free from word-division errors — entirely error-free. The Guru is perfect and infallible. We are incomplete, and forever prone to error.
+      </p>
+
+      <p>
+        Now let us turn our attention to the pad-chhed saroop of Sri Guru Granth Sahib Ji. Several pad-chhed saroops have been printed by commercial traders, and several by the Shiromani Committee. There are many differences of word-division among them. No single one of these saroops can satisfy all the commentators. Whoever is convinced by a particular commentator's explanation of word-division holds that commentator to be right with firm conviction, and considers the arguments of the other commentators wrong. So all these readers find many, many errors printed in the pad-chhed saroops, and by pointing at them they establish their own opinion as correct. In this way, the responsibility for the mispronunciation of Gurbani is placed squarely on the head of Sri Guru Granth Sahib Ji. A few such errors, merely as a sample, are as follows:
+      </p>
+
+      <div class="section-divider">◆ ◆ ◆</div>
+
+      <div class="profile-block">
+        <h3>1</h3>
+        <p>One commentator says the reading 'ਏਤੇ ਕੂਕਰ ਹਉ ਬੇਗਾਨਾ' (ete kookar hau begaanaa) is correct;<br>another says the reading 'ਏਤੇ ਕੂਕ ਰਹਉ ਬੇਗਾਨਾ' (ete kook rahau begaanaa) is right.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>2</h3>
+        <p>One says the word-division 'ਦਰ ਸਰੀਤਾ' (dar sareetaa) is correct;<br>another says the division 'ਦਰਸ ਰੀਤਾ' (daras reetaa) is correct.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>3</h3>
+        <p>Some consider the reading 'ਪੰਚਾਹ ਰੁਨਿ ਦਲਿਅਉ' (panchaah run daliau) correct;<br>others consider 'ਪੰਚਾਹਰੁ ਨਿਦਲਿਅਉ' (panchaahar nidaliau) correct.</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>4</h3>
+        <p>Some are firmly settled that 'ਸਬਦ ਸੁਰਤਿ ਕੀ ਨੀਵ ਰਖਾਈ' (sabad surat kee neev rakhaaee) alone is right;<br>while another explains it as 'ਸਬਦ ਸੁਰਤਿ ਕੀਨੀ ਵਰਖਾਈ' (sabad surat keenee varakhaaee).</p>
+      </div>
+
+      <div class="profile-block">
+        <h3>5</h3>
+        <p>Some consider the division 'ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ' (satgur prasaad) correct;<br>others say the division 'ਸਤਿ ਗੁਰਪ੍ਰਸਾਦਿ' (sat gurprasaad) is correct.</p>
+      </div>
+
+      <div class="section-divider">◆ ◆ ◆</div>
+
+      <p>
+        In the same way there are countless other words on whose correct division learned people do not share one opinion. Which commentators will a single pad-chhed saroop satisfy? Satisfying everyone is impossible for any one pad-chhed saroop. Whichever commentator is left unsatisfied will turn up his nose at its word-division errors. Where, then, does the respect of the pad-chhed saroop remain?
+      </p>
+
+      <p>
+        Haner Saain Da — what an outrage, O Lord! The Guru wrong, and we right! Alas, a hundred times alas! By dividing Gurbani into separate words, the mispronunciation of Gurbani has, in a sense, been put into Guru Sahib Ji's own mouth. Let everyone remember that Sri Guru Gobind Singh Sahib Ji bowed before the larivaar saroop and bestowed the Guruship upon it. Therefore the larivaar saroop alone is the rightful holder of the Guruship, fully deserving of complete reverence from the whole Panth.
+      </p>
+
+      <p>
+        The larivaar saroop alone bears witness to the completeness and correctness of Gurbani, and is free from word-division errors. The Guru's command "ਹਮਭੂਲਹਤੁਮਸਦਾਅਭੂਲਾ" — "We err; You are forever unerring" (Ang 1213) — applies only to the larivaar saroop, not to the pad-chhed saroop. In any case, we must show Gurbani the greatest possible respect in every circumstance.
+      </p>
+
+      <p>
+        The word-division errors within Sri Guru Granth Sahib Ji have arisen only from dividing Gurbani into separate words. Because of these errors, Sri Guru Granth Sahib Ji has been made a subject of argument and debate — and the blame, the full responsibility for this, lies with those who divided Gurbani into words, which is unforgivable. Promoting the pad-chhed saroop, or even lending it our support, does not let us go free of this blame either.
+      </p>
+
+      <p>
+        Therefore it is proper, right and correct that the larivaar saroop of the sacred Sri Guru Granth Sahib Ji be given prakash in all Gurdwaras, dharamsalas and homes. Only by doing so can the blame for mispronouncing Gurbani be lifted from Guru Sahib Ji's head and placed back upon the readers. And the fault truly is the readers' alone, not Guru Sahib Ji's. It has been forcibly imposed upon Guru Sahib Ji — imposed by the devotees of pad-chhed.
+      </p>
+
+      <p>
+        It is a humble request at the feet of all the responsible individuals of the Panth that, to make good their hereafter, they make every effort to restore the larivaar saroop of Sri Guru Granth Sahib Ji, and not go on needlessly consigning these saroops to the fire.
+      </p>
+
+      <p>
+        Stubbornly clinging to a wrong position is unbecoming. The true word-division is known only to the Satguru Himself, or to those upon whom Guru Sahib Ji bestows full grace. We beings of limited understanding cannot, hand on heart, claim that such-and-such a word-division is absolutely correct. Yes — each of us can make an estimate according to our own understanding.
+      </p>
+
+      <p>
+        Sincere efforts should be made to read correctly, and to help others read correctly (shudh paath).
+      </p>
+
+      <div class="attribution">
+        <p>
+          This article was written by Jathedar Bhai Sahib Bhai Ram Singh Ji (Mukhi, Akhand Kirtani Jatha) and published in 'Sooraa', Amritsar, March–April 2002 (pages 24–25).
+        </p>
+      </div>
+
+    </div>
+
+    <a href="/articles/RamSingh/index.html" class="back-home">
+      ← Back To Bhai Ram Singh Ji Articles
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 GurmatKhajana.com • The Living Archive of Gursikh Legacy • AKJUK 🙏
+</footer>
+
+<script>
+
+function showPunjabi(){
+    document.getElementById('punjabi-content').style.display = 'block';
+    document.getElementById('english-content').style.display = 'none';
+    document.getElementById('paBtn').classList.add('active');
+    document.getElementById('enBtn').classList.remove('active');
+}
+
+function showEnglish(){
+    document.getElementById('punjabi-content').style.display = 'none';
+    document.getElementById('english-content').style.display = 'block';
+    document.getElementById('enBtn').classList.add('active');
+    document.getElementById('paBtn').classList.remove('active');
+}
+
+</script>
+
+</body>
+</html>
