@@ -91,7 +91,6 @@ a{
     top:0;
     left:0;
     width:100%;
-
     z-index:999;
 
     padding:22px 6%;
@@ -100,15 +99,28 @@ a{
     justify-content:flex-end;
     align-items:center;
 
-    background:
-    linear-gradient(to bottom,
-    rgba(0,0,0,0.88),
-    rgba(0,0,0,0.15));
+    background:linear-gradient(to bottom, rgba(0,0,0,0.92), rgba(0,0,0,0.2));
+    backdrop-filter:blur(12px);
 
-    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
 
-    border-bottom:
-    1px solid rgba(255,255,255,0.05);
+.navbar::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-1px;
+    width:100%;
+    height:1px;
+
+    background:linear-gradient(90deg,
+    transparent,
+    #ff8c00,
+    #d4a42c,
+    #3a6fd8,
+    transparent);
+
+    opacity:0.5;
 }
 
 .nav-links{
@@ -121,12 +133,29 @@ a{
     letter-spacing:2px;
     text-transform:uppercase;
     color:#ddd;
-
+    position:relative;
     transition:0.3s ease;
 }
 
-.nav-links a:hover{
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:linear-gradient(90deg, #ff8c00, #d4a42c);
+    transition:0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
     color:#d4a42c;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
 }
 
 /* HERO */
@@ -733,12 +762,30 @@ a{
 /* FOOTER */
 
 footer{
+    position:relative;
     padding:40px 20px;
     text-align:center;
     color:#888;
-    border-top:1px solid rgba(255,255,255,0.06);
 }
 
+footer::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    height:1px;
+
+    background:linear-gradient(90deg,
+    transparent,
+    #ff8c00,
+    #d4a42c,
+    #3a6fd8,
+    transparent);
+
+    opacity:0.4;
+}
 /* TABLET */
 
 @media(max-width:1100px){
@@ -981,7 +1028,7 @@ footer{
 <nav class="navbar">
 
     <div class="nav-links">
-        <a href="/index.html">Home</a>
+        <a href="/index.html" class="active">Home</a>
         <a href="/about.html">About</a>
         <a href="/articles/index.html">Articles</a>
         <a href="/jeevani/index.html">Jeevani</a>
@@ -1078,7 +1125,7 @@ footer{
             <div class="steek-divider"></div>
 
             <p>
-                A pauri-by-pauri explanation of Japji Sahib, presented in Panjabi & English.
+                A pauri-by-pauri explanation of Japji Sahib, presented in Panjabi &amp; English.
             </p>
 
             <span class="steek-btn">Click here to read</span>
