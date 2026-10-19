@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bhai Joginder Singh Talwara • GurmatKhajana</title>
+    <title>Bhai Joginder Singh Talwara Ji • GurmatKhajana</title>
+    <link rel="icon" type="image/png" href="/images/logo/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Noto+Serif+Gurmukhi:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
 
@@ -31,7 +32,7 @@ body{
     overflow-x:hidden;
 }
 
-/* BACKGROUND */
+/* MULTI-COLOUR BACKGROUND GLOW */
 
 body::before{
     content:'';
@@ -39,36 +40,12 @@ body::before{
     inset:0;
 
     background:
-    radial-gradient(circle at top,
-    rgba(212,164,44,0.08),
-    transparent 45%);
+    radial-gradient(circle at 12% 18%, rgba(212,164,44,0.10), transparent 28%),
+    radial-gradient(circle at 88% 35%, rgba(58,111,216,0.10), transparent 30%),
+    radial-gradient(circle at 30% 85%, rgba(255,140,0,0.07), transparent 32%);
 
     pointer-events:none;
     z-index:-1;
-}
-
-body::after{
-    content:'';
-
-    position:fixed;
-    inset:0;
-
-    background:
-
-    radial-gradient(circle at 15% 20%,
-    rgba(212,164,44,0.10),
-    transparent 25%),
-
-    radial-gradient(circle at 85% 30%,
-    rgba(212,164,44,0.08),
-    transparent 30%),
-
-    radial-gradient(circle at 50% 80%,
-    rgba(255,255,255,0.03),
-    transparent 35%);
-
-    pointer-events:none;
-    z-index:-2;
 }
 
 a{
@@ -83,7 +60,6 @@ a{
     top:0;
     left:0;
     width:100%;
-
     z-index:999;
 
     padding:22px 6%;
@@ -92,15 +68,28 @@ a{
     justify-content:flex-end;
     align-items:center;
 
-    background:
-    linear-gradient(to bottom,
-    rgba(0,0,0,0.92),
-    rgba(0,0,0,0.2));
-
+    background:linear-gradient(to bottom, rgba(0,0,0,0.92), rgba(0,0,0,0.2));
     backdrop-filter:blur(12px);
 
-    border-bottom:
-    1px solid rgba(255,255,255,0.06);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.navbar::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-1px;
+    width:100%;
+    height:1px;
+
+    background:linear-gradient(90deg,
+    transparent,
+    #ff8c00,
+    #d4a42c,
+    #3a6fd8,
+    transparent);
+
+    opacity:0.5;
 }
 
 .nav-links{
@@ -113,96 +102,119 @@ a{
     letter-spacing:2px;
     text-transform:uppercase;
     color:#ddd;
-
+    position:relative;
     transition:0.3s ease;
 }
 
-.nav-links a:hover{
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:linear-gradient(90deg, #ff8c00, #d4a42c);
+    transition:0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
     color:#d4a42c;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
 }
 
 /* TOP LOGO */
 
 .top-main-logo{
     position:fixed;
-
     top:14px;
     left:40px;
-
     z-index:1001;
 }
 
 .top-main-logo img{
     width:150px;
     height:auto;
-
     display:block;
-
-    filter:
-    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+    filter:drop-shadow(0 0 20px rgba(212,164,44,0.15));
 }
 
 /* HERO */
 
 .hero{
     position:relative;
-
     min-height:60vh;
 
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
 
     overflow:hidden;
-
     isolation:isolate;
 
     background:
-    linear-gradient(rgba(0,0,0,0.60),
-    rgba(0,0,0,0.90)),
-    url('../../images/gallery/siteimages/talwara.jpg')
-    center/cover fixed;
+    linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.90)),
+    url('/images/gallery/siteimages/talwara.jpg') center/cover fixed;
 }
 
 .hero::before{
     content:'';
     position:absolute;
     inset:0;
-
-    background:
-    radial-gradient(circle at center,
-    transparent 10%,
-    rgba(0,0,0,0.82) 100%);
+    background:radial-gradient(circle at center, transparent 10%, rgba(0,0,0,0.82) 100%);
 }
 
 .hero::after{
     content:'';
-
     position:absolute;
     inset:0;
 
     background:
-    radial-gradient(circle at center,
-    rgba(212,164,44,0.12),
-    transparent 45%);
+    radial-gradient(circle at 35% 45%, rgba(255,140,0,0.12), transparent 40%),
+    radial-gradient(circle at 65% 55%, rgba(58,111,216,0.12), transparent 40%),
+    radial-gradient(circle at center, rgba(212,164,44,0.10), transparent 45%);
 
     z-index:1;
+    pointer-events:none;
 }
 
 .hero-content{
     position:relative;
     z-index:2;
-
     max-width:900px;
-
     padding:180px 20px 100px;
+}
+
+.hero-eyebrow{
+    display:inline-block;
+
+    padding:8px 22px;
+    margin-bottom:28px;
+
+    border-radius:50px;
+    border:1px solid rgba(255,140,0,0.35);
+    background:rgba(255,140,0,0.08);
+
+    color:#ffa94d;
+    font-size:0.75rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
 }
 
 .hero-content h1{
     font-family:'Cinzel',serif;
     font-size:4.5rem;
+    line-height:1.15;
+
+    background:linear-gradient(135deg, #f3d27a, #d4a42c 45%, #ff8c00);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
 
     margin-bottom:25px;
 }
@@ -220,27 +232,21 @@ a{
     padding:110px 7%;
 }
 
-.content-section::before{
-    content:'';
+.back-link{
+    display:inline-block;
+    margin-bottom:50px;
 
-    position:absolute;
+    color:#ffa94d;
+    font-size:0.8rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
 
-    top:120px;
-    left:50%;
+    transition:0.3s ease;
+}
 
-    transform:translateX(-50%);
-
-    width:75%;
-    height:75%;
-
-    background:
-    radial-gradient(circle,
-    rgba(212,164,44,0.05),
-    transparent 70%);
-
-    filter:blur(80px);
-
-    z-index:-1;
+.back-link:hover{
+    color:#d4a42c;
+    transform:translateX(-4px);
 }
 
 .section-title{
@@ -249,7 +255,7 @@ a{
 }
 
 .section-title span{
-    color:#d4a42c;
+    color:#ffa94d;
     letter-spacing:3px;
     font-size:0.8rem;
     text-transform:uppercase;
@@ -261,13 +267,19 @@ a{
     margin-top:15px;
 }
 
+.title-divider{
+    width:90px;
+    height:2px;
+    margin:22px auto 0;
+    background:linear-gradient(90deg, #ff8c00, #d4a42c, #3a6fd8);
+}
+
 /* ARTICLE GRID */
 
 .article-grid{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-
+    grid-template-columns:repeat(auto-fill, minmax(320px, 380px));
+    justify-content:center;
     gap:32px;
 }
 
@@ -275,44 +287,43 @@ a{
 
 .article-card{
     position:relative;
-
-    overflow:hidden;
-
+    display:block;
     min-height:500px;
-
+    overflow:hidden;
     border-radius:30px;
 
-    background:
-    linear-gradient(135deg,
-    rgba(20,20,20,0.55),
-    rgba(10,10,10,0.35));
+    background:#111;
 
-    border:
-    1px solid rgba(255,255,255,0.05);
-
-    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,153,51,0.25);
+    box-shadow:0 0 60px rgba(255,140,0,0.08);
 
     transition:0.4s ease;
+}
 
-    box-shadow:
-    0 20px 60px rgba(0,0,0,0.35);
+.article-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:3px;
+    background:linear-gradient(90deg, #ff8c00, #d4a42c, #3a6fd8);
+    z-index:5;
 }
 
 .article-card:hover{
     transform:translateY(-8px);
-
-    border-color:
-    rgba(212,164,44,0.25);
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,0.45);
+    border-color:rgba(255,153,51,0.5);
+    box-shadow:0 20px 50px rgba(0,0,0,0.45),
+               0 0 80px rgba(255,140,0,0.12);
 }
 
 .article-card img{
+    position:absolute;
+    inset:0;
     width:100%;
     height:100%;
     object-fit:cover;
-
     transition:0.5s ease;
 }
 
@@ -329,10 +340,7 @@ a{
 
     padding:35px;
 
-    background:
-    linear-gradient(to top,
-    rgba(0,0,0,0.95),
-    rgba(0,0,0,0.12));
+    background:linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.12));
 }
 
 .article-overlay-content{
@@ -340,63 +348,114 @@ a{
 }
 
 .article-label{
-    color:#d4a42c;
+    color:#ffa94d;
     font-size:0.8rem;
     letter-spacing:2px;
     text-transform:uppercase;
-
     margin-bottom:12px;
 }
 
 .article-overlay h3{
-    font-family:'Cinzel',serif;
+    font-family:'Cinzel','Noto Serif Gurmukhi',serif;
     font-size:2rem;
-
+    line-height:1.5;
     margin-bottom:15px;
+}
+
+.article-overlay h3.long-title{
+    font-size:1.35rem;
+    line-height:1.7;
 }
 
 .article-overlay p{
     color:#ddd;
     line-height:1.8;
-
     margin-bottom:22px;
 }
 
 .read-btn{
     display:inline-block;
-
     padding:12px 22px;
-
     border-radius:50px;
 
-    background:
-    rgba(212,164,44,0.12);
-
-    border:
-    1px solid rgba(212,164,44,0.22);
-
+    background:rgba(212,164,44,0.12);
+    border:1px solid rgba(212,164,44,0.25);
     color:#d4a42c;
 
     font-size:0.85rem;
+    letter-spacing:1px;
 
     transition:0.3s ease;
 }
 
 .article-card:hover .read-btn{
-    background:#d4a42c;
-    color:black;
+    background:linear-gradient(90deg, #ff8c00, #d4a42c);
+    border-color:transparent;
+    color:#000;
+    font-weight:600;
+}
+
+/* FEATURED CARD (Japji Sahib Steek) */
+
+.article-card.featured{
+    border-color:rgba(255,140,0,0.45);
+    box-shadow:0 0 70px rgba(255,140,0,0.16);
+}
+
+.article-card.featured .article-overlay{
+    background:
+    radial-gradient(circle at 80% 10%, rgba(255,140,0,0.18), transparent 45%),
+    linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.12));
+}
+
+.article-card.featured .article-label{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:50px;
+    background:rgba(255,140,0,0.14);
+    border:1px solid rgba(255,140,0,0.35);
+}
+
+.article-card.featured h3{
+    background:linear-gradient(90deg, #ffd27a, #ff9a3c);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.article-card.featured .read-btn{
+    background:linear-gradient(90deg, #ff8c00, #d4a42c);
+    border-color:transparent;
+    color:#000;
+    font-weight:600;
 }
 
 /* FOOTER */
 
 footer{
+    position:relative;
     padding:40px 20px;
     text-align:center;
-
     color:#888;
+}
 
-    border-top:
-    1px solid rgba(255,255,255,0.06);
+footer::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    height:1px;
+
+    background:linear-gradient(90deg,
+    transparent,
+    #ff8c00,
+    #d4a42c,
+    #3a6fd8,
+    transparent);
+
+    opacity:0.4;
 }
 
 /* MOBILE */
@@ -417,12 +476,7 @@ footer{
 }
 
 .top-main-logo{
-    left:20px;
-    top:18px;
-}
-
-.top-main-logo img{
-    width:135px;
+    display:none;
 }
 
 .hero{
@@ -444,11 +498,19 @@ footer{
 }
 
 .content-section{
-    padding:80px 20px;
+    padding:60px 20px 80px;
+}
+
+.back-link{
+    margin-bottom:35px;
 }
 
 .section-title h2{
     font-size:2rem;
+}
+
+.article-grid{
+    grid-template-columns:1fr;
 }
 
 .article-card{
@@ -463,8 +525,17 @@ footer{
     font-size:1.5rem;
 }
 
+.article-overlay h3.long-title{
+    font-size:1.15rem;
+}
+
 .article-overlay p{
     font-size:0.92rem;
+}
+
+footer{
+    font-size:0.85rem;
+    line-height:1.7;
 }
 
 }
@@ -477,34 +548,28 @@ footer{
 <!-- TOP LOGO -->
 
 <div class="top-main-logo">
-
-    <img src="/images/logo/logo.png"
-         alt="GurmatKhajana Logo">
-
+    <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
 </div>
 
 <!-- NAVBAR -->
 
 <nav class="navbar">
-
     <div class="nav-links">
         <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
-        <a href="/articles/index.html">Articles</a>
+        <a href="/articles/index.html" class="active">Articles</a>
         <a href="/jeevani/index.html">Jeevani</a>
     </div>
-
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
-
     <div class="hero-content">
 
-        <h1>
-            Bhai Joginder Singh Talwara Ji
-        </h1>
+        <span class="hero-eyebrow">Gurmat Archive</span>
+
+        <h1>Bhai Joginder Singh Talwara Ji</h1>
 
         <p>
             Explore deep Gurmat reflections,
@@ -514,217 +579,120 @@ footer{
         </p>
 
     </div>
-
 </section>
 
 <!-- ARTICLES -->
 
 <section class="content-section">
 
+    <a href="/articles/index.html" class="back-link">← All Authors</a>
+
     <div class="section-title">
-
         <span>Articles Archive</span>
-
         <h2>Browse Articles</h2>
-
+        <div class="title-divider"></div>
     </div>
 
     <div class="article-grid">
 
-        <!-- ARTICLE -->
+        <!-- ਮਨ -->
 
-        <a href="/articles/Talwara/mann.html"
-           class="article-card">
+        <a href="/articles/Talwara/mann.html" class="article-card">
 
-            <img src="/images/gallery/siteimages/talwara.jpg">
+            <img src="/images/gallery/siteimages/talwara.jpg" alt="ਮਨ - Bhai Joginder Singh Talwara Ji">
 
             <div class="article-overlay">
-
                 <div class="article-overlay-content">
-
-                    <div class="article-label">
-                        Gurmat Vichaar
-                    </div>
-
-                    <h3>
-                        ਮਨ
-                    </h3>
-
-                    <p>
-                        From the Bani of Guru Tegh Bahadur Ji
-                    </p>
-
-                    <div class="read-btn">
-                        Read Article
-                    </div>
-
+                    <div class="article-label">Gurmat Vichaar</div>
+                    <h3>ਮਨ</h3>
+                    <p>From the Bani of Guru Tegh Bahadur Ji</p>
+                    <div class="read-btn">Read Article</div>
                 </div>
-
             </div>
 
         </a>
 
-        <!-- ARTICLE -->
+        <!-- ਜਗ-ਰਚਨਾ -->
 
-        <a href="/articles/Talwara/jagrachna.html"
-           class="article-card">
+        <a href="/articles/Talwara/jagrachna.html" class="article-card">
 
-            <img src="/images/gallery/siteimages/talwara1.JPG">
+            <img src="/images/gallery/siteimages/talwara1.JPG" alt="ਜਗ-ਰਚਨਾ - Bhai Joginder Singh Talwara Ji">
 
             <div class="article-overlay">
-
                 <div class="article-overlay-content">
-
-                    <div class="article-label">
-                        Gurmat Vichaar
-                    </div>
-
-                    <h3>
-                        ਜਗ-ਰਚਨਾ
-                    </h3>
-
-                    <p>
-                        The Creation Of the World
-                    </p>
-
-                    <div class="read-btn">
-                        Read Article
-                    </div>
-
+                    <div class="article-label">Gurmat Vichaar</div>
+                    <h3>ਜਗ-ਰਚਨਾ</h3>
+                    <p>The Creation Of the World</p>
+                    <div class="read-btn">Read Article</div>
                 </div>
-
             </div>
 
         </a>
 
-        <!-- ARTICLE -->
+        <!-- ਸਤਿਗੁਰ ਮੈ ਸਬਦੁ -->
 
-        <a href="/articles/Talwara/shabad-guru.html"
-           class="article-card">
+        <a href="/articles/Talwara/shabad-guru.html" class="article-card">
 
-            <img src="/images/gallery/siteimages/talwara4.jpeg">
+            <img src="/images/gallery/siteimages/talwara4.jpeg" alt="ਸਤਿਗੁਰ ਮੈ ਸਬਦੁ - Bhai Joginder Singh Talwara Ji">
 
             <div class="article-overlay">
-
                 <div class="article-overlay-content">
-
-                    <div class="article-label">
-                        Gurmat Vichaar
-                    </div>
-
-                    <h3>
-                        ਸਤਿਗੁਰ ਮੈ ਸਬਦੁ ਸਬਦ ਮੈ ਸਤਿਗੁਰ ਹੈ ਨਿਰਗੁਨ ਗਿਆਨ ਧਿਆਨ ਸਮਝਾਵੈ ਜੀ
-                    </h3>
-
-                    <p>
-                        The True Guru is within the Word, and the Word is within the True Guru.
-                    </p>
-
-                    <div class="read-btn">
-                        Read Article
-                    </div>
-
+                    <div class="article-label">Gurmat Vichaar</div>
+                    <h3 class="long-title">ਸਤਿਗੁਰ ਮੈ ਸਬਦੁ ਸਬਦ ਮੈ ਸਤਿਗੁਰ ਹੈ ਨਿਰਗੁਨ ਗਿਆਨ ਧਿਆਨ ਸਮਝਾਵੈ ਜੀ</h3>
+                    <p>The True Guru is within the Word, and the Word is within the True Guru.</p>
+                    <div class="read-btn">Read Article</div>
                 </div>
-
             </div>
 
         </a>
 
-        <!-- ARTICLE -->
+        <!-- ਗੁਰਬਾਣੀ ਉਚਾਰਣ -->
 
-        <a href="/articles/Talwara/gurbaniucharan.html"
-           class="article-card">
+        <a href="/articles/Talwara/gurbaniucharan.html" class="article-card">
 
-            <img src="/images/gallery/siteimages/talwara3.jpeg">
+            <img src="/images/gallery/siteimages/talwara3.jpeg" alt="ਗੁਰਬਾਣੀ ਉਚਾਰਣ - Bhai Joginder Singh Talwara Ji">
 
             <div class="article-overlay">
-
                 <div class="article-overlay-content">
-
-                    <div class="article-label">
-                        Gurmat Vichaar
-                    </div>
-
-                    <h3>
-                        ਗੁਰਬਾਣੀ ਉਚਾਰਣ
-                    </h3>
-
-                    <p>
-                        Gurbani Pronunciation — the importance of Santhia and correct recitation
-                    </p>
-
-                    <div class="read-btn">
-                        Read Article
-                    </div>
-
+                    <div class="article-label">Gurmat Vichaar</div>
+                    <h3>ਗੁਰਬਾਣੀ ਉਚਾਰਣ</h3>
+                    <p>Gurbani Pronunciation — the importance of Santhia and correct recitation</p>
+                    <div class="read-btn">Read Article</div>
                 </div>
-
             </div>
 
         </a>
 
-        <!-- ARTICLE -->
+        <!-- ਗੁਰਮਤਿ ਪ੍ਰਚਾਰ -->
 
-        <a href="/articles/Talwara/GurmatParchar.html"
-           class="article-card">
+        <a href="/articles/Talwara/GurmatParchar.html" class="article-card">
 
-            <img src="/images/gallery/siteimages/Talwara2.jpg">
+            <img src="/images/gallery/siteimages/Talwara2.jpg" alt="ਗੁਰਮਤਿ ਪ੍ਰਚਾਰ - Bhai Joginder Singh Talwara Ji">
 
             <div class="article-overlay">
-
                 <div class="article-overlay-content">
-
-                    <div class="article-label">
-                        Gurmat Vichaar
-                    </div>
-
-                    <h3>
-                        ਗੁਰਮਤਿ ਪ੍ਰਚਾਰ - ਜੀਵਨ ਕਥਾ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ
-                    </h3>
-
-                    <p>
-                        Gurmat Parchar — the Life Story of Sri Guru Amardas Ji
-                    </p>
-
-                    <div class="read-btn">
-                        Read Article
-                    </div>
-
+                    <div class="article-label">Gurmat Vichaar</div>
+                    <h3>ਗੁਰਮਤਿ ਪ੍ਰਚਾਰ - ਜੀਵਨ ਕਥਾ ਸ੍ਰੀ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ</h3>
+                    <p>Gurmat Parchar — the Life Story of Sri Guru Amardas Ji</p>
+                    <div class="read-btn">Read Article</div>
                 </div>
-
             </div>
 
         </a>
 
-        <!-- JAPJI SAHIB STEEK -->
+        <!-- JAPJI SAHIB STEEK (Featured) -->
 
-        <a href="/articles/Talwara/japjisahibsteek.html"
-           class="article-card">
+        <a href="/articles/Talwara/japjisahibsteek.html" class="article-card featured">
 
-            <img src="/images/gallery/siteimages/japji.jpg">
+            <img src="/images/gallery/siteimages/japji.jpg" alt="Sri Japji Sahib Steek - Bhai Joginder Singh Talwara Ji">
 
             <div class="article-overlay">
-
                 <div class="article-overlay-content">
-
-                    <div class="article-label">
-                        Japji Sahib Steek
-                    </div>
-
-                    <h3>
-                        ਸ੍ਰੀ ਜਪੁ ਜੀ ਸਾਹਿਬ ਸਟੀਕ
-                    </h3>
-
-                    <p>
-                        Sri Japji Sahib Steek — Bhai Joginder Singh Talwara Ji
-                    </p>
-
-                    <div class="read-btn">
-                        Read Steek
-                    </div>
-
+                    <div class="article-label">Japji Sahib Steek</div>
+                    <h3>ਸ੍ਰੀ ਜਪੁ ਜੀ ਸਾਹਿਬ ਸਟੀਕ</h3>
+                    <p>Sri Japji Sahib Steek — Bhai Joginder Singh Talwara Ji</p>
+                    <div class="read-btn">Read Steek</div>
                 </div>
-
             </div>
 
         </a>
