@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jeevani • GurmatKhajana</title>
+    <link rel="icon" type="image/png" href="/images/logo/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,15 +32,17 @@ body{
     overflow-x:hidden;
 }
 
+/* MULTI-COLOUR BACKGROUND GLOW */
+
 body::before{
     content:'';
     position:fixed;
     inset:0;
 
     background:
-    radial-gradient(circle at top,
-    rgba(212,164,44,0.08),
-    transparent 45%);
+    radial-gradient(circle at 12% 18%, rgba(212,164,44,0.10), transparent 28%),
+    radial-gradient(circle at 88% 35%, rgba(58,111,216,0.10), transparent 30%),
+    radial-gradient(circle at 30% 85%, rgba(255,140,0,0.07), transparent 32%);
 
     pointer-events:none;
     z-index:-1;
@@ -57,7 +60,6 @@ a{
     top:0;
     left:0;
     width:100%;
-
     z-index:999;
 
     padding:22px 6%;
@@ -66,15 +68,28 @@ a{
     justify-content:flex-end;
     align-items:center;
 
-    background:
-    linear-gradient(to bottom,
-    rgba(0,0,0,0.92),
-    rgba(0,0,0,0.2));
-
+    background:linear-gradient(to bottom, rgba(0,0,0,0.92), rgba(0,0,0,0.2));
     backdrop-filter:blur(12px);
 
-    border-bottom:
-    1px solid rgba(255,255,255,0.06);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.navbar::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-1px;
+    width:100%;
+    height:1px;
+
+    background:linear-gradient(90deg,
+    transparent,
+    #ff8c00,
+    #d4a42c,
+    #3a6fd8,
+    transparent);
+
+    opacity:0.5;
 }
 
 .nav-links{
@@ -87,97 +102,121 @@ a{
     letter-spacing:2px;
     text-transform:uppercase;
     color:#ddd;
-
+    position:relative;
     transition:0.3s ease;
 }
 
-.nav-links a:hover{
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:linear-gradient(90deg, #ff8c00, #d4a42c);
+    transition:0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
     color:#d4a42c;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
 }
 
 /* TOP LOGO */
 
 .top-main-logo{
     position:fixed;
-
     top:14px;
     left:40px;
-
     z-index:1001;
 }
 
 .top-main-logo img{
     width:150px;
     height:auto;
-
     display:block;
-
-    filter:
-    drop-shadow(0 0 20px rgba(212,164,44,0.15));
+    filter:drop-shadow(0 0 20px rgba(212,164,44,0.15));
 }
 
 /* HERO */
 
 .hero{
     position:relative;
-
     min-height:55vh;
 
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
 
     overflow:hidden;
+    isolation:isolate;
 
     background:
-    linear-gradient(rgba(0,0,0,0.55),
-    rgba(0,0,0,0.88)),
-    url('/images/gallery/siteimages/Gursikhs.jpg')
-    center/cover fixed;
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.90)),
+    url('/images/gallery/siteimages/Gursikhs.jpg') center/cover fixed;
 }
 
 .hero::before{
     content:'';
     position:absolute;
     inset:0;
-
-    background:
-    radial-gradient(circle at center,
-    transparent 10%,
-    rgba(0,0,0,0.78) 100%);
+    background:radial-gradient(circle at center, transparent 10%, rgba(0,0,0,0.78) 100%);
 }
 
 .hero::after{
     content:'';
-
     position:absolute;
     inset:0;
 
     background:
-    radial-gradient(circle at center,
-    rgba(212,164,44,0.10),
-    transparent 45%);
+    radial-gradient(circle at 35% 45%, rgba(255,140,0,0.12), transparent 40%),
+    radial-gradient(circle at 65% 55%, rgba(58,111,216,0.12), transparent 40%),
+    radial-gradient(circle at center, rgba(212,164,44,0.10), transparent 45%);
 
     z-index:1;
-
     pointer-events:none;
 }
 
 .hero-content{
     position:relative;
     z-index:2;
-
+    max-width:900px;
     padding:160px 20px 80px;
+}
+
+.hero-eyebrow{
+    display:inline-block;
+
+    padding:8px 22px;
+    margin-bottom:28px;
+
+    border-radius:50px;
+    border:1px solid rgba(255,140,0,0.35);
+    background:rgba(255,140,0,0.08);
+
+    color:#ffa94d;
+    font-size:0.75rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
 }
 
 .hero-content h1{
     font-family:'Cinzel',serif;
     font-size:4.5rem;
-    color:#d4a42c;
+    line-height:1.15;
 
-    margin-bottom:20px;
+    background:linear-gradient(135deg, #f3d27a, #d4a42c 45%, #ff8c00);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:25px;
 }
 
 .hero-content p{
@@ -198,7 +237,7 @@ a{
 }
 
 .section-title span{
-    color:#d4a42c;
+    color:#ffa94d;
     letter-spacing:3px;
     font-size:0.8rem;
     text-transform:uppercase;
@@ -210,13 +249,18 @@ a{
     margin-top:15px;
 }
 
+.title-divider{
+    width:90px;
+    height:2px;
+    margin:22px auto 0;
+    background:linear-gradient(90deg, #ff8c00, #d4a42c, #3a6fd8);
+}
+
 /* JEEVANI GRID */
 
 .jeevani-grid{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:32px;
 }
 
@@ -224,40 +268,47 @@ a{
 
 .jeevani-card{
     position:relative;
-
+    display:block;
     min-height:500px;
-
     overflow:hidden;
-
     border-radius:30px;
 
     background:#111;
 
-    transition:0.4s ease;
+    border:1px solid rgba(255,153,51,0.25);
+    box-shadow:0 0 60px rgba(255,140,0,0.08);
 
-    border:
-    1px solid rgba(255,255,255,0.06);
+    transition:0.4s ease;
 }
 
-.jeevani-card:hover{
+.jeevani-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:3px;
+    background:linear-gradient(90deg, #ff8c00, #d4a42c, #3a6fd8);
+    z-index:5;
+}
+
+a.jeevani-card:hover{
     transform:translateY(-8px);
-
-    border-color:
-    rgba(212,164,44,0.4);
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,0.45);
+    border-color:rgba(255,153,51,0.5);
+    box-shadow:0 20px 50px rgba(0,0,0,0.45),
+               0 0 80px rgba(255,140,0,0.12);
 }
 
 .jeevani-card img{
+    position:absolute;
+    inset:0;
     width:100%;
     height:100%;
     object-fit:cover;
-
     transition:0.5s ease;
 }
 
-.jeevani-card:hover img{
+a.jeevani-card:hover img{
     transform:scale(1.05);
 }
 
@@ -270,10 +321,7 @@ a{
 
     padding:35px;
 
-    background:
-    linear-gradient(to top,
-    rgba(0,0,0,0.96),
-    rgba(0,0,0,0.18));
+    background:linear-gradient(to top, rgba(0,0,0,0.96), rgba(0,0,0,0.18));
 }
 
 .jeevani-overlay-content{
@@ -281,18 +329,16 @@ a{
 }
 
 .jeevani-label{
-    color:#d4a42c;
+    color:#ffa94d;
     font-size:0.8rem;
     letter-spacing:2px;
     text-transform:uppercase;
-
     margin-bottom:12px;
 }
 
 .jeevani-overlay h3{
     font-family:'Cinzel',serif;
     font-size:2rem;
-
     margin-bottom:12px;
 }
 
@@ -304,32 +350,74 @@ a{
 
 .view-badge{
     display:inline-block;
-
-    padding:10px 18px;
-
+    padding:10px 20px;
     border-radius:50px;
 
-    background:
-    rgba(212,164,44,0.12);
-
-    border:
-    1px solid rgba(212,164,44,0.2);
-
+    background:rgba(212,164,44,0.12);
+    border:1px solid rgba(212,164,44,0.25);
     color:#d4a42c;
 
     font-size:0.85rem;
+    letter-spacing:1px;
+
+    transition:0.3s ease;
+}
+
+a.jeevani-card:hover .view-badge{
+    background:linear-gradient(90deg, #ff8c00, #d4a42c);
+    border-color:transparent;
+    color:#000;
+    font-weight:600;
+}
+
+/* COMING SOON CARDS */
+
+.jeevani-card.coming-soon{
+    border-color:rgba(255,255,255,0.08);
+    box-shadow:none;
+    cursor:default;
+}
+
+.jeevani-card.coming-soon::before{
+    opacity:0.35;
+}
+
+.jeevani-card.coming-soon img{
+    filter:grayscale(0.6) brightness(0.7);
+}
+
+.jeevani-card.coming-soon .view-badge{
+    background:rgba(58,111,216,0.10);
+    border-color:rgba(58,111,216,0.30);
+    color:#8fb0ec;
 }
 
 /* FOOTER */
 
 footer{
+    position:relative;
     padding:40px 20px;
     text-align:center;
-
     color:#888;
+}
 
-    border-top:
-    1px solid rgba(255,255,255,0.06);
+footer::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    height:1px;
+
+    background:linear-gradient(90deg,
+    transparent,
+    #ff8c00,
+    #d4a42c,
+    #3a6fd8,
+    transparent);
+
+    opacity:0.4;
 }
 
 /* MOBILE */
@@ -351,10 +439,6 @@ footer{
 
 .top-main-logo{
     display:none;
-}
-
-.top-main-logo img{
-    width:135px;
 }
 
 .hero{
@@ -382,6 +466,10 @@ footer{
     font-size:2rem;
 }
 
+.jeevani-grid{
+    grid-template-columns:1fr;
+}
+
 .jeevani-card{
     min-height:400px;
 }
@@ -398,6 +486,11 @@ footer{
     font-size:0.92rem;
 }
 
+footer{
+    font-size:0.85rem;
+    line-height:1.7;
+}
+
 }
 
     </style>
@@ -408,31 +501,26 @@ footer{
 <!-- TOP LOGO -->
 
 <div class="top-main-logo">
-
-    <img src="../images/logo/logo.png"
-         alt="GurmatKhajana Logo">
-
+    <img src="/images/logo/logo.png" alt="GurmatKhajana Logo">
 </div>
 
 <!-- NAVBAR -->
 
 <nav class="navbar">
-
     <div class="nav-links">
         <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
         <a href="/articles/index.html">Articles</a>
-        <a href="/jeevani/index.html">Jeevani</a>
-
+        <a href="/jeevani/index.html" class="active">Jeevani</a>
     </div>
-
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
-
     <div class="hero-content">
+
+        <span class="hero-eyebrow">Gursikh Lives</span>
 
         <h1>Jeevani</h1>
 
@@ -442,7 +530,6 @@ footer{
         </p>
 
     </div>
-
 </section>
 
 <!-- JEEVANI -->
@@ -450,264 +537,153 @@ footer{
 <section class="section">
 
     <div class="section-title">
-
         <span>Gursikh Lives</span>
-
         <h2>Browse Jeevani</h2>
-
+        <div class="title-divider"></div>
     </div>
 
     <div class="jeevani-grid">
 
-
         <!-- Bhai Nirmal Singh -->
 
         <a href="/jeevani/bhai_nirmal_singh.html" class="jeevani-card">
-
-            <img src="../images/gallery/jeevani/Bhai_Nirmal_Singh.jpg"
-                 alt="Bhai Nirmal Singh Ji">
-
+            <img src="/images/gallery/jeevani/Bhai_Nirmal_Singh.jpg" alt="Bhai Nirmal Singh Ji">
             <div class="jeevani-overlay">
-
                 <div class="jeevani-overlay-content">
-
                     <div class="jeevani-label">Jeevani</div>
-
                     <h3>Bhai Nirmal Singh Ji</h3>
-
                     <p>Life and spiritual legacy of Bhai Nirmal Singh Ji.</p>
-
                     <div class="view-badge">Read Jeevani</div>
-
                 </div>
-
             </div>
-
         </a>
 
         <!-- Bhai Jagtar Singh -->
 
         <a href="/jeevani/bhai_jagtar_singh.html" class="jeevani-card">
-
-            <img src="/images/gallery/jeevani/Bhai_Jagtar_Singh.jpg"
-                 alt="Bhai Jagtar Singh Ji">
-
+            <img src="/images/gallery/jeevani/Bhai_Jagtar_Singh.jpg" alt="Bhai Jagtar Singh Ji">
             <div class="jeevani-overlay">
-
                 <div class="jeevani-overlay-content">
-
                     <div class="jeevani-label">Jeevani</div>
-
                     <h3>Bhai Jagtar Singh Ji</h3>
-
                     <p>Life and spiritual legacy of Bhai Jagtar Singh Ji.</p>
-
                     <div class="view-badge">Read Jeevani</div>
-
                 </div>
-
             </div>
-
         </a>
 
-        <!-- Bhai Jasbir Singh Mohali -->
+        <!-- Bhai Jasbir Singh Mohali (Coming Soon) -->
 
-        <a href="#" class="jeevani-card">
-
-            <img src="/images/gallery/jeevani/Jasbir_Singh_Mohali.jpg"
-                 alt="Bhai Jasbir Singh Mohali">
-
+        <div class="jeevani-card coming-soon">
+            <img src="/images/gallery/jeevani/Jasbir_Singh_Mohali.jpg" alt="Bhai Jasbir Singh Ji Mohali">
             <div class="jeevani-overlay">
-
                 <div class="jeevani-overlay-content">
-
                     <div class="jeevani-label">Jeevani</div>
-
                     <h3>Bhai Jasbir Singh Ji Mohali</h3>
-
                     <p>Life and spiritual legacy of Bhai Jasbir Singh Ji Mohali.</p>
-
                     <div class="view-badge">Coming Soon</div>
-
                 </div>
-
             </div>
-
-        </a>
+        </div>
 
         <!-- Bhai Shingara Singh -->
 
         <a href="/jeevani/bhai_shingara_singh.html" class="jeevani-card">
-
-            <img src="/images/gallery/jeevani/Bhai_Shingara_Singh.png"
-                 alt="Bhai Shingara Singh Ji">
-
+            <img src="/images/gallery/jeevani/Bhai_Shingara_Singh.png" alt="Bhai Shingara Singh Ji">
             <div class="jeevani-overlay">
-
                 <div class="jeevani-overlay-content">
-
                     <div class="jeevani-label">Jeevani</div>
-
                     <h3>Bhai Shingara Singh Ji</h3>
-
                     <p>Life and spiritual legacy of Bhai Shingara Singh Ji.</p>
-
                     <div class="view-badge">Read Jeevani</div>
-
                 </div>
-
             </div>
-
         </a>
 
-        <!-- Giani Amolak Singh -->
+        <!-- Giani Amolak Singh (Coming Soon) -->
 
-        <a href="#" class="jeevani-card">
-
-            <img src="/images/gallery/jeevani/Giani_Amolak_Singh.jpg"
-                 alt="Giani Amolak Singh Ji">
-
+        <div class="jeevani-card coming-soon">
+            <img src="/images/gallery/jeevani/Giani_Amolak_Singh.jpg" alt="Giani Amolak Singh Ji">
             <div class="jeevani-overlay">
-
                 <div class="jeevani-overlay-content">
-
                     <div class="jeevani-label">Jeevani</div>
-
                     <h3>Giani Amolak Singh Ji</h3>
-
                     <p>Life and spiritual legacy of Giani Amolak Singh Ji.</p>
-
                     <div class="view-badge">Coming Soon</div>
-
                 </div>
-
             </div>
-
-        </a>
+        </div>
 
         <!-- Bhai Rama Singh -->
 
         <a href="/jeevani/bhai_rama_singh.html" class="jeevani-card">
-
-            <img src="/images/gallery/jeevani/Bhai_Rama_Singh.jpg"
-                 alt="Bhai Rama Singh Ji">
-
+            <img src="/images/gallery/jeevani/Bhai_Rama_Singh.jpg" alt="Bhai Rama Singh Ji">
             <div class="jeevani-overlay">
-
                 <div class="jeevani-overlay-content">
-
                     <div class="jeevani-label">Jeevani</div>
-
                     <h3>Bhai Rama Singh Ji</h3>
-
                     <p>Life and spiritual legacy of Bhai Rama Singh Ji.</p>
-
                     <div class="view-badge">Read Jeevani</div>
-
                 </div>
-
             </div>
-
         </a>
 
-        <!-- Jathedaar Bhai Didar Singh -->
+        <!-- Jathedaar Bhai Didar Singh (Coming Soon) -->
 
-        <a href="#" class="jeevani-card">
-
-            <img src="/images/gallery/jeevani/Jathedaar_Bhai_Didar_Singh.jpg"
-                 alt="Jathedaar Bhai Didar Singh">
-
+        <div class="jeevani-card coming-soon">
+            <img src="/images/gallery/jeevani/Jathedaar_Bhai_Didar_Singh.jpg" alt="Jathedaar Bhai Didar Singh Ji">
             <div class="jeevani-overlay">
-
                 <div class="jeevani-overlay-content">
-
                     <div class="jeevani-label">Jeevani</div>
-
                     <h3>Jathedaar Bhai Didar Singh Ji</h3>
-
-                    <p>Life and spiritual legacy of Jathedaar Bhai Didar Singh.</p>
-
+                    <p>Life and spiritual legacy of Jathedaar Bhai Didar Singh Ji.</p>
                     <div class="view-badge">Coming Soon</div>
-
                 </div>
-
             </div>
-
-        </a>
-
-        <!-- Jathedaar Bhai Raghbir Singh -->
-
-        <a href="#" class="jeevani-card">
-
-            <img src="/images/gallery/jeevani/JBRS.jpg"
-                 alt="Jathedaar Bhai Raghbir Singh Ji">
-
-            <div class="jeevani-overlay">
-
-                <div class="jeevani-overlay-content">
-
-                    <div class="jeevani-label">Jeevani</div>
-
-                    <h3>Jathedaar Bhai Raghbir Singh Ji</h3>
-
-                    <p>Life and spiritual legacy of Jathedaar Bhai Raghbir Singh Ji.</p>
-
-                    <div class="view-badge">Coming Soon</div>
-
-                </div>
-
-            </div>
-
-        </a>
-
-    <!-- Bibi Kirpal Kaur -->
-
-    <a href="/jeevani/bibi_kirpal_kaur.html" class="jeevani-card">
-
-        <img src="/images/gallery/jeevani/Kirpal_Kaur.jpg"
-             alt="Bibi Kirpal Kaur Ji">
-
-        <div class="jeevani-overlay">
-
-            <div class="jeevani-overlay-content">
-
-                <div class="jeevani-label">Jeevani</div>
-
-                <h3>Bibi Kirpal Kaur Ji</h3>
-
-                <p>Life and spiritual legacy of Bibi Kirpal Kaur Ji</p>
-
-                <div class="view-badge">Click here</div>
-
-            </div>
-
         </div>
 
-    </a>
+        <!-- Jathedaar Bhai Raghbir Singh (Coming Soon) -->
+
+        <div class="jeevani-card coming-soon">
+            <img src="/images/gallery/jeevani/JBRS.jpg" alt="Jathedaar Bhai Raghbir Singh Ji">
+            <div class="jeevani-overlay">
+                <div class="jeevani-overlay-content">
+                    <div class="jeevani-label">Jeevani</div>
+                    <h3>Jathedaar Bhai Raghbir Singh Ji</h3>
+                    <p>Life and spiritual legacy of Jathedaar Bhai Raghbir Singh Ji.</p>
+                    <div class="view-badge">Coming Soon</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bibi Kirpal Kaur -->
+
+        <a href="/jeevani/bibi_kirpal_kaur.html" class="jeevani-card">
+            <img src="/images/gallery/jeevani/Kirpal_Kaur.jpg" alt="Bibi Kirpal Kaur Ji">
+            <div class="jeevani-overlay">
+                <div class="jeevani-overlay-content">
+                    <div class="jeevani-label">Jeevani</div>
+                    <h3>Bibi Kirpal Kaur Ji</h3>
+                    <p>Life and spiritual legacy of Bibi Kirpal Kaur Ji.</p>
+                    <div class="view-badge">Read Jeevani</div>
+                </div>
+            </div>
+        </a>
+
         <!-- Mata Joginder Kaur -->
 
         <a href="/jeevani/mata_joginder_kaur.html" class="jeevani-card">
-
-            <img src="/images/gallery/jeevani/MJK.jpg"
-                 alt="Mata Joginder Kaur Ji">
-
+            <img src="/images/gallery/jeevani/MJK.jpg" alt="Mata Joginder Kaur Ji">
             <div class="jeevani-overlay">
-
                 <div class="jeevani-overlay-content">
-
                     <div class="jeevani-label">Jeevani</div>
-
                     <h3>Mata Joginder Kaur Ji</h3>
-
                     <p>Life and spiritual legacy of Mata Joginder Kaur Ji.</p>
-
-                    <div class="view-badge">Click Here</div>
-
+                    <div class="view-badge">Read Jeevani</div>
                 </div>
-
             </div>
-
         </a>
+
     </div> <!-- End jeevani-grid -->
 
 </section>
