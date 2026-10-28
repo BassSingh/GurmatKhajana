@@ -1,0 +1,38 @@
+/* Self-hosted fonts */
+
+/* Cinzel */
+@font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 400; font-display: swap; src: url('cinzel-v26-latin-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 500; font-display: swap; src: url('cinzel-v26-latin-500.woff2') format('woff2'); }
+@font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 600; font-display: swap; src: url('cinzel-v26-latin-600.woff2') format('woff2'); }
+@font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 700; font-display: swap; src: url('cinzel-v26-latin-700.woff2') format('woff2'); }
+
+/* Noto Serif Gurmukhi */
+@font-face { font-family: 'Noto Serif Gurmukhi'; font-style: normal; font-weight: 400; font-display: swap; src: url('noto-serif-gurmukhi-v22-gurmukhi_latin-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Serif Gurmukhi'; font-style: normal; font-weight: 500; font-display: swap; src: url('noto-serif-gurmukhi-v22-gurmukhi_latin-500.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Serif Gurmukhi'; font-style: normal; font-weight: 700; font-display: swap; src: url('noto-serif-gurmukhi-v22-gurmukhi_latin-700.woff2') format('woff2'); }
+
+/* Noto Sans Gurmukhi */
+@font-face { font-family: 'Noto Sans Gurmukhi'; font-style: normal; font-weight: 400; font-display: swap; src: url('noto-sans-gurmukhi-v29-gurmukhi_latin-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans Gurmukhi'; font-style: normal; font-weight: 500; font-display: swap; src: url('noto-sans-gurmukhi-v29-gurmukhi_latin-500.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans Gurmukhi'; font-style: normal; font-weight: 600; font-display: swap; src: url('noto-sans-gurmukhi-v29-gurmukhi_latin-600.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans Gurmukhi'; font-style: normal; font-weight: 700; font-display: swap; src: url('noto-sans-gurmukhi-v29-gurmukhi_latin-700.woff2') format('woff2'); }
+
+/* Inter */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 300; font-display: swap; src: url('inter-v20-latin-300.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('inter-v20-latin-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('inter-v20-latin-500.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('inter-v20-latin-600.woff2') format('woff2'); }
+
+/* Cormorant Garamond */
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 300; font-display: swap; src: url('cormorant-garamond-v21-latin-300.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url('cormorant-garamond-v21-latin-regular.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url('cormorant-garamond-v21-latin-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('cormorant-garamond-v21-latin-500.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url('cormorant-garamond-v21-latin-600.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 700; font-display: swap; src: url('cormorant-garamond-v21-latin-700.woff2') format('woff2'); }
+
+/* EB Garamond */
+@font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url('eb-garamond-v33-latin-regular.woff2') format('woff2'); }
+@font-face { font-family: 'EB Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url('eb-garamond-v33-latin-italic.woff2') format('woff2'); }
+@font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('eb-garamond-v33-latin-500.woff2') format('woff2'); }
+@font-face { font-family: 'EB Garamond'; font-style: italic; font-weight: 500; font-display: swap; src: url('eb-garamond-v33-latin-500italic.woff2') format('woff2'); }
